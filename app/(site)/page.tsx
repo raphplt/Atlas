@@ -8,22 +8,28 @@ import { Process } from "@/components/sections/Process";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
+import { BeforeAfter } from "@/components/sections/BeforeAfter";
+import { Gallery } from "@/components/sections/Gallery";
+import { Testimonials } from "@/components/sections/Testimonials";
 
 export default function Page() {
-  return (
-    <>
-      <Nav />
-      <main>
-        <Hero />
-        <Problems />
-        <Solution />
-        <Offers />
-        <Work />
-        <Process />
-        <FAQ />
-        <CTA />
-      </main>
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Nav />
+			<main>
+				<Hero />
+				<Problems />
+				<Solution />
+				<BeforeAfter />
+				<Gallery />
+				<Work />
+				<Testimonials />
+				<Offers />
+				<Process />
+				<FAQ />
+				<CTA />
+			</main>
+			<Footer />
+		</>
+	);
 }
