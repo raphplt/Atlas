@@ -1,15 +1,25 @@
-export interface ContactInput {
-  firstName: string;
-  company: string;
-  email: string;
-  phone?: string;
-  message: string;
-}
+import { z } from "zod";
+
+export const contactSchema = z.object({
+	firstName: z.string().min(1, "Prénom requis").max(60),
+	company: z.string().min(1, "Entreprise requise").max(120),
+	email: z.string().email("Email invalide"),
+	phone: z
+		.string()
+		.optional()
+		.refine(
+			(v: string | undefined) => !v || /^(\+|0)[0-9 .-]{6,}$/.test(v),
+			"Téléphone invalide"
+		),
+	projectType: z.string().optional(),
+	budget: z.string().optional(),
+	hasSite: z.enum(["oui", "non"]).optional(),
+	message: z.string().min(1, "Message requis").max(3000),
+	website: z.string().max(0).optional(), // honeypot
+});
+
+export type ContactInput = z.infer<typeof contactSchema>;
 
 export function validateContact(data: ContactInput): ContactInput {
-  if (!data.firstName) throw new Error("Prénom requis");
-  if (!data.company) throw new Error("Entreprise requise");
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) throw new Error("Email invalide");
-  if (!data.message) throw new Error("Message requis");
-  return data;
+	return contactSchema.parse(data);
 }

@@ -3,47 +3,53 @@ import Image from "next/image";
 
 export function Hero() {
 	return (
-		<section className="relative pt-24 pb-32" id="hero">
+		<section className="relative pt-28 pb-40 overflow-hidden" id="hero">
 			<div className="hero-bg" aria-hidden="true" />
 			<div className="noise" aria-hidden="true" />
+			<div className="aurora a1" />
+			<div className="aurora a2" />
 			<div className="container relative text-center">
-				<div className="inline-block px-4 py-1 mb-6 rounded-full bg-[var(--color-bg-alt)]/60 border border-[var(--color-border)] text-xs font-medium tracking-wide uppercase text-[var(--color-muted)] backdrop-blur-sm">
+				<div className="inline-flex items-center gap-2 px-5 py-1.5 mb-7 rounded-full btn-outline-gradient text-[10px] md:text-xs font-medium tracking-[.15em] uppercase text-[var(--color-muted)] backdrop-blur-sm">
+					<span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />{" "}
 					Sites vitrines premium
 				</div>
-				<h1 className="h1 mb-6 max-w-5xl mx-auto">
-					Transformez votre présence locale avec un site{" "}
-					<span className="gradient-text">ultra moderne</span>
+				<h1 className="h1 mb-8 max-w-6xl mx-auto">
+					Un site qui transforme vos visites
+					<br /> en <span className="gradient-text">clients locaux</span>
 				</h1>
-				<p className="lead mb-10">
-					Conçus pour convertir : plus d'appels, plus de demandes de devis. Livraison
-					rapide (≤ 10 jours) et optimisation locale incluse.
+				<p className="lead mb-12 max-w-3xl">
+					Conception rapide (≤ 10 jours), expérience mobile parfaite, structure
+					pensée pour générer appels & demandes de devis.
 				</p>
-				<div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
+				<div className="flex flex-col sm:flex-row gap-5 justify-center mb-16">
 					<a
 						href="#contact"
 						className={buttonVariants({
-							className: "relative overflow-hidden group font-semibold",
+							className: "btn-base h-14 px-10 text-base font-semibold tracking-wide",
 						})}
 					>
-						<span className="absolute inset-0 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-alt)] opacity-0 group-hover:opacity-100 transition" />
-						<span className="relative">Réserver un appel</span>
+						Réserver un appel
 					</a>
 					<a
 						href="#offres"
 						className={buttonVariants({
 							variant: "ghost",
-							className: "font-semibold",
+							className:
+								"h-14 px-10 text-base font-semibold tracking-wide btn-outline-gradient",
 						})}
 					>
 						Voir les offres
 					</a>
 				</div>
-				<div className="mx-auto max-w-5xl rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-alt)]/50 backdrop-blur-sm p-4 shadow-[var(--shadow)]">
-					<div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden bg-gradient-to-br from-[var(--color-accent)]/20 to-[var(--color-accent-alt)]/20 flex items-center justify-center">
-						{/* Placeholder for video / mockup */}
-						<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,#fff2,transparent_60%)] mix-blend-overlay" />
+				<div className="mx-auto max-w-6xl rounded-3xl border border-[var(--color-border)] bg-[var(--color-bg-alt)]/60 backdrop-blur p-5 shadow-[var(--shadow)] relative">
+					<div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] md:text-xs px-3 py-1 rounded-full bg-[var(--color-bg)]/80 border border-[var(--color-border)]">
+						Aperçu
+					</div>
+					<div className="relative aspect-[16/8] w-full rounded-2xl overflow-hidden bg-gradient-to-br from-[var(--color-accent)]/15 via-[var(--color-accent-alt)]/15 to-[var(--color-accent)]/10 flex items-center justify-center">
+						<div className="absolute inset-0 pattern-grid opacity-30" />
+						<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,#fff3,transparent_60%)] mix-blend-overlay" />
 						<div className="text-sm md:text-base font-medium text-[var(--color-muted)]">
-							Mockup / Vidéo de démo (placeholder)
+							Mockup / Vidéo (placeholder)
 						</div>
 						<Image
 							src="/images/placeholders/after.png"
@@ -53,18 +59,19 @@ export function Hero() {
 						/>
 					</div>
 				</div>
-				<ul className="flex flex-wrap justify-center gap-3 mt-10 text-xs md:text-sm text-[var(--color-muted)]">
+				<ul className="flex flex-wrap justify-center gap-3 mt-14 text-[11px] md:text-xs font-medium">
 					{[
 						"≤ 10 jours",
 						"Mobile-first",
-						"Optimisé local",
+						"Google Maps",
 						"Prix fixe",
-						"Conversion",
+						"Optimisation locale",
 						"Design premium",
+						"Tracking analytics",
 					].map((b) => (
 						<li
 							key={b}
-							className="px-3 py-1 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-alt)]/60 backdrop-blur-sm"
+							className="px-4 py-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-card)]/70 backdrop-blur-sm text-[var(--color-muted)] hover:text-[var(--color-fg)] transition"
 						>
 							{b}
 						</li>

@@ -12,7 +12,7 @@ export function ThemeToggle({ className }: { className?: string }) {
 			onClick={toggle}
 			aria-label={isDark ? "Activer le mode clair" : "Activer le mode sombre"}
 			className={cn(
-				"relative w-10 h-10 rounded-full soft-border flex items-center justify-center group overflow-hidden transition bg-[var(--color-bg-alt)]/70 hover:bg-[var(--color-bg-alt)] accent-ring",
+				"relative cursor-pointer w-10 h-10 rounded-full soft-border flex items-center justify-center group overflow-hidden transition bg-[var(--color-bg-alt)]/70 hover:bg-[var(--color-bg-alt)] accent-ring",
 				className
 			)}
 		>
