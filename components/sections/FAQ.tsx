@@ -109,8 +109,7 @@ export function FAQ() {
 			<div className="container relative">
 				<h2 className="h2 text-center mb-6">FAQ</h2>
 				<p className="text-center text-sm text-[var(--color-muted)] mb-12 max-w-2xl mx-auto">
-					Réponses aux questions les plus fréquentes. Utilisez la recherche
-					ci‑dessous.
+					Réponses aux questions fréquentes. Utilisez la recherche pour filtrer.
 				</p>
 				<div className="flex flex-col md:flex-row gap-4 md:items-center mb-10">
 					<div className="relative flex-1">

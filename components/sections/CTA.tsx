@@ -70,11 +70,11 @@ export function CTA() {
 					<div className="space-y-10 max-w-xl">
 						<div className="space-y-6">
 							<h2 className="h2 leading-tight">
-								Votre site doit vous rapporter des clients.
+								Transformez plus de visites en clients.
 							</h2>
 							<p className="text-lg text-[var(--color-muted)]">
-								Expliquez votre activité, vos objectifs et obtenez un plan
-								d'amélioration concret.
+								Présentez activité & objectifs et recevez un plan d'amélioration
+								concret.
 							</p>
 						</div>
 						<div className="grid gap-6 sm:grid-cols-2">
@@ -82,7 +82,7 @@ export function CTA() {
 								{
 									icon: PhoneCall,
 									label: "Diagnostic gratuit",
-									desc: "Analyse rapide de votre présence.",
+									desc: "Analyse de votre présence actuelle.",
 								},
 								{
 									icon: Sparkles,
@@ -92,11 +92,11 @@ export function CTA() {
 								{
 									icon: Timer,
 									label: "Réponse ≤24h",
-									desc: "Prise de contact rapide.",
+									desc: "Retour rapide garanti.",
 								},
 								{
 									icon: ShieldCheck,
-									label: "Pas d’engagement",
+									label: "Sans engagement",
 									desc: "Vous décidez ensuite.",
 								},
 							].map((b) => (
@@ -315,7 +315,7 @@ export function CTA() {
 											Aucune newsletter automatique.
 										</p>
 										<p className="flex flex-wrap gap-3 pt-1">
-											{["Sécurisé", "RGPD", "Aucun spam"].map((b) => (
+											{["Sécurisé", "RGPD", "Zéro spam"].map((b) => (
 												<span
 													key={b}
 													className="px-2 py-0.5 rounded bg-[var(--color-bg-alt)]/60 border border-[var(--color-border)]"

@@ -48,11 +48,11 @@ export function Testimonials() {
 				aria-hidden="true"
 			/>
 			<div className="container relative">
-				<h2 className="h2 text-center mb-6">Témoignages</h2>
+				<h2 className="h2 text-center mb-6">Ils en parlent</h2>
 				<p className="mb-16 text-sm md:text-base font-medium tracking-wide flex items-center justify-center gap-4 text-[var(--color-muted)]">
 					<span className="hidden sm:inline-block h-px w-16 bg-gradient-to-r from-transparent via-[var(--color-border)] to-[var(--color-accent)]" />
 					<span className="bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-alt)] bg-clip-text text-transparent whitespace-nowrap">
-						Ce qu'en disent nos clients
+						Résultats perçus par nos clients
 					</span>
 					<span className="hidden sm:inline-block h-px w-16 bg-gradient-to-r from-[var(--color-accent-alt)] via-[var(--color-border)] to-transparent" />
 				</p>

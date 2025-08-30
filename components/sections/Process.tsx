@@ -42,9 +42,9 @@ export function Process() {
 				aria-hidden="true"
 			/>
 			<div className="container relative">
-				<h2 className="h2 text-center mb-6">Process</h2>
+				<h2 className="h2 text-center mb-6">Étapes</h2>
 				<p className="text-center text-[var(--color-muted)] mb-16 max-w-2xl mx-auto">
-					Méthode courte, structurée, itérative — toujours orientée résultat.
+					Méthode courte, structurée et itérative — toujours orientée résultat.
 				</p>
 				<ol className="relative flex flex-col md:flex-row md:items-stretch gap-10 md:gap-8">
 					{/* Ligne de progression (desktop) */}

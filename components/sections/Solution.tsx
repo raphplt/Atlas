@@ -4,17 +4,17 @@ import { ShieldCheck, TrendingUp, MapPin } from "lucide-react";
 const items = [
 	{
 		title: "Crédibilité instantanée",
-		body: "Design premium, structure claire, rassurance visuelle.",
+		body: "Design premium, hiérarchie claire, éléments de confiance.",
 		icon: ShieldCheck,
 	},
 	{
 		title: "Conversion optimisée",
-		body: "CTA stratégiques, formulaires rapides, preuve sociale.",
+		body: "CTA visibles, formulaires rapides, preuve sociale.",
 		icon: TrendingUp,
 	},
 	{
 		title: "Visibilité locale",
-		body: "Structure SEO + optimisation Google Business.",
+		body: "Structure SEO + optimisation Google Business Profile.",
 		icon: MapPin,
 	},
 ];
@@ -26,7 +26,7 @@ export function Solution() {
 			<div className="container">
 				<h2 className="h2 text-center mb-6">Ce que nous apportons</h2>
 				<p className="text-center text-[var(--color-muted)] mb-14 max-w-2xl mx-auto">
-					Une refonte pensée pour la performance business : chaque élément a un rôle.
+					Une approche orientée performance : chaque bloc a une fonction mesurable.
 				</p>
 				<div className="grid gap-8 md:grid-cols-3">
 					{items.map((it) => (

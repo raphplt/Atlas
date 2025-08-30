@@ -23,7 +23,7 @@ export function BeforeAfter() {
 			<div className="container relative">
 				<h2 className="h2 text-center mb-6">Avant / Après</h2>
 				<p className="lead mb-12">
-					Visualisez l'impact immédiat d'un design structuré, lisible et crédible.
+					L'impact visuel et lisible d'une refonte structurée en un coup d'œil.
 				</p>
 				<div
 					ref={ref}

@@ -17,7 +17,7 @@ const works = [
 export function Work() {
 	return (
 		<section className="container py-24" id="realisations">
-			<h2 className="h2 text-center mb-12">Refontes (détails)</h2>
+			<h2 className="h2 text-center mb-12">Refontes détaillées</h2>
 			<div className="grid gap-6 md:grid-cols-2">
 				{works.map((w, i) => (
 					<Card key={i} className="p-2">
@@ -33,7 +33,7 @@ export function Work() {
 			</div>
 			<div className="text-center mt-8">
 				<a href="#contact" className="underline text-sm">
-					Voir plus d'exemples
+					Demander d'autres exemples
 				</a>
 			</div>
 		</section>

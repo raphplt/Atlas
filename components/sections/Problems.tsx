@@ -4,24 +4,24 @@ import { FileWarning, MapPinOff, PhoneOff } from "lucide-react";
 const items = [
 	{
 		title: "Site non mobile",
-		body: "60%+ de vos visiteurs partent frustrés.",
+		body: "60%+ de vos visiteurs quittent avant 5s.",
 		icon: PhoneOff,
 	},
 	{
-		title: "Pas de devis rapide",
-		body: "Vous perdez des prospects chauds.",
+		title: "Aucun devis rapide",
+		body: "Vous perdez les prospects chauds.",
 		icon: FileWarning,
 	},
 	{
 		title: "Invisible en local",
-		body: "Vos voisins ne vous trouvent pas.",
+		body: "Les clients proches ne vous trouvent pas.",
 		icon: MapPinOff,
 	},
 ];
 
 export function Problems() {
 	return (
-		<section className="relative py-32" id="problemes">
+		<section className="relative py-32" id="problems">
 			<div
 				className="absolute inset-0 pattern-grid opacity-40"
 				aria-hidden="true"
@@ -29,7 +29,7 @@ export function Problems() {
 			<div className="container relative">
 				<h2 className="h2 text-center mb-6">Ce qui vous freine</h2>
 				<p className="text-center text-[var(--color-muted)] mb-14 max-w-2xl mx-auto">
-					Des obstacles simples à corriger qui bloquent votre crédibilité et vos
+					Des freins faciles à lever qui pénalisent votre crédibilité et vos
 					conversions.
 				</p>
 				<div className="grid gap-8 md:grid-cols-3">

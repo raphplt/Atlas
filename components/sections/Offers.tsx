@@ -7,9 +7,9 @@ export function Offers() {
 			<section className="relative py-32" id="offres">
 				<div className="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--color-accent)]/8 via-transparent to-transparent" />
 				<div className="container">
-					<h2 className="h2 text-center mb-6">Offres claires</h2>
+					<h2 className="h2 text-center mb-6">Offres simples</h2>
 					<p className="text-center text-sm text-[var(--color-muted)] mb-12">
-						Paiement en 2 fois possible — toutes les intégrations essentielles
+						Paiement possible en 2 fois — toutes les fonctionnalités essentielles
 						incluses.
 					</p>
 					<div className="grid gap-8 md:grid-cols-3">
@@ -45,7 +45,7 @@ export function Offers() {
 									href="#contact"
 									className={buttonVariants({ className: "w-full font-semibold" })}
 								>
-									Discuter de ce pack
+									Choisir ce pack
 								</a>
 							</Card>
 						))}

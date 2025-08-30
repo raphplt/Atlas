@@ -38,7 +38,7 @@ export function Gallery() {
 		<section className="container py-24" id="galerie">
 			<h2 className="h2 text-center mb-6">Exemples</h2>
 			<p className="lead mb-12">
-				Une qualité de design constante orientée performance.
+				Une cohérence de design centrée sur la clarté et l'action.
 			</p>
 			<div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
 				{items.map((it) => (

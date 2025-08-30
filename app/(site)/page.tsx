@@ -1,4 +1,4 @@
-import { Nav } from "@/components/Nav";
+import { Navbar } from "@/components/Nav";
 import { Hero } from "@/components/sections/Hero";
 import { Problems } from "@/components/sections/Problems";
 import { Solution } from "@/components/sections/Solution";
@@ -15,7 +15,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 export default function Page() {
 	return (
 		<>
-			<Nav />
+			<Navbar />
 			<main>
 				<Hero />
 				<Problems />

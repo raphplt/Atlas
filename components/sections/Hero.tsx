@@ -14,12 +14,12 @@ export function Hero() {
 					Sites vitrines premium
 				</div>
 				<h1 className="h1 mb-8 max-w-6xl mx-auto">
-					Un site qui transforme vos visites
+					Un site qui transforme vos visiteurs
 					<br /> en <span className="gradient-text">clients locaux</span>
 				</h1>
 				<p className="lead mb-12 max-w-3xl">
-					Conception rapide (≤ 10 jours), expérience mobile parfaite, structure
-					pensée pour générer appels & demandes de devis.
+					Livraison en ≤ 10 jours. Expérience mobile irréprochable. Structure conçue
+					pour déclencher appels & demandes de devis.
 				</p>
 				<div className="flex flex-col sm:flex-row gap-5 justify-center mb-16">
 					<a
@@ -63,10 +63,10 @@ export function Hero() {
 					{[
 						"≤ 10 jours",
 						"Mobile-first",
-						"Google Maps",
-						"Prix fixe",
 						"Optimisation locale",
 						"Design premium",
+						"Google Maps",
+						"Prix fixe",
 						"Tracking analytics",
 					].map((b) => (
 						<li
