@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
 	ResizablePanelGroup,
 	ResizablePanel,
@@ -14,6 +14,8 @@ interface BeforeAfterSliderProps {
 	className?: string;
 	showLabels?: boolean;
 	size?: "sm" | "md" | "lg";
+	autoSlide?: boolean;
+	slideDuration?: number;
 }
 
 export function BeforeAfterSlider({
@@ -23,13 +25,28 @@ export function BeforeAfterSlider({
 	className = "",
 	showLabels = true,
 	size = "md",
+	autoSlide = true,
+	slideDuration = 3000,
 }: BeforeAfterSliderProps) {
-	const [defaultSize] = useState(50);
+	const [defaultSize, setDefaultSize] = useState(50);
+	const [isAnimating, setIsAnimating] = useState(false);
+
+	// Animation automatique vers la droite
+	useEffect(() => {
+		if (!autoSlide) return;
+
+		const timer = setTimeout(() => {
+			setIsAnimating(true);
+			setDefaultSize(100);
+		}, 1000);
+
+		return () => clearTimeout(timer);
+	}, [autoSlide]);
 
 	const sizeClasses = {
-		sm: "h-48 md:h-64",
-		md: "h-64 md:h-80",
-		lg: "h-80 md:h-96",
+		sm: "w-full aspect-[16/9]",
+		md: "w-full aspect-[16/9]",
+		lg: "w-full aspect-[16/9]",
 	};
 
 	return (
@@ -38,7 +55,14 @@ export function BeforeAfterSlider({
 				className={`${sizeClasses[size]} shadow-[var(--shadow)] ring-1 ring-[var(--color-border)] rounded-2xl overflow-hidden`}
 			>
 				<ResizablePanelGroup direction="horizontal">
-					<ResizablePanel defaultSize={100 - defaultSize}>
+					<ResizablePanel
+						defaultSize={100 - defaultSize}
+						style={{
+							transition: isAnimating
+								? `width ${slideDuration}ms ease-in-out`
+								: "none",
+						}}
+					>
 						<div className="relative h-full">
 							<Image
 								src={afterSrc}
@@ -55,7 +79,14 @@ export function BeforeAfterSlider({
 						className="bg-[var(--color-accent)] hover:bg-[var(--color-accent)]/80 transition-colors"
 					/>
 
-					<ResizablePanel defaultSize={defaultSize}>
+					<ResizablePanel
+						defaultSize={defaultSize}
+						style={{
+							transition: isAnimating
+								? `width ${slideDuration}ms ease-in-out`
+								: "none",
+						}}
+					>
 						<div className="relative h-full">
 							<Image
 								src={beforeSrc}

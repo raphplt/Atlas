@@ -1,17 +1,25 @@
 "use client";
+import { projects } from "@/content/projects";
 import Image from "next/image";
 import { useRef, useState, useCallback } from "react";
+import { BeforeAfterSlider } from "../ui/before-after-slider";
+import { ProjectModal } from "../ui/project-modal";
 
 export function BeforeAfter() {
-	const ref = useRef<HTMLDivElement | null>(null);
-	const [percent, setPercent] = useState(50);
-	const onMove = useCallback((e: React.MouseEvent | React.TouchEvent) => {
-		if (!ref.current) return;
-		const rect = ref.current.getBoundingClientRect();
-		const x = "touches" in e ? e.touches[0].clientX : e.clientX;
-		const p = ((x - rect.left) / rect.width) * 100;
-		setPercent(Math.min(100, Math.max(0, p)));
-	}, []);
+	const [selectedProject, setSelectedProject] = useState<string | null>(null);
+
+	const openModal = (projectId: string) => {
+		setSelectedProject(projectId);
+	};
+
+	const closeModal = () => {
+		setSelectedProject(null);
+	};
+
+	const selectedProjectData = selectedProject
+		? projects.find((p) => p.id === selectedProject)
+		: null;
+
 	return (
 		<section className="relative py-32 overflow-hidden" id="avant-apres">
 			<div
@@ -25,47 +33,57 @@ export function BeforeAfter() {
 				<p className="lead mb-12">
 					L'impact visuel et lisible d'une refonte structurée en un coup d'œil.
 				</p>
-				<div
-					ref={ref}
-					className="ba-wrapper max-w-4xl mx-auto cursor-ew-resize select-none shadow-[var(--shadow)] ring-1 ring-[var(--color-border)]"
-					onMouseMove={(e) => e.buttons === 1 && onMove(e)}
-					onTouchMove={onMove}
-				>
-					<Image
-						src="/images/placeholders/before.png"
-						alt="Avant"
-						fill
-						className="object-cover"
+
+				{/* Grille des projets */}
+				<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+					{projects.map((project) => (
+						<div
+							key={project.id}
+							className="group cursor-pointer"
+							onClick={() => openModal(project.id)}
+						>
+							<div className="relative overflow-hidden rounded-2xl bg-[var(--color-card)] border border-[var(--color-border)] shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow)] transition-all duration-300 hover:-translate-y-1">
+								{/* Mini slider avant/après */}
+								<div className="aspect-[4/3] relative">
+									<BeforeAfterSlider
+										beforeSrc={project.beforeSrc}
+										afterSrc={project.afterSrc}
+										alt={project.alt}
+										size="sm"
+										showLabels={false}
+										className="rounded-t-2xl"
+									/>
+								</div>
+
+								{/* Contenu de la carte */}
+								<div className="p-4">
+									<h3 className="font-semibold text-[var(--color-fg)] mb-1 group-hover:text-[var(--color-accent)] transition-colors">
+										{project.title}
+									</h3>
+									<p className="text-sm text-[var(--color-muted)] leading-relaxed">
+										{project.subtitle}
+									</p>
+								</div>
+
+								{/* Overlay au hover */}
+								<div className="absolute inset-0 bg-[var(--color-accent)]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center">
+									<div className="px-4 py-2 rounded-full bg-[var(--color-card)]/90 backdrop-blur-sm text-sm font-medium text-[var(--color-accent)]">
+										Voir les détails
+									</div>
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+
+				{/* Modal pour les détails du projet */}
+				{selectedProjectData && (
+					<ProjectModal
+						isOpen={!!selectedProject}
+						onClose={closeModal}
+						project={selectedProjectData}
 					/>
-					<div className="ba-after" style={{ width: `${percent}%` }}>
-						<Image
-							src="/images/placeholders/after.png"
-							alt="Après"
-							fill
-							className="object-cover"
-						/>
-					</div>
-					<div
-						role="slider"
-						aria-valuemin={0}
-						aria-valuemax={100}
-						aria-valuenow={percent}
-						tabIndex={0}
-						className="ba-handle"
-						onKeyDown={(e) => {
-							if (e.key === "ArrowLeft") setPercent((p) => Math.max(0, p - 5));
-							if (e.key === "ArrowRight") setPercent((p) => Math.min(100, p + 5));
-						}}
-						onMouseDown={(e) => onMove(e)}
-						onTouchStart={onMove}
-					>
-						<div className="ba-dot">⇆</div>
-					</div>
-				</div>
-				<div className="flex justify-center gap-12 text-xs md:text-sm mt-6 font-medium tracking-wide">
-					<span className="text-[var(--color-muted)]">Avant</span>
-					<span className="text-[var(--color-muted)]">Après</span>
-				</div>
+				)}
 			</div>
 		</section>
 	);

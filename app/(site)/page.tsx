@@ -21,7 +21,6 @@ export default function Page() {
 				<Problems />
 				<Solution />
 				<BeforeAfter />
-				<Gallery />
 				<CaseStudies />
 				<Testimonials />
 				<Offers />

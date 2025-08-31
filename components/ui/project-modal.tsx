@@ -24,12 +24,18 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
 
 		if (isOpen) {
 			document.addEventListener("keydown", handleEscape);
+			// Bloquer le scroll du body
 			document.body.style.overflow = "hidden";
+			document.body.style.position = "fixed";
+			document.body.style.width = "100%";
 		}
 
 		return () => {
 			document.removeEventListener("keydown", handleEscape);
-			document.body.style.overflow = "unset";
+			// Restaurer le scroll du body
+			document.body.style.overflow = "";
+			document.body.style.position = "";
+			document.body.style.width = "";
 		};
 	}, [isOpen, onClose]);
 
@@ -47,7 +53,9 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
 			<div className="relative w-full max-w-6xl max-h-[90vh] bg-[var(--color-card)] rounded-3xl shadow-[var(--shadow)] border border-[var(--color-border)] overflow-hidden">
 				{/* Header */}
 				<div className="flex items-center justify-between p-6 border-b border-[var(--color-border)]">
-					<h2 className="text-2xl md:text-3xl font-bold">{project.title}</h2>
+					<h2 className="text-2xl md:text-3xl font-bold text-[var(--color-fg)]">
+						{project.title}
+					</h2>
 					<button
 						onClick={onClose}
 						className="p-2 rounded-full hover:bg-[var(--color-bg-alt)] transition-colors"
