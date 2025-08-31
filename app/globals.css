@@ -62,8 +62,8 @@ html, body { overflow-x: hidden; }
 /* BEFORE / AFTER SLIDER */
 .ba-wrapper { position:relative; overflow:hidden; border-radius:24px; }
 .ba-after { position:absolute; inset:0; top:0; left:0; height:100%; width:50%; overflow:hidden; transition:width .15s ease; }
-.ba-handle { position:absolute; top:0; left:50%; transform:translateX(-50%); height:100%; width:3px; background:linear-gradient(var(--color-accent),var(--color-accent-alt)); box-shadow:0 0 0 1px #000,0 0 0 4px color-mix(in oklab,var(--color-accent) 30%, transparent); cursor:ew-resize; display:flex; align-items:center; justify-content:center; }
-.ba-dot { width:28px; height:28px; border-radius:50%; background:var(--color-card); border:2px solid var(--color-accent); display:grid; place-items:center; color:var(--color-accent); font-size:12px; font-weight:600; }
+.ba-handle { position:absolute; top:0; height:100%; width:3px; background:linear-gradient(var(--color-accent),var(--color-accent-alt)); box-shadow:0 0 0 1px #000,0 0 0 4px color-mix(in oklab,var(--color-accent) 30%, transparent); cursor:ew-resize; display:flex; align-items:center; justify-content:center; transition:left .15s ease; }
+.ba-dot { width:28px; height:28px; border-radius:50%; background:var(--color-card); border:2px solid var(--color-accent); display:grid; place-items:center; color:var(--color-accent); font-size:12px; font-weight:600; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
 
 /* GALLERY */
 .gallery-card { position:relative; overflow:hidden; border-radius:20px; background:var(--color-card); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; }

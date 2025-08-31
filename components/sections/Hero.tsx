@@ -1,5 +1,5 @@
 import { buttonVariants } from "@/components/ui/button";
-import Image from "next/image";
+import { BeforeAfterSlider } from "@/components/ui/before-after-slider";
 
 export function Hero() {
 	return (
@@ -41,21 +41,31 @@ export function Hero() {
 						Voir les offres
 					</a>
 				</div>
-				<div className="mx-auto max-w-6xl rounded-3xl border border-[var(--color-border)] bg-[var(--color-bg-alt)]/60 backdrop-blur p-5 shadow-[var(--shadow)] relative">
-					<div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] md:text-xs px-3 py-1 rounded-full bg-[var(--color-bg)]/80 border border-[var(--color-border)]">
-						Aperçu
-					</div>
-					<div className="relative aspect-[16/8] w-full rounded-2xl overflow-hidden bg-gradient-to-br from-[var(--color-accent)]/15 via-[var(--color-accent-alt)]/15 to-[var(--color-accent)]/10 flex items-center justify-center">
-						<div className="absolute inset-0 pattern-grid opacity-30" />
-						<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,#fff3,transparent_60%)] mix-blend-overlay" />
-						<div className="text-sm md:text-base font-medium text-[var(--color-muted)]">
-							Mockup / Vidéo (placeholder)
+				<div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+					{/* Texte d'accroche */}
+					<div className="text-left space-y-6">
+						<div className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full btn-outline-gradient text-[10px] md:text-xs font-medium tracking-[.15em] uppercase text-[var(--color-muted)] backdrop-blur-sm">
+							<span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />
+							Exemple concret
 						</div>
-						<Image
-							src="/images/placeholders/after.png"
-							alt="Mockup"
-							fill
-							className="object-cover opacity-0"
+						<h3 className="text-2xl md:text-3xl font-bold">Avant / Après</h3>
+						<p className="text-[var(--color-muted)] leading-relaxed">
+							Découvrez l'impact visuel d'une refonte professionnelle. Glissez pour
+							comparer l'ancien site avec le nouveau.
+						</p>
+					</div>
+
+					{/* Slider interactif */}
+					<div className="relative">
+						<div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] md:text-xs px-3 py-1 rounded-full bg-[var(--color-bg)]/80 border border-[var(--color-border)]">
+							Site Coiffeur
+						</div>
+						<BeforeAfterSlider
+							beforeSrc="/images/screenshots/before/coiffeur.png"
+							afterSrc="/images/screenshots/after/coiffeur.png"
+							alt="Refonte site coiffeur"
+							size="lg"
+							showLabels={true}
 						/>
 					</div>
 				</div>
