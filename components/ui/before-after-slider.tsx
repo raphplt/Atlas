@@ -65,8 +65,8 @@ export function BeforeAfterSlider({
 					>
 						<div className="relative h-full">
 							<Image
-								src={afterSrc}
-								alt={`${alt} - Après`}
+								src={beforeSrc}
+								alt={`${alt} - Avant`}
 								fill
 								className="object-cover"
 								priority={size === "lg"}
@@ -89,8 +89,8 @@ export function BeforeAfterSlider({
 					>
 						<div className="relative h-full">
 							<Image
-								src={beforeSrc}
-								alt={`${alt} - Avant`}
+								src={afterSrc}
+								alt={`${alt} - Après`}
 								fill
 								className="object-cover"
 								priority={size === "lg"}

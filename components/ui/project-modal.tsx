@@ -73,7 +73,7 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
 		>
 			<DialogContent
 				className="
-    p-0 gap-0 overflow-hidden rounded-3xl border border-[var(--color-border)]  bg-[var(--color-card)] shadow-[var(--shadow)] w-[min(98vw,1600px)] xl:w-[min(95vw,1800px)] 2xl:w-[min(92vw,2000px)]
+    p-0 gap-0 overflow-hidden rounded-3xl border border-[var(--color-border)]  bg-[var(--color-card)] shadow-[var(--shadow)] w-[min(99vw,1800px)] xl:w-[min(98vw,2000px)] 2xl:w-[min(96vw,2200px)]
   "
 			>
 				{/* Header */}
@@ -82,15 +82,17 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
 						<DialogTitle className="text-2xl md:text-3xl font-bold text-[var(--color-fg)]">
 							{project.title}
 						</DialogTitle>
-						{/* Bouton plein écran seulement */}
-						<button
-							onClick={() => setShowShowcase(true)}
-							className="p-2 rounded-full hover:bg-[var(--color-bg-alt)] transition-colors"
-							aria-label="Voir en plein écran"
-							title="Voir en plein écran"
-						>
-							<Maximize2 className="w-5 h-5 text-[var(--color-muted)]" />
-						</button>
+						{/* Bouton plein écran avec meilleur alignement */}
+						<div className="flex items-center">
+							<button
+								onClick={() => setShowShowcase(true)}
+								className="p-2 rounded-full hover:bg-[var(--color-bg-alt)] transition-colors"
+								aria-label="Voir en plein écran"
+								title="Voir en plein écran"
+							>
+								<Maximize2 className="w-5 h-5 text-[var(--color-muted)]" />
+							</button>
+						</div>
 					</div>
 				</DialogHeader>
 				{/* Content */}
