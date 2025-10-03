@@ -1,0 +1,357 @@
+{
+    "navigation": {
+        "home": "Accueil",
+        "portfolio": "Réalisations",
+        "about": "À propos",
+        "testimonials": "Témoignages",
+        "offers": "Offres",
+        "process": "Process",
+        "contact": "Contact"
+    },
+    "hero": {
+        "badge": "Sites vitrines premium",
+        "title": "Transformez votre site en machine à générer des clients",
+        "subtitle": "Sites web optimisés pour artisans et services locaux. +50% de demandes de devis en moyenne. Livraison en 5 jours.",
+        "ctaPrimary": "Obtenir un diagnostic gratuit",
+        "ctaSecondary": "Voir un exemple en 30s",
+        "socialProof": {
+            "clients": "124+ artisans nous font confiance",
+            "rating": "4.9/5",
+            "reviews": "(87 avis)"
+        },
+        "trustIndicators": {
+            "0": "Sans engagement",
+            "1": "Réponse < 24h",
+            "2": "Paiement en 2x possible"
+        },
+        "solutions": {
+            "credibility": {
+                "title": "Crédibilité instantanée",
+                "description": "Design premium qui inspire confiance dès la première visite."
+            },
+            "conversion": {
+                "title": "Conversion maximisée",
+                "description": "Chaque élément est pensé pour transformer vos visiteurs en clients."
+            },
+            "visibility": {
+                "title": "Visibilité locale boostée",
+                "description": "Optimisation SEO locale pour être trouvé par vos clients."
+            }
+        }
+    },
+    "problems": {
+        "title": "Ce qui vous freine",
+        "subtitle": "Des freins faciles à lever qui pénalisent votre crédibilité et vos conversions.",
+        "items": {
+            "mobile": {
+                "title": "Site non mobile",
+                "description": "60%+ de vos visiteurs quittent avant 5s."
+            },
+            "quotes": {
+                "title": "Aucun devis rapide",
+                "description": "Vous perdez les prospects chauds."
+            },
+            "local": {
+                "title": "Invisible en local",
+                "description": "Les clients proches ne vous trouvent pas."
+            }
+        }
+    },
+    "about": {
+        "title": "Pourquoi choisir Raphaël plutôt qu'une agence ?",
+        "subtitle": "Développeur Full Stack avec 2+ ans d'expérience en startup et co-fondateur de projets SaaS.",
+        "description": "Étudiant en Master à l'ETNA et co-fondateur de plusieurs projets (Melios, Quori), je crée Atlas pour apporter aux artisans la même qualité technique qu'aux startups tech. Plus de 2 ans d'expérience en développement from scratch jusqu'à la production.",
+        "expertise": {
+            "technical": {
+                "title": "Stack technique moderne",
+                "description": "React/Next.js, NestJS, PostgreSQL, React Native. Applications déployées sur App Store & Google Play Store."
+            },
+            "conversion": {
+                "title": "Expérience startup & produit",
+                "description": "Co-fondateur de Melios (+150 beta-testers) et Quori (SaaS B2B). Vision produit couplée à l'expertise technique."
+            },
+            "approach": {
+                "title": "Approche développement & entrepreneuriat",
+                "description": "Chaque projet est pensé comme un produit : architecture solide, performance, et surtout ROI business tangible."
+            }
+        },
+        "skillsTitle": "Technologies maîtrisées",
+        "skills": {
+            "0": "React & Next.js 15",
+            "1": "NestJS & Node.js",
+            "2": "PostgreSQL & MongoDB",
+            "3": "React Native & Expo",
+            "4": "Docker & CI/CD",
+            "5": "Firebase & DevOps"
+        },
+        "name": "Raphaël Plassart",
+        "jobTitle": "Développeur Full Stack & Mobile",
+        "photoPlaceholder": "Photo professionnelle",
+        "cta": "Discutons de votre projet",
+        "ctaSecondary": "Voir mes réalisations"
+    },
+    "portfolio": {
+        "title": "Nos réalisations",
+        "subtitle": "L'impact concret d'une refonte structurée sur différents secteurs d'activité.",
+        "tabs": {
+            "gallery": "Galerie",
+            "caseStudies": "Études de cas"
+        },
+        "viewDetails": "Voir les détails",
+        "benefitsTitle": "Bénéfices concrets",
+        "resultsTitle": "Résultats mesurables",
+        "metrics": {
+            "visits": "Visites",
+            "contacts": "Contacts"
+        }
+    },
+    "offers": {
+        "title": "Offres adaptées à votre besoin",
+        "subtitle": "Chaque formule est conçue pour maximiser votre retour sur investissement. Livraison rapide garantie.",
+        "popular": "Le plus choisi",
+        "bestValue": "Meilleur rapport",
+        "limitedOffer": "⚡ Offre de lancement — Réservez maintenant",
+        "perProject": "HT",
+        "guarantee": "💯 Garantie satisfait ou remboursé sous 30 jours",
+        "cta": "Choisir cette formule",
+        "packages": {
+            "essential": {
+                "name": "Essentiel",
+                "description": "Pour démarrer rapidement avec une présence en ligne professionnelle",
+                "price": "490€",
+                "originalPrice": "690€",
+                "features": {
+                    "0": "Site one-page responsive",
+                    "1": "Design moderne sur mesure",
+                    "2": "Formulaire de contact optimisé",
+                    "3": "SEO de base inclus",
+                    "4": "Livraison en 3-5 jours"
+                }
+            },
+            "standard": {
+                "name": "Performance",
+                "description": "L'offre complète pour générer des leads et dominer localement",
+                "price": "790€",
+                "originalPrice": "1190€",
+                "features": {
+                    "0": "Tout de l'offre Essentiel",
+                    "1": "Jusqu'à 5 pages personnalisées",
+                    "2": "Intégration Google Maps",
+                    "3": "Analytics & tracking avancé",
+                    "4": "Optimisation performance (Core Web Vitals)",
+                    "5": "Livraison en 5-7 jours"
+                }
+            },
+            "premium": {
+                "name": "Excellence",
+                "description": "La solution tout-en-un pour dominer votre marché local",
+                "price": "1190€",
+                "originalPrice": "1790€",
+                "features": {
+                    "0": "Tout de l'offre Performance",
+                    "1": "Blog intégré pour votre SEO",
+                    "2": "Rédaction de contenu optimisé",
+                    "3": "Fiche Google Business Profile",
+                    "4": "Support prioritaire 1 mois",
+                    "5": "Formation complète CMS"
+                }
+            }
+        }
+    },
+    "guarantee": {
+        "title": "Notre engagement envers vous",
+        "subtitle": "Votre satisfaction est notre priorité absolue. Nous prenons tous les risques pour que vous n'en ayez aucun.",
+        "items": {
+            "moneyBack": {
+                "title": "Satisfait ou remboursé",
+                "description": "30 jours pour changer d'avis. Remboursement intégral sans condition."
+            },
+            "delivery": {
+                "title": "Livraison garantie",
+                "description": "Respect strict des délais annoncés ou remboursement partiel."
+            },
+            "revisions": {
+                "title": "Révisions illimitées",
+                "description": "Modifications gratuites jusqu'à satisfaction complète du projet."
+            },
+            "support": {
+                "title": "Support réactif",
+                "description": "Réponse sous 24h pour toutes vos questions et demandes."
+            }
+        }
+    },
+    "process": {
+        "title": "Étapes",
+        "subtitle": "Méthode courte, structurée et itérative — toujours orientée résultat.",
+        "steps": {
+            "call": {
+                "title": "Call gratuit",
+                "description": "On cerne l'activité, objectifs, différenciation.",
+                "duration": "30 min"
+            },
+            "quote": {
+                "title": "Devis clair",
+                "description": "Portée définie, plan du site, timing confirmé.",
+                "duration": "< 24h"
+            },
+            "creation": {
+                "title": "Création",
+                "description": "Design + intégration + contenus. Points d'étape.",
+                "duration": "5–7 j"
+            },
+            "launch": {
+                "title": "Mise en ligne",
+                "description": "Tests, performance, SEO local, suivi analytics.",
+                "duration": "1 j"
+            }
+        },
+        "launchNote": "Mise en ligne + suivi initial",
+        "totalDuration": "Durée totale typique: ≤ 10 jours"
+    },
+    "testimonials": {
+        "title": "Ils en parlent",
+        "subtitle": "Résultats perçus par nos clients",
+        "testimonials": {
+            "0": {
+                "name": "Mickaël Roussel",
+                "role": "Menuisier",
+                "text": "Refonte impeccable : image plus pro, et beaucoup plus d'appels."
+            },
+            "1": {
+                "name": "Karima Bensaïd",
+                "role": "Plombière",
+                "text": "Site moderne livré en une semaine, mes clients trouvent enfin mes services facilement."
+            },
+            "2": {
+                "name": "Didier Lemoine",
+                "role": "Peintre en bâtiment",
+                "text": "Résultats rapides : +30% de demandes de devis depuis la mise en ligne."
+            },
+            "3": {
+                "name": "Claire Doucet",
+                "role": "Paysagiste",
+                "text": "Process fluide, rendu très qualitatif. Mes clients me prennent plus au sérieux."
+            }
+        },
+        "marquee": {
+            "0": "+30% demandes",
+            "1": "Crédibilité renforcée",
+            "2": "Process rapide",
+            "3": "Design premium",
+            "4": "Optimisation locale"
+        }
+    },
+    "faq": {
+        "title": "FAQ",
+        "subtitle": "Réponses aux questions fréquentes. Utilisez la recherche pour filtrer.",
+        "searchPlaceholder": "Rechercher une question (ex: paiement, google...)",
+        "expandAll": "Tout ouvrir",
+        "collapseAll": "Replier tout",
+        "noResults": "Aucun résultat. Essayez un autre terme.",
+        "stillHaveQuestion": "Toujours une question ?",
+        "contactMe": "Contactez-moi",
+        "questions": {
+            "0": {
+                "question": "Quels délais pour la création d'un site ?",
+                "answer": "Un site vitrine complet est livré en 7 à 10 jours maximum, selon la réactivité pour valider les contenus (textes, photos, logo). Le processus est rapide et structuré pour éviter les retards."
+            },
+            "1": {
+                "question": "Quels contenus dois-je fournir ?",
+                "answer": "Idéalement : votre logo, quelques photos de vos réalisations, la liste de vos services, vos coordonnées. Si vous n'avez pas tout, je peux vous proposer des textes optimisés et des images libres de droits."
+            },
+            "2": {
+                "question": "Dois-je gérer l'hébergement et le nom de domaine ?",
+                "answer": "Non, je m'occupe de tout. Je vous accompagne pour réserver un nom de domaine à votre nom et configurer un hébergement fiable. Vous êtes propriétaire du site et gardez un accès complet."
+            },
+            "3": {
+                "question": "Le site sera-t-il visible sur Google ?",
+                "answer": "Oui. Chaque site est livré optimisé pour le référencement local : structure claire, balises SEO, rapidité et compatibilité mobile. De plus, je peux créer ou améliorer votre fiche Google Business Profile pour renforcer votre visibilité locale."
+            },
+            "4": {
+                "question": "Puis-je mettre à jour mon site moi-même ?",
+                "answer": "Oui. Le site est conçu pour être simple à modifier. Je vous fournis un accès administrateur et une mini-formation pour faire des changements basiques (texte, photos, prix)."
+            },
+            "5": {
+                "question": "Proposez-vous un suivi après la mise en ligne ?",
+                "answer": "Oui. Une option de maintenance mensuelle est disponible (30€/mois) : mises à jour techniques, sauvegardes, sécurité et petites modifications. Cela vous permet d'avoir un site toujours à jour et sécurisé."
+            },
+            "6": {
+                "question": "Comment se passe le paiement ?",
+                "answer": "Le paiement est simple et transparent : acompte de 30% au démarrage, solde à la livraison. Vous pouvez aussi régler en 2 fois sans frais. Pas de coûts cachés."
+            },
+            "7": {
+                "question": "Que se passe-t-il si je n'ai jamais eu de site ?",
+                "answer": "C'est fréquent, et je m'occupe de tout : réservation du domaine, hébergement, création du site, configuration email si besoin. Vous repartez avec une solution clé en main, prête à générer des clients."
+            }
+        }
+    },
+    "contact": {
+        "title": "Transformez plus de visites en clients.",
+        "subtitle": "Présentez activité & objectifs et recevez un plan d'amélioration concret.",
+        "benefits": {
+            "diagnostic": {
+                "label": "Diagnostic gratuit",
+                "description": "Analyse de votre présence actuelle."
+            },
+            "recommendations": {
+                "label": "Pistes concrètes",
+                "description": "Recommandations actionnables."
+            },
+            "response": {
+                "label": "Réponse ≤24h",
+                "description": "Retour rapide garanti."
+            },
+            "commitment": {
+                "label": "Sans engagement",
+                "description": "Vous décidez ensuite."
+            }
+        },
+        "form": {
+            "title": "Formulaire de contact",
+            "stepTitle": "Commencez votre diagnostic gratuit",
+            "stepSubtitle": "Remplissez ces 3 infos pour recevoir votre analyse personnalisée",
+            "firstName": "Prénom",
+            "company": "Entreprise",
+            "email": "Email",
+            "phone": "Téléphone",
+            "phoneOptional": "(optionnel)",
+            "project": "Projet",
+            "budget": "Budget estimé",
+            "hasSite": "Avez-vous déjà un site ?",
+            "yes": "Oui",
+            "no": "Non",
+            "message": "Message",
+            "messagePlaceholder": "Décrivez votre activité, l'objectif, l'urgence...",
+            "submit": "Réserver un appel gratuit de 15 min",
+            "submitting": "Envoi...",
+            "honeypot": "Ne pas remplir",
+            "projectTypes": {
+                "showcase": "Site vitrine",
+                "redesign": "Refonte",
+                "optimization": "Optimisation / SEO local",
+                "other": "Autre"
+            },
+            "budgetRanges": {
+                "under1000": "< 1000€",
+                "1000to2000": "1000–2000€",
+                "over2000": "> 2000€",
+                "tbd": "À définir"
+            },
+            "consent": "En envoyant ce formulaire vous acceptez un contact email / téléphone. Aucune newsletter automatique.",
+            "badges": {
+                "0": "Sécurisé",
+                "1": "RGPD",
+                "2": "Zéro spam"
+            },
+            "successMessage": "Message envoyé. Réponse sous 24h ✅"
+        }
+    },
+    "language": {
+        "switch": "Changer de langue",
+        "french": "Français",
+        "english": "English"
+    },
+    "stickyCta": {
+        "cta": "Diagnostic gratuit →"
+    }
+}

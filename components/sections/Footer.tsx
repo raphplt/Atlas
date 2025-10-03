@@ -1,17 +1,11 @@
-import Image from "next/image";
+import Logo from "@/components/Logo";
 
 export function Footer() {
 	return (
 		<footer className="mt-auto border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]/40 backdrop-blur-sm">
 			<div className="container py-16 footer-grid text-sm">
 				<div className="space-y-4 max-w-sm">
-					<Image
-						src="/images/Logo.png"
-						alt="Atlas"
-						width={120}
-						height={40}
-						className="object-contain w-20 h-20"
-					/>
+					<Logo size={8} />
 					<h3 className="font-semibold text-base">Atlas</h3>
 					<p className="text-[var(--color-muted)] leading-relaxed">
 						Sites vitrines modernes et performants pour artisans & services locaux.
@@ -47,6 +41,11 @@ export function Footer() {
 							Légal
 						</h4>
 						<ul className="space-y-2">
+							<li>
+								<a href="/about" className="hover:text-[var(--color-fg)] transition">
+									À propos
+								</a>
+							</li>
 							<li>
 								<a
 									href="/legal/mentions-legales"

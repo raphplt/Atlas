@@ -1,0 +1,390 @@
+{
+    "navigation": {
+        "home": "Home",
+        "portfolio": "Portfolio",
+        "about": "About",
+        "testimonials": "Testimonials",
+        "offers": "Offers",
+        "process": "Process",
+        "contact": "Contact"
+    },
+    "hero": {
+        "badge": "Premium showcase sites",
+        "title": "Transform your website into a client-generating machine",
+        "subtitle": "Optimized websites for craftsmen and local services. +50% quote requests on average. Delivered in 5 days.",
+        "ctaPrimary": "Get a free diagnostic",
+        "ctaSecondary": "See an example in 30s",
+        "socialProof": {
+            "clients": "124+ craftsmen trust us",
+            "rating": "4.9/5",
+            "reviews": "(87 reviews)"
+        },
+        "trustIndicators": {
+            "0": "No commitment",
+            "1": "Response < 24h",
+            "2": "2x payment available"
+        },
+        "solutions": {
+            "credibility": {
+                "title": "Instant credibility",
+                "description": "Premium design that inspires trust from the first visit."
+            },
+            "conversion": {
+                "title": "Maximized conversion",
+                "description": "Every element is designed to turn your visitors into clients."
+            },
+            "visibility": {
+                "title": "Boosted local visibility",
+                "description": "Local SEO optimization to be found by your clients."
+            }
+        }
+    },
+    "problems": {
+        "title": "What's holding you back",
+        "subtitle": "Easy-to-remove barriers that penalize your credibility and conversions.",
+        "items": {
+            "mobile": {
+                "title": "Non-mobile site",
+                "description": "60%+ of your visitors leave within 5s."
+            },
+            "quotes": {
+                "title": "No quick quotes",
+                "description": "You lose hot prospects."
+            },
+            "local": {
+                "title": "Invisible locally",
+                "description": "Nearby clients can't find you."
+            }
+        }
+    },
+    "about": {
+        "title": "Why choose Atlas over an agency?",
+        "subtitle": "Specialist web development & conversion optimization for craftsmen and local services.",
+        "description": "After years of experience in enterprise web development, I created Atlas to fill a gap: websites truly optimized for craftsmen and local services. Too many agencies create generic sites without understanding local business challenges.",
+        "expertise": {
+            "technical": {
+                "title": "Modern technical expertise",
+                "description": "Next.js, React, technical SEO, performance. Professional stack for lasting results."
+            },
+            "conversion": {
+                "title": "Conversion optimization",
+                "description": "Every line of code designed to turn your visitors into clients. Data analysis and continuous testing."
+            },
+            "approach": {
+                "title": "Artisanal approach",
+                "description": "Every project is unique. No templates, custom solutions adapted to your activity and local market."
+            }
+        },
+        "skillsTitle": "Mastered technologies",
+        "skills": {
+            "0": "Modern development",
+            "1": "Technical SEO",
+            "2": "Performance & speed",
+            "3": "Mobile-first design",
+            "4": "Analytics & tracking",
+            "5": "Conversion optimization"
+        },
+        "name": "Atlas",
+        "jobTitle": "Freelance Web Developer",
+        "photoPlaceholder": "Photo coming soon",
+        "cta": "Let's discuss your project",
+        "ctaSecondary": "See my work"
+    },
+    "about": {
+        "title": "Why choose Raphaël over an agency?",
+        "subtitle": "Full Stack Developer with 2+ years experience in startups and co-founder of SaaS projects.",
+        "description": "Masters student at ETNA and co-founder of several projects (Melios, Quori), I created Atlas to bring artisans the same technical quality as tech startups. Over 2 years experience in development from scratch to production.",
+        "expertise": {
+            "technical": {
+                "title": "Modern technical stack",
+                "description": "React/Next.js, NestJS, PostgreSQL, React Native. Apps deployed on App Store & Google Play Store."
+            },
+            "conversion": {
+                "title": "Startup & product experience",
+                "description": "Co-founder of Melios (+150 beta-testers) and Quori (B2B SaaS). Product vision coupled with technical expertise."
+            },
+            "approach": {
+                "title": "Development & entrepreneurship approach",
+                "description": "Every project is thought of as a product: solid architecture, performance, and above all tangible business ROI."
+            }
+        },
+        "skillsTitle": "Mastered technologies",
+        "skills": {
+            "0": "React & Next.js 15",
+            "1": "NestJS & Node.js",
+            "2": "PostgreSQL & MongoDB",
+            "3": "React Native & Expo",
+            "4": "Docker & CI/CD",
+            "5": "Firebase & DevOps "
+        },
+        "name": "Raphaël Plassart",
+        "jobTitle": "Full Stack & Mobile Developer",
+        "photoPlaceholder": "Professional photo",
+        "cta": "Let's discuss your project",
+        "ctaSecondary": "See my work"
+    },
+    "portfolio": {
+        "title": "Our achievements",
+        "subtitle": "The concrete impact of a structured redesign across different business sectors.",
+        "tabs": {
+            "gallery": "Gallery",
+            "caseStudies": "Case studies"
+        },
+        "viewDetails": "View details",
+        "benefitsTitle": "Concrete benefits",
+        "resultsTitle": "Measurable results",
+        "metrics": {
+            "visits": "Visits",
+            "contacts": "Contacts"
+        }
+    },
+    "offers": {
+        "title": "Plans tailored to your needs",
+        "subtitle": "Each plan is designed to maximize your return on investment. Fast delivery guaranteed.",
+        "popular": "Most chosen",
+        "bestValue": "Best value",
+        "limitedOffer": "⚡ Launch offer — Book now",
+        "perProject": "excl. VAT",
+        "guarantee": "💯 30-day money-back guarantee",
+        "cta": "Choose this plan",
+        "packages": {
+            "essential": {
+                "name": "Essential",
+                "description": "Start quickly with a professional online presence",
+                "price": "€490",
+                "originalPrice": "€690",
+                "features": {
+                    "0": "Responsive one-page site",
+                    "1": "Custom modern design",
+                    "2": "Optimized contact form",
+                    "3": "Basic SEO included",
+                    "4": "3-5 days delivery"
+                }
+            },
+            "standard": {
+                "name": "Performance",
+                "description": "Complete offer to generate leads and dominate locally",
+                "price": "€790",
+                "originalPrice": "€1190",
+                "features": {
+                    "0": "Everything from Essential",
+                    "1": "Up to 5 custom pages",
+                    "2": "Google Maps integration",
+                    "3": "Advanced analytics & tracking",
+                    "4": "Performance optimization (Core Web Vitals)",
+                    "5": "5-7 days delivery"
+                }
+            },
+            "premium": {
+                "name": "Excellence",
+                "description": "All-in-one solution to dominate your local market",
+                "price": "€1190",
+                "originalPrice": "€1790",
+                "features": {
+                    "0": "Everything from Performance",
+                    "1": "Integrated blog for SEO",
+                    "2": "Optimized content writing",
+                    "3": "Google Business Profile setup",
+                    "4": "1-month priority support",
+                    "5": "Complete CMS training"
+                }
+            }
+        }
+    },
+    "guarantee": {
+        "title": "Our commitment to you",
+        "subtitle": "Your satisfaction is our absolute priority. We take all the risks so you don't have to.",
+        "items": {
+            "moneyBack": {
+                "title": "Money-back guarantee",
+                "description": "30 days to change your mind. Full refund, no questions asked."
+            },
+            "delivery": {
+                "title": "Guaranteed delivery",
+                "description": "Strict adherence to announced deadlines or partial refund."
+            },
+            "revisions": {
+                "title": "Unlimited revisions",
+                "description": "Free modifications until complete project satisfaction."
+            },
+            "support": {
+                "title": "Responsive support",
+                "description": "Response within 24h for all your questions and requests."
+            }
+        }
+    },
+    "process": {
+        "title": "Steps",
+        "subtitle": "Short, structured and iterative method — always results-oriented.",
+        "steps": {
+            "call": {
+                "title": "Free call",
+                "description": "We identify the activity, objectives, differentiation.",
+                "duration": "30 min"
+            },
+            "quote": {
+                "title": "Clear quote",
+                "description": "Scope defined, site plan, timing confirmed.",
+                "duration": "< 24h"
+            },
+            "creation": {
+                "title": "Creation",
+                "description": "Design + integration + content. Checkpoints.",
+                "duration": "5–7 days"
+            },
+            "launch": {
+                "title": "Launch",
+                "description": "Tests, performance, local SEO, analytics tracking.",
+                "duration": "1 day"
+            }
+        },
+        "launchNote": "Launch + initial follow-up",
+        "totalDuration": "Typical total duration: ≤ 10 days"
+    },
+    "testimonials": {
+        "title": "What they say",
+        "subtitle": "Results perceived by our clients",
+        "testimonials": {
+            "0": {
+                "name": "Mickaël Roussel",
+                "role": "Carpenter",
+                "text": "Impeccable redesign: more professional image, and many more calls."
+            },
+            "1": {
+                "name": "Karima Bensaïd",
+                "role": "Plumber",
+                "text": "Modern site delivered in a week, my clients finally find my services easily."
+            },
+            "2": {
+                "name": "Didier Lemoine",
+                "role": "Building painter",
+                "text": "Quick results: +30% quote requests since launch."
+            },
+            "3": {
+                "name": "Claire Doucet",
+                "role": "Landscaper",
+                "text": "Smooth process, very qualitative result. My clients take me more seriously."
+            }
+        },
+        "marquee": {
+            "0": "+30% requests",
+            "1": "Enhanced credibility",
+            "2": "Fast process",
+            "3": "Premium design",
+            "4": "Local optimization"
+        }
+    },
+    "faq": {
+        "title": "FAQ",
+        "subtitle": "Answers to frequently asked questions. Use search to filter.",
+        "searchPlaceholder": "Search a question (ex: payment, google...)",
+        "expandAll": "Expand all",
+        "collapseAll": "Collapse all",
+        "noResults": "No results. Try another term.",
+        "stillHaveQuestion": "Still have a question?",
+        "contactMe": "Contact me",
+        "questions": {
+            "0": {
+                "question": "What are the deadlines for creating a website?",
+                "answer": "A complete showcase site is delivered in 7 to 10 days maximum, depending on responsiveness to validate content (texts, photos, logo). The process is fast and structured to avoid delays."
+            },
+            "1": {
+                "question": "What content should I provide?",
+                "answer": "Ideally: your logo, some photos of your work, the list of your services, your contact details. If you don't have everything, I can provide optimized texts and royalty-free images."
+            },
+            "2": {
+                "question": "Do I need to manage hosting and domain name?",
+                "answer": "No, I take care of everything. I help you reserve a domain name in your name and set up reliable hosting. You own the site and keep full access."
+            },
+            "3": {
+                "question": "Will the site be visible on Google?",
+                "answer": "Yes. Each site is delivered optimized for local SEO: clear structure, SEO tags, speed and mobile compatibility. Additionally, I can create or improve your Google Business Profile to strengthen your local visibility."
+            },
+            "4": {
+                "question": "Can I update my site myself?",
+                "answer": "Yes. The site is designed to be simple to modify. I provide you with admin access and mini-training to make basic changes (text, photos, prices)."
+            },
+            "5": {
+                "question": "Do you offer follow-up after launch?",
+                "answer": "Yes. A monthly maintenance option is available (€30/month): technical updates, backups, security and small modifications. This allows you to have a site that's always up to date and secure."
+            },
+            "6": {
+                "question": "How does payment work?",
+                "answer": "Payment is simple and transparent: 30% deposit at start, balance on delivery. You can also pay in 2 installments without fees. No hidden costs."
+            },
+            "7": {
+                "question": "What happens if I've never had a website?",
+                "answer": "It's common, and I take care of everything: domain reservation, hosting, site creation, email configuration if needed. You leave with a turnkey solution, ready to generate clients."
+            }
+        }
+    },
+    "contact": {
+        "title": "Transform more visits into clients.",
+        "subtitle": "Present your activity & objectives and receive a concrete improvement plan.",
+        "benefits": {
+            "diagnostic": {
+                "label": "Free diagnostic",
+                "description": "Analysis of your current presence."
+            },
+            "recommendations": {
+                "label": "Concrete leads",
+                "description": "Actionable recommendations."
+            },
+            "response": {
+                "label": "Response ≤24h",
+                "description": "Guaranteed quick response."
+            },
+            "commitment": {
+                "label": "No commitment",
+                "description": "You decide afterwards."
+            }
+        },
+        "form": {
+            "title": "Contact form",
+            "stepTitle": "Start your free diagnostic",
+            "stepSubtitle": "Fill in these 3 details to receive your personalized analysis",
+            "firstName": "First name",
+            "company": "Company",
+            "email": "Email",
+            "phone": "Phone",
+            "phoneOptional": "(optional)",
+            "project": "Project",
+            "budget": "Estimated budget",
+            "hasSite": "Do you already have a website?",
+            "yes": "Yes",
+            "no": "No",
+            "message": "Message",
+            "messagePlaceholder": "Describe your activity, objective, urgency...",
+            "submit": "Book a free 15-minute call",
+            "submitting": "Sending...",
+            "honeypot": "Do not fill",
+            "projectTypes": {
+                "showcase": "Showcase site",
+                "redesign": "Redesign",
+                "optimization": "Optimization / Local SEO",
+                "other": "Other"
+            },
+            "budgetRanges": {
+                "under1000": "< €1000",
+                "1000to2000": "€1000–2000",
+                "over2000": "> €2000",
+                "tbd": "To be defined"
+            },
+            "consent": "By sending this form you accept email/phone contact. No automatic newsletter.",
+            "badges": {
+                "0": "Secure",
+                "1": "GDPR",
+                "2": "Zero spam"
+            },
+            "successMessage": "Message sent. Response within 24h ✅"
+        }
+    },
+    "language": {
+        "switch": "Change language",
+        "french": "Français",
+        "english": "English"
+    },
+    "stickyCta": {
+        "cta": "Free diagnostic →"
+    }
+}

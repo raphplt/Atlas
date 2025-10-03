@@ -1,6 +1,11 @@
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import { ThemeScript } from "@/components/theme/ThemeScript";
+import { Navbar } from "@/components/Nav";
+import { Footer } from "@/components/sections/Footer";
+import { StickyCTA } from "@/components/StickyCTA";
+import { NextIntlClientProvider } from "next-intl";
+import { GlassFilter } from "@/components/ui/liquid-glass";
 
 export default function RootLayout({
 	children,
@@ -13,8 +18,14 @@ export default function RootLayout({
 				<ThemeScript />
 			</head>
 			<body className="font-sans min-h-screen flex flex-col" data-theme="light">
-				<Toaster />
-				{children}
+				<GlassFilter />
+				<NextIntlClientProvider>
+					<Toaster />
+					<Navbar />
+					{children}
+					<Footer />
+					<StickyCTA />
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);

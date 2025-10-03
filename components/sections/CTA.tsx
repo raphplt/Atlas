@@ -2,16 +2,25 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { track } from "@/lib/analytics";
-import { PhoneCall, Timer, ShieldCheck, Sparkles } from "lucide-react";
+import {
+	PhoneCall,
+	Timer,
+	ShieldCheck,
+	Sparkles,
+	CheckCircle2,
+} from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, ContactInput } from "@/lib/validators";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { useTranslations } from "next-intl";
 
 export function CTA() {
 	const router = useRouter();
 	const [serverError, setServerError] = useState<string | null>(null);
+	const [showFullForm, setShowFullForm] = useState(false);
+	const t = useTranslations("contact");
 	const form = useForm<ContactInput>({
 		resolver: zodResolver(contactSchema),
 		defaultValues: {
@@ -31,9 +40,21 @@ export function CTA() {
 		handleSubmit,
 		formState: { errors, isSubmitting },
 		reset,
+		watch,
 	} = form;
 
-		async function onSubmit(values: ContactInput) {
+	// Auto-expand si les champs de base sont remplis
+	const firstName = watch("firstName");
+	const email = watch("email");
+	const company = watch("company");
+
+	React.useEffect(() => {
+		if (firstName && email && company && !showFullForm) {
+			setShowFullForm(true);
+		}
+	}, [firstName, email, company, showFullForm]);
+
+	async function onSubmit(values: ContactInput) {
 		setServerError(null);
 		try {
 			const res = await fetch("/api/contact", {
@@ -46,12 +67,12 @@ export function CTA() {
 				throw new Error(body.error || "Erreur inconnue");
 			}
 			reset();
-				track("contact-success");
-				toast.success("Message envoyé. Réponse sous 24h ✅");
+			track("contact-success");
+			toast.success(t("form.successMessage"));
 		} catch (e: any) {
-				const msg = e.message || "Erreur serveur";
-				setServerError(msg);
-				toast.error(msg);
+			const msg = e.message || "Erreur serveur";
+			setServerError(msg);
+			toast.error(msg);
 		}
 	}
 
@@ -69,42 +90,44 @@ export function CTA() {
 					{/* Left content */}
 					<div className="space-y-10 max-w-xl">
 						<div className="space-y-6">
-							<h2 className="h2 leading-tight">
-								Transformez plus de visites en clients.
+							<h2 className="h2 leading-tight motion-fade-in motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
+								{t("title")}
 							</h2>
-							<p className="text-lg text-[var(--color-muted)]">
-								Présentez activité & objectifs et recevez un plan d'amélioration
-								concret.
+							<p className="text-lg text-[var(--color-muted)] motion-slide-up motion-delay-100 motion-duration-1000 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
+								{t("subtitle")}
 							</p>
 						</div>
 						<div className="grid gap-6 sm:grid-cols-2">
 							{[
 								{
 									icon: PhoneCall,
-									label: "Diagnostic gratuit",
-									desc: "Analyse de votre présence actuelle.",
+									label: t("benefits.diagnostic.label"),
+									desc: t("benefits.diagnostic.description"),
 								},
 								{
 									icon: Sparkles,
-									label: "Pistes concrètes",
-									desc: "Recommandations actionnables.",
+									label: t("benefits.recommendations.label"),
+									desc: t("benefits.recommendations.description"),
 								},
 								{
 									icon: Timer,
-									label: "Réponse ≤24h",
-									desc: "Retour rapide garanti.",
+									label: t("benefits.response.label"),
+									desc: t("benefits.response.description"),
 								},
 								{
 									icon: ShieldCheck,
-									label: "Sans engagement",
-									desc: "Vous décidez ensuite.",
+									label: t("benefits.commitment.label"),
+									desc: t("benefits.commitment.description"),
 								},
-							].map((b) => (
-								<div key={b.label} className="flex gap-3 items-start">
-									<div className="icon-circle shrink-0 size-11 flex items-center justify-center">
-										<b.icon className="size-4" />
+							].map((b, index) => (
+								<div
+									key={b.label}
+									className="flex gap-3 items-start motion-fade-in motion-delay-200 motion-intersect-start motion-intersect-end motion-intersect-threshold-50"
+								>
+									<div className="icon-circle shrink-0 size-11 flex items-center justify-center motion-scale-in motion-delay-300">
+										<b.icon className="size-4 motion-wiggle motion-delay-400" />
 									</div>
-									<div className="text-sm leading-relaxed">
+									<div className="text-sm leading-relaxed motion-slide-up motion-delay-500">
 										<p className="font-medium text-[var(--color-fg)]">{b.label}</p>
 										<p className="text-[11px] text-[var(--color-muted)] mt-0.5">
 											{b.desc}
@@ -113,86 +136,101 @@ export function CTA() {
 								</div>
 							))}
 						</div>
-						<div className="flex flex-wrap gap-4 pt-4 border-t border-[var(--color-border)] text-[11px] uppercase tracking-wide text-[var(--color-muted)]">
-							{[
-								"≤ 10 jours",
-								"Design premium",
-								"Mobile-first",
-								"Optimisation locale",
-							].map((t) => (
-								<span
-									key={t}
-									className="px-3 py-1 rounded-full border border-[var(--color-border)] bg-[var(--color-card)]/60"
-								>
-									{t}
-								</span>
-							))}
-						</div>
 					</div>
 					{/* Form */}
 					<div className="relative group">
 						<div
-							className="absolute -inset-[2px] rounded-3xl bg-gradient-to-br from-[var(--color-accent)]/60 via-[var(--color-accent)]/10 to-[var(--color-accent-alt)]/60 opacity-70 blur-xl group-hover:opacity-90 transition"
+							className="absolute -inset-[2px] rounded-3xl bg-gradient-to-br from-[var(--color-accent)]/60 via-[var(--color-accent)]/10 to-[var(--color-accent-alt)]/60 opacity-70 blur-xl group-hover:opacity-90 transition motion-scale-in motion-delay-600"
 							aria-hidden="true"
 						/>
 						<div
-							className="absolute inset-0 rounded-3xl border border-[var(--color-border)] pointer-events-none [mask:linear-gradient(#000,transparent_70%)]"
+							className="absolute inset-0 rounded-3xl border border-[var(--color-border)] pointer-events-none [mask:linear-gradient(#000,transparent_70%)] motion-fade-in motion-delay-700"
 							aria-hidden="true"
 						/>
-						<div className="relative rounded-3xl border border-[var(--color-border)] bg-[var(--color-card)]/80 backdrop-blur-xl p-10 shadow-[var(--shadow)]">
+						<div className="relative rounded-3xl border border-[var(--color-border)] bg-[var(--color-card)]/80 backdrop-blur-xl p-10 shadow-[var(--shadow)] motion-slide-up motion-delay-800 motion-intersect-start motion-intersect-end motion-intersect-threshold-50">
 							<form
 								onSubmit={handleSubmit(onSubmit)}
 								className="grid gap-6"
-								aria-label="Formulaire de contact"
+								aria-label={t("form.title")}
 								noValidate
 							>
 								{/* Honeypot */}
 								<div className="hidden">
 									<label>
-										Ne pas remplir{" "}
+										{t("form.honeypot")}{" "}
 										<input tabIndex={-1} autoComplete="off" {...register("website")} />
 									</label>
 								</div>
-								<div className="grid gap-6 md:grid-cols-2">
-									<div className="field">
-										<label htmlFor="firstName">Prénom</label>
-										<input
-											id="firstName"
-											className="input"
-											autoComplete="given-name"
-											aria-invalid={!!errors.firstName}
-											{...register("firstName")}
-										/>
-										{errors.firstName && (
-											<p className="mt-1 text-[10px] text-[var(--color-accent)]">
-												{errors.firstName.message}
-											</p>
-										)}
+
+								{/* Étape 1 : Champs essentiels (toujours visibles) */}
+								<div className="space-y-6">
+									<div className="text-center mb-6 motion-fade-in motion-delay-900">
+										<h3 className="text-lg font-semibold mb-2 motion-slide-up motion-delay-1000">
+											{t("form.stepTitle")}
+										</h3>
+										<p className="text-sm text-[var(--color-muted)] motion-fade-in motion-delay-1100">
+											{t("form.stepSubtitle")}
+										</p>
 									</div>
-									<div className="field">
-										<label htmlFor="company">Entreprise</label>
-										<input
-											id="company"
-											className="input"
-											autoComplete="organization"
-											aria-invalid={!!errors.company}
-											{...register("company")}
-										/>
-										{errors.company && (
-											<p className="mt-1 text-[10px] text-[var(--color-accent)]">
-												{errors.company.message}
-											</p>
-										)}
+
+									<div className="grid gap-6 md:grid-cols-2">
+										<div className="field">
+											<label htmlFor="firstName" className="flex items-center gap-2">
+												{t("form.firstName")}
+												{firstName && (
+													<CheckCircle2 className="w-4 h-4 text-[var(--color-accent)]" />
+												)}
+											</label>
+											<input
+												id="firstName"
+												className="input"
+												autoComplete="given-name"
+												placeholder="Jean"
+												aria-invalid={!!errors.firstName}
+												{...register("firstName")}
+											/>
+											{errors.firstName && (
+												<p className="mt-1 text-[10px] text-[var(--color-accent)]">
+													{errors.firstName.message}
+												</p>
+											)}
+										</div>
+										<div className="field">
+											<label htmlFor="company" className="flex items-center gap-2">
+												{t("form.company")}
+												{company && (
+													<CheckCircle2 className="w-4 h-4 text-[var(--color-accent)]" />
+												)}
+											</label>
+											<input
+												id="company"
+												className="input"
+												autoComplete="organization"
+												placeholder="Mon Entreprise"
+												aria-invalid={!!errors.company}
+												{...register("company")}
+											/>
+											{errors.company && (
+												<p className="mt-1 text-[10px] text-[var(--color-accent)]">
+													{errors.company.message}
+												</p>
+											)}
+										</div>
 									</div>
-								</div>
-								<div className="grid gap-6 md:grid-cols-2">
+
 									<div className="field">
-										<label htmlFor="email">Email</label>
+										<label htmlFor="email" className="flex items-center gap-2">
+											{t("form.email")}
+											{email && (
+												<CheckCircle2 className="w-4 h-4 text-[var(--color-accent)]" />
+											)}
+										</label>
 										<input
 											id="email"
 											type="email"
 											className="input"
 											autoComplete="email"
+											placeholder="jean@exemple.fr"
 											aria-invalid={!!errors.email}
 											{...register("email")}
 										/>
@@ -202,125 +240,141 @@ export function CTA() {
 											</p>
 										)}
 									</div>
-									<div className="field">
-										<label htmlFor="phone">
-											Téléphone{" "}
-											<span className="text-[var(--color-muted)] font-normal">
-												(optionnel)
-											</span>
-										</label>
-										<input
-											id="phone"
-											className="input"
-											autoComplete="tel"
-											aria-invalid={!!errors.phone}
-											{...register("phone")}
-										/>
-										{errors.phone && (
-											<p className="mt-1 text-[10px] text-[var(--color-accent)]">
-												{errors.phone.message}
-											</p>
-										)}
-									</div>
 								</div>
-								<div className="grid gap-6 md:grid-cols-2">
-									<div className="field">
-										<label htmlFor="projectType">Projet</label>
-										<select
-											id="projectType"
-											className="input text-sm pr-8"
-											{...register("projectType")}
-										>
-											<option value="site-vitrine">Site vitrine</option>
-											<option value="refonte">Refonte</option>
-											<option value="optimisation">Optimisation / SEO local</option>
-											<option value="autre">Autre</option>
-										</select>
-									</div>
-									<div className="field">
-										<label htmlFor="budget">Budget estimé</label>
-										<select
-											id="budget"
-											className="input text-sm pr-8"
-											{...register("budget")}
-										>
-											<option value="<1000">&lt; 1000€</option>
-											<option value="1000-2000">1000–2000€</option>
-											<option value=">2000">&gt; 2000€</option>
-											<option value="nd">À définir</option>
-										</select>
-									</div>
-								</div>
-								<fieldset className="flex flex-wrap gap-4 text-xs">
-									<legend className="text-[11px] tracking-wide uppercase text-[var(--color-muted)] mb-1">
-										Avez-vous déjà un site ?
-									</legend>
-									{[
-										{ label: "Oui", value: "oui" },
-										{ label: "Non", value: "non" },
-									].map((r) => (
-										<label
-											key={r.value}
-											className="flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-alt)]/40 cursor-pointer hover:border-[var(--color-accent)]/50"
-										>
+
+								{/* Étape 2 : Détails (apparaît progressivement) */}
+								{showFullForm && (
+									<div className="space-y-6 animate-in fade-in slide-in-from-top-4 duration-500 motion-fade-in motion-delay-1200">
+										<div className="h-px bg-gradient-to-r from-transparent via-[var(--color-border)] to-transparent motion-scale-in motion-delay-1300" />
+
+										<div className="field">
+											<label htmlFor="phone">
+												{t("form.phone")}{" "}
+												<span className="text-[var(--color-muted)] font-normal">
+													{t("form.phoneOptional")}
+												</span>
+											</label>
 											<input
-												type="radio"
-												value={r.value}
-												className="accent-[var(--color-accent)]"
-												{...register("hasSite")}
+												id="phone"
+												className="input"
+												autoComplete="tel"
+												placeholder="06 12 34 56 78"
+												aria-invalid={!!errors.phone}
+												{...register("phone")}
 											/>
-											<span>{r.label}</span>
-										</label>
-									))}
-								</fieldset>
-								<div className="field">
-									<label htmlFor="message">Message</label>
-									<textarea
-										id="message"
-										className="input"
-										placeholder="Décrivez votre activité, l'objectif, l'urgence..."
-										aria-invalid={!!errors.message}
-										{...register("message")}
-									/>
-									{errors.message && (
-										<p className="mt-1 text-[10px] text-[var(--color-accent)]">
-											{errors.message.message}
-										</p>
-									)}
-								</div>
+											{errors.phone && (
+												<p className="mt-1 text-[10px] text-[var(--color-accent)]">
+													{errors.phone.message}
+												</p>
+											)}
+										</div>
+
+										<div className="grid gap-6 md:grid-cols-2">
+											<div className="field">
+												<label htmlFor="projectType">{t("form.project")}</label>
+												<select
+													id="projectType"
+													className="input text-sm pr-8"
+													{...register("projectType")}
+												>
+													<option value="site-vitrine">
+														{t("form.projectTypes.showcase")}
+													</option>
+													<option value="refonte">{t("form.projectTypes.redesign")}</option>
+													<option value="optimisation">
+														{t("form.projectTypes.optimization")}
+													</option>
+													<option value="autre">{t("form.projectTypes.other")}</option>
+												</select>
+											</div>
+											<div className="field">
+												<label htmlFor="budget">{t("form.budget")}</label>
+												<select
+													id="budget"
+													className="input text-sm pr-8"
+													{...register("budget")}
+												>
+													<option value="<1000">{t("form.budgetRanges.under1000")}</option>
+													<option value="1000-2000">
+														{t("form.budgetRanges.1000to2000")}
+													</option>
+													<option value=">2000">{t("form.budgetRanges.over2000")}</option>
+													<option value="nd">{t("form.budgetRanges.tbd")}</option>
+												</select>
+											</div>
+										</div>
+
+										<fieldset className="flex flex-wrap gap-4 text-xs">
+											<legend className="text-[11px] tracking-wide uppercase text-[var(--color-muted)] mb-1">
+												{t("form.hasSite")}
+											</legend>
+											{[
+												{ label: t("form.yes"), value: "oui" },
+												{ label: t("form.no"), value: "non" },
+											].map((r) => (
+												<label
+													key={r.value}
+													className="flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-alt)]/40 cursor-pointer hover:border-[var(--color-accent)]/50 transition"
+												>
+													<input
+														type="radio"
+														value={r.value}
+														className="accent-[var(--color-accent)]"
+														{...register("hasSite")}
+													/>
+													<span>{r.label}</span>
+												</label>
+											))}
+										</fieldset>
+
+										<div className="field">
+											<label htmlFor="message">{t("form.message")}</label>
+											<textarea
+												id="message"
+												className="input"
+												rows={4}
+												placeholder={t("form.messagePlaceholder")}
+												aria-invalid={!!errors.message}
+												{...register("message")}
+											/>
+											{errors.message && (
+												<p className="mt-1 text-[10px] text-[var(--color-accent)]">
+													{errors.message.message}
+												</p>
+											)}
+										</div>
+									</div>
+								)}
 								<div className="flex flex-col gap-3">
 									<Button
 										type="submit"
 										onClick={() => track("cta-click")}
 										disabled={isSubmitting}
-										className="h-14 text-sm md:text-base font-semibold tracking-wide relative"
+										className="h-14 text-sm md:text-base font-semibold tracking-wide relative motion-scale-in motion-delay-1400"
 									>
 										<span
 											className={`${
 												isSubmitting ? "opacity-0" : "opacity-100"
 											} transition`}
 										>
-											Réserver un appel gratuit de 15 min
+											{t("form.submit")}
 										</span>
 										{isSubmitting && (
 											<span className="absolute inset-0 flex items-center justify-center gap-2 text-sm">
 												<span className="size-4 rounded-full border-2 border-[var(--color-accent)] border-t-transparent animate-spin" />{" "}
-												Envoi...
+												{t("form.submitting")}
 											</span>
 										)}
 									</Button>
 									<div className="text-[11px] text-[var(--color-muted)] leading-relaxed space-y-1">
-										<p>
-											En envoyant ce formulaire vous acceptez un contact email / téléphone.
-											Aucune newsletter automatique.
-										</p>
+										<p>{t("form.consent")}</p>
 										<p className="flex flex-wrap gap-3 pt-1">
-											{["Sécurisé", "RGPD", "Zéro spam"].map((b) => (
+											{Array.from({ length: 3 }, (_, idx) => (
 												<span
-													key={b}
+													key={idx}
 													className="px-2 py-0.5 rounded bg-[var(--color-bg-alt)]/60 border border-[var(--color-border)]"
 												>
-													{b}
+													{t(`form.badges.${idx}`)}
 												</span>
 											))}
 										</p>
