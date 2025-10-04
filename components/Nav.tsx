@@ -27,11 +27,10 @@ export function Navbar() {
 
 	return (
 		<div className="fixed inset-x-0 top-4 z-50 flex justify-center">
-			<GlassEffect className=" rounded-2xl px-5 py-1">
+			<GlassEffect className=" rounded-2xl px-5 py-2">
 				<header className="flex items-center justify-between w-full">
-					{/* Logo */}
 					<Link
-						href="#hero"
+						href="/"
 						className="inline-flex items-center gap-3 rounded-full px-4 py-2 text-lg font-bold tracking-wide text-[var(--color-fg)] hover:bg-[var(--color-accent)]/10 transition-all duration-300"
 					>
 						<Logo />

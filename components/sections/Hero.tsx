@@ -14,7 +14,10 @@ export function Hero() {
 	const t = useTranslations("hero");
 
 	return (
-		<section className="relative pt-28 pb-24 overflow-hidden" id="hero">
+		<section
+			className="relative pt-28 pb-24 overflow-hidden min-h-[100vh]"
+			id="hero"
+		>
 			<div className="hero-bg" aria-hidden="true" />
 			<div className="noise" aria-hidden="true" />
 			<div className="aurora a1" />
@@ -68,7 +71,7 @@ export function Hero() {
 					</div>
 
 					<div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 motion-slide-up motion-delay-600 motion-duration-1000">
-						<a href="#portfolio">
+						<a href="#contact">
 							<ButtonColorful>
 								<div className="flex items-center gap-2">
 									<CircleChevronDown className="size-3.5 text-black" />
@@ -76,7 +79,7 @@ export function Hero() {
 								</div>
 							</ButtonColorful>
 						</a>
-						<a href="#contact">
+						<a href="#portfolio">
 							<ButtonColorful>
 								<div className="flex items-center gap-2">
 									<ArrowUpRight className="size-3.5 text-black" />

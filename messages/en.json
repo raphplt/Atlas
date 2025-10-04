@@ -386,5 +386,36 @@
     },
     "stickyCta": {
         "cta": "Free diagnostic →"
+    },
+    "projectModal": {
+        "categories": {
+            "coiffeur": "Beauty",
+            "plombier": "Services",
+            "paysagiste": "Landscape",
+            "photographe": "Creative"
+        },
+        "metrics": {
+            "visits": "+150% visits",
+            "contacts": "+80% contacts",
+            "mobileFirst": "Mobile-first"
+        },
+        "fullscreen": "View fullscreen",
+        "transformation": {
+            "title": "Before/After Transformation",
+            "subtitle": "Visual impact of the redesign on user experience"
+        },
+        "results": {
+            "title": "Concrete results",
+            "visits": "Visits",
+            "contacts": "Contacts"
+        },
+        "improvements": {
+            "title": "Improvements made"
+        },
+        "cta": {
+            "title": "Ready to transform your website?",
+            "description": "Get similar results with a custom approach adapted to your business sector.",
+            "button": "Request a free diagnostic"
+        }
     }
 }

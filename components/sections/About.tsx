@@ -72,11 +72,13 @@ export function About() {
 
 						{/* CTA */}
 						<div className="flex flex-col sm:flex-row gap-4">
-							<EnhancedLink href="#contact" variant="primary" className="h-12 px-8">
+							<EnhancedLink href="/#contact" variant="primary" className="h-12 px-8">
 								{t("cta")}
 							</EnhancedLink>
 							<EnhancedLink
-								href="#portfolio"
+								href="https://www.raphael-plassart.com/"
+								target="_blank"
+								rel="noopener noreferrer"
 								variant="secondary"
 								className="h-12 px-8"
 							>
@@ -85,10 +87,8 @@ export function About() {
 						</div>
 					</div>
 
-					{/* Right content */}
 					<div className="space-y-8">
-						{/* Skills grid */}
-						<Card className="p-8">
+						{/* <Card className="p-8">
 							<h3 className="text-xl font-bold mb-6">{t("skillsTitle")}</h3>
 							<div className="grid grid-cols-2 gap-4">
 								{skills.map((skill, i) => (
@@ -98,14 +98,15 @@ export function About() {
 									</div>
 								))}
 							</div>
-						</Card>
+						</Card> */}
 
-						{/* Photo placeholder */}
 						<Card className="p-6 bg-gradient-to-br from-[var(--color-accent)]/10 to-[var(--color-accent-alt)]/10">
 							<div className="aspect-square rounded-2xl bg-[var(--color-bg-alt)] flex items-center justify-center mb-4">
 								<div className="text-center space-y-2">
 									<div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-alt)] flex items-center justify-center">
-										<span className="text-white text-2xl font-bold">A</span>
+										<span className="text-white text-2xl font-bold">
+											{t("name").charAt(0)}
+										</span>
 									</div>
 									<Image
 										src="/images/Raphael-Plassart.jpg"

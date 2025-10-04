@@ -353,5 +353,36 @@
     },
     "stickyCta": {
         "cta": "Diagnostic gratuit →"
+    },
+    "projectModal": {
+        "categories": {
+            "coiffeur": "Beauté",
+            "plombier": "Services",
+            "paysagiste": "Paysage",
+            "photographe": "Créatif"
+        },
+        "metrics": {
+            "visits": "+150% visites",
+            "contacts": "+80% contacts",
+            "mobileFirst": "Mobile-first"
+        },
+        "fullscreen": "Voir en plein écran",
+        "transformation": {
+            "title": "Transformation Avant/Après",
+            "subtitle": "Impact visuel de la refonte sur l'expérience utilisateur"
+        },
+        "results": {
+            "title": "Résultats concrets",
+            "visits": "Visites",
+            "contacts": "Contacts"
+        },
+        "improvements": {
+            "title": "Améliorations apportées"
+        },
+        "cta": {
+            "title": "Prêt à transformer votre site ?",
+            "description": "Obtenez des résultats similaires avec une approche sur-mesure adaptée à votre secteur d'activité.",
+            "button": "Demander un diagnostic gratuit"
+        }
     }
 }
