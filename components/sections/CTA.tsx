@@ -345,7 +345,7 @@ export function CTA() {
 									<Button
 										type="submit"
 										disabled={isSubmitting}
-										className="h-14 text-sm md:text-base font-semibold tracking-wide relative motion-scale-in motion-delay-1400"
+										className="h-14 text-sm md:text-base font-semibold tracking-wide relative"
 									>
 										<span
 											className={`${

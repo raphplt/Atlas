@@ -8,6 +8,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { GlassFilter } from "@/components/ui/liquid-glass";
 import Head from "@/components/Head";
 import { ConsentBanner } from "@/components/ConsentBanner";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function RootLayout({
 	children,
@@ -23,6 +24,7 @@ export default function RootLayout({
 					<Toaster />
 					<Navbar />
 					{children}
+					<Analytics />
 					<Footer />
 					<StickyCTA />
 					<ConsentBanner />
