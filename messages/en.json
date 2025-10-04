@@ -417,5 +417,56 @@
             "description": "Get similar results with a custom approach adapted to your business sector.",
             "button": "Request a free diagnostic"
         }
+    },
+    "consent": {
+        "banner": {
+            "title": "Cookie Management",
+            "description": "We use cookies to improve your experience and analyze our traffic. You can accept all cookies or customize your preferences.",
+            "manage": "Manage",
+            "reject": "Reject",
+            "accept": "Accept"
+        },
+        "modal": {
+            "title": "Manage your cookie preferences",
+            "description": "We respect your privacy. Choose the types of cookies you accept. Your preferences will be saved for a maximum of 13 months.",
+            "categories": {
+                "essential": {
+                    "title": "Essential cookies",
+                    "description": "Necessary for the site to function. They cannot be disabled.",
+                    "status": "Always active"
+                },
+                "analytics": {
+                    "title": "Analytics cookies",
+                    "description": "Help us understand how you use our site via Google Analytics.",
+                    "status": {
+                        "enabled": "Enabled",
+                        "disabled": "Disabled"
+                    },
+                    "actions": {
+                        "enable": "Enable",
+                        "disable": "Disable"
+                    }
+                },
+                "marketing": {
+                    "title": "Marketing cookies",
+                    "description": "Used to personalize advertisements and measure their effectiveness.",
+                    "status": {
+                        "enabled": "Enabled",
+                        "disabled": "Disabled"
+                    },
+                    "actions": {
+                        "enable": "Enable",
+                        "disable": "Disable"
+                    }
+                }
+            },
+            "footer": {
+                "rejectAll": "Reject all",
+                "acceptAll": "Accept all"
+            }
+        },
+        "manager": {
+            "link": "Manage my cookies"
+        }
     }
 }

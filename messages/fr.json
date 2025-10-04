@@ -384,5 +384,56 @@
             "description": "Obtenez des résultats similaires avec une approche sur-mesure adaptée à votre secteur d'activité.",
             "button": "Demander un diagnostic gratuit"
         }
+    },
+    "consent": {
+        "banner": {
+            "title": "Gestion des cookies",
+            "description": "Nous utilisons des cookies pour améliorer votre expérience et analyser notre trafic. Vous pouvez accepter tous les cookies ou personnaliser vos préférences.",
+            "manage": "Gérer",
+            "reject": "Refuser",
+            "accept": "Accepter"
+        },
+        "modal": {
+            "title": "Gestion de vos préférences de cookies",
+            "description": "Nous respectons votre vie privée. Choisissez les types de cookies que vous acceptez. Vos préférences seront sauvegardées pendant 13 mois maximum.",
+            "categories": {
+                "essential": {
+                    "title": "Cookies essentiels",
+                    "description": "Nécessaires au fonctionnement du site. Ils ne peuvent pas être désactivés.",
+                    "status": "Toujours actifs"
+                },
+                "analytics": {
+                    "title": "Cookies analytiques",
+                    "description": "Nous aident à comprendre comment vous utilisez notre site via Google Analytics.",
+                    "status": {
+                        "enabled": "Activés",
+                        "disabled": "Désactivés"
+                    },
+                    "actions": {
+                        "enable": "Activer",
+                        "disable": "Désactiver"
+                    }
+                },
+                "marketing": {
+                    "title": "Cookies marketing",
+                    "description": "Utilisés pour personnaliser les publicités et mesurer leur efficacité.",
+                    "status": {
+                        "enabled": "Activés",
+                        "disabled": "Désactivés"
+                    },
+                    "actions": {
+                        "enable": "Activer",
+                        "disable": "Désactiver"
+                    }
+                }
+            },
+            "footer": {
+                "rejectAll": "Refuser tout",
+                "acceptAll": "Accepter tout"
+            }
+        },
+        "manager": {
+            "link": "Gérer mes cookies"
+        }
     }
 }

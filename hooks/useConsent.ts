@@ -42,31 +42,26 @@ export function useConsent(): UseConsentReturn {
 	);
 	const [isLoading, setIsLoading] = useState(true);
 
-	// Initialisation au montage du composant
 	useEffect(() => {
 		const initConsent = () => {
 			try {
-				// Initialiser le consentement par défaut (refusé)
 				initializeDefaultConsent();
 
-				// Récupérer les préférences existantes
 				const existingConsent = getConsentPreferences();
 
 				if (existingConsent) {
 					setPreferences(existingConsent);
 					setHasConsent(true);
-					setIsVisible(false);
+					// setIsVisible(process.env.NODE_ENV === "development");
 
-					// Appliquer le consentement à GA
 					const consentData = preferencesToConsentData(existingConsent);
 					applyConsentToGA(consentData);
 				} else {
-					// Pas de consentement existant, afficher la bannière
 					setIsVisible(true);
 				}
 			} catch (error) {
 				console.error("Erreur lors de l'initialisation du consentement:", error);
-				setIsVisible(true); // Afficher la bannière en cas d'erreur
+				setIsVisible(true);
 			} finally {
 				setIsLoading(false);
 			}
@@ -75,7 +70,6 @@ export function useConsent(): UseConsentReturn {
 		initConsent();
 	}, []);
 
-	// Accepter tous les cookies
 	const acceptAll = useCallback(() => {
 		const newPreferences: Omit<ConsentPreferences, "timestamp" | "version"> = {
 			analytics: true,
@@ -99,7 +93,6 @@ export function useConsent(): UseConsentReturn {
 		setIsVisible(false);
 	}, []);
 
-	// Refuser tous les cookies
 	const rejectAll = useCallback(() => {
 		const newPreferences: Omit<ConsentPreferences, "timestamp" | "version"> = {
 			analytics: false,
@@ -123,7 +116,6 @@ export function useConsent(): UseConsentReturn {
 		setIsVisible(false);
 	}, []);
 
-	// Accepter uniquement les cookies analytiques
 	const acceptAnalytics = useCallback(() => {
 		const newPreferences: Omit<ConsentPreferences, "timestamp" | "version"> = {
 			analytics: true,
@@ -147,7 +139,6 @@ export function useConsent(): UseConsentReturn {
 		setIsVisible(false);
 	}, []);
 
-	// Refuser les cookies analytiques
 	const rejectAnalytics = useCallback(() => {
 		const newPreferences: Omit<ConsentPreferences, "timestamp" | "version"> = {
 			analytics: false,
@@ -169,7 +160,6 @@ export function useConsent(): UseConsentReturn {
 		});
 	}, [preferences?.marketing]);
 
-	// Accepter les cookies marketing
 	const acceptMarketing = useCallback(() => {
 		const newPreferences: Omit<ConsentPreferences, "timestamp" | "version"> = {
 			analytics: preferences?.analytics || false,
@@ -191,7 +181,6 @@ export function useConsent(): UseConsentReturn {
 		});
 	}, [preferences?.analytics]);
 
-	// Refuser les cookies marketing
 	const rejectMarketing = useCallback(() => {
 		const newPreferences: Omit<ConsentPreferences, "timestamp" | "version"> = {
 			analytics: preferences?.analytics || false,
@@ -213,17 +202,14 @@ export function useConsent(): UseConsentReturn {
 		});
 	}, [preferences?.analytics]);
 
-	// Afficher la bannière
 	const showBanner = useCallback(() => {
 		setIsVisible(true);
 	}, []);
 
-	// Masquer la bannière
 	const hideBanner = useCallback(() => {
 		setIsVisible(false);
 	}, []);
 
-	// Supprimer toutes les données de consentement
 	const clearConsent = useCallback(() => {
 		clearConsentData();
 		setPreferences(null);

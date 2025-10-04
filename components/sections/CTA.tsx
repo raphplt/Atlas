@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { track } from "@/lib/analytics";
 import {
 	PhoneCall,
 	Timer,
@@ -12,12 +11,10 @@ import {
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, ContactInput } from "@/lib/validators";
-import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { useTranslations } from "next-intl";
 
 export function CTA() {
-	const router = useRouter();
 	const [serverError, setServerError] = useState<string | null>(null);
 	const [showFullForm, setShowFullForm] = useState(false);
 	const t = useTranslations("contact");
@@ -67,7 +64,6 @@ export function CTA() {
 				throw new Error(body.error || "Erreur inconnue");
 			}
 			reset();
-			track("contact-success");
 			toast.success(t("form.successMessage"));
 		} catch (e: any) {
 			const msg = e.message || "Erreur serveur";
@@ -348,7 +344,6 @@ export function CTA() {
 								<div className="flex flex-col gap-3">
 									<Button
 										type="submit"
-										onClick={() => track("cta-click")}
 										disabled={isSubmitting}
 										className="h-14 text-sm md:text-base font-semibold tracking-wide relative motion-scale-in motion-delay-1400"
 									>
