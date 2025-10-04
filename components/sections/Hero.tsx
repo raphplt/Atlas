@@ -24,7 +24,7 @@ export function Hero() {
 			<div className="aurora a2" />
 			<div className="container relative">
 				<div className="text-center mb-16 max-w-5xl mx-auto">
-					<div className="inline-flex items-center gap-2 px-5 py-1.5 mb-6 rounded-full btn-outline-gradient text-[10px] md:text-xs font-medium tracking-[.15em] uppercase text-[var(--color-muted)] backdrop-blur-sm motion-fade-in motion-delay-0">
+					<div className="inline-flex items-center gap-2 px-5 py-1.5 mb-6 rounded-full btn-outline-gradient text-[10px] font-medium tracking-[.15em] uppercase text-[var(--color-muted)] backdrop-blur-sm motion-fade-in motion-delay-0">
 						<span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />{" "}
 						{t("badge")}
 					</div>

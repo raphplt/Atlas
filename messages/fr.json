@@ -9,15 +9,15 @@
         "contact": "Contact"
     },
     "hero": {
-        "badge": "Sites vitrines premium",
+        "badge": "Seulement 3 diagnostics gratuits cette semaine",
         "title": "Transformez votre site en machine à générer des clients",
         "subtitle": "Sites web optimisés pour artisans et services locaux. +50% de demandes de devis en moyenne. Livraison en 5-7 jours.",
-        "ctaPrimary": "Obtenir un diagnostic gratuit",
-        "ctaSecondary": "Voir un exemple en 30s",
+        "ctaPrimary": "Obtenez votre diagnostic gratuit (réponse en 24h)",
+        "ctaSecondary": "Voir un exemple de site optimisé (+50% de devis)",
         "socialProof": {
             "clients": "124+ artisans nous font confiance",
             "rating": "4.9/5",
-            "reviews": "(87 avis)"
+            "reviews": "(87 avis positifs)"
         },
         "trustIndicators": {
             "0": "Sans engagement",

@@ -9,15 +9,15 @@
         "contact": "Contact"
     },
     "hero": {
-        "badge": "Premium showcase sites",
+        "badge": "Only 3 free diagnostics this week",
         "title": "Transform your website into a client-generating machine",
         "subtitle": "Optimized websites for craftsmen and local services. +50% quote requests on average. Delivered in 5 days.",
-        "ctaPrimary": "Get a free diagnostic",
-        "ctaSecondary": "See an example in 30s",
+        "ctaPrimary": "Get your free diagnostic (response in 24h)",
+        "ctaSecondary": "See an optimized site example (+50% quotes)",
         "socialProof": {
             "clients": "124+ craftsmen trust us",
             "rating": "4.9/5",
-            "reviews": "(87 reviews)"
+            "reviews": "(87 positive reviews)"
         },
         "trustIndicators": {
             "0": "No commitment",
