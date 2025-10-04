@@ -71,11 +71,12 @@ export function Footer() {
 						</h4>
 						<ul className="space-y-2">
 							{[
-								["Offres", "#offres"],
-								["Réalisations", "#realisations"],
-								["Avant / Après", "#avant-apres"],
-								["Process", "#process"],
-								["Contact", "#contact"],
+								["Offres", "/#offres"],
+								["Réalisations", "/#portfolio"],
+								["Témoignages", "/#temoignages"],
+								["FAQ", "/#faq"],
+								["Process", "/#process"],
+								["Contact", "/#contact"],
 							].map(([label, href]) => (
 								<li key={label}>
 									<a href={href} className="hover:text-[var(--color-fg)] transition">
@@ -117,6 +118,11 @@ export function Footer() {
 									className="hover:text-[var(--color-fg)] transition"
 								>
 									Confidentialité
+								</a>
+							</li>
+							<li>
+								<a href="/about" className="hover:text-[var(--color-fg)] transition">
+									À propos
 								</a>
 							</li>
 						</ul>

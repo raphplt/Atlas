@@ -385,6 +385,169 @@
             "button": "Demander un diagnostic gratuit"
         }
     },
+    "legal": {
+        "cgv": {
+            "title": "Conditions Générales de Vente",
+            "sections": {
+                "object": {
+                    "title": "1. Objet",
+                    "content": "Les présentes conditions générales de vente (CGV) régissent les relations contractuelles entre Atlas, représenté par Raphaël Plassart, et ses clients pour la prestation de création de sites web."
+                },
+                "services": {
+                    "title": "2. Prestations",
+                    "content": "Atlas propose des services de création de sites web vitrines pour artisans et services locaux, incluant design, développement, optimisation SEO et mise en ligne."
+                },
+                "payment": {
+                    "title": "3. Modalités de paiement",
+                    "items": [
+                        "Acompte de 30% à la commande",
+                        "Solde à la livraison du site",
+                        "Paiement possible en 2 fois sans frais",
+                        "Facturation en HT"
+                    ]
+                },
+                "delivery": {
+                    "title": "4. Délais de livraison",
+                    "content": "Les sites sont livrés en 5 à 7 jours ouvrés maximum, sous réserve de la fourniture rapide des contenus par le client (textes, images, logo)."
+                },
+                "guarantees": {
+                    "title": "5. Garanties",
+                    "items": [
+                        "Garantie satisfait ou remboursé sous 30 jours",
+                        "Révisions illimitées jusqu'à satisfaction",
+                        "Support technique inclus pendant 1 mois"
+                    ]
+                },
+                "responsibilities": {
+                    "title": "6. Responsabilités",
+                    "content": "Le client s'engage à fournir des contenus conformes à la législation en vigueur. Atlas ne saurait être tenu responsable du contenu fourni par le client."
+                },
+                "intellectual": {
+                    "title": "7. Propriété intellectuelle",
+                    "content": "Le site créé devient la propriété du client dès le paiement intégral. Le client dispose d'un accès administrateur complet."
+                },
+                "contact": {
+                    "title": "8. Contact",
+                    "content": "Pour toute question relative aux présentes CGV :",
+                    "email": "Email : contact@atlas.raphael-plassart.com"
+                }
+            }
+        },
+        "mentions": {
+            "title": "Mentions Légales",
+            "sections": {
+                "publisher": {
+                    "title": "Éditeur du site",
+                    "content": "Raphaël Plassart",
+                    "role": "Développeur Full Stack & Mobile",
+                    "studies": "Étudiant en Master à l'ETNA",
+                    "projects": "Co-fondateur de Melios et Quori"
+                },
+                "contact": {
+                    "title": "Contact",
+                    "email": "Email : contact@atlas.raphael-plassart.com",
+                    "website": "Site web : https://atlas.raphael-plassart.com"
+                },
+                "hosting": {
+                    "title": "Hébergement",
+                    "company": "Ce site est hébergé par Vercel Inc.",
+                    "address": "440 N Barranca Ave #4133",
+                    "city": "Covina, CA 91723",
+                    "country": "États-Unis"
+                },
+                "intellectual": {
+                    "title": "Propriété intellectuelle",
+                    "content": "L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques."
+                },
+                "data": {
+                    "title": "Collecte de données",
+                    "content": "Les informations collectées via les formulaires de contact sont utilisées uniquement pour répondre aux demandes des utilisateurs. Aucune donnée n'est vendue à des tiers."
+                },
+                "cookies": {
+                    "title": "Cookies",
+                    "content": "Ce site utilise des cookies pour améliorer l'expérience utilisateur et analyser le trafic. Vous pouvez désactiver les cookies dans les paramètres de votre navigateur."
+                },
+                "law": {
+                    "title": "Droit applicable",
+                    "content": "Les présentes mentions légales sont régies par le droit français. Tout litige sera soumis aux tribunaux compétents français."
+                }
+            }
+        },
+        "privacy": {
+            "title": "Politique de Confidentialité",
+            "sections": {
+                "introduction": {
+                    "title": "1. Introduction",
+                    "content": "La présente politique de confidentialité décrit comment Atlas collecte, utilise et protège vos informations personnelles conformément au Règlement Général sur la Protection des Données (RGPD)."
+                },
+                "controller": {
+                    "title": "2. Responsable du traitement",
+                    "name": "Raphaël Plassart",
+                    "email": "Email : contact@atlas.raphael-plassart.com",
+                    "website": "Site web : https://atlas.raphael-plassart.com"
+                },
+                "data": {
+                    "title": "3. Données collectées",
+                    "content": "Nous collectons les informations suivantes :",
+                    "items": [
+                        "Nom et prénom",
+                        "Adresse email",
+                        "Numéro de téléphone (optionnel)",
+                        "Nom de l'entreprise",
+                        "Messages et demandes de contact"
+                    ]
+                },
+                "purposes": {
+                    "title": "4. Finalités du traitement",
+                    "content": "Vos données sont utilisées pour :",
+                    "items": [
+                        "Répondre à vos demandes de contact",
+                        "Vous fournir des devis et informations",
+                        "Améliorer nos services",
+                        "Respecter nos obligations légales"
+                    ]
+                },
+                "legal": {
+                    "title": "5. Base légale",
+                    "content": "Le traitement de vos données personnelles est basé sur votre consentement lorsque vous nous contactez via nos formulaires."
+                },
+                "retention": {
+                    "title": "6. Conservation des données",
+                    "content": "Vos données personnelles sont conservées pendant la durée nécessaire aux finalités pour lesquelles elles ont été collectées, et au maximum 3 ans après notre dernier contact."
+                },
+                "rights": {
+                    "title": "7. Vos droits",
+                    "content": "Conformément au RGPD, vous disposez des droits suivants :",
+                    "items": [
+                        "Droit d'accès à vos données",
+                        "Droit de rectification",
+                        "Droit à l'effacement",
+                        "Droit à la portabilité",
+                        "Droit d'opposition",
+                        "Droit de limitation du traitement"
+                    ],
+                    "contact": "Pour exercer ces droits, contactez-nous à : contact@atlas.raphael-plassart.com"
+                },
+                "analytics": {
+                    "title": "8. Cookies et analytics",
+                    "content": "Nous utilisons Plausible Analytics pour analyser le trafic de notre site. Cette solution respecte la vie privée et ne collecte pas de données personnelles."
+                },
+                "security": {
+                    "title": "9. Sécurité",
+                    "content": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre la perte, l'utilisation abusive et l'accès non autorisé."
+                },
+                "contact": {
+                    "title": "10. Contact",
+                    "content": "Pour toute question relative à cette politique de confidentialité :",
+                    "email": "Email : contact@atlas.raphael-plassart.com"
+                },
+                "modifications": {
+                    "title": "11. Modifications",
+                    "content": "Cette politique de confidentialité peut être modifiée. La version en vigueur est celle publiée sur notre site web."
+                }
+            }
+        }
+    },
     "consent": {
         "banner": {
             "title": "Gestion des cookies",

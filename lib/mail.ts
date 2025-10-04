@@ -1,8 +1,8 @@
 import { ContactInput } from "./validators";
+import { Resend } from "resend";
+import { ContactEmail } from "@/components/email-templates/ContactEmail";
 
 export async function sendMail(data: ContactInput) {
-	// En mode développement, on affiche les données et on n'envoie pas vraiment
-	// Sauf si ENABLE_MAIL_IN_DEV est défini à true
 	if (
 		process.env.NODE_ENV !== "production" &&
 		process.env.ENABLE_MAIL_IN_DEV !== "true"
@@ -23,7 +23,6 @@ export async function sendMail(data: ContactInput) {
 	}
 
 	try {
-		const { Resend } = await import("resend");
 		const resend = new Resend(process.env.RESEND_API_KEY);
 
 		const result = await resend.emails.send({
@@ -31,7 +30,7 @@ export async function sendMail(data: ContactInput) {
 			to: [process.env.MAIL_TO || "you@yourdomain.dev"],
 			subject: `Nouveau contact: ${data.firstName} – ${data.company}`,
 			replyTo: data.email,
-			text: `Projet: ${data.projectType}\nBudget: ${data.budget}\nA un site: ${data.hasSite}\nTéléphone: ${data.phone || "-"}\n\nMessage:\n${data.message}`,
+			react: ContactEmail({ data }),
 		});
 
 		console.log("Email envoyé avec succès:", result);

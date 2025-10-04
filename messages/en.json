@@ -379,6 +379,169 @@
             "successMessage": "Message sent. Response within 24h ✅"
         }
     },
+    "legal": {
+        "cgv": {
+            "title": "Terms and Conditions",
+            "sections": {
+                "object": {
+                    "title": "1. Object",
+                    "content": "These terms and conditions govern the contractual relationships between Atlas, represented by Raphaël Plassart, and its clients for website creation services."
+                },
+                "services": {
+                    "title": "2. Services",
+                    "content": "Atlas offers website creation services for craftsmen and local services, including design, development, SEO optimization and online deployment."
+                },
+                "payment": {
+                    "title": "3. Payment Terms",
+                    "items": [
+                        "30% deposit upon order",
+                        "Balance upon website delivery",
+                        "Payment possible in 2 installments without fees",
+                        "Billing excluding tax"
+                    ]
+                },
+                "delivery": {
+                    "title": "4. Delivery Times",
+                    "content": "Websites are delivered within 5 to 7 business days maximum, subject to rapid provision of content by the client (texts, images, logo)."
+                },
+                "guarantees": {
+                    "title": "5. Guarantees",
+                    "items": [
+                        "Satisfaction or money-back guarantee within 30 days",
+                        "Unlimited revisions until satisfaction",
+                        "Technical support included for 1 month"
+                    ]
+                },
+                "responsibilities": {
+                    "title": "6. Responsibilities",
+                    "content": "The client undertakes to provide content that complies with current legislation. Atlas cannot be held responsible for content provided by the client."
+                },
+                "intellectual": {
+                    "title": "7. Intellectual Property",
+                    "content": "The created website becomes the client's property upon full payment. The client has full administrator access."
+                },
+                "contact": {
+                    "title": "8. Contact",
+                    "content": "For any questions regarding these terms and conditions:",
+                    "email": "Email: contact@atlas.raphael-plassart.com"
+                }
+            }
+        },
+        "mentions": {
+            "title": "Legal Notice",
+            "sections": {
+                "publisher": {
+                    "title": "Website Publisher",
+                    "content": "Raphaël Plassart",
+                    "role": "Full Stack & Mobile Developer",
+                    "studies": "Master's student at ETNA",
+                    "projects": "Co-founder of Melios and Quori"
+                },
+                "contact": {
+                    "title": "Contact",
+                    "email": "Email: contact@atlas.raphael-plassart.com",
+                    "website": "Website: https://atlas.raphael-plassart.com"
+                },
+                "hosting": {
+                    "title": "Hosting",
+                    "company": "This site is hosted by Vercel Inc.",
+                    "address": "440 N Barranca Ave #4133",
+                    "city": "Covina, CA 91723",
+                    "country": "United States"
+                },
+                "intellectual": {
+                    "title": "Intellectual Property",
+                    "content": "This entire site is subject to French and international legislation on copyright and intellectual property. All reproduction rights are reserved, including for downloadable documents and iconographic and photographic representations."
+                },
+                "data": {
+                    "title": "Data Collection",
+                    "content": "Information collected through contact forms is used solely to respond to user requests. No data is sold to third parties."
+                },
+                "cookies": {
+                    "title": "Cookies",
+                    "content": "This site uses cookies to improve user experience and analyze traffic. You can disable cookies in your browser settings."
+                },
+                "law": {
+                    "title": "Applicable Law",
+                    "content": "These legal notices are governed by French law. Any dispute will be submitted to the competent French courts."
+                }
+            }
+        },
+        "privacy": {
+            "title": "Privacy Policy",
+            "sections": {
+                "introduction": {
+                    "title": "1. Introduction",
+                    "content": "This privacy policy describes how Atlas collects, uses and protects your personal information in accordance with the General Data Protection Regulation (GDPR)."
+                },
+                "controller": {
+                    "title": "2. Data Controller",
+                    "name": "Raphaël Plassart",
+                    "email": "Email: contact@atlas.raphael-plassart.com",
+                    "website": "Website: https://atlas.raphael-plassart.com"
+                },
+                "data": {
+                    "title": "3. Data Collected",
+                    "content": "We collect the following information:",
+                    "items": [
+                        "First and last name",
+                        "Email address",
+                        "Phone number (optional)",
+                        "Company name",
+                        "Messages and contact requests"
+                    ]
+                },
+                "purposes": {
+                    "title": "4. Processing Purposes",
+                    "content": "Your data is used to:",
+                    "items": [
+                        "Respond to your contact requests",
+                        "Provide you with quotes and information",
+                        "Improve our services",
+                        "Comply with our legal obligations"
+                    ]
+                },
+                "legal": {
+                    "title": "5. Legal Basis",
+                    "content": "The processing of your personal data is based on your consent when you contact us through our forms."
+                },
+                "retention": {
+                    "title": "6. Data Retention",
+                    "content": "Your personal data is retained for the duration necessary for the purposes for which it was collected, and at most 3 years after our last contact."
+                },
+                "rights": {
+                    "title": "7. Your Rights",
+                    "content": "In accordance with the GDPR, you have the following rights:",
+                    "items": [
+                        "Right of access to your data",
+                        "Right to rectification",
+                        "Right to erasure",
+                        "Right to data portability",
+                        "Right to object",
+                        "Right to restriction of processing"
+                    ],
+                    "contact": "To exercise these rights, contact us at: contact@atlas.raphael-plassart.com"
+                },
+                "analytics": {
+                    "title": "8. Cookies and Analytics",
+                    "content": "We use Plausible Analytics to analyze our site traffic. This solution respects privacy and does not collect personal data."
+                },
+                "security": {
+                    "title": "9. Security",
+                    "content": "We implement appropriate technical and organizational measures to protect your personal data against loss, misuse and unauthorized access."
+                },
+                "contact": {
+                    "title": "10. Contact",
+                    "content": "For any questions regarding this privacy policy:",
+                    "email": "Email: contact@atlas.raphael-plassart.com"
+                },
+                "modifications": {
+                    "title": "11. Modifications",
+                    "content": "This privacy policy may be modified. The current version is the one published on our website."
+                }
+            }
+        }
+    },
     "language": {
         "switch": "Change language",
         "french": "Français",
