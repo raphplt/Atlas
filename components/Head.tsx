@@ -7,16 +7,16 @@ const Head = () => {
 			<ThemeScript />
 
 			<script
-				defer
-				data-domain="atlas.raphael-plassart.com"
-				src="https://plausible.io/js/script.outbound-links.tagged-events.js"
+				async
+				src="https://www.googletagmanager.com/gtag/js?id=G-BEJ9SX02CT"
 			></script>
 			<script
 				dangerouslySetInnerHTML={{
 					__html: `
-						window.plausible = window.plausible || function() {
-							(window.plausible.q = window.plausible.q || []).push(arguments);
-						};
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'G-BEJ9SX02CT');
 					`,
 				}}
 			/>

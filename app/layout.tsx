@@ -6,6 +6,7 @@ import { Footer } from "@/components/sections/Footer";
 import { StickyCTA } from "@/components/StickyCTA";
 import { NextIntlClientProvider } from "next-intl";
 import { GlassFilter } from "@/components/ui/liquid-glass";
+import Head from "@/components/Head";
 
 export default function RootLayout({
 	children,
@@ -14,9 +15,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="fr">
-			<head>
-				<ThemeScript />
-			</head>
+			<Head />
 			<body className="font-sans min-h-screen flex flex-col" data-theme="light">
 				<GlassFilter />
 				<NextIntlClientProvider>
