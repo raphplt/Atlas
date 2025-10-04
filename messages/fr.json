@@ -11,7 +11,7 @@
     "hero": {
         "badge": "Sites vitrines premium",
         "title": "Transformez votre site en machine à générer des clients",
-        "subtitle": "Sites web optimisés pour artisans et services locaux. +50% de demandes de devis en moyenne. Livraison en 5 jours.",
+        "subtitle": "Sites web optimisés pour artisans et services locaux. +50% de demandes de devis en moyenne. Livraison en 5-7 jours.",
         "ctaPrimary": "Obtenir un diagnostic gratuit",
         "ctaSecondary": "Voir un exemple en 30s",
         "socialProof": {
@@ -63,7 +63,7 @@
         "description": "Étudiant en Master à l'ETNA et co-fondateur de plusieurs projets (Melios, Quori), je crée Atlas pour apporter aux artisans la même qualité technique qu'aux startups tech. Plus de 2 ans d'expérience en développement from scratch jusqu'à la production.",
         "expertise": {
             "technical": {
-                "title": "Stack technique moderne",
+                "title": "Technologies modernes",
                 "description": "React/Next.js, NestJS, PostgreSQL, React Native. Applications déployées sur App Store & Google Play Store."
             },
             "conversion": {
@@ -125,7 +125,7 @@
                     "1": "Design moderne sur mesure",
                     "2": "Formulaire de contact optimisé",
                     "3": "SEO de base inclus",
-                    "4": "Livraison en 3-5 jours"
+                    "4": "Livraison en 5-7 jours"
                 }
             },
             "standard": {
@@ -187,7 +187,7 @@
             "call": {
                 "title": "Call gratuit",
                 "description": "On cerne l'activité, objectifs, différenciation.",
-                "duration": "30 min"
+                "duration": "15 min"
             },
             "quote": {
                 "title": "Devis clair",
@@ -206,7 +206,7 @@
             }
         },
         "launchNote": "Mise en ligne + suivi initial",
-        "totalDuration": "Durée totale typique: ≤ 10 jours"
+        "totalDuration": "Durée totale typique: 7-10 jours"
     },
     "testimonials": {
         "title": "Ils en parlent",
@@ -234,7 +234,7 @@
             }
         },
         "marquee": {
-            "0": "+30% demandes",
+            "0": "+30% demandes de devis",
             "1": "Crédibilité renforcée",
             "2": "Process rapide",
             "3": "Design premium",

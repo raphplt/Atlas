@@ -15,6 +15,7 @@ export async function POST(req: NextRequest) {
 		if (process.env.NODE_ENV === "production") {
 			await sendMail(data);
 		} else {
+			await sendMail(data);
 			console.log("contact(api)", data);
 		}
 
