@@ -10,15 +10,14 @@ export function StickyCTA() {
 	const [isDismissed, setIsDismissed] = useState(false);
 	const t = useTranslations("stickyCta");
 
+
 	useEffect(() => {
 		const handleScroll = () => {
-			// Afficher après 400px de scroll
 			const scrollPosition = window.scrollY;
 			const shouldShow = scrollPosition > 400 && !isDismissed;
 			setIsVisible(shouldShow);
 		};
 
-		// Vérifier immédiatement au chargement
 		handleScroll();
 
 		window.addEventListener("scroll", handleScroll);

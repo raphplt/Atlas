@@ -70,7 +70,13 @@ export function Testimonials() {
 								<span className="quote-icon motion-wiggle motion-delay-500">"</span>
 								<div className="flex items-center gap-4 mb-6 motion-fade-in motion-delay-600">
 									<div className="relative w-16 h-16 rounded-full overflow-hidden border border-[var(--color-border)] motion-scale-in motion-delay-700">
-										<Image src={t.avatar} alt={t.name} fill className="object-cover" />
+										<Image
+											src={t.avatar}
+											alt={t.name}
+											fill
+											sizes="(max-width: 768px) 100vw, 50vw"
+											className="object-cover"
+										/>
 									</div>
 									<div className="motion-slide-up motion-delay-800">
 										<p className="font-semibold text-lg leading-tight">{t.name}</p>
@@ -103,7 +109,13 @@ export function Testimonials() {
 								>
 									<div className="flex items-center gap-3 motion-slide-up motion-delay-600">
 										<div className="relative w-12 h-12 rounded-full overflow-hidden border border-[var(--color-border)] motion-scale-in motion-delay-700">
-											<Image src={t.avatar} alt={t.name} fill className="object-cover" />
+											<Image
+												src={t.avatar}
+												alt={t.name}
+												fill
+												sizes="(max-width: 768px) 100vw, 50vw"
+												className="object-cover"
+											/>
 										</div>
 										<div className="motion-fade-in motion-delay-800">
 											<p className="font-semibold leading-tight">{t.name}</p>

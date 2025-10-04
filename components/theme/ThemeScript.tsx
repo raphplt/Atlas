@@ -1,12 +1,11 @@
 "use client";
 import { useEffect } from "react";
 
-// Inline script to set initial theme before paint (avoids FOUC)
 export function ThemeScript() {
 	return (
 		<script
 			dangerouslySetInnerHTML={{
-				__html: `(()=>{try{const m=window.matchMedia('(prefers-color-scheme: dark)').matches;const s=localStorage.getItem('theme');const t=s|| (m?'dark':'light');document.addEventListener('DOMContentLoaded',()=>{document.body.dataset.theme=t});document.documentElement.style.colorScheme=t==='dark'?'dark':'light';}catch(e){}})();`,
+				__html: `(()=>{try{const m=window.matchMedia('(prefers-color-scheme: dark)').matches;const s=localStorage.getItem('theme');const t=s|| (m?'dark':'light');document.body.dataset.theme=t;}catch(e){}})();`,
 			}}
 		/>
 	);
@@ -14,13 +13,20 @@ export function ThemeScript() {
 
 export function useTheme() {
 	function setTheme(t: "light" | "dark") {
-		document.body.dataset.theme = t;
-		document.documentElement.style.colorScheme = t;
-		localStorage.setItem("theme", t);
+		if (typeof document !== "undefined") {
+			document.body.dataset.theme = t;
+			document.documentElement.style.colorScheme = t;
+			localStorage.setItem("theme", t);
+		}
 	}
 	useEffect(() => {
-		const stored = localStorage.getItem("theme") as "light" | "dark" | null;
-		if (stored) setTheme(stored);
+		if (typeof document !== "undefined") {
+			const stored = localStorage.getItem("theme") as "light" | "dark" | null;
+			const currentTheme =
+				(document.body.dataset.theme as "light" | "dark") || "light";
+			const themeToSet = stored || currentTheme;
+			document.documentElement.style.colorScheme = themeToSet;
+		}
 	}, []);
 	return {
 		theme:

@@ -68,6 +68,7 @@ export function BeforeAfterSlider({
 								src={beforeSrc}
 								alt={`${alt} - Avant`}
 								fill
+								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 								className="object-cover"
 								priority={size === "lg"}
 							/>
@@ -92,6 +93,7 @@ export function BeforeAfterSlider({
 								src={afterSrc}
 								alt={`${alt} - Après`}
 								fill
+								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 								className="object-cover"
 								priority={size === "lg"}
 							/>

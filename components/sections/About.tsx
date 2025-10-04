@@ -112,6 +112,7 @@ export function About() {
 										src="/images/Raphael-Plassart.jpg"
 										alt="About"
 										fill
+										sizes="(max-width: 768px) 100vw, 50vw"
 										className="object-cover"
 									/>
 								</div>
