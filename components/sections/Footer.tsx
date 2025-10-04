@@ -5,6 +5,7 @@ import {
 	MailIcon,
 	CoffeeIcon,
 } from "@/components/Icons";
+import { ConsentManager } from "@/components/ConsentBanner";
 
 export function Footer() {
 	return (
@@ -56,9 +57,12 @@ export function Footer() {
 						</a>
 					</div>
 
-					<p className="text-xs text-[var(--color-muted)]">
-						© {new Date().getFullYear()} Atlas — Tous droits réservés.
-					</p>
+					<div className="space-y-2">
+						<p className="text-xs text-[var(--color-muted)]">
+							© {new Date().getFullYear()} Atlas — Tous droits réservés.
+						</p>
+						<ConsentManager />
+					</div>
 				</div>
 				<div className="grid grid-cols-2 gap-8">
 					<div className="space-y-4">

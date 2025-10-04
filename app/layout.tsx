@@ -7,6 +7,7 @@ import { StickyCTA } from "@/components/StickyCTA";
 import { NextIntlClientProvider } from "next-intl";
 import { GlassFilter } from "@/components/ui/liquid-glass";
 import Head from "@/components/Head";
+import { ConsentBanner } from "@/components/ConsentBanner";
 
 export default function RootLayout({
 	children,
@@ -24,6 +25,7 @@ export default function RootLayout({
 					{children}
 					<Footer />
 					<StickyCTA />
+					<ConsentBanner />
 				</NextIntlClientProvider>
 			</body>
 		</html>
