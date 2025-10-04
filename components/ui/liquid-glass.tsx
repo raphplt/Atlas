@@ -24,35 +24,35 @@ const GlassEffect: React.FC<GlassEffectProps> = ({
   };
 
   const content = (
-    <div
-      className={`relative flex font-semibold overflow-hidden text-black cursor-pointer transition-all duration-700 ${className}`}
-      style={glassStyle}
-    >
-      {/* Glass Layers */}
-      <div
-        className="absolute inset-0 z-0 overflow-hidden rounded-inherit rounded-3xl"
-        style={{
-          backdropFilter: "blur(3px)",
-          filter: "url(#glass-distortion)",
-          isolation: "isolate",
-        }}
-      />
-      <div
-        className="absolute inset-0 z-10 rounded-inherit"
-        style={{ background: "rgba(255, 255, 255, 0.25)" }}
-      />
-      <div
-        className="absolute inset-0 z-20 rounded-inherit rounded-3xl overflow-hidden"
-        style={{
-          boxShadow:
-            "inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5), inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5)",
-        }}
-      />
+			<div
+				className={`relative flex font-semibold overflow-visible text-black transition-all duration-700 ${className}`}
+				style={glassStyle}
+			>
+				{/* Glass Layers */}
+				<div
+					className="absolute inset-0 z-0 overflow-hidden rounded-inherit rounded-3xl"
+					style={{
+						backdropFilter: "blur(3px)",
+						filter: "url(#glass-distortion)",
+						isolation: "isolate",
+					}}
+				/>
+				<div
+					className="absolute inset-0 z-10 rounded-inherit"
+					style={{ background: "rgba(255, 255, 255, 0.25)" }}
+				/>
+				<div
+					className="absolute inset-0 z-20 rounded-inherit rounded-3xl overflow-hidden"
+					style={{
+						boxShadow:
+							"inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5), inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5)",
+					}}
+				/>
 
-      {/* Content */}
-      <div className="relative z-30">{children}</div>
-    </div>
-  );
+				{/* Content */}
+				<div className="relative z-30 flex-1 w-full">{children}</div>
+			</div>
+		);
 
   return href ? (
     <a href={href} target={target} rel="noopener noreferrer" className="block">

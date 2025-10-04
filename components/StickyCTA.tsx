@@ -4,12 +4,19 @@ import { useState, useEffect } from "react";
 import { buttonVariants } from "@/components/ui/button";
 import { Phone, X } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export function StickyCTA() {
 	const [isVisible, setIsVisible] = useState(false);
 	const [isDismissed, setIsDismissed] = useState(false);
+	const [isMounted, setIsMounted] = useState(false);
 	const t = useTranslations("stickyCta");
 
+	const pathname = usePathname();
+
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -24,7 +31,8 @@ export function StickyCTA() {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, [isDismissed]);
 
-	if (!isVisible) return null;
+	// Ne pas afficher si pas monté, pas sur la page d'accueil, ou pas visible
+	if (!isMounted || pathname !== "/" || !isVisible) return null;
 
 	return (
 		<div className="fixed bottom-4 left-4 right-4 z-50 lg:hidden animate-in slide-in-from-bottom-full duration-300">

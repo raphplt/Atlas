@@ -68,45 +68,45 @@ export function FAQ() {
 		filtered.length > 0 && filtered.every((f) => openIds.includes(f.id));
 
 	return (
-		<section className="relative py-32 overflow-hidden" id="faq">
+		<section className="relative py-20 sm:py-32 overflow-hidden" id="faq">
 			<div
 				className="absolute inset-0 pattern-grid opacity-30"
 				aria-hidden="true"
 			/>
 			<div className="container relative">
-				<h2 className="h2 text-center mb-6 motion-fade-in motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
+				<h2 className="h2 text-center mb-4 sm:mb-6 motion-fade-in motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
 					{t("title")}
 				</h2>
-				<p className="text-center text-sm text-[var(--color-muted)] mb-12 max-w-2xl mx-auto motion-slide-up motion-delay-100 motion-duration-1000 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
+				<p className="text-center text-sm text-[var(--color-muted)] mb-8 sm:mb-12 max-w-2xl mx-auto motion-slide-up motion-delay-100 motion-duration-1000 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
 					{t("subtitle")}
 				</p>
-				<div className="flex flex-col md:flex-row gap-4 md:items-center mb-10 motion-scale-in motion-delay-200 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
+				<div className="flex flex-col md:flex-row gap-3 sm:gap-4 md:items-center mb-8 sm:mb-10 motion-scale-in motion-delay-200 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
 					<div className="relative flex-1 motion-slide-up motion-delay-300">
-						<Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-[var(--color-muted)] motion-wiggle motion-delay-400" />
+						<Search className="absolute left-3 top-1/2 -translate-y-1/2 size-3.5 sm:size-4 text-[var(--color-muted)] motion-wiggle motion-delay-400" />
 						<input
 							placeholder={t("searchPlaceholder")}
 							value={query}
 							onChange={(e) => setQuery(e.target.value)}
-							className="w-full pl-9 pr-3 py-2 rounded-md bg-[var(--color-bg-alt)]/70 border border-[var(--color-border)] text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+							className="w-full pl-8 sm:pl-9 pr-3 py-2 rounded-md bg-[var(--color-bg-alt)]/70 border border-[var(--color-border)] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
 							aria-label="Rechercher dans la FAQ"
 						/>
 					</div>
 					<button
 						onClick={() => (allExpanded ? collapseAll() : expandAll())}
-						className="text-xs font-medium px-3 py-2 rounded-md border border-[var(--color-border)] bg-[var(--color-card)]/70 hover:bg-[var(--color-bg-alt)] transition flex items-center gap-1 motion-scale-in motion-delay-500"
+						className="text-[10px] sm:text-xs font-medium px-2 sm:px-3 py-1.5 sm:py-2 rounded-md border border-[var(--color-border)] bg-[var(--color-card)]/70 hover:bg-[var(--color-bg-alt)] transition flex items-center gap-1 motion-scale-in motion-delay-500"
 						aria-label={allExpanded ? t("collapseAll") : t("expandAll")}
 					>
 						{allExpanded ? (
-							<Minimize2 className="size-3.5" />
+							<Minimize2 className="size-3 sm:size-3.5" />
 						) : (
-							<Maximize2 className="size-3.5" />
+							<Maximize2 className="size-3 sm:size-3.5" />
 						)}
 						{allExpanded ? t("collapseAll") : t("expandAll")}
 					</button>
 				</div>
-				<div ref={listRef} className="space-y-4">
+				<div ref={listRef} className="space-y-3 sm:space-y-4">
 					{filtered.length === 0 && (
-						<p className="text-sm text-[var(--color-muted)] motion-fade-in motion-delay-600">
+						<p className="text-xs sm:text-sm text-[var(--color-muted)] motion-fade-in motion-delay-600">
 							{t("noResults")}
 						</p>
 					)}
@@ -116,22 +116,22 @@ export function FAQ() {
 							<div
 								key={f.id}
 								id={f.id}
-								className="group border border-[var(--color-border)] rounded-2xl bg-[var(--color-card)]/70 backdrop-blur-sm transition hover:border-[var(--color-accent)]/40 motion-fade-in motion-delay-600 motion-intersect-start motion-intersect-end motion-intersect-threshold-50"
+								className="group border border-[var(--color-border)] rounded-xl sm:rounded-2xl bg-[var(--color-card)]/70 backdrop-blur-sm transition hover:border-[var(--color-accent)]/40 motion-fade-in motion-delay-600 motion-intersect-start motion-intersect-end motion-intersect-threshold-50"
 							>
 								<button
 									onClick={() => toggle(f.id)}
-									className="w-full flex items-start gap-4 text-left px-5 py-4 motion-scale-in motion-delay-700"
+									className="w-full flex items-start gap-3 sm:gap-4 text-left px-3 sm:px-5 py-3 sm:py-4 motion-scale-in motion-delay-700"
 									aria-expanded={isOpen}
 									aria-controls={`panel-${f.id}`}
 								>
-									<div className="mt-1 rounded-full size-6 flex items-center justify-center bg-[var(--color-accent)]/15 text-[var(--color-accent)] text-xs font-semibold motion-wiggle motion-delay-800">
+									<div className="mt-1 rounded-full size-5 sm:size-6 flex items-center justify-center bg-[var(--color-accent)]/15 text-[var(--color-accent)] text-xs font-semibold motion-wiggle motion-delay-800">
 										{isOpen ? "-" : "+"}
 									</div>
-									<span className="font-medium flex-1 leading-snug pr-6 motion-slide-up motion-delay-900">
+									<span className="font-medium flex-1 leading-snug pr-4 sm:pr-6 text-sm sm:text-base motion-slide-up motion-delay-900">
 										{f.question}
 									</span>
 									<ChevronDown
-										className={`size-4 text-[var(--color-muted)] transition mt-1 motion-scale-in motion-delay-1000 ${
+										className={`size-3.5 sm:size-4 text-[var(--color-muted)] transition mt-1 motion-scale-in motion-delay-1000 ${
 											isOpen ? "rotate-180 text-[var(--color-accent)]" : ""
 										}`}
 									/>
@@ -142,9 +142,9 @@ export function FAQ() {
 									aria-hidden={!isOpen}
 									className={`grid transition-[grid-template-rows,opacity] duration-400 ease-out motion-fade-in motion-delay-1100 ${
 										isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-									} px-5`}
+									} px-3 sm:px-5`}
 								>
-									<div className="overflow-hidden pb-5 pt-0 text-sm leading-relaxed text-[var(--color-muted)] motion-slide-up motion-delay-1200">
+									<div className="overflow-hidden pb-3 sm:pb-5 pt-0 text-xs sm:text-sm leading-relaxed text-[var(--color-muted)] motion-slide-up motion-delay-1200">
 										{f.answer}
 									</div>
 								</div>
@@ -152,7 +152,7 @@ export function FAQ() {
 						);
 					})}
 				</div>
-				<p className="mt-12 text-center text-xs text-[var(--color-muted)] motion-fade-in motion-delay-1300 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
+				<p className="mt-8 sm:mt-12 text-center text-[10px] sm:text-xs text-[var(--color-muted)] motion-fade-in motion-delay-1300 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
 					{t("stillHaveQuestion")}{" "}
 					<a
 						href="#contact"

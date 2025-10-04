@@ -2,32 +2,52 @@
 import { useTheme } from "./ThemeScript";
 import { Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useState, useEffect } from "react";
 
 export function ThemeToggle({ className }: { className?: string }) {
 	const { theme, toggle } = useTheme();
-	const isDark = theme === "dark";
+	const [isDark, setIsDark] = useState(false);
+	const [isAnimating, setIsAnimating] = useState(false);
+
+	useEffect(() => {
+		setIsDark(theme === "dark");
+	}, [theme]);
+
+	const handleToggle = () => {
+		setIsAnimating(true);
+		toggle();
+		setTimeout(() => setIsAnimating(false), 500);
+	};
+
 	return (
 		<button
 			type="button"
-			onClick={toggle}
+			onClick={handleToggle}
 			aria-label={isDark ? "Activer le mode clair" : "Activer le mode sombre"}
 			className={cn(
-				"relative cursor-pointer w-10 h-10 rounded-full soft-border flex items-center justify-center group overflow-hidden transition bg-[var(--color-bg-alt)]/70 hover:bg-[var(--color-bg-alt)] accent-ring",
+				"relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)]/60 bg-white/20 text-[var(--color-fg)] transition-all duration-300 hover:bg-[var(--color-accent)]/20 hover:scale-110 active:scale-95 backdrop-blur-sm overflow-hidden",
+				isAnimating && "scale-95",
 				className
 			)}
 		>
 			<Sun
 				className={cn(
-					"absolute size-5 text-[var(--color-accent)] transition",
-					isDark && "translate-y-8 opacity-0"
+					"absolute size-5 text-[var(--color-accent)] transform transition-all duration-500 ease-in-out",
+					isDark
+						? "translate-y-[-12px] opacity-0 rotate-90"
+						: "translate-y-0 opacity-100 rotate-0"
 				)}
 			/>
+
 			<Moon
 				className={cn(
-					"absolute size-5 text-[var(--color-accent)] transition",
-					!isDark && "translate-y-8 opacity-0"
+					"absolute size-5 text-[var(--color-accent)] transform transition-all duration-500 ease-in-out",
+					isDark
+						? "translate-y-0 opacity-100 rotate-0"
+						: "translate-y-[12px] opacity-0 -rotate-90"
 				)}
 			/>
+
 			<span className="sr-only">Changer de thème</span>
 		</button>
 	);

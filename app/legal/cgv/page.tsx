@@ -1,3 +1,4 @@
+import { H3 } from "@/components/ui/typography";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata() {
@@ -17,17 +18,17 @@ export default async function CGV() {
 
 			<div className="prose prose-lg max-w-none">
 				<section className="mb-8">
-					<h2 className="h3 mb-4">{t("sections.object.title")}</h2>
+					<H3 className="mb-4">{t("sections.object.title")}</H3>
 					<p>{t("sections.object.content")}</p>
 				</section>
 
 				<section className="mb-8">
-					<h2 className="h3 mb-4">{t("sections.services.title")}</h2>
+					<H3 className="mb-4">{t("sections.services.title")}</H3>
 					<p>{t("sections.services.content")}</p>
 				</section>
 
 				<section className="mb-8">
-					<h2 className="h3 mb-4">{t("sections.payment.title")}</h2>
+					<H3 className="mb-4">{t("sections.payment.title")}</H3>
 					<ul className="list-disc pl-6">
 						{t.raw("sections.payment.items").map((item: string, index: number) => (
 							<li key={index}>{item}</li>
@@ -36,12 +37,12 @@ export default async function CGV() {
 				</section>
 
 				<section className="mb-8">
-					<h2 className="h3 mb-4">{t("sections.delivery.title")}</h2>
+					<H3 className="mb-4">{t("sections.delivery.title")}</H3>
 					<p>{t("sections.delivery.content")}</p>
 				</section>
 
 				<section className="mb-8">
-					<h2 className="h3 mb-4">{t("sections.guarantees.title")}</h2>
+					<H3 className="mb-4">{t("sections.guarantees.title")}</H3>
 					<ul className="list-disc pl-6">
 						{t.raw("sections.guarantees.items").map((item: string, index: number) => (
 							<li key={index}>{item}</li>
@@ -50,17 +51,17 @@ export default async function CGV() {
 				</section>
 
 				<section className="mb-8">
-					<h2 className="h3 mb-4">{t("sections.responsibilities.title")}</h2>
+					<H3 className="mb-4">{t("sections.responsibilities.title")}</H3>
 					<p>{t("sections.responsibilities.content")}</p>
 				</section>
 
 				<section className="mb-8">
-					<h2 className="h3 mb-4">{t("sections.intellectual.title")}</h2>
+					<H3 className="mb-4">{t("sections.intellectual.title")}</H3>
 					<p>{t("sections.intellectual.content")}</p>
 				</section>
 
 				<section className="mb-8">
-					<h2 className="h3 mb-4">{t("sections.contact.title")}</h2>
+					<H3 className="mb-4">{t("sections.contact.title")}</H3>
 					<p>
 						{t("sections.contact.content")}
 						<br />

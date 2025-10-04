@@ -5,7 +5,7 @@ type LogoProps = {
 	size?: number;
 };
 
-const Logo = ({ size = 5 }: LogoProps) => {
+const Logo = ({ size = 8 }: LogoProps) => {
 	return (
 		<span
 			className={clsx(

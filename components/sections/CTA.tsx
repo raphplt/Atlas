@@ -73,7 +73,7 @@ export function CTA() {
 	}
 
 	return (
-		<section className="relative py-40 overflow-hidden" id="contact">
+		<section className="relative py-24 sm:py-40 overflow-hidden" id="contact">
 			<div
 				className="absolute inset-0 pointer-events-none opacity-[.35] md:opacity-40"
 				aria-hidden="true"
@@ -82,18 +82,18 @@ export function CTA() {
 				<div className="absolute bottom-[-300px] right-[-200px] w-[620px] h-[620px] rounded-full bg-[var(--color-accent-alt)]/25 blur-3xl" />
 			</div>
 			<div className="container relative">
-				<div className="grid gap-20 lg:grid-cols-2 items-start">
+				<div className="grid gap-12 sm:gap-20 lg:grid-cols-2 items-start">
 					{/* Left content */}
-					<div className="space-y-10 max-w-xl">
-						<div className="space-y-6">
+					<div className="space-y-6 sm:space-y-10 max-w-xl">
+						<div className="space-y-4 sm:space-y-6">
 							<h2 className="h2 leading-tight motion-fade-in motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
 								{t("title")}
 							</h2>
-							<p className="text-lg text-[var(--color-muted)] motion-slide-up motion-delay-100 motion-duration-1000 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
+							<p className="text-base sm:text-lg text-[var(--color-muted)] motion-slide-up motion-delay-100 motion-duration-1000 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
 								{t("subtitle")}
 							</p>
 						</div>
-						<div className="grid gap-6 sm:grid-cols-2">
+						<div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
 							{[
 								{
 									icon: PhoneCall,
@@ -118,14 +118,14 @@ export function CTA() {
 							].map((b, index) => (
 								<div
 									key={b.label}
-									className="flex gap-3 items-start motion-fade-in motion-delay-200 motion-intersect-start motion-intersect-end motion-intersect-threshold-50"
+									className="flex gap-2 sm:gap-3 items-start motion-fade-in motion-delay-200 motion-intersect-start motion-intersect-end motion-intersect-threshold-50"
 								>
-									<div className="icon-circle shrink-0 size-11 flex items-center justify-center motion-scale-in motion-delay-300">
-										<b.icon className="size-4 motion-wiggle motion-delay-400" />
+									<div className="icon-circle shrink-0 size-9 sm:size-11 flex items-center justify-center motion-scale-in motion-delay-300">
+										<b.icon className="size-3.5 sm:size-4 motion-wiggle motion-delay-400" />
 									</div>
-									<div className="text-sm leading-relaxed motion-slide-up motion-delay-500">
+									<div className="text-xs sm:text-sm leading-relaxed motion-slide-up motion-delay-500">
 										<p className="font-medium text-[var(--color-fg)]">{b.label}</p>
-										<p className="text-[11px] text-[var(--color-muted)] mt-0.5">
+										<p className="text-[10px] sm:text-[11px] text-[var(--color-muted)] mt-0.5">
 											{b.desc}
 										</p>
 									</div>
@@ -136,17 +136,17 @@ export function CTA() {
 					{/* Form */}
 					<div className="relative group">
 						<div
-							className="absolute -inset-[2px] rounded-3xl bg-gradient-to-br from-[var(--color-accent)]/60 via-[var(--color-accent)]/10 to-[var(--color-accent-alt)]/60 opacity-70 blur-xl group-hover:opacity-90 transition motion-scale-in motion-delay-600"
+							className="absolute -inset-[2px] rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[var(--color-accent)]/60 via-[var(--color-accent)]/10 to-[var(--color-accent-alt)]/60 opacity-70 blur-xl group-hover:opacity-90 transition motion-scale-in motion-delay-600"
 							aria-hidden="true"
 						/>
 						<div
-							className="absolute inset-0 rounded-3xl border border-[var(--color-border)] pointer-events-none [mask:linear-gradient(#000,transparent_70%)] motion-fade-in motion-delay-700"
+							className="absolute inset-0 rounded-2xl sm:rounded-3xl border border-[var(--color-border)] pointer-events-none [mask:linear-gradient(#000,transparent_70%)] motion-fade-in motion-delay-700"
 							aria-hidden="true"
 						/>
-						<div className="relative rounded-3xl border border-[var(--color-border)] bg-[var(--color-card)]/80 backdrop-blur-xl p-10 shadow-[var(--shadow)] motion-slide-up motion-delay-800 motion-intersect-start motion-intersect-end motion-intersect-threshold-50">
+						<div className="relative rounded-2xl sm:rounded-3xl border border-[var(--color-border)] bg-[var(--color-card)]/80 backdrop-blur-xl p-6 sm:p-10 shadow-[var(--shadow)] motion-slide-up motion-delay-800 motion-intersect-start motion-intersect-end motion-intersect-threshold-50">
 							<form
 								onSubmit={handleSubmit(onSubmit)}
-								className="grid gap-6"
+								className="grid gap-4 sm:gap-6"
 								aria-label={t("form.title")}
 								noValidate
 							>
@@ -159,17 +159,17 @@ export function CTA() {
 								</div>
 
 								{/* Étape 1 : Champs essentiels (toujours visibles) */}
-								<div className="space-y-6">
-									<div className="text-center mb-6 motion-fade-in motion-delay-900">
-										<h3 className="text-lg font-semibold mb-2 motion-slide-up motion-delay-1000">
+								<div className="space-y-4 sm:space-y-6">
+									<div className="text-center mb-4 sm:mb-6 motion-fade-in motion-delay-900">
+										<h3 className="text-base sm:text-lg font-semibold mb-2 motion-slide-up motion-delay-1000">
 											{t("form.stepTitle")}
 										</h3>
-										<p className="text-sm text-[var(--color-muted)] motion-fade-in motion-delay-1100">
+										<p className="text-xs sm:text-sm text-[var(--color-muted)] motion-fade-in motion-delay-1100">
 											{t("form.stepSubtitle")}
 										</p>
 									</div>
 
-									<div className="grid gap-6 md:grid-cols-2">
+									<div className="grid gap-4 sm:gap-6 md:grid-cols-2">
 										<div className="field">
 											<label htmlFor="firstName" className="flex items-center gap-2">
 												{t("form.firstName")}
@@ -240,7 +240,7 @@ export function CTA() {
 
 								{/* Étape 2 : Détails (apparaît progressivement) */}
 								{showFullForm && (
-									<div className="space-y-6 animate-in fade-in slide-in-from-top-4 duration-500 motion-fade-in motion-delay-1200">
+									<div className="space-y-4 sm:space-y-6 animate-in fade-in slide-in-from-top-4 duration-500 motion-fade-in motion-delay-1200">
 										<div className="h-px bg-gradient-to-r from-transparent via-[var(--color-border)] to-transparent motion-scale-in motion-delay-1300" />
 
 										<div className="field">
@@ -265,12 +265,12 @@ export function CTA() {
 											)}
 										</div>
 
-										<div className="grid gap-6 md:grid-cols-2">
+										<div className="grid gap-4 sm:gap-6 md:grid-cols-2">
 											<div className="field">
 												<label htmlFor="projectType">{t("form.project")}</label>
 												<select
 													id="projectType"
-													className="input text-sm pr-8"
+													className="input text-xs sm:text-sm pr-8"
 													{...register("projectType")}
 												>
 													<option value="site-vitrine">
@@ -287,7 +287,7 @@ export function CTA() {
 												<label htmlFor="budget">{t("form.budget")}</label>
 												<select
 													id="budget"
-													className="input text-sm pr-8"
+													className="input text-xs sm:text-sm pr-8"
 													{...register("budget")}
 												>
 													<option value="<1000">{t("form.budgetRanges.under1000")}</option>
@@ -300,8 +300,8 @@ export function CTA() {
 											</div>
 										</div>
 
-										<fieldset className="flex flex-wrap gap-4 text-xs">
-											<legend className="text-[11px] tracking-wide uppercase text-[var(--color-muted)] mb-1">
+										<fieldset className="flex flex-wrap gap-3 sm:gap-4 text-xs">
+											<legend className="text-[10px] sm:text-[11px] tracking-wide uppercase text-[var(--color-muted)] mb-1">
 												{t("form.hasSite")}
 											</legend>
 											{[
@@ -310,7 +310,7 @@ export function CTA() {
 											].map((r) => (
 												<label
 													key={r.value}
-													className="flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-alt)]/40 cursor-pointer hover:border-[var(--color-accent)]/50 transition"
+													className="flex items-center gap-2 px-2 sm:px-3 py-1 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-alt)]/40 cursor-pointer hover:border-[var(--color-accent)]/50 transition"
 												>
 													<input
 														type="radio"
@@ -328,7 +328,7 @@ export function CTA() {
 											<textarea
 												id="message"
 												className="input"
-												rows={4}
+												rows={3}
 												placeholder={t("form.messagePlaceholder")}
 												aria-invalid={!!errors.message}
 												{...register("message")}
@@ -341,11 +341,11 @@ export function CTA() {
 										</div>
 									</div>
 								)}
-								<div className="flex flex-col gap-3">
+								<div className="flex flex-col gap-2 sm:gap-3">
 									<Button
 										type="submit"
 										disabled={isSubmitting}
-										className="h-14 text-sm md:text-base font-semibold tracking-wide relative"
+										className="h-12 sm:h-14 text-xs sm:text-sm md:text-base font-semibold tracking-wide relative"
 									>
 										<span
 											className={`${
@@ -355,19 +355,19 @@ export function CTA() {
 											{t("form.submit")}
 										</span>
 										{isSubmitting && (
-											<span className="absolute inset-0 flex items-center justify-center gap-2 text-sm">
-												<span className="size-4 rounded-full border-2 border-[var(--color-accent)] border-t-transparent animate-spin" />{" "}
+											<span className="absolute inset-0 flex items-center justify-center gap-2 text-xs sm:text-sm">
+												<span className="size-3 sm:size-4 rounded-full border-2 border-[var(--color-accent)] border-t-transparent animate-spin" />{" "}
 												{t("form.submitting")}
 											</span>
 										)}
 									</Button>
-									<div className="text-[11px] text-[var(--color-muted)] leading-relaxed space-y-1">
+									<div className="text-[10px] sm:text-[11px] text-[var(--color-muted)] leading-relaxed space-y-1">
 										<p>{t("form.consent")}</p>
-										<p className="flex flex-wrap gap-3 pt-1">
+										<p className="flex flex-wrap gap-2 sm:gap-3 pt-1">
 											{Array.from({ length: 3 }, (_, idx) => (
 												<span
 													key={idx}
-													className="px-2 py-0.5 rounded bg-[var(--color-bg-alt)]/60 border border-[var(--color-border)]"
+													className="px-1.5 sm:px-2 py-0.5 rounded bg-[var(--color-bg-alt)]/60 border border-[var(--color-border)] text-[9px] sm:text-[10px]"
 												>
 													{t(`form.badges.${idx}`)}
 												</span>
@@ -376,7 +376,7 @@ export function CTA() {
 									</div>
 									<div
 										aria-live="polite"
-										className="text-xs text-[var(--color-accent)] min-h-[1rem]"
+										className="text-[10px] sm:text-xs text-[var(--color-accent)] min-h-[1rem]"
 									>
 										{serverError}
 									</div>
