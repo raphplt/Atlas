@@ -1,14 +1,10 @@
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
-import { ThemeScript } from "@/components/theme/ThemeScript";
-import { Navbar } from "@/components/Nav";
-import { Footer } from "@/components/sections/Footer";
-import { StickyCTA } from "@/components/StickyCTA";
 import { NextIntlClientProvider } from "next-intl";
 import { GlassFilter } from "@/components/ui/liquid-glass";
 import Head from "@/components/Head";
 import { ConsentBanner } from "@/components/ConsentBanner";
-import { Analytics } from "@vercel/analytics/next";
+import { ConditionalLayoutWrapper } from "@/components/ConditionalLayoutWrapper";
 
 export default function RootLayout({
 	children,
@@ -22,11 +18,7 @@ export default function RootLayout({
 				<GlassFilter />
 				<NextIntlClientProvider>
 					<Toaster />
-					<Navbar />
-					{children}
-					<Analytics />
-					<Footer />
-					<StickyCTA />
+					<ConditionalLayoutWrapper>{children}</ConditionalLayoutWrapper>
 					<ConsentBanner />
 				</NextIntlClientProvider>
 			</body>

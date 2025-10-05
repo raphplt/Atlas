@@ -631,5 +631,50 @@
         "manager": {
             "link": "Manage my cookies"
         }
+    },
+    "links": {
+        "title": "My Links",
+        "subtitle": "Find all my links in one place",
+        "profile": {
+            "name": "Raphaël Plassart",
+            "title": "Full Stack & Mobile Developer",
+            "description": "Creator of Atlas • ETNA Student • Co-founder Melios & Quori"
+        },
+        "categories": {
+            "social": "Social Media",
+            "projects": "Projects",
+            "contact": "Contact",
+            "support": "Support"
+        },
+        "links": {
+            "github": {
+                "title": "GitHub",
+                "description": "My open source projects and contributions"
+            },
+            "linkedin": {
+                "title": "LinkedIn",
+                "description": "My professional profile"
+            },
+            "email": {
+                "title": "Email",
+                "description": "Contact me directly"
+            },
+            "ko-fi": {
+                "title": "Ko-fi",
+                "description": "Support my work"
+            },
+            "atlas": {
+                "title": "Atlas",
+                "description": "Websites for craftsmen"
+            },
+            "melios": {
+                "title": "Melios",
+                "description": "Event management platform"
+            },
+            "quori": {
+                "title": "Quori",
+                "description": "B2B SaaS for businesses"
+            }
+        }
     }
 }

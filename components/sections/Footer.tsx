@@ -125,6 +125,11 @@ export function Footer() {
 									À propos
 								</a>
 							</li>
+							<li>
+								<a href="/links" className="hover:text-[var(--color-fg)] transition">
+									Liens
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
