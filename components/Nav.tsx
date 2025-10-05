@@ -28,7 +28,7 @@ export function Navbar() {
 	return (
 		<>
 			<div className="fixed inset-x-0 top-2 sm:top-4 z-50 flex justify-center px-4">
-				<GlassEffect className="rounded-2xl px-3 sm:px-5 py-2 w-full sm:w-fit">
+				<GlassEffect className="rounded-2xl px-3 sm:px-5 py-2 w-full sm:w-1/2">
 					<header className="flex items-center justify-between w-full">
 						<Link
 							href="/"
