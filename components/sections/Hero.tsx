@@ -1,14 +1,11 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
-import {
-	ShieldCheck,
-	TrendingUp,
-	MapPin,
-	ArrowUpRight,
-	CircleChevronDown,
-} from "lucide-react";
+import { ShieldCheck, TrendingUp, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { ButtonColorful } from "../ui/ColorfulButton";
+import { PrimaryCta } from "../ui/PrimaryCta";
+import { SecondaryCta } from "../ui/SecondaryCta";
 
 export function Hero() {
 	const t = useTranslations("hero");
@@ -22,7 +19,6 @@ export function Hero() {
 			<div className="noise" aria-hidden="true" />
 			<div className="aurora a1" />
 			<div className="aurora a2" />
-			{/* Éléments décoratifs pour grands écrans */}
 			<div className="hidden 2xl:block absolute top-1/4 left-8 w-32 h-32 bg-gradient-to-br from-[var(--color-accent)]/10 to-[var(--color-accent-alt)]/10 rounded-full blur-xl animate-pulse-subtle" />
 			<div className="hidden 2xl:block absolute bottom-1/4 right-8 w-24 h-24 bg-gradient-to-br from-[var(--color-accent-alt)]/10 to-[var(--color-accent)]/10 rounded-full blur-xl animate-pulse-subtle" />
 
@@ -76,23 +72,18 @@ export function Hero() {
 						</div>
 					</div>
 
-					<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8 motion-slide-up motion-delay-600 motion-duration-1000">
-						<a href="#contact" className="w-full sm:w-auto">
-							<ButtonColorful className="w-full sm:w-auto">
-								<div className="flex items-center justify-center gap-2">
-									<CircleChevronDown className="size-3.5 text-black" />
-									<p className="text-sm text-black">{t("ctaPrimary")}</p>
-								</div>
-							</ButtonColorful>
-						</a>
-						<a href="#portfolio" className="w-full sm:w-auto">
-							<ButtonColorful className="w-full sm:w-auto">
-								<div className="flex items-center justify-center gap-2">
-									<ArrowUpRight className="size-3.5 text-black" />
-									<p className="text-sm text-black">{t("ctaSecondary")}</p>
-								</div>
-							</ButtonColorful>
-						</a>
+					<div className="flex flex-col gap-6 sm:gap-8 items-center mb-6 sm:mb-8 motion-slide-up motion-delay-600 motion-duration-1000">
+						<div className="w-full sm:w-auto">
+							<PrimaryCta
+								location="hero"
+								size="large"
+								showSubtext={true}
+								className="w-full sm:w-auto animate-pulse-subtle"
+							/>
+						</div>
+						<SecondaryCta href="#portfolio" location="hero-secondary">
+							{t("ctaSecondary")}
+						</SecondaryCta>
 					</div>
 
 					<div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[10px] sm:text-xs text-[var(--color-muted)] motion-fade-in motion-delay-900">

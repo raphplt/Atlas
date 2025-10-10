@@ -1,6 +1,9 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
 import { FileWarning, MapPinOff, PhoneOff } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { PrimaryCta } from "@/components/ui/PrimaryCta";
 
 export function Problems() {
 	const t = useTranslations("problems");
@@ -53,6 +56,16 @@ export function Problems() {
 							</p>
 						</Card>
 					))}
+				</div>
+
+				{/* CTA to solve problems */}
+				<div className="text-center mt-12 sm:mt-16">
+					<PrimaryCta
+						location="problems"
+						size="default"
+						showIcon={true}
+						showSubtext={false}
+					/>
 				</div>
 			</div>
 		</section>

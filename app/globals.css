@@ -120,8 +120,14 @@ html, body { overflow-x: hidden; }
 @keyframes fade { from { opacity:0; transform:translateY(12px);} }
 .animate-pulse-subtle { animation: pulse-subtle 2s ease-in-out infinite; }
 @keyframes pulse-subtle { 
-	0%, 100% { transform: scale(1); }
-	50% { transform: scale(1.02); }
+	0%, 100% { 
+		transform: scale(1); 
+		box-shadow: 0 8px 24px rgba(var(--color-accent-rgb), 0.35);
+	}
+	50% { 
+		transform: scale(1.01); 
+		box-shadow: 0 12px 32px rgba(var(--color-accent-rgb), 0.45);
+	}
 }
 
 /* FORMS */
@@ -161,13 +167,13 @@ body[data-theme='dark'] .aurora { mix-blend-mode:plus-lighter; opacity:.6; }
 	position: relative;
 	overflow: hidden;
 	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	border-radius: 8px;
+	border-radius: 12px;
 }
 
 .btn-primary-sober:hover {
-	transform: translateY(-1px);
+	transform: translateY(-2px);
 	box-shadow: 
-		0 10px 25px rgba(0,0,0,0.1),
+		0 12px 32px rgba(var(--color-accent-rgb), 0.5),
 		0 0 0 1px rgba(255,255,255,0.1);
 }
 
@@ -292,14 +298,14 @@ body[data-theme='dark'] .aurora { mix-blend-mode:plus-lighter; opacity:.6; }
 	position: relative;
 	overflow: hidden;
 	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	border-radius: 8px;
+	border-radius: 12px;
 }
 
 .btn-secondary-sober:hover {
-	transform: translateY(-1px);
+	transform: translateY(-2px);
 	box-shadow: 
-		0 8px 20px rgba(0,0,0,0.08),
-		0 0 0 1px rgba(var(--color-accent-rgb), 0.1);
+		0 12px 28px rgba(0,0,0,0.12),
+		0 0 0 1px rgba(var(--color-accent-rgb), 0.2);
 }
 
 /* Subtle ripple effect for secondary */

@@ -5,6 +5,7 @@ import { GlassFilter } from "@/components/ui/liquid-glass";
 import Head from "@/components/Head";
 import { ConsentBanner } from "@/components/ConsentBanner";
 import { ConditionalLayoutWrapper } from "@/components/ConditionalLayoutWrapper";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({
 	children,
@@ -21,6 +22,7 @@ export default function RootLayout({
 					<ConditionalLayoutWrapper>{children}</ConditionalLayoutWrapper>
 					<ConsentBanner />
 				</NextIntlClientProvider>
+				<Analytics />
 			</body>
 		</html>
 	);

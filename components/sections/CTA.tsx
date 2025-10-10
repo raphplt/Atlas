@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import {
 	PhoneCall,
@@ -13,10 +13,17 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, ContactInput } from "@/lib/validators";
 import toast from "react-hot-toast";
 import { useTranslations } from "next-intl";
+import {
+	trackFormView,
+	trackFormSuccess,
+	trackFormError,
+} from "@/lib/analytics";
 
 export function CTA() {
 	const [serverError, setServerError] = useState<string | null>(null);
 	const [showFullForm, setShowFullForm] = useState(false);
+	const [hasTrackedView, setHasTrackedView] = useState(false);
+	const formRef = useRef<HTMLDivElement>(null);
 	const t = useTranslations("contact");
 	const form = useForm<ContactInput>({
 		resolver: zodResolver(contactSchema),
@@ -45,6 +52,27 @@ export function CTA() {
 	const email = watch("email");
 	const company = watch("company");
 
+	// Track form view when it enters viewport
+	useEffect(() => {
+		if (!formRef.current || hasTrackedView) return;
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting && !hasTrackedView) {
+						trackFormView("hero");
+						setHasTrackedView(true);
+					}
+				});
+			},
+			{ threshold: 0.5 }
+		);
+
+		observer.observe(formRef.current);
+
+		return () => observer.disconnect();
+	}, [hasTrackedView]);
+
 	React.useEffect(() => {
 		if (firstName && email && company && !showFullForm) {
 			setShowFullForm(true);
@@ -61,12 +89,19 @@ export function CTA() {
 			});
 			if (!res.ok) {
 				const body = await res.json().catch(() => ({}));
-				throw new Error(body.error || "Erreur inconnue");
+				const errorMsg = body.error || "Erreur inconnue";
+				throw new Error(errorMsg);
 			}
+
+			// Track success
+			trackFormSuccess("hero");
 			reset();
 			toast.success(t("form.successMessage"));
 		} catch (e: any) {
 			const msg = e.message || "Erreur serveur";
+
+			// Track error
+			trackFormError(msg, "hero");
 			setServerError(msg);
 			toast.error(msg);
 		}
@@ -134,7 +169,7 @@ export function CTA() {
 						</div>
 					</div>
 					{/* Form */}
-					<div className="relative group">
+					<div className="relative group" ref={formRef}>
 						<div
 							className="absolute -inset-[2px] rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[var(--color-accent)]/60 via-[var(--color-accent)]/10 to-[var(--color-accent-alt)]/60 opacity-70 blur-xl group-hover:opacity-90 transition motion-scale-in motion-delay-600"
 							aria-hidden="true"
@@ -345,7 +380,8 @@ export function CTA() {
 									<Button
 										type="submit"
 										disabled={isSubmitting}
-										className="h-12 sm:h-14 text-xs sm:text-sm md:text-base font-semibold tracking-wide relative"
+										size="lg"
+										className="text-sm sm:text-base font-bold tracking-wide relative animate-pulse-subtle"
 									>
 										<span
 											className={`${
@@ -356,7 +392,7 @@ export function CTA() {
 										</span>
 										{isSubmitting && (
 											<span className="absolute inset-0 flex items-center justify-center gap-2 text-xs sm:text-sm">
-												<span className="size-3 sm:size-4 rounded-full border-2 border-[var(--color-accent)] border-t-transparent animate-spin" />{" "}
+												<span className="size-3 sm:size-4 rounded-full border-2 border-white border-t-transparent animate-spin" />{" "}
 												{t("form.submitting")}
 											</span>
 										)}

@@ -85,19 +85,19 @@ export function EnhancedButton({
 	const variantClasses = {
 		primary: cn(
 			"btn-primary-sober",
-			"h-12 px-8 text-sm",
-			"bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-alt)]",
-			"text-white shadow-lg",
-			"border border-white/10",
-			"hover:shadow-xl hover:scale-[1.02]"
+			"h-14 px-8 text-base rounded-xl",
+			"bg-[var(--color-accent)]",
+			"text-white font-bold shadow-[0_8px_24px_rgba(var(--color-accent-rgb),0.35)]",
+			"border-none",
+			"hover:bg-[var(--color-accent)]/90 hover:shadow-[0_12px_32px_rgba(var(--color-accent-rgb),0.5)] hover:scale-[1.02]"
 		),
 		secondary: cn(
 			"btn-secondary-sober",
-			"h-12 px-8 text-sm",
-			"bg-white/90 backdrop-blur-sm",
-			"text-[var(--color-fg)] hover:text-[var(--color-accent)]",
-			"border border-gray-200/50",
-			"shadow-md hover:shadow-lg hover:scale-[1.02]"
+			"h-14 px-8 text-base rounded-xl",
+			"bg-[var(--color-card)]/90 backdrop-blur-sm",
+			"text-[var(--color-fg)] hover:text-[var(--color-accent)] font-semibold",
+			"border-2 border-[var(--color-border)]",
+			"shadow-lg hover:shadow-xl hover:scale-[1.02] hover:border-[var(--color-accent)]/50"
 		),
 	};
 
@@ -219,26 +219,26 @@ export function EnhancedLink({
 		"relative overflow-hidden font-medium tracking-wide",
 		"transition-all duration-300 ease-out",
 		"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2",
-		"inline-flex items-center justify-center rounded-md",
+		"inline-flex items-center justify-center rounded-xl",
 		"transform-gpu will-change-transform"
 	);
 
 	const variantClasses = {
 		primary: cn(
 			"btn-primary-sober",
-			"h-12 px-8 text-sm",
-			"bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-alt)]",
-			"text-white shadow-lg",
-			"border border-white/10",
-			"hover:shadow-xl hover:scale-[1.02]"
+			"h-14 px-8 text-base rounded-xl",
+			"bg-[var(--color-accent)]",
+			"text-white font-bold shadow-[0_8px_24px_rgba(var(--color-accent-rgb),0.35)]",
+			"border-none",
+			"hover:bg-[var(--color-accent)]/90 hover:shadow-[0_12px_32px_rgba(var(--color-accent-rgb),0.5)] hover:scale-[1.02]"
 		),
 		secondary: cn(
 			"btn-secondary-sober",
-			"h-12 px-8 text-sm",
-			"bg-white/90 backdrop-blur-sm",
-			"text-[var(--color-fg)] hover:text-[var(--color-accent)]",
-			"border border-gray-200/50",
-			"shadow-md hover:shadow-lg hover:scale-[1.02]"
+			"h-14 px-8 text-base rounded-xl",
+			"bg-[var(--color-card)]/90 backdrop-blur-sm",
+			"text-[var(--color-fg)] hover:text-[var(--color-accent)] font-semibold",
+			"border-2 border-[var(--color-border)]",
+			"shadow-lg hover:shadow-xl hover:scale-[1.02] hover:border-[var(--color-accent)]/50"
 		),
 	};
 

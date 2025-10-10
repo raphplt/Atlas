@@ -1,12 +1,13 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
-import { buttonVariants } from "@/components/ui/button";
 import { Check, Zap, Crown } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { trackCtaClick } from "@/lib/analytics";
 
 export function Offers() {
 	const t = useTranslations("offers");
 
-	// Utiliser les offres traduites avec des icônes
 	const translatedOffers = [
 		{
 			name: t("packages.essential.name"),
@@ -116,12 +117,12 @@ export function Offers() {
 									</ul>
 									<a
 										href="#contact"
-										className={buttonVariants({
-											className: `w-full font-semibold h-10 sm:h-12 text-xs sm:text-sm motion-scale-in motion-delay-1800 ${
-												isPopular ? "shadow-lg hover:shadow-xl" : ""
-											}`,
-											variant: isPopular ? "default" : "ghost",
-										})}
+										onClick={() => trackCtaClick("offers", offer.packageKey)}
+										className={`w-full h-10 sm:h-12 text-xs sm:text-sm font-semibold rounded-xl flex items-center justify-center transition-all duration-300 motion-scale-in motion-delay-1800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 ${
+											isPopular
+												? "bg-[#2563EB] text-white hover:bg-[#1d4ed8] shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+												: "border-2 border-[var(--color-border)] bg-[var(--color-card)] hover:border-[var(--color-accent)]/50 hover:bg-[var(--color-card)] hover:scale-[1.02] active:scale-[0.98]"
+										}`}
 									>
 										{t("cta")}
 									</a>
