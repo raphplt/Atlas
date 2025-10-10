@@ -7,7 +7,6 @@ export async function POST(req: NextRequest) {
 		const json = await req.json();
 		const data = contactSchema.parse(json);
 
-		// Honeypot
 		if (data.website) {
 			return NextResponse.json({ ok: true }, { status: 200 });
 		}
@@ -17,6 +16,27 @@ export async function POST(req: NextRequest) {
 		} else {
 			await sendMail(data);
 			console.log("contact(api)", data);
+		}
+
+		if (process.env.MAKE_WEBHOOK_URL) {
+			try {
+				await fetch(process.env.MAKE_WEBHOOK_URL, {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						firstName: data.firstName,
+						email: data.email,
+						company: data.company,
+						site: data.hasSite === "oui" ? "Oui" : "Non",
+						phone: data.phone || "",
+						projectType: data.projectType || "",
+						budget: data.budget || "",
+						message: data.message,
+					}),
+				});
+			} catch (e) {
+				console.error("Webhook Make error:", e);
+			}
 		}
 
 		return NextResponse.json({ ok: true });
