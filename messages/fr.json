@@ -367,6 +367,8 @@
             "mobileFirst": "Mobile-first"
         },
         "fullscreen": "Voir en plein écran",
+        "close": "Fermer",
+        "closeHint": "Appuyez sur Échap pour fermer",
         "transformation": {
             "title": "Transformation Avant/Après",
             "subtitle": "Impact visuel de la refonte sur l'expérience utilisateur"

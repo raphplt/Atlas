@@ -6,6 +6,7 @@ export interface Project {
 	afterSrc: string;
 	alt: string;
 	improvements: string[];
+	improvementWords: string[];
 	category: string;
 }
 
@@ -22,6 +23,7 @@ export const projects: Project[] = [
 			"Réservation en ligne 24h/24 : +80% de nouveaux clients",
 			"Mobile-first : 70% des prises de RDV depuis smartphone",
 		],
+		improvementWords: ["Design premium", "Réservation en ligne", "Mobile-first"],
 		category: "beauty",
 	},
 	{
@@ -35,6 +37,11 @@ export const projects: Project[] = [
 			"Devis instantané en ligne : 3x plus de demandes",
 			"SEO local optimisé : 1ère page Google en 2 mois",
 			"Galerie de réalisations : +40% de conversion visiteurs → clients",
+		],
+		improvementWords: [
+			"Devis instantané",
+			"SEO local optimisé",
+			"Galerie de réalisations",
 		],
 		category: "services",
 	},
@@ -50,6 +57,11 @@ export const projects: Project[] = [
 			"Géolocalisation intelligente : clients dans un rayon de 15km",
 			"Design nature premium : positionnement haut de gamme",
 		],
+		improvementWords: [
+			"Galerie immersive",
+			"Géolocalisation intelligente",
+			"Design nature premium",
+		],
 		category: "landscape",
 	},
 	{
@@ -63,6 +75,11 @@ export const projects: Project[] = [
 			"Portfolio artistique : +120% de demandes de séances",
 			"Réservation en ligne : planning optimisé, zéro oubli",
 			"Blog SEO : +300% de trafic organique en 4 mois",
+		],
+		improvementWords: [
+			"Portfolio artistique",
+			"Réservation en ligne",
+			"Blog SEO",
 		],
 		category: "creative",
 	},

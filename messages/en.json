@@ -563,6 +563,8 @@
             "mobileFirst": "Mobile-first"
         },
         "fullscreen": "View fullscreen",
+        "close": "Close",
+        "closeHint": "Press Escape to close",
         "transformation": {
             "title": "Before/After Transformation",
             "subtitle": "Visual impact of the redesign on user experience"

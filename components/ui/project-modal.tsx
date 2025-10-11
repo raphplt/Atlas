@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BeforeAfterSlider } from "./before-after-slider";
 import {
 	Dialog,
@@ -8,7 +8,7 @@ import {
 	DialogTitle,
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Maximize2 } from "lucide-react";
+import { Maximize2, X } from "lucide-react";
 import * as React from "react";
 import { HairdresserHeroAfter } from "../showcase/hairdresser-after";
 import { PlumberHeroAfter } from "../showcase/plumber-hero-after";
@@ -35,6 +35,24 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
 	const t = useTranslations("projectModal");
 	const router = useRouter();
 
+	// Gestion de la touche Échap
+	useEffect(() => {
+		const handleKeyDown = (event: KeyboardEvent) => {
+			if (event.key === "Escape") {
+				if (showShowcase) {
+					setShowShowcase(false);
+				} else {
+					onClose();
+				}
+			}
+		};
+
+		if (isOpen) {
+			document.addEventListener("keydown", handleKeyDown);
+			return () => document.removeEventListener("keydown", handleKeyDown);
+		}
+	}, [isOpen, showShowcase, onClose]);
+
 	const getShowcaseComponent = () => {
 		switch (project.id) {
 			case "coiffeur":
@@ -58,13 +76,21 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
 	if (showShowcase) {
 		return (
 			<div className="fixed inset-0 z-50 bg-white">
-				{/* <button
+				{/* Bouton de fermeture en mode showcase */}
+				<button
 					onClick={() => setShowShowcase(false)}
-					className="fixed top-4 right-4 z-[10001] p-3 bg-black/20 backdrop-blur-sm rounded-full hover:bg-black/30 transition-colors"
-					aria-label="Fermer"
+					className="fixed top-4 right-4 z-[100] p-3 rounded-full bg-black/30 hover:bg-black/50 text-white transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-white/20"
+					aria-label={t("close")}
+					title={`${t("close")} (Échap)`}
 				>
-					<X className="w-6 h-6 text-white" />
-				</button> */}
+					<X className="w-6 h-6" />
+				</button>
+
+				{/* Indication de la touche Échap */}
+				<div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-[100] px-4 py-2 rounded-full bg-black/30 text-white text-sm backdrop-blur-sm border border-white/20">
+					{t("closeHint")}
+				</div>
+
 				{getShowcaseComponent()}
 			</div>
 		);
@@ -89,21 +115,20 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
 							<div className="px-3 py-1 rounded-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-alt)] text-white text-xs font-semibold">
 								{t(`categories.${project.id}`)}
 							</div>
-							<DialogTitle className="text-2xl md:text-3xl font-bold text-[var(--color-fg)]">
-								{project.title}
-							</DialogTitle>
+							<div className="flex items-center gap-3">
+								<DialogTitle className="text-2xl md:text-3xl font-bold text-[var(--color-fg)]">
+									{project.title}
+								</DialogTitle>
+								<button
+									onClick={() => setShowShowcase(true)}
+									className="p-2 rounded-xl hover:bg-[var(--color-bg-alt)] transition-all duration-300 hover:scale-105 group"
+									aria-label={t("fullscreen")}
+									title={t("fullscreen")}
+								>
+									<Maximize2 className="w-4 h-4 text-[var(--color-muted)] group-hover:text-[var(--color-accent)] transition-colors" />
+								</button>
+							</div>
 						</div>
-
-						{/* <div className="flex items-center gap-2">
-							<button
-								onClick={() => setShowShowcase(true)}
-								className="p-3 rounded-2xl hover:bg-[var(--color-bg-alt)] transition-all duration-300 hover:scale-105 group"
-								aria-label={t("fullscreen")}
-								title={t("fullscreen")}
-							>
-								<Maximize2 className="w-5 h-5 text-[var(--color-muted)] group-hover:text-[var(--color-accent)] transition-colors" />
-							</button>
-						</div> */}
 					</div>
 
 					<div className="flex items-center gap-6 mt-4">
@@ -214,7 +239,7 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
 									</p>
 									<button
 										onClick={handleClickCTA}
-										className="w-full cursor-pointer px-6 py-3 rounded-2xl bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-alt)] text-white font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+										className="w-full cursor-pointer px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-alt)] text-white font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
 									>
 										{t("cta.button")}
 									</button>

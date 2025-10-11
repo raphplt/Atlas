@@ -64,7 +64,7 @@ export function PrimaryCta({
 		size === "large" ? "h-14 px-8 text-base" : "h-12 px-6 text-sm";
 
 	const colorClasses =
-		"bg-[#2563EB] text-white hover:bg-[#1d4ed8] shadow-[0_8px_24px_rgba(37,99,235,0.4)] hover:shadow-[0_12px_32px_rgba(37,99,235,0.5)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]";
+		"btn-primary-sober bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-alt)] text-white hover:from-[var(--color-accent)]/90 hover:to-[var(--color-accent-alt)]/90 shadow-[0_8px_24px_rgba(var(--color-accent-rgb),0.15)] hover:shadow-[0_12px_32px_rgba(var(--color-accent-rgb),0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]";
 
 	return (
 		<div className="flex flex-col gap-2">
@@ -75,7 +75,7 @@ export function PrimaryCta({
 				aria-label={copy.primary}
 			>
 				{/* Shimmer effect */}
-				<span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+				<span className="sober-shimmer" />
 
 				{showIcon && (
 					<CircleChevronDown className="size-5 relative z-10 group-hover:animate-bounce" />

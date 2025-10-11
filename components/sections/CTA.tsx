@@ -377,26 +377,28 @@ export function CTA() {
 									</div>
 								)}
 								<div className="flex flex-col gap-2 sm:gap-3">
-									<Button
+									<button
 										type="submit"
 										disabled={isSubmitting}
-										size="lg"
-										className="text-sm sm:text-base font-bold tracking-wide relative animate-pulse-subtle"
+										className="relative group inline-flex items-center justify-center gap-2 rounded-xl font-bold transition-all duration-300 overflow-hidden h-14 px-8 text-base btn-primary-sober bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-alt)] text-white hover:from-[var(--color-accent)]/90 hover:to-[var(--color-accent-alt)]/90 shadow-[0_8px_24px_rgba(var(--color-accent-rgb),0.15)] hover:shadow-[0_12px_32px_rgba(var(--color-accent-rgb),0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)] animate-pulse-subtle disabled:opacity-50 disabled:cursor-not-allowed"
 									>
+										{/* Shimmer effect */}
+										<span className="sober-shimmer" />
+
 										<span
-											className={`${
+											className={`relative z-10 ${
 												isSubmitting ? "opacity-0" : "opacity-100"
 											} transition`}
 										>
 											{t("form.submit")}
 										</span>
 										{isSubmitting && (
-											<span className="absolute inset-0 flex items-center justify-center gap-2 text-xs sm:text-sm">
-												<span className="size-3 sm:size-4 rounded-full border-2 border-white border-t-transparent animate-spin" />{" "}
+											<span className="absolute inset-0 flex items-center justify-center gap-2 text-sm z-10">
+												<span className="size-4 rounded-full border-2 border-white border-t-transparent animate-spin" />{" "}
 												{t("form.submitting")}
 											</span>
 										)}
-									</Button>
+									</button>
 									<div className="text-[10px] sm:text-[11px] text-[var(--color-muted)] leading-relaxed space-y-1">
 										<p>{t("form.consent")}</p>
 										<p className="flex flex-wrap gap-2 sm:gap-3 pt-1">
