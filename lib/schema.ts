@@ -19,7 +19,7 @@ export function businessSchema() {
 			aggregateRating: {
 				"@type": "AggregateRating",
 				ratingValue: "4.9",
-				reviewCount: "87",
+				reviewCount: "19",
 				bestRating: "5",
 				worstRating: "1",
 			},

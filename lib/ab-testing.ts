@@ -11,7 +11,7 @@ export const CTA_VARIANTS = {
 	},
 	B: {
 		primary: "Analyse gratuite en 24h → + de demandes de devis",
-		subtitle: "Rejoignez 124+ artisans qui génèrent plus de clients chaque mois.",
+		subtitle: "Rejoignez 20+ artisans qui génèrent plus de clients chaque mois.",
 	},
 	C: {
 		primary: "Votre diagnostic offert aujourd'hui (sans engagement)",
