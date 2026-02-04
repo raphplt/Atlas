@@ -38,7 +38,7 @@ export function About() {
 	return (
 		<section className="relative py-32 overflow-hidden" id="about">
 			<div className="absolute inset-0 bg-gradient-to-br from-[var(--color-accent)]/5 to-[var(--color-accent-alt)]/5" />
-			<div className="container relative">
+			<div className="container mx-auto relative">
 				<div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
 					<div className="space-y-8">
 						<div className="space-y-6">

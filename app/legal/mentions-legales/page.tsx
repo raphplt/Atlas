@@ -13,7 +13,7 @@ export default async function MentionsLegales() {
 	const t = await getTranslations("legal.mentions");
 
 	return (
-		<div className="container py-24">
+		<div className="container mx-auto py-24">
 			<h1 className="h2 mb-8">{t("title")}</h1>
 
 			<div className="prose prose-lg max-w-none">

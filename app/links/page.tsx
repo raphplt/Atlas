@@ -113,7 +113,7 @@ export default async function LinksPage() {
 
 			{/* Main Content */}
 			<main className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 py-16">
-				<div className="w-full max-w-md space-y-8">
+				<div className="w-full max-w-md mx-auto space-y-8">
 					{/* Profile Section */}
 					<div className="text-center space-y-4">
 						<div className="mx-auto mb-6">
