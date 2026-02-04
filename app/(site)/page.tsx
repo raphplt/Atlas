@@ -7,6 +7,13 @@ import { Process } from "@/components/sections/Process";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Atlas | Sites Web pour Artisans & Services Locaux",
+	description:
+		"Augmentez vos demandes de devis avec un site web professionnel et optimisé. Spécialisé pour les artisans et TPE. Devis gratuit.",
+};
 
 export default function Page() {
 	return (

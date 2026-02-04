@@ -39,7 +39,6 @@ const GlassEffect: React.FC<GlassEffectProps> = ({
 				/>
 				<div
 					className="absolute inset-0 z-10 rounded-inherit"
-					style={{ background: "rgba(255, 255, 255, 0.25)" }}
 				/>
 				<div
 					className="absolute inset-0 z-20 rounded-inherit rounded-3xl overflow-hidden"
