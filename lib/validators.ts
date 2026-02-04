@@ -11,15 +11,22 @@ export const contactSchema = z.object({
 			(v: string | undefined) => !v || /^(\+|0)[0-9 .-]{6,}$/.test(v),
 			"Téléphone invalide"
 		),
-	projectType: z.string().optional(),
+    // Qualification fields
+    projectGoal: z.enum(["creation", "redesign", "marketing", "other"], {
+        required_error: "Veuillez sélectionner un objectif"
+    }),
+    timeline: z.enum(["urgent", "1month", "3months", "exploration"], {
+        required_error: "Veuillez sélectionner un délai"
+    }).optional(),
 	budget: z.string().optional(),
-	hasSite: z.enum(["oui", "non"]).optional(),
-	message: z.string().min(1, "Message requis").max(3000),
+    currentUrl: z.string().url("URL invalide").optional().or(z.literal("")),
+    
+	message: z.string().max(3000).optional(), // Made optional as goal is captured
 	website: z.string().max(0).optional(), // honeypot
 });
 
 export type ContactInput = z.infer<typeof contactSchema>;
 
-export function validateContact(data: ContactInput): ContactInput {
+export function validateContact(data: unknown): ContactInput {
 	return contactSchema.parse(data);
 }

@@ -1,13 +1,13 @@
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { GlassFilter } from "@/components/ui/liquid-glass";
 import { ConsentBanner } from "@/components/ConsentBanner";
 import { ConditionalLayoutWrapper } from "@/components/ConditionalLayoutWrapper";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import Script from "next/script";
 import { ThemeScript } from "@/components/theme/ThemeScript";
+import TawkMessenger from "@/components/TawkMessenger";
 
 export const metadata: Metadata = {
 	title: {
@@ -26,14 +26,19 @@ export const metadata: Metadata = {
 	},
 };
 
+import { Inter, Inter_Tight } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const interTight = Inter_Tight({ subsets: ["latin"], variable: "--font-inter-tight" });
+
 export default function RootLayout({
 	children,
 }: {
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="fr">
-			<body className="font-sans min-h-screen flex flex-col" data-theme="light">
+		<html lang="fr" className={`${inter.variable} ${interTight.variable}`}>
+			<body className="font-sans min-h-screen flex flex-col bg-white text-slate-900" data-theme="light">
 				<ThemeScript />
 				
 				{/* Google Consent Mode V2 */}
@@ -68,11 +73,12 @@ export default function RootLayout({
 					`}
 				</Script>
 
-				<GlassFilter />
+
 				<NextIntlClientProvider>
 					<Toaster />
 					<ConditionalLayoutWrapper>{children}</ConditionalLayoutWrapper>
 					<ConsentBanner />
+					<TawkMessenger />
 				</NextIntlClientProvider>
 				<Analytics />
 			</body>

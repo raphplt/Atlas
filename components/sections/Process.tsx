@@ -1,10 +1,11 @@
 import { PhoneCall, FileCheck2, Code2, Rocket } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { MotionWrapper } from "@/components/ui/MotionWrapper";
 
 type Step = {
 	title: string;
 	desc: string;
-	icon: any; // lucide component
+	icon: any; 
 	duration: string;
 };
 
@@ -39,76 +40,62 @@ export function Process() {
 	];
 
 	return (
-		<section className="relative py-20 sm:py-32 overflow-hidden" id="process">
-			<div
-				className="absolute inset-0 pattern-grid opacity-30"
-				aria-hidden="true"
-			/>
-			<div className="container relative">
-				<h2 className="h2 text-center mb-4 sm:mb-6 motion-fade-in motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
-					{t("title")}
-				</h2>
-				<p className="text-center text-[var(--color-muted)] mb-12 sm:mb-16 max-w-2xl mx-auto motion-slide-up motion-delay-100 motion-duration-1000 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
-					{t("subtitle")}
-				</p>
-				<ol className="relative flex flex-col md:flex-row md:items-stretch gap-6 sm:gap-10 md:gap-8">
-					{/* Ligne de progression (desktop) */}
-					<div
-						className="hidden md:block absolute top-16 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--color-border)] to-transparent motion-fade-in motion-delay-200"
-						aria-hidden="true"
-					/>
+		<section className="py-24 bg-[var(--color-background-alt)] relative overflow-hidden" id="process">
+            <div className="absolute inset-0 bg-dot-pattern opacity-30 pointer-events-none" />
+			<div className="container-width relative">
+				<div className="text-center mb-16 max-w-3xl mx-auto">
+                    <MotionWrapper variant="fade-up">
+					    <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-primary)] mb-6">{t("title")}</h2>
+                    </MotionWrapper>
+                    <MotionWrapper variant="fade-up" delay={0.1}>
+					    <p className="text-lg text-[var(--color-muted)]">
+						    {t("subtitle")}
+					    </p>
+                    </MotionWrapper>
+				</div>
+                
+				<div className="grid md:grid-cols-4 gap-8">
 					{steps.map((step, i) => {
 						const Icon = step.icon;
 						return (
-							<li key={step.title} className="relative flex-1 group">
-								{/* Connector vertical mobile */}
-								{i < steps.length - 1 && (
-									<span
-										className="md:hidden absolute left-6 sm:left-8 top-[60px] sm:top-[72px] h-8 sm:h-10 w-px bg-[var(--color-border)] motion-fade-in motion-delay-300"
-										aria-hidden="true"
-									/>
-								)}
-								<div className="card-glow h-full rounded-xl sm:rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)]/70 backdrop-blur-sm p-4 sm:p-6 flex flex-col hover:-translate-y-1 transition relative motion-slide-up motion-delay-400 motion-intersect-start motion-intersect-end motion-intersect-threshold-50">
-									<div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4 motion-scale-in motion-delay-500">
-										<div className="relative">
-											<div className="icon-circle size-[40px] sm:size-[52px] flex items-center justify-center motion-wiggle motion-delay-600">
-												<Icon className="size-4 sm:size-5" />
-											</div>
-											<span className="absolute -bottom-1 -right-1 text-[9px] sm:text-[10px] font-semibold px-1 sm:px-1.5 py-0.5 rounded bg-[var(--color-accent)]/20 text-[var(--color-accent)] motion-scale-in motion-delay-700">
-												{i + 1}
-											</span>
-										</div>
-										<div className="motion-fade-in motion-delay-800">
-											<h3 className="font-semibold text-sm sm:text-base leading-tight tracking-tight">
-												{step.title}
-											</h3>
-											<p className="text-[9px] sm:text-[10px] uppercase tracking-wider text-[var(--color-muted)] font-medium mt-1">
-												{step.duration}
-											</p>
-										</div>
-									</div>
-									<p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed flex-1 motion-slide-up motion-delay-900">
-										{step.desc}
-									</p>
-									{i === steps.length - 1 && (
-										<div className="mt-4 sm:mt-6 text-[10px] sm:text-xs font-medium text-[var(--color-accent)] flex items-center gap-2 motion-wiggle motion-delay-1000">
-											<span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[var(--color-accent)] animate-pulse motion-scale-in motion-delay-1100" />
-											{t("launchNote")}
-										</div>
-									)}
-								</div>
-							</li>
+							<div key={i} className="relative">
+                                {/* Connector (Desktop) */}
+                                {i < steps.length - 1 && (
+                                    <div className="hidden md:block absolute top-8 left-[50%] w-full h-px bg-[var(--color-border)] -z-10" />
+                                )}
+                                
+                                <MotionWrapper variant="fade-up" delay={0.1 * i} className="h-full">
+								    <div className="bg-[var(--color-card)] rounded-lg p-6 border border-[var(--color-border)] h-full flex flex-col items-center text-center hover:border-[var(--color-primary)] transition-colors">
+									    <div className="w-16 h-16 rounded-full bg-[var(--color-background-alt)] flex items-center justify-center text-[var(--color-primary)] mb-6 relative">
+										    <Icon className="size-6" />
+                                            <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold flex items-center justify-center">
+                                                {i + 1}
+                                            </div>
+									    </div>
+                                        
+									    <h3 className="font-bold text-[var(--color-primary)] mb-2">
+										    {step.title}
+									    </h3>
+                                        
+                                        <div className="text-xs font-bold uppercase tracking-wider text-[var(--color-accent)] mb-4">
+                                            {step.duration}
+                                        </div>
+                                        
+									    <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+										    {step.desc}
+									    </p>
+								    </div>
+                                </MotionWrapper>
+							</div>
 						);
 					})}
-				</ol>
-				<div className="mt-10 sm:mt-14 flex flex-col items-center gap-2 sm:gap-3 motion-fade-in motion-delay-1200 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
-					<div className="h-1.5 sm:h-2 w-32 sm:w-40 rounded-full bg-gradient-to-r from-[var(--color-accent)]/30 via-[var(--color-accent-alt)]/30 to-[var(--color-accent)]/30 relative overflow-hidden motion-scale-in motion-delay-1300">
-						<span className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--color-accent)]/50 to-transparent animate-[pulse_3s_ease-in-out_infinite]" />
-					</div>
-					<p className="text-center text-xs sm:text-sm text-[var(--color-muted)] motion-slide-up motion-delay-1400">
+				</div>
+                
+				<MotionWrapper variant="fade-in" delay={0.5} className="mt-16 text-center">
+					<p className="text-sm font-medium text-[var(--color-muted)] bg-white inline-block px-6 py-3 rounded-full border border-[var(--color-border)] shadow-sm">
 						{t("totalDuration")}
 					</p>
-				</div>
+				</MotionWrapper>
 			</div>
 		</section>
 	);

@@ -6,7 +6,8 @@
         "testimonials": "Testimonials",
         "offers": "Offers",
         "process": "Process",
-        "contact": "Contact"
+        "contact": "Contact",
+        "startProject": "Start a project"
     },
     "hero": {
         "badge": "Only 3 free diagnostics this week",
@@ -56,39 +57,6 @@
                 "description": "Nearby clients can't find you."
             }
         }
-    },
-    "about": {
-        "title": "Why choose Atlas over an agency?",
-        "subtitle": "Specialist web development & conversion optimization for craftsmen and local services.",
-        "description": "After years of experience in enterprise web development, I created Atlas to fill a gap: websites truly optimized for craftsmen and local services. Too many agencies create generic sites without understanding local business challenges.",
-        "expertise": {
-            "technical": {
-                "title": "Modern technical expertise",
-                "description": "Next.js, React, technical SEO, performance. Professional stack for lasting results."
-            },
-            "conversion": {
-                "title": "Conversion optimization",
-                "description": "Every line of code designed to turn your visitors into clients. Data analysis and continuous testing."
-            },
-            "approach": {
-                "title": "Artisanal approach",
-                "description": "Every project is unique. No templates, custom solutions adapted to your activity and local market."
-            }
-        },
-        "skillsTitle": "Mastered technologies",
-        "skills": {
-            "0": "Modern development",
-            "1": "Technical SEO",
-            "2": "Performance & speed",
-            "3": "Mobile-first design",
-            "4": "Analytics & tracking",
-            "5": "Conversion optimization"
-        },
-        "name": "Atlas",
-        "jobTitle": "Freelance Web Developer",
-        "photoPlaceholder": "Photo coming soon",
-        "cta": "Let's discuss your project",
-        "ctaSecondary": "See my work"
     },
     "about": {
         "title": "Why choose Raphaël over an agency?",
@@ -320,6 +288,7 @@
     },
     "contact": {
         "title": "Transform more visits into clients.",
+        "badge": "Limited spots this month",
         "subtitle": "Present your activity & objectives and receive a concrete improvement plan.",
         "benefits": {
             "diagnostic": {
@@ -677,6 +646,25 @@
                 "title": "Quori",
                 "description": "B2B SaaS for businesses"
             }
+        }
+    },
+    "footer": {
+        "description": "Modern and high-performance showcase websites for craftsmen & local services. Premium design, local optimization, conversion.",
+        "navigation": "Navigation",
+        "support": "Support",
+        "legal": "Legal",
+        "copyright": "© {year} Atlas Web Studio — All rights reserved.",
+        "links": {
+            "offers": "Our Offers",
+            "portfolio": "Portfolio",
+            "process": "Our Process",
+            "testimonials": "Testimonials",
+            "faq": "FAQ",
+            "contact": "Contact",
+            "about": "About",
+            "mentions": "Legal Notice",
+            "cgv": "Terms & Conditions",
+            "privacy": "Privacy Policy"
         }
     }
 }

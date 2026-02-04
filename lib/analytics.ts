@@ -11,7 +11,13 @@ export type CtaLocation =
 	| "problems"
 	| "offers"
 	| "footer"
-	| "modal";
+	| "hero"
+	| "sticky"
+	| "problems"
+	| "offers"
+	| "footer"
+	| "modal"
+    | "wizard";
 
 export interface CtaClickEvent {
 	variant?: string;

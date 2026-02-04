@@ -10,12 +10,9 @@ export async function submitContact(formData: FormData) {
 			company: String(formData.get("company") || ""),
 			email: String(formData.get("email") || ""),
 			phone: formData.get("phone") ? String(formData.get("phone")) : undefined,
-			projectType: formData.get("projectType")
-				? String(formData.get("projectType"))
-				: undefined,
 			budget: formData.get("budget") ? String(formData.get("budget")) : undefined,
-			hasSite: formData.get("hasSite")
-				? (String(formData.get("hasSite")) as any)
+			projectGoal: formData.get("projectGoal")
+				? String(formData.get("projectGoal"))
 				: undefined,
 			message: String(formData.get("message") || ""),
 			website: formData.get("website")

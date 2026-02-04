@@ -59,7 +59,7 @@ export function StickyCTA() {
 			<div className="relative mx-auto max-w-md">
 				<button
 					onClick={() => setIsDismissed(true)}
-					className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[var(--color-card)] border border-[var(--color-border)] flex items-center justify-center shadow-lg hover:bg-[var(--color-bg-alt)] transition z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2"
+					className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[var(--color-card)] border border-[var(--color-border)] flex items-center justify-center shadow-lg hover:bg-[var(--color-bg-alt)] transition z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2"
 					aria-label="Fermer la bannière"
 				>
 					<X className="w-3 h-3" />
@@ -67,7 +67,7 @@ export function StickyCTA() {
 				<a
 					href="#contact"
 					onClick={handleClick}
-					className="w-full h-14 text-base font-bold rounded-xl bg-[#2563EB] text-white shadow-[0_8px_24px_rgba(37,99,235,0.5)] hover:bg-[#1d4ed8] hover:shadow-[0_12px_32px_rgba(37,99,235,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 animate-pulse-subtle border-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2"
+					className="w-full h-14 text-base font-bold rounded-xl bg-[var(--color-primary)] text-[var(--color-primary-foreground)] shadow-lg hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 animate-pulse-subtle border-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2"
 					aria-live="polite"
 				>
 					<Search className="w-5 h-5" aria-hidden="true" />

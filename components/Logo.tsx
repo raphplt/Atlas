@@ -1,18 +1,37 @@
 import clsx from "clsx";
+import Image from "next/image"
 import React from "react";
 
 type LogoProps = {
 	size?: number;
+	forceDark?: boolean;
+	forceLight?: boolean;
+
 };
 
-const Logo = ({ size = 8 }: LogoProps) => {
+const Logo = ({ size = 24, forceDark = false, forceLight = false }: LogoProps) => {
 	return (
-		<span
-			className={clsx(
-				"inline-block rounded-full bg-[conic-gradient(from_180deg_at_50%_50%,#5ba8ff,40%,#f7a8a1,80%,#ffd67b)] ring-1 ring-black/5 dark:ring-white/10",
-				`h-${size} w-${size}`
-			)}
-		/>
+        <>
+		    <Image 
+                src="/images/Logo.png" 
+                alt="Logo" 
+                width={size} 
+                height={size} 
+                className={clsx(
+                    forceDark ? "hidden" : forceLight ? "block" : "block dark:hidden"
+                )} 
+            />
+            
+            <Image 
+                src="/images/Logo-White.png" 
+                alt="Logo" 
+                width={size} 
+                height={size} 
+                className={clsx(
+                    forceLight ? "hidden" : forceDark ? "block" : "hidden dark:block"
+                )} 
+            />
+        </>
 	);
 };
 

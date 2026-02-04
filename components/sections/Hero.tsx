@@ -1,142 +1,131 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
-import { ShieldCheck, TrendingUp, MapPin } from "lucide-react";
+import { ShieldCheck, TrendingUp, MapPin, Star } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { PrimaryCta } from "../ui/PrimaryCta";
 import { SecondaryCta } from "../ui/SecondaryCta";
+import { MotionWrapper } from "@/components/ui/MotionWrapper";
 
 export function Hero() {
 	const t = useTranslations("hero");
 
 	return (
-		<section
-			className="relative pt-20 sm:pt-28 pb-16 sm:pb-24 overflow-hidden min-h-[100vh] 2xl:min-h-[90vh]"
-			id="hero"
-		>
-			<div className="hero-bg" aria-hidden="true" />
-			<div className="noise" aria-hidden="true" />
-			<div className="aurora a1" />
-			<div className="aurora a2" />
-			<div className="hidden 2xl:block absolute top-1/4 left-8 w-32 h-32 bg-gradient-to-br from-[var(--color-accent)]/10 to-[var(--color-accent-alt)]/10 rounded-full blur-xl animate-pulse-subtle" />
-			<div className="hidden 2xl:block absolute bottom-1/4 right-8 w-24 h-24 bg-gradient-to-br from-[var(--color-accent-alt)]/10 to-[var(--color-accent)]/10 rounded-full blur-xl animate-pulse-subtle" />
+		<section className="relative pt-32 pb-24 md:pt-40 md:pb-32 bg-[var(--color-background-alt)] border-b border-[var(--color-border)] overflow-hidden" id="hero">
+            <div className="absolute inset-0 bg-dot-pattern opacity-75 pointer-events-none" />
+            <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-transparent pointer-events-none dark:from-[var(--color-background)]" />
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--color-background-alt)] to-transparent pointer-events-none" />
+            
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-accent)]/15 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen dark:bg-[var(--color-accent)]/10 animate-blob pointer-events-none" />
+            <div className="absolute top-40 right-10 w-72 h-72 bg-[var(--color-primary)]/15 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen dark:bg-[var(--color-primary)]/10 animate-blob animation-delay-2000 pointer-events-none" />
 
-			<div className="container relative">
-				<div className="text-center mb-12 sm:mb-16 max-w-5xl mx-auto 2xl:max-w-6xl">
-					<div className="inline-flex items-center gap-2 px-3 sm:px-5 py-1.5 mb-4 sm:mb-6 rounded-full btn-outline-gradient text-[9px] sm:text-[10px] font-medium tracking-[.15em] uppercase text-[var(--color-muted)] backdrop-blur-sm motion-fade-in motion-delay-0">
-						<span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />{" "}
-						{t("badge")}
-					</div>
+			<div className="container-width relative">
+				<div className="max-w-4xl mx-auto text-center mb-16 px-4">
+					<MotionWrapper variant="fade-up" delay={0.1}>
+                        <div className="inline-block mb-6 text-xs font-bold tracking-widest uppercase text-[var(--color-accent)]">
+                            {t("badge")}
+                        </div>
+                    </MotionWrapper>
 
-					<h1 className="h1 mb-4 sm:mb-6 max-w-5xl mx-auto 2xl:text-8xl motion-fade-in motion-delay-100 motion-duration-1000">
-						{t("title")}
-					</h1>
+					<MotionWrapper variant="fade-up" delay={0.2}>
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-primary)] mb-6 leading-[1.15]">
+                            {t("title")}
+                        </h1>
+                    </MotionWrapper>
 
-					<p className="text-base sm:text-lg md:text-xl 2xl:text-2xl text-[var(--color-muted)] mb-6 sm:mb-8 max-w-3xl mx-auto 2xl:max-w-4xl leading-relaxed motion-fade-in motion-delay-200 motion-duration-1000">
-						{t("subtitle")}
-					</p>
+					<MotionWrapper variant="fade-up" delay={0.3}>
+                        <p className="text-lg md:text-xl text-[var(--color-muted)] mb-10 max-w-2xl mx-auto leading-relaxed">
+                            {t("subtitle")}
+                        </p>
+                    </MotionWrapper>
 
-					<div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-8 sm:mb-10 text-sm motion-fade-in motion-delay-300 motion-duration-1000">
-						<div className="flex items-center gap-2">
-							<div className="flex -space-x-2">
-								{[1, 2, 3, 4].map((i) => (
-									<div
-										key={i}
-										className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-alt)] border-2 border-[var(--color-bg)] flex items-center justify-center text-white text-xs font-semibold motion-scale-in motion-delay-400 motion-duration-500"
-									>
-										<Image
-											src={`/images/people/${i}.jpg`}
-											alt={`Client ${i}`}
-											width={32}
-											height={32}
-											className="object-cover rounded-full"
-										/>
-									</div>
-								))}
-							</div>
-							<span className="text-[var(--color-muted)] text-xs sm:text-sm">
-								{t("socialProof.clients")}
-							</span>
-						</div>
-						<div className="flex items-center gap-2">
-							<span className="text-xl sm:text-2xl motion-wiggle motion-delay-500">
-								⭐
-							</span>
-							<span className="font-semibold text-[var(--color-fg)] text-xs sm:text-sm">
-								{t("socialProof.rating")}
-							</span>
-							<span className="text-[var(--color-muted)] text-xs sm:text-sm">
-								{t("socialProof.reviews")}
-							</span>
-						</div>
-					</div>
+					<MotionWrapper variant="fade-up" delay={0.4}>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                            <div className="w-full sm:w-auto">
+                                <PrimaryCta
+                                    location="hero"
+                                    size="large"
+                                    showSubtext={false}
+                                    className="w-full sm:w-auto"
+                                />
+                            </div>
+                            <SecondaryCta href="#portfolio" location="hero-secondary" className="w-full sm:w-auto">
+                                {t("ctaSecondary")}
+                            </SecondaryCta>
+                        </div>
+                    </MotionWrapper>
 
-					<div className="flex flex-col gap-6 sm:gap-8 items-center mb-6 sm:mb-8 motion-slide-up motion-delay-600 motion-duration-1000">
-						<div className="w-full sm:w-auto">
-							<PrimaryCta
-								location="hero"
-								size="large"
-								showSubtext={true}
-								className="w-full sm:w-auto animate-pulse-subtle"
-							/>
-						</div>
-						<SecondaryCta href="#portfolio" location="hero-secondary">
-							{t("ctaSecondary")}
-						</SecondaryCta>
-					</div>
-
-					<div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[10px] sm:text-xs text-[var(--color-muted)] motion-fade-in motion-delay-900">
-						{[
-							t("trustIndicators.0"),
-							t("trustIndicators.1"),
-							t("trustIndicators.2"),
-						].map((indicator, i) => (
-							<div
-								key={i}
-								className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[var(--color-card)]/60 backdrop-blur-sm border border-[var(--color-border)] motion-scale-in motion-delay-1000"
-							>
-								<span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[var(--color-accent)]" />
-								{indicator}
-							</div>
-						))}
-					</div>
+					<MotionWrapper variant="fade-in" delay={0.6}>
+                        <div className="flex flex-col items-center justify-center gap-3">
+                            <div className="flex -space-x-3">
+                                {[1, 2, 3, 4].map((i) => (
+                                    <Image
+                                        key={i}
+                                        src={`/images/people/${i}.jpg`}
+                                        alt={`Client ${i}`}
+                                        width={40}
+                                        height={40}
+                                        className="w-10 h-10 rounded-full border-2 border-white dark:border-[var(--color-background-alt)] object-cover"
+                                    />
+                                ))}
+                            </div>
+                            <div className="flex items-center gap-2 text-sm font-medium text-[var(--color-foreground)]">
+                                 <div className="flex text-[var(--color-warning)]">
+                                    <Star className="w-4 h-4 fill-current" />
+                                    <Star className="w-4 h-4 fill-current" />
+                                    <Star className="w-4 h-4 fill-current" />
+                                    <Star className="w-4 h-4 fill-current" />
+                                    <Star className="w-4 h-4 fill-current" />
+                                 </div>
+                                 <span>{t("socialProof.rating")}</span>
+                                 <span className="text-[var(--color-muted)]">• {t("socialProof.reviews")}</span>
+                            </div>
+                        </div>
+                    </MotionWrapper>
 				</div>
 
-				<div className="grid gap-4 sm:gap-6 md:grid-cols-3 max-w-5xl mx-auto 2xl:max-w-6xl">
-					<Card className="p-4 sm:p-6 2xl:p-8 card-glow text-center motion-fade-in motion-delay-1100 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
-						<div className="icon-circle mx-auto mb-3 sm:mb-4 2xl:mb-6 motion-scale-in motion-delay-1200">
-							<ShieldCheck className="size-4 sm:size-5 2xl:size-6" />
-						</div>
-						<h3 className="text-sm sm:text-base 2xl:text-lg font-semibold mb-2 2xl:mb-3 tracking-tight motion-slide-up motion-delay-1300">
-							{t("solutions.credibility.title")}
-						</h3>
-						<p className="text-xs sm:text-sm 2xl:text-base leading-relaxed text-[var(--color-muted)] motion-fade-in motion-delay-1400">
-							{t("solutions.credibility.description")}
-						</p>
-					</Card>
-					<Card className="p-4 sm:p-6 2xl:p-8 card-glow text-center ring-2 ring-[var(--color-accent)]/20 motion-fade-in motion-delay-1200 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
-						<div className="icon-circle mx-auto mb-3 sm:mb-4 2xl:mb-6 motion-scale-in motion-delay-1300">
-							<TrendingUp className="size-4 sm:size-5 2xl:size-6" />
-						</div>
-						<h3 className="text-sm sm:text-base 2xl:text-lg font-semibold mb-2 2xl:mb-3 tracking-tight motion-slide-up motion-delay-1400">
-							{t("solutions.conversion.title")}
-						</h3>
-						<p className="text-xs sm:text-sm 2xl:text-base leading-relaxed text-[var(--color-muted)] motion-fade-in motion-delay-1500">
-							{t("solutions.conversion.description")}
-						</p>
-					</Card>
-					<Card className="p-4 sm:p-6 2xl:p-8 card-glow text-center motion-fade-in motion-delay-1300 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
-						<div className="icon-circle mx-auto mb-3 sm:mb-4 2xl:mb-6 motion-scale-in motion-delay-1400">
-							<MapPin className="size-4 sm:size-5 2xl:size-6" />
-						</div>
-						<h3 className="text-sm sm:text-base 2xl:text-lg font-semibold mb-2 2xl:mb-3 tracking-tight motion-slide-up motion-delay-1500">
-							{t("solutions.visibility.title")}
-						</h3>
-						<p className="text-xs sm:text-sm 2xl:text-base leading-relaxed text-[var(--color-muted)] motion-fade-in motion-delay-1600">
-							{t("solutions.visibility.description")}
-						</p>
-					</Card>
+				<div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+					<MotionWrapper variant="fade-up" delay={0.7} className="h-full">
+                        <div className="card-base text-left transition-transform hover:-translate-y-1 duration-300 h-full">
+                            <div className="w-10 h-10 rounded-lg bg-[var(--color-primary)]/5 flex items-center justify-center text-[var(--color-primary)] mb-4">
+                                <ShieldCheck className="size-5" />
+                            </div>
+                            <h3 className="text-lg font-semibold mb-2 text-[var(--color-primary)]">
+                                {t("solutions.credibility.title")}
+                            </h3>
+                            <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                                {t("solutions.credibility.description")}
+                            </p>
+                        </div>
+                    </MotionWrapper>
+
+					<MotionWrapper variant="fade-up" delay={0.8} className="h-full">
+                        <div className="card-base text-left transition-transform hover:-translate-y-1 duration-300 border-[var(--color-accent)]/20 shadow-md h-full">
+                            <div className="w-10 h-10 rounded-lg bg-[var(--color-accent)]/10 flex items-center justify-center text-[var(--color-accent)] mb-4">
+                                <TrendingUp className="size-5" />
+                            </div>
+                            <h3 className="text-lg font-semibold mb-2 text-[var(--color-primary)]">
+                                {t("solutions.conversion.title")}
+                            </h3>
+                            <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                                {t("solutions.conversion.description")}
+                            </p>
+                        </div>
+                    </MotionWrapper>
+
+					<MotionWrapper variant="fade-up" delay={0.9} className="h-full">
+                        <div className="card-base text-left transition-transform hover:-translate-y-1 duration-300 h-full">
+                            <div className="w-10 h-10 rounded-lg bg-[var(--color-primary)]/5 flex items-center justify-center text-[var(--color-primary)] mb-4">
+                                <MapPin className="size-5" />
+                            </div>
+                            <h3 className="text-lg font-semibold mb-2 text-[var(--color-primary)]">
+                                {t("solutions.visibility.title")}
+                            </h3>
+                            <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                                {t("solutions.visibility.description")}
+                            </p>
+                        </div>
+                    </MotionWrapper>
 				</div>
 			</div>
 		</section>

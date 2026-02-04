@@ -2,11 +2,12 @@
     "navigation": {
         "home": "Accueil",
         "portfolio": "Réalisations",
-        "about": "À propos",
         "testimonials": "Témoignages",
         "offers": "Offres",
         "process": "Process",
-        "contact": "Contact"
+        "contact": "Contact",
+        "about": "À propos",
+        "startProject": "Démarrer un projet"
     },
     "hero": {
         "badge": "Seulement 3 diagnostics gratuits cette semaine",
@@ -287,6 +288,7 @@
     },
     "contact": {
         "title": "Transformez plus de visites en clients.",
+        "badge": "Places limitées ce mois-ci",
         "subtitle": "Présentez activité & objectifs et recevez un plan d'amélioration concret.",
         "benefits": {
             "diagnostic": {
@@ -308,42 +310,59 @@
         },
         "form": {
             "title": "Formulaire de contact",
-            "stepTitle": "Commencez votre diagnostic gratuit",
-            "stepSubtitle": "Remplissez ces 3 infos pour recevoir votre analyse personnalisée",
-            "firstName": "Prénom",
-            "company": "Entreprise",
-            "email": "Email",
-            "phone": "Téléphone",
-            "phoneOptional": "(optionnel)",
-            "project": "Projet",
-            "budget": "Budget estimé",
-            "hasSite": "Avez-vous déjà un site ?",
-            "yes": "Oui",
-            "no": "Non",
-            "message": "Message",
-            "messagePlaceholder": "Décrivez votre activité, l'objectif, l'urgence...",
-            "submit": "Réserver un appel gratuit de 15 min",
-            "submitting": "Envoi...",
-            "honeypot": "Ne pas remplir",
-            "projectTypes": {
-                "showcase": "Site vitrine",
-                "redesign": "Refonte",
-                "optimization": "Optimisation / SEO local",
-                "other": "Autre"
+            "steps": {
+                "objective": "Votre Objectif",
+                "context": "Contexte",
+                "identity": "Coordonnées"
+            },
+            "objectives": {
+                "creation": {
+                    "label": "Création de site",
+                    "desc": "Je n'ai pas encore de site"
+                },
+                "redesign": {
+                    "label": "Refonte complète",
+                    "desc": "J'ai un site mais il est daté"
+                },
+                "marketing": {
+                    "label": "Performance / SEO",
+                    "desc": "Je veux plus de trafic/clients"
+                },
+                "other": {
+                    "label": "Autre demande",
+                    "desc": "Partenariat ou spécifique"
+                }
+            },
+            "timelines": {
+                "label": "Délai souhaité",
+                "urgent": "Dès que possible (< 2 sem)",
+                "1month": "Dans le mois",
+                "3months": "Dans les 3 mois",
+                "exploration": "Je me renseigne"
             },
             "budgetRanges": {
-                "under1000": "< 1000€",
-                "1000to2000": "1000–2000€",
-                "over2000": "> 2000€",
-                "tbd": "À définir"
+                "tbd": "À définir / Je ne sais pas",
+                "under1000": "Moins de 1 000 €",
+                "1000to2000": "1 000 € - 2 000 €",
+                "over2000": "Plus de 2 000 €"
             },
-            "consent": "En envoyant ce formulaire vous acceptez un contact email / téléphone. Aucune newsletter automatique.",
-            "badges": {
-                "0": "Sécurisé",
-                "1": "RGPD",
-                "2": "Zéro spam"
+            "fields": {
+                "currentUrl": "Adresse de votre site actuel (si existant)",
+                "budget": "Budget envisagé",
+                "budgetPlaceholder": "Sélectionner une fourchette...",
+                "message": "Détails supplémentaires (optionnel)",
+                "firstName": "Prénom",
+                "lastName": "Nom",
+                "email": "Email pro",
+                "company": "Nom de l'entreprise",
+                "phone": "Téléphone mobile"
             },
-            "successMessage": "Message envoyé. Réponse sous 24h ✅"
+            "next": "Continuer",
+            "back": "Retour",
+            "submit": "Obtenir mon audit gratuit",
+            "submitting": "Analyse en cours...",
+            "successMessage": "Demande reçue ! Je vous recontacte sous 24h.",
+            "consent": "Vos données sont confidentielles. Pas de spam, promis."
         }
     },
     "language": {
@@ -644,6 +663,25 @@
                 "title": "Quori",
                 "description": "SaaS B2B pour entreprises"
             }
+        }
+    },
+    "footer": {
+        "description": "Sites vitrines modernes et performants pour artisans & services locaux. Design premium, optimisation locale, conversion.",
+        "navigation": "Navigation",
+        "support": "Support",
+        "legal": "Légal",
+        "copyright": "© {year} Atlas Web Studio — Tous droits réservés.",
+        "links": {
+            "offers": "Nos Offres",
+            "portfolio": "Réalisations",
+            "process": "Notre Process",
+            "testimonials": "Témoignages",
+            "faq": "FAQ",
+            "contact": "Contact",
+            "about": "À propos",
+            "mentions": "Mentions légales",
+            "cgv": "CGV",
+            "privacy": "Confidentialité"
         }
     }
 }

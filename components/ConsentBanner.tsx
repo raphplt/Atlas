@@ -40,7 +40,6 @@ export function ConsentBanner() {
 
 	return (
 		<>
-			{/* Bannière principale */}
 			<div
 				className="fixed bottom-0 left-0 right-0 z-[1000] bg-[var(--color-card)] border-t border-[var(--color-border)] shadow-[0_-4px_20px_rgba(0,0,0,0.1)] backdrop-blur-[10px] animate-[consent-slide-up_0.3s_ease-out]"
 				role="dialog"
@@ -105,7 +104,6 @@ export function ConsentBanner() {
 				</div>
 			</div>
 
-			{/* Modal de détails */}
 			<Dialog open={showDetails} onOpenChange={setShowDetails}>
 				<DialogContent className="max-w-2xl" aria-labelledby="consent-modal-title">
 					<DialogHeader>
@@ -264,9 +262,6 @@ export function ConsentBanner() {
 	);
 }
 
-/**
- * Composant pour afficher un lien "Gérer mes cookies" dans le footer
- */
 export function ConsentManager() {
 	const { showBanner, clearConsent, hasConsent } = useConsent();
 	const t = useTranslations("consent");
@@ -281,7 +276,7 @@ export function ConsentManager() {
 				clearConsent();
 				showBanner();
 			}}
-			className="consent-manager-link"
+			className="flex items-center text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors text-xs"
 			aria-label={t("manager.link")}
 		>
 			<Settings className="w-4 h-4 mr-1" aria-hidden="true" />

@@ -1,6 +1,5 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
 import { FileWarning, MapPinOff, PhoneOff } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { PrimaryCta } from "@/components/ui/PrimaryCta";
@@ -27,34 +26,33 @@ export function Problems() {
 	];
 
 	return (
-		<section className="relative py-20 sm:py-32" id="problems">
-			<div
-				className="absolute inset-0 pattern-grid opacity-40"
-				aria-hidden="true"
-			/>
-			<div className="container relative">
-				<h2 className="h2 text-center mb-4 sm:mb-6 motion-fade-in motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
-					{t("title")}
-				</h2>
-				<p className="text-center text-[var(--color-muted)] mb-10 sm:mb-14 max-w-2xl mx-auto motion-slide-up motion-delay-100 motion-duration-1000 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
-					{t("subtitle")}
-				</p>
-				<div className="grid gap-6 sm:gap-8 md:grid-cols-3">
+		<section className="py-24 bg-[var(--color-background)]" id="problems">
+			<div className="container-width">
+				<div className="text-center mb-16 max-w-2xl mx-auto">
+					<h2 className="text-3xl md:text-4xl font-bold text-[var(--color-primary)] mb-6">
+						{t("title")}
+					</h2>
+					<p className="text-lg text-[var(--color-muted)]">
+						{t("subtitle")}
+					</p>
+				</div>
+                
+				<div className="grid gap-8 md:grid-cols-3">
 					{items.map((it, index) => (
-						<Card
+						<div
 							key={it.title}
-							className="p-6 sm:p-8 card-glow motion-fade-in motion-delay-200 motion-intersect-start motion-intersect-end motion-intersect-threshold-50"
+							className="p-8 bg-[var(--color-background-alt)] rounded-lg border border-[var(--color-border)] hover:border-[var(--color-primary)] transition-colors"
 						>
-							<div className="icon-circle mb-4 sm:mb-6 motion-scale-in motion-delay-300">
-								<it.icon className="size-4 sm:size-5" />
+							<div className="mb-6 text-[var(--color-accent)]">
+								<it.icon className="size-8" />
 							</div>
-							<h3 className="text-base sm:text-lg font-semibold mb-2 tracking-tight motion-slide-up motion-delay-400">
+							<h3 className="text-xl font-bold text-[var(--color-primary)] mb-3">
 								{it.title}
 							</h3>
-							<p className="text-sm leading-relaxed text-[var(--color-muted)] motion-fade-in motion-delay-500">
+							<p className="text-sm leading-relaxed text-[var(--color-muted)]">
 								{it.body}
 							</p>
-						</Card>
+						</div>
 					))}
 				</div>
 

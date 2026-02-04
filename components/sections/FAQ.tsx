@@ -1,6 +1,6 @@
 "use client";
-import { useState, useMemo, useRef, useEffect } from "react";
-import { ChevronDown, Search, Minimize2, Maximize2 } from "lucide-react";
+import { useState, useMemo } from "react";
+import { ChevronDown, Search } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 interface FaqItem {
@@ -21,7 +21,6 @@ function slugify(str: string) {
 export function FAQ() {
 	const t = useTranslations("faq");
 	const [query, setQuery] = useState("");
-	const listRef = useRef<HTMLDivElement | null>(null);
 
 	const faqs: FaqItem[] = Array.from({ length: 8 }, (_, i) => {
 		const question = t(`questions.${i}.question`);
@@ -33,16 +32,6 @@ export function FAQ() {
 		};
 	});
 	const [openIds, setOpenIds] = useState<string[]>([faqs[0]?.id || ""]);
-
-	// Auto-open if hash matches
-	useEffect(() => {
-		if (typeof window === "undefined") return;
-		const hash = window.location.hash.replace("#", "");
-		if (hash) {
-			const exists = faqs.find((f) => f.id === hash);
-			if (exists) setOpenIds((ids) => (ids.includes(hash) ? ids : [...ids, hash]));
-		}
-	}, []);
 
 	const filtered = useMemo(() => {
 		if (!query.trim()) return faqs;
@@ -58,93 +47,60 @@ export function FAQ() {
 			ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]
 		);
 	}
-	function expandAll() {
-		setOpenIds(filtered.map((f) => f.id));
-	}
-	function collapseAll() {
-		setOpenIds([]);
-	}
-	const allExpanded =
-		filtered.length > 0 && filtered.every((f) => openIds.includes(f.id));
 
 	return (
-		<section className="relative py-20 sm:py-32 overflow-hidden" id="faq">
-			<div
-				className="absolute inset-0 pattern-grid opacity-30"
-				aria-hidden="true"
-			/>
-			<div className="container relative">
-				<h2 className="h2 text-center mb-4 sm:mb-6 motion-fade-in motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
+		<section className="py-24 bg-[var(--color-background)]" id="faq">
+			<div className="container-width max-w-3xl">
+				<h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-[var(--color-primary)]">
 					{t("title")}
 				</h2>
-				<p className="text-center text-sm text-[var(--color-muted)] mb-8 sm:mb-12 max-w-2xl mx-auto motion-slide-up motion-delay-100 motion-duration-1000 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
+				<p className="text-center text-[var(--color-muted)] mb-12 text-lg">
 					{t("subtitle")}
 				</p>
-				<div className="flex flex-col md:flex-row gap-3 sm:gap-4 md:items-center mb-8 sm:mb-10 motion-scale-in motion-delay-200 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
-					<div className="relative flex-1 motion-slide-up motion-delay-300">
-						<Search className="absolute left-3 top-1/2 -translate-y-1/2 size-3.5 sm:size-4 text-[var(--color-muted)] motion-wiggle motion-delay-400" />
-						<input
-							placeholder={t("searchPlaceholder")}
-							value={query}
-							onChange={(e) => setQuery(e.target.value)}
-							className="w-full pl-8 sm:pl-9 pr-3 py-2 rounded-md bg-[var(--color-bg-alt)]/70 border border-[var(--color-border)] text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
-							aria-label="Rechercher dans la FAQ"
-						/>
-					</div>
-					<button
-						onClick={() => (allExpanded ? collapseAll() : expandAll())}
-						className="text-[10px] sm:text-xs font-medium px-2 sm:px-3 py-1.5 sm:py-2 rounded-md border border-[var(--color-border)] bg-[var(--color-card)]/70 hover:bg-[var(--color-bg-alt)] transition flex items-center gap-1 motion-scale-in motion-delay-500"
-						aria-label={allExpanded ? t("collapseAll") : t("expandAll")}
-					>
-						{allExpanded ? (
-							<Minimize2 className="size-3 sm:size-3.5" />
-						) : (
-							<Maximize2 className="size-3 sm:size-3.5" />
-						)}
-						{allExpanded ? t("collapseAll") : t("expandAll")}
-					</button>
+                
+				<div className="relative mb-10">
+					<Search className="absolute left-4 top-1/2 -translate-y-1/2 size-5 text-[var(--color-muted)]" />
+					<input
+						placeholder={t("searchPlaceholder")}
+						value={query}
+						onChange={(e) => setQuery(e.target.value)}
+						className="w-full pl-12 pr-4 py-4 rounded-xl border border-[var(--color-border)] text-[var(--color-foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all shadow-sm"
+					/>
 				</div>
-				<div ref={listRef} className="space-y-3 sm:space-y-4">
+
+				<div className="space-y-4">
 					{filtered.length === 0 && (
-						<p className="text-xs sm:text-sm text-[var(--color-muted)] motion-fade-in motion-delay-600">
+						<p className="text-sm text-[var(--color-muted)] text-center">
 							{t("noResults")}
 						</p>
 					)}
-					{filtered.map((f, index) => {
+					{filtered.map((f) => {
 						const isOpen = openIds.includes(f.id);
 						return (
 							<div
 								key={f.id}
-								id={f.id}
-								className="group border border-[var(--color-border)] rounded-xl sm:rounded-2xl bg-[var(--color-card)]/70 backdrop-blur-sm transition hover:border-[var(--color-accent)]/40 motion-fade-in motion-delay-600 motion-intersect-start motion-intersect-end motion-intersect-threshold-50"
+								className={`border rounded-lg transition-all duration-200 ${isOpen ? 'border-[var(--color-primary)] ring-1 ring-[var(--color-primary)]' : 'border-[var(--color-border)] bg-[var(--color-background-alt)]/30'}`}
 							>
 								<button
 									onClick={() => toggle(f.id)}
-									className="w-full flex items-start gap-3 sm:gap-4 text-left px-3 sm:px-5 py-3 sm:py-4 motion-scale-in motion-delay-700"
+									className="w-full flex items-center justify-between gap-4 text-left px-6 py-5"
 									aria-expanded={isOpen}
-									aria-controls={`panel-${f.id}`}
 								>
-									<div className="mt-1 rounded-full size-5 sm:size-6 flex items-center justify-center bg-[var(--color-accent)]/15 text-[var(--color-accent)] text-xs font-semibold motion-wiggle motion-delay-800">
-										{isOpen ? "-" : "+"}
-									</div>
-									<span className="font-medium flex-1 leading-snug pr-4 sm:pr-6 text-sm sm:text-base motion-slide-up motion-delay-900">
+									<span className={`font-semibold text-lg ${isOpen ? 'text-[var(--color-primary)]' : 'text-[var(--color-foreground)]'}`}>
 										{f.question}
 									</span>
 									<ChevronDown
-										className={`size-3.5 sm:size-4 text-[var(--color-muted)] transition mt-1 motion-scale-in motion-delay-1000 ${
-											isOpen ? "rotate-180 text-[var(--color-accent)]" : ""
+										className={`size-5 text-[var(--color-muted)] transition-transform duration-300 flex-shrink-0 ${
+											isOpen ? "rotate-180 text-[var(--color-primary)]" : ""
 										}`}
 									/>
 								</button>
 								<div
-									id={`panel-${f.id}`}
-									role="region"
-									aria-hidden={!isOpen}
-									className={`grid transition-[grid-template-rows,opacity] duration-400 ease-out motion-fade-in motion-delay-1100 ${
-										isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-									} px-3 sm:px-5`}
+									className={`grid transition-[grid-template-rows,padding] duration-300 ease-out ${
+										isOpen ? "grid-rows-[1fr] pb-5" : "grid-rows-[0fr] pb-0"
+									} px-6`}
 								>
-									<div className="overflow-hidden pb-3 sm:pb-5 pt-0 text-xs sm:text-sm leading-relaxed text-[var(--color-muted)] motion-slide-up motion-delay-1200">
+									<div className="overflow-hidden leading-relaxed text-[var(--color-muted)]">
 										{f.answer}
 									</div>
 								</div>
@@ -152,11 +108,12 @@ export function FAQ() {
 						);
 					})}
 				</div>
-				<p className="mt-8 sm:mt-12 text-center text-[10px] sm:text-xs text-[var(--color-muted)] motion-fade-in motion-delay-1300 motion-intersect-start motion-intersect-end motion-intersect-threshold-75">
+                
+				<p className="mt-12 text-center text-sm text-[var(--color-muted)]">
 					{t("stillHaveQuestion")}{" "}
 					<a
 						href="#contact"
-						className="text-[var(--color-accent)] hover:underline motion-wiggle motion-delay-1400"
+						className="text-[var(--color-primary)] font-semibold hover:underline underline-offset-2"
 					>
 						{t("contactMe")}
 					</a>
