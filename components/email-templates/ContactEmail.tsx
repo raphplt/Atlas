@@ -46,14 +46,9 @@ export function ContactEmail({ data }: ContactEmailProps) {
 
 			<div style={{ marginBottom: "20px" }}>
 				<h3 style={{ color: "#555", marginBottom: "10px" }}>Détails du projet :</h3>
-				<p>
-					<strong>Type de projet :</strong> {data.projectType}
-				</p>
+				
 				<p>
 					<strong>Budget :</strong> {data.budget}
-				</p>
-				<p>
-					<strong>Possède déjà un site :</strong> {data.hasSite ? "Oui" : "Non"}
 				</p>
 			</div>
 
