@@ -10,7 +10,6 @@
   background-size: 24px 24px;
 }
 
-/* THEME TOKENS */
 @theme {
   /* Typography */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -51,28 +50,34 @@
   --container: 1180px;
 }
 
-/* DARK THEME TOKENS */
-/* DARK THEME TOKENS */
 [data-theme="dark"] {
-  --color-background: #020617;  /* Deep Midnight Slate - Richer than prev */
-  --color-background-alt: #0F172A; /* Slate-900 */
-  
-  /* Glassy Card Effect */
-  --color-card: rgba(30, 41, 59, 0.4); /* Slate-800 with opacity */
-  --color-card-foreground: #F8FAFC; /* Slate-50 */
+  /* Backgrounds */
+  --color-background: #0A0F1C;
+  /* Encre profonde */
+  --color-background-alt: #0F1629;
+  /* Section contrastée */
 
-  --color-primary: #38BDF8; /* Sky-400 - Vibrant against dark */
-  --color-primary-foreground: #020617;
-  
-  --color-foreground: #F1F5F9; /* Slate-100 */
-  --color-muted: #94A3B8;      /* Slate-400 */
-  --color-border: #1E293B;     /* Slate-800 */
-  
-  --color-accent: #FB923C;     /* Orange-400 */
-  
-  /* Footer specific overrides if needed, but general theme should cover it */
-  --color-footer-bg: #020617;
-  --color-footer-fg: #E2E8F0;
+  /* Cards */
+  --color-card: #0F172A;
+  /* Plein, pas glass */
+  --color-card-foreground: #E5E7EB;
+
+  /* Primary = version dark de ton bleu brand */
+  --color-primary: #8FB4D9;
+  /* Bleu désaturé premium */
+  --color-primary-foreground: #0A0F1C;
+
+  /* Text */
+  --color-foreground: #E5E7EB;
+  --color-muted: #9CA3AF;
+  --color-border: #1F2937;
+
+  /* Accent = cuivre assombri */
+  --color-accent: #D08A3D;
+
+  /* Footer */
+  --color-footer-bg: #050814;
+  --color-footer-fg: #CBD5E1;
   --color-footer-muted: #64748B;
 }
 
