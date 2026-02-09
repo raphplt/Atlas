@@ -351,162 +351,343 @@
     "legal": {
         "cgv": {
             "title": "Terms and Conditions",
+            "lastUpdate": "Last updated: February 9, 2026",
             "sections": {
                 "object": {
-                    "title": "1. Object",
-                    "content": "These terms and conditions govern the contractual relationships between Atlas, represented by Raphaël Plassart, and its clients for website creation services."
+                    "title": "1. Purpose and Scope",
+                    "content": "These Terms and Conditions (hereinafter \"T&C\") govern all contractual relationships between the Service Provider and the Client for any order of website creation services. Any order implies unreserved acceptance of these T&C by the Client. The applicable T&C are those in effect at the date of the order."
+                },
+                "provider": {
+                    "title": "2. Service Provider Identification",
+                    "name": "Raphaël Plassart",
+                    "tradeName": "Trade name: Atlas",
+                    "status": "Sole proprietor (Micro-enterprise)",
+                    "siren": "SIREN: 942 906 157",
+                    "siret": "SIRET: 942 906 157 00014",
+                    "ape": "APE Code: 62.01Z – Computer programming",
+                    "address": "Registered office: 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France",
+                    "email": "Email: raphael.plassart@gmail.com",
+                    "phone": "Phone: +33 7 69 89 28 62",
+                    "tva": "VAT not applicable, article 293 B of the French General Tax Code"
                 },
                 "services": {
-                    "title": "2. Services",
-                    "content": "Atlas offers website creation services for craftsmen and local services, including design, development, SEO optimization and online deployment."
+                    "title": "3. Services",
+                    "content": "The Service Provider offers website design and development services, including:",
+                    "items": [
+                        "Creation of showcase websites (single-page or multi-page)",
+                        "Custom design and integration (responsive / mobile-first)",
+                        "Local search engine optimization (SEO)",
+                        "Hosting and domain name setup",
+                        "Third-party tool integration (Google Maps, Analytics, forms)",
+                        "User training and optional maintenance"
+                    ],
+                    "detail": "The precise details of services, features and deliverables are defined in the quote approved by the Client, which forms an integral part of the contract."
+                },
+                "quote": {
+                    "title": "4. Quote and Order",
+                    "items": [
+                        "The Service Provider issues a free, detailed quote based on the information provided by the Client.",
+                        "The quote is valid for 30 days from its issue date.",
+                        "The order is deemed firm and final upon receipt of the signed quote (or acceptance by email) together with the deposit payment.",
+                        "Any request for additional services not included in the initial quote will be subject to a separate costed amendment, subject to Client approval."
+                    ]
+                },
+                "pricing": {
+                    "title": "5. Pricing",
+                    "content": "Prices are quoted in euros. VAT is not applicable pursuant to article 293 B of the French General Tax Code (micro-enterprise regime). The applicable rates are those shown on the quote accepted by the Client. The Service Provider reserves the right to modify rates at any time, without effect on orders already accepted."
                 },
                 "payment": {
-                    "title": "3. Payment Terms",
+                    "title": "6. Payment Terms",
+                    "content": "Payment is made as follows:",
                     "items": [
-                        "30% deposit upon order",
-                        "Balance upon website delivery",
-                        "Payment possible in 2 installments without fees",
-                        "Billing excluding tax"
-                    ]
+                        "30% deposit of the total amount upon order (quote signature)",
+                        "70% balance upon website delivery, before final deployment",
+                        "Payment in 2 installments without fees available on request (50% upon order, 50% upon delivery)",
+                        "Accepted payment methods: bank transfer, PayPal"
+                    ],
+                    "invoice": "An invoice is issued for each payment. Invoices state \"VAT not applicable, article 293 B of the French General Tax Code\"."
+                },
+                "latePayment": {
+                    "title": "7. Late Payment",
+                    "content": "In case of late payment, and in accordance with articles L441-10 et seq. of the French Commercial Code: late payment penalties at three times the legal interest rate will be due, calculated on the outstanding amount from the scheduled payment date. A flat-rate compensation of €40 for recovery costs will also be automatically due (art. D441-5 of the French Commercial Code). The Service Provider reserves the right to suspend any ongoing work in case of non-payment."
                 },
                 "delivery": {
-                    "title": "4. Delivery Times",
-                    "content": "Websites are delivered within 5 to 7 business days maximum, subject to rapid provision of content by the client (texts, images, logo)."
+                    "title": "8. Delivery Times",
+                    "content": "Indicative delivery times are 5 to 10 business days from receipt of all necessary materials (content, text, images, logo, access credentials). These times may vary depending on project complexity and the Client's responsiveness in providing content. Any delay attributable to the Client (failure to provide content, delayed approval) will extend the delivery deadline accordingly. Delivery is deemed complete when the website is made available on a preview environment (staging) for Client validation."
                 },
-                "guarantees": {
-                    "title": "5. Guarantees",
+                "providerObligations": {
+                    "title": "9. Service Provider Obligations",
                     "items": [
-                        "Satisfaction or money-back guarantee within 30 days",
-                        "Unlimited revisions until satisfaction",
-                        "Technical support included for 1 month"
+                        "Deliver services in accordance with the approved quote and professional standards",
+                        "Respect agreed deadlines, subject to Client cooperation",
+                        "Keep the Client informed of project progress at each key milestone",
+                        "Maintain confidentiality of information shared by the Client",
+                        "Deliver a functional, responsive and SEO-optimized website"
                     ]
                 },
-                "responsibilities": {
-                    "title": "6. Responsibilities",
-                    "content": "The client undertakes to provide content that complies with current legislation. Atlas cannot be held responsible for content provided by the client."
+                "clientObligations": {
+                    "title": "10. Client Obligations",
+                    "items": [
+                        "Provide all necessary content (text, images, logo) within agreed timeframes",
+                        "Validate creation stages within a reasonable timeframe (5 business days maximum per stage)",
+                        "Ensure that provided content is free of third-party rights and complies with applicable laws",
+                        "Pay amounts due by the scheduled deadlines",
+                        "Designate a single point of contact to facilitate communication"
+                    ]
+                },
+                "withdrawal": {
+                    "title": "11. Right of Withdrawal",
+                    "content": "In accordance with articles L221-18 et seq. of the French Consumer Code, the Client acting as a consumer has a 14-day period from acceptance of the quote to exercise their right of withdrawal, without justification or penalty. To exercise this right, the Client must notify their decision by email to raphael.plassart@gmail.com. In case of withdrawal, amounts paid will be refunded within 14 days.",
+                    "exception": "In accordance with article L221-28 of the French Consumer Code, the right of withdrawal cannot be exercised for services fully performed before the end of the withdrawal period, if performance began with the Client's express consent and acknowledgment of loss of their right of withdrawal. By accepting the quote and the start of work during the withdrawal period, the Client expressly acknowledges waiving their right of withdrawal for services already performed."
+                },
+                "validation": {
+                    "title": "12. Validation and Acceptance",
+                    "content": "Upon completion, the Service Provider presents the website to the Client for validation (acceptance phase). The Client has 7 business days to submit remarks and modification requests. After this period, in the absence of Client feedback, the website is deemed compliant and accepted. Validation (express or tacit) triggers payment of the balance and authorizes final deployment."
+                },
+                "revisions": {
+                    "title": "13. Revisions and Modifications",
+                    "content": "Within the scope of the initial project, the Client benefits from included revisions to adjust the result to their expectations (text changes, colors, element layout). Revisions cover adjustments within the scope defined in the quote. Any request involving a significant design overhaul, addition of unplanned features, or major creative direction change may be subject to an additional quote. After final validation and deployment, modifications are billed at the current hourly rate or under a maintenance contract."
+                },
+                "guarantee": {
+                    "title": "14. Satisfaction Guarantee",
+                    "content": "The Service Provider offers a 30-day satisfaction or money-back guarantee from website delivery. If the Client is not satisfied with the result despite proposed revisions, they may request a full refund of amounts paid within this period. This guarantee is subject to the following conditions: the Client must have provided all requested content, actively participated in validation phases, and submitted their refund request by reasoned email."
                 },
                 "intellectual": {
-                    "title": "7. Intellectual Property",
-                    "content": "The created website becomes the client's property upon full payment. The client has full administrator access."
+                    "title": "15. Intellectual Property and Rights Transfer",
+                    "items": [
+                        "The source code and design of the created website are transferred to the Client on an exclusive basis upon full payment. The Client becomes the owner of the website and has full administrator access.",
+                        "The Service Provider retains the right to reference the work in their portfolio and marketing materials, unless the Client objects in writing.",
+                        "Open source tools, frameworks, libraries and methodologies used remain the property of their respective authors under their original licenses.",
+                        "The Client warrants that they hold the rights to all content provided (text, images, logos) and indemnifies the Service Provider against any third-party rights violation."
+                    ]
+                },
+                "liability": {
+                    "title": "16. Liability",
+                    "items": [
+                        "The Service Provider is bound by an obligation of means in performing their services.",
+                        "The Service Provider shall not be held liable for content provided by the Client, temporary website unavailability due to the hosting provider, or indirect damages (loss of revenue, loss of clientele).",
+                        "The Service Provider's liability is limited to the total amount of the relevant service.",
+                        "The Client is solely responsible for the use made of the delivered website, its updates and the compliance of its content with applicable regulations."
+                    ]
+                },
+                "data": {
+                    "title": "17. Personal Data",
+                    "content": "In performing the services, the Service Provider may process the Client's personal data (name, email, phone). This data is processed in compliance with the GDPR and the privacy policy available on the website. The Service Provider undertakes not to share this data with third parties and to retain it only for the duration necessary for contract performance."
+                },
+                "confidentiality": {
+                    "title": "18. Confidentiality",
+                    "content": "Each party undertakes to keep confidential all information of any kind (commercial, technical, financial) communicated by the other party during contract performance. This confidentiality obligation persists throughout the contract and for 2 years after its termination."
+                },
+                "forceMajeure": {
+                    "title": "19. Force Majeure",
+                    "content": "Neither party shall be held liable for failure to fulfill contractual obligations if such failure results from a force majeure event within the meaning of article 1218 of the French Civil Code (an event beyond the affected party's control, unforeseeable and irresistible). In case of force majeure, the parties' obligations are suspended. If the event persists beyond 30 days, either party may terminate the contract without compensation."
+                },
+                "termination": {
+                    "title": "20. Termination",
+                    "content": "In case of serious breach by either party of their contractual obligations, the other party may terminate the contract as of right, 15 days after sending a formal notice that remains unsuccessful (by email with acknowledgment of receipt). In case of termination by the Client after work has begun and outside the exercise of the right of withdrawal, amounts paid as deposit shall remain with the Service Provider as compensation for work already performed. The Service Provider will invoice any additional services performed beyond the deposit amount."
+                },
+                "mediation": {
+                    "title": "21. Mediation and Disputes",
+                    "content": "In the event of a dispute between the Service Provider and the Client, the parties undertake to seek an amicable solution. In accordance with articles L611-1 et seq. of the French Consumer Code, consumer Clients have the right to use a consumer mediator free of charge for amicable dispute resolution. The Service Provider will provide the Client with the contact details of the relevant mediator upon contract signing. Failing amicable resolution, the dispute shall be submitted to the competent courts within the jurisdiction of the Paris Court of Appeal, under French law."
+                },
+                "law": {
+                    "title": "22. Applicable Law",
+                    "content": "These T&C are governed by French law. They are written in French. In case of contradiction between the French and English versions, the French version shall prevail."
                 },
                 "contact": {
-                    "title": "8. Contact",
-                    "content": "For any questions regarding these terms and conditions:",
-                    "email": "Email: raphael.plassart@gmail.com"
+                    "title": "23. Contact",
+                    "content": "For any questions regarding these Terms and Conditions:",
+                    "email": "Email: raphael.plassart@gmail.com",
+                    "phone": "Phone: +33 7 69 89 28 62",
+                    "address": "Address: 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France"
                 }
             }
         },
         "mentions": {
             "title": "Legal Notice",
+            "lastUpdate": "Last updated: February 9, 2026",
             "sections": {
                 "publisher": {
-                    "title": "Website Publisher",
-                    "content": "Raphaël Plassart",
-                    "role": "Full Stack & Mobile Developer",
-                    "studies": "Master's student at ETNA",
-                    "projects": "Co-founder of Melios and Quori"
+                    "title": "1. Website Publisher",
+                    "name": "Raphaël Plassart",
+                    "status": "Sole proprietor (Micro-enterprise)",
+                    "activity": "Activity: Web development, creation of showcase and e-commerce websites",
+                    "siren": "SIREN: 942 906 157",
+                    "siret": "SIRET: 942 906 157 00014",
+                    "ape": "APE Code: 62.01Z – Computer programming",
+                    "address": "Registered office: 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France",
+                    "tva": "VAT not applicable, article 293 B of the French General Tax Code"
+                },
+                "director": {
+                    "title": "2. Publication Director",
+                    "content": "Raphaël Plassart"
                 },
                 "contact": {
-                    "title": "Contact",
+                    "title": "3. Contact",
                     "email": "Email: raphael.plassart@gmail.com",
+                    "phone": "Phone: +33 7 69 89 28 62",
                     "website": "Website: https://atlas.raphael-plassart.com"
                 },
                 "hosting": {
-                    "title": "Hosting",
-                    "company": "This site is hosted by Vercel Inc.",
+                    "title": "4. Hosting",
+                    "content": "This website is hosted by:",
+                    "company": "Vercel Inc.",
                     "address": "440 N Barranca Ave #4133",
                     "city": "Covina, CA 91723",
-                    "country": "United States"
+                    "country": "United States",
+                    "website": "Website: https://vercel.com"
                 },
                 "intellectual": {
-                    "title": "Intellectual Property",
-                    "content": "This entire site is subject to French and international legislation on copyright and intellectual property. All reproduction rights are reserved, including for downloadable documents and iconographic and photographic representations."
+                    "title": "5. Intellectual Property",
+                    "content": "All content on this website (text, images, graphics, logo, icons, source code) is the exclusive property of Raphaël Plassart, unless otherwise stated. Any reproduction, representation, modification, publication or adaptation of all or part of the elements of the site, by any means or process, is prohibited without prior written authorization from Raphaël Plassart. Any unauthorized use of the site or any of its elements shall be considered as infringement and prosecuted in accordance with articles L.335-2 et seq. of the French Intellectual Property Code."
                 },
                 "data": {
-                    "title": "Data Collection",
-                    "content": "Information collected through contact forms is used solely to respond to user requests. No data is sold to third parties."
+                    "title": "6. Personal Data Collection",
+                    "content": "Personal information collected through contact forms (name, email, phone, company name) is used solely to respond to user requests and provide the requested services. No personal data is sold or transferred to third parties. In accordance with the General Data Protection Regulation (GDPR), you have the right to access, rectify, delete and port your data. To exercise these rights, contact: raphael.plassart@gmail.com. For more information, please refer to our Privacy Policy."
                 },
                 "cookies": {
-                    "title": "Cookies",
-                    "content": "This site uses cookies to improve user experience and analyze traffic. You can disable cookies in your browser settings."
+                    "title": "7. Cookies",
+                    "content": "This site uses strictly necessary cookies for its operation as well as analytical cookies (with your consent) to measure audience. You can manage your cookie preferences at any time via the consent banner or your browser settings. For more details, please refer to our Privacy Policy."
+                },
+                "liability": {
+                    "title": "8. Limitation of Liability",
+                    "content": "The information contained on this site is as accurate as possible and is regularly updated. However, it may contain inaccuracies or omissions. Raphaël Plassart shall not be held liable for any direct or indirect damages resulting from access to or use of this site, including inaccessibility, data loss, damage or viruses that may affect the user's computer equipment."
+                },
+                "links": {
+                    "title": "9. Hyperlinks",
+                    "content": "This site may contain hyperlinks to other websites. Raphaël Plassart has no control over the content of these third-party sites and disclaims all responsibility for their content or any damages resulting from their use."
                 },
                 "law": {
-                    "title": "Applicable Law",
-                    "content": "These legal notices are governed by French law. Any dispute will be submitted to the competent French courts."
+                    "title": "10. Applicable Law and Jurisdiction",
+                    "content": "These legal notices are governed by French law. In the event of a dispute, and after an attempt at amicable resolution, jurisdiction is attributed to the competent courts within the jurisdiction of the Paris Court of Appeal."
                 }
             }
         },
         "privacy": {
             "title": "Privacy Policy",
+            "lastUpdate": "Last updated: February 9, 2026",
             "sections": {
                 "introduction": {
                     "title": "1. Introduction",
-                    "content": "This privacy policy describes how Atlas collects, uses and protects your personal information in accordance with the General Data Protection Regulation (GDPR)."
+                    "content": "This privacy policy describes how Raphaël Plassart, operating under the trade name \"Atlas\", collects, uses and protects your personal data when using the website https://atlas.raphael-plassart.com, in accordance with Regulation (EU) 2016/679 of 27 April 2016 (GDPR) and French Law No. 78-17 of 6 January 1978 (Data Protection Act)."
                 },
                 "controller": {
                     "title": "2. Data Controller",
+                    "content": "The data controller is:",
                     "name": "Raphaël Plassart",
+                    "status": "Sole proprietor (Micro-enterprise)",
+                    "siret": "SIRET: 942 906 157 00014",
+                    "address": "18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France",
                     "email": "Email: raphael.plassart@gmail.com",
-                    "website": "Website: https://atlas.raphael-plassart.com"
+                    "phone": "Phone: +33 7 69 89 28 62"
                 },
                 "data": {
-                    "title": "3. Data Collected",
-                    "content": "We collect the following information:",
-                    "items": [
+                    "title": "3. Personal Data Collected",
+                    "formTitle": "Through contact forms:",
+                    "formItems": [
                         "First and last name",
                         "Email address",
                         "Phone number (optional)",
                         "Company name",
-                        "Messages and contact requests"
+                        "Project objective and message"
+                    ],
+                    "autoTitle": "Automatically collected data (with your consent):",
+                    "autoItems": [
+                        "IP address (anonymized)",
+                        "Browser type and operating system",
+                        "Pages visited and visit duration",
+                        "Traffic source (referrer)"
                     ]
                 },
                 "purposes": {
-                    "title": "4. Processing Purposes",
-                    "content": "Your data is used to:",
+                    "title": "4. Purposes and Legal Bases",
+                    "content": "Your data is processed for the following purposes:",
                     "items": [
-                        "Respond to your contact requests",
-                        "Provide you with quotes and information",
-                        "Improve our services",
-                        "Comply with our legal obligations"
+                        "Responding to your contact requests and providing quotes (legal basis: pre-contractual measures – Art. 6.1.b GDPR)",
+                        "Client relationship management and project tracking (legal basis: contract performance – Art. 6.1.b GDPR)",
+                        "Statistical analysis and site improvement via Google Analytics and Vercel Analytics (legal basis: consent – Art. 6.1.a GDPR)",
+                        "Compliance with legal and tax obligations (legal basis: legal obligation – Art. 6.1.c GDPR)"
                     ]
                 },
-                "legal": {
-                    "title": "5. Legal Basis",
-                    "content": "The processing of your personal data is based on your consent when you contact us through our forms."
+                "recipients": {
+                    "title": "5. Recipients and Sub-processors",
+                    "content": "Your personal data may be shared with the following sub-processors, strictly within the scope of the purposes described above:",
+                    "items": [
+                        "Vercel Inc. (website hosting) – United States – https://vercel.com/legal/privacy-policy",
+                        "Google LLC (Google Analytics 4, audience measurement) – United States – https://policies.google.com/privacy",
+                        "Vercel Analytics (performance measurement) – United States – https://vercel.com/legal/privacy-policy"
+                    ],
+                    "noSale": "No personal data is sold, rented or transferred to third parties for commercial purposes."
+                },
+                "transfers": {
+                    "title": "6. International Data Transfers",
+                    "content": "Some of our sub-processors (Vercel, Google) are located in the United States. These transfers are governed by Standard Contractual Clauses (SCCs) approved by the European Commission and/or the EU-US Data Privacy Framework, in compliance with GDPR requirements (Articles 46 and 49)."
                 },
                 "retention": {
-                    "title": "6. Data Retention",
-                    "content": "Your personal data is retained for the duration necessary for the purposes for which it was collected, and at most 3 years after our last contact."
+                    "title": "7. Data Retention Periods",
+                    "items": [
+                        "Contact data (forms): 3 years from last contact",
+                        "Client data (invoicing): 10 years in accordance with accounting obligations",
+                        "Browsing data (analytics cookies): 13 months maximum",
+                        "Consent preferences: 13 months maximum (in line with CNIL recommendations)"
+                    ]
+                },
+                "cookies": {
+                    "title": "8. Cookies and Tracking Technologies",
+                    "intro": "This site uses cookies, which are small text files stored on your device during your visit.",
+                    "essentialTitle": "Strictly necessary cookies (no consent required):",
+                    "essentialItems": [
+                        "atlas_consent_preferences: storage of your cookie preferences (duration: 13 months)"
+                    ],
+                    "analyticsTitle": "Analytics cookies (subject to your consent):",
+                    "analyticsItems": [
+                        "Google Analytics 4 (_ga, _ga_*): audience measurement, pages visited, session duration (duration: 13 months). IP address anonymization is enabled.",
+                        "Vercel Analytics: performance measurement and conversion events (duration: session)"
+                    ],
+                    "marketingTitle": "Marketing cookies (subject to your consent):",
+                    "marketingItems": [
+                        "Google Signals: advertising personalization (disabled by default)"
+                    ],
+                    "management": "You can manage your cookie preferences at any time via the consent banner at the bottom of the page, or by configuring your browser. Refusing analytics and marketing cookies does not affect the site's functionality.",
+                    "consentMode": "This site uses Google Consent Mode V2, which ensures that analytics and marketing cookies are only set after your explicit consent."
                 },
                 "rights": {
-                    "title": "7. Your Rights",
-                    "content": "In accordance with the GDPR, you have the following rights:",
+                    "title": "9. Your Rights",
+                    "content": "In accordance with the GDPR (Articles 15 to 22) and the French Data Protection Act, you have the following rights:",
                     "items": [
-                        "Right of access to your data",
-                        "Right to rectification",
-                        "Right to erasure",
-                        "Right to data portability",
-                        "Right to object",
-                        "Right to restriction of processing"
+                        "Right of access: obtain confirmation that your data is being processed and receive a copy (Art. 15)",
+                        "Right to rectification: have inaccurate or incomplete data corrected (Art. 16)",
+                        "Right to erasure: request deletion of your data (Art. 17)",
+                        "Right to restriction: request suspension of processing (Art. 18)",
+                        "Right to data portability: receive your data in a structured format and transfer it (Art. 20)",
+                        "Right to object: object to the processing of your data (Art. 21)",
+                        "Right to withdraw consent: withdraw your consent at any time for consent-based processing (Art. 7)"
                     ],
-                    "contact": "To exercise these rights, contact us at: raphael.plassart@gmail.com"
-                },
-                "analytics": {
-                    "title": "8. Cookies and Analytics",
-                    "content": "We use Plausible Analytics to analyze our site traffic. This solution respects privacy and does not collect personal data."
+                    "contact": "To exercise these rights, email us at: raphael.plassart@gmail.com. We will respond within one month in accordance with the GDPR.",
+                    "cnil": "If you have concerns about how your personal data is handled, you may lodge a complaint with the CNIL (French Data Protection Authority): https://www.cnil.fr"
                 },
                 "security": {
-                    "title": "9. Security",
-                    "content": "We implement appropriate technical and organizational measures to protect your personal data against loss, misuse and unauthorized access."
+                    "title": "10. Data Security",
+                    "content": "We implement appropriate technical and organizational measures to protect your personal data, including: secure hosting via Vercel (HTTPS), IP address anonymization in Google Analytics, no storage of sensitive data on the client side, and restricted access to personal data."
                 },
-                "contact": {
-                    "title": "10. Contact",
-                    "content": "For any questions regarding this privacy policy:",
-                    "email": "Email: raphael.plassart@gmail.com"
+                "automated": {
+                    "title": "11. Automated Decisions",
+                    "content": "No automated decision-making or profiling within the meaning of Article 22 of the GDPR is implemented on this site."
+                },
+                "minors": {
+                    "title": "12. Data of Minors",
+                    "content": "This site is not intended for minors under 16. We do not knowingly collect personal data from minors. If you are a parent or guardian and discover that a minor has provided us with personal data, please contact us to request its deletion."
                 },
                 "modifications": {
-                    "title": "11. Modifications",
-                    "content": "This privacy policy may be modified. The current version is the one published on our website."
+                    "title": "13. Policy Changes",
+                    "content": "This privacy policy may be updated at any time. The current version is the one published on this site, with its last updated date. In the event of a substantial change, we will inform you via a banner on the site."
+                },
+                "contact": {
+                    "title": "14. Contact",
+                    "content": "For any questions regarding this privacy policy or the management of your personal data:",
+                    "email": "Email: raphael.plassart@gmail.com",
+                    "phone": "Phone: +33 7 69 89 28 62",
+                    "address": "Address: 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France"
                 }
             }
         }

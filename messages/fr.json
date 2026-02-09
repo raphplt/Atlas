@@ -409,162 +409,343 @@
     "legal": {
         "cgv": {
             "title": "Conditions Générales de Vente",
+            "lastUpdate": "Dernière mise à jour : 9 février 2026",
             "sections": {
                 "object": {
-                    "title": "1. Objet",
-                    "content": "Les présentes conditions générales de vente (CGV) régissent les relations contractuelles entre Atlas, représenté par Raphaël Plassart, et ses clients pour la prestation de création de sites web."
+                    "title": "1. Objet et champ d'application",
+                    "content": "Les présentes Conditions Générales de Vente (ci-après « CGV ») régissent l'ensemble des relations contractuelles entre le Prestataire et le Client pour toute commande de prestations de services de création de sites web. Toute commande implique l'acceptation sans réserve des présentes CGV par le Client. Les CGV applicables sont celles en vigueur à la date de la commande."
+                },
+                "provider": {
+                    "title": "2. Identification du prestataire",
+                    "name": "Raphaël Plassart",
+                    "tradeName": "Nom commercial : Atlas",
+                    "status": "Entrepreneur individuel (Micro-entreprise)",
+                    "siren": "SIREN : 942 906 157",
+                    "siret": "SIRET : 942 906 157 00014",
+                    "ape": "Code APE : 62.01Z – Programmation informatique",
+                    "address": "Siège social : 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France",
+                    "email": "Email : raphael.plassart@gmail.com",
+                    "phone": "Téléphone : 07 69 89 28 62",
+                    "tva": "TVA non applicable, article 293 B du Code général des impôts"
                 },
                 "services": {
-                    "title": "2. Prestations",
-                    "content": "Atlas propose des services de création de sites web vitrines pour artisans et services locaux, incluant design, développement, optimisation SEO et mise en ligne."
+                    "title": "3. Prestations",
+                    "content": "Le Prestataire propose des services de conception et de développement de sites web, incluant notamment :",
+                    "items": [
+                        "Création de sites vitrines (one-page ou multi-pages)",
+                        "Design et intégration sur mesure (responsive / mobile-first)",
+                        "Optimisation du référencement naturel (SEO local)",
+                        "Configuration de l'hébergement et du nom de domaine",
+                        "Intégration d'outils tiers (Google Maps, Analytics, formulaires)",
+                        "Formation à l'utilisation et maintenance optionnelle"
+                    ],
+                    "detail": "Le détail précis des prestations, fonctionnalités et livrables est défini dans le devis validé par le Client, qui fait partie intégrante du contrat."
+                },
+                "quote": {
+                    "title": "4. Devis et commande",
+                    "items": [
+                        "Le Prestataire établit un devis gratuit et détaillé sur la base des informations fournies par le Client.",
+                        "Le devis est valable 30 jours à compter de sa date d'émission.",
+                        "La commande est réputée ferme et définitive à réception du devis signé (ou accepté par email) accompagné du versement de l'acompte.",
+                        "Toute demande de prestation supplémentaire non prévue au devis initial fera l'objet d'un avenant chiffré soumis à l'accord du Client."
+                    ]
+                },
+                "pricing": {
+                    "title": "5. Tarifs",
+                    "content": "Les prix sont indiqués en euros. TVA non applicable en vertu de l'article 293 B du Code général des impôts (régime de la micro-entreprise). Les tarifs en vigueur sont ceux figurant sur le devis accepté par le Client. Le Prestataire se réserve le droit de modifier ses tarifs à tout moment, sans effet sur les commandes déjà acceptées."
                 },
                 "payment": {
-                    "title": "3. Modalités de paiement",
+                    "title": "6. Modalités de paiement",
+                    "content": "Le paiement s'effectue selon les modalités suivantes :",
                     "items": [
-                        "Acompte de 30% à la commande",
-                        "Solde à la livraison du site",
-                        "Paiement possible en 2 fois sans frais",
-                        "Facturation en HT"
-                    ]
+                        "Acompte de 30 % du montant total à la commande (signature du devis)",
+                        "Solde de 70 % à la livraison du site, avant mise en ligne définitive",
+                        "Paiement possible en 2 fois sans frais (50 % à la commande, 50 % à la livraison), sur demande",
+                        "Moyens de paiement acceptés : virement bancaire, PayPal"
+                    ],
+                    "invoice": "Une facture est émise pour chaque paiement. La facture mentionne « TVA non applicable, article 293 B du CGI »."
+                },
+                "latePayment": {
+                    "title": "7. Retard de paiement",
+                    "content": "En cas de retard de paiement, et conformément aux articles L441-10 et suivants du Code de commerce : des pénalités de retard seront exigibles au taux de trois fois le taux d'intérêt légal en vigueur, calculées sur le montant TTC de la somme restant due, à compter de la date d'échéance prévue. Une indemnité forfaitaire de 40 € pour frais de recouvrement sera également due de plein droit (art. D441-5 du Code de commerce). Le Prestataire se réserve le droit de suspendre toute prestation en cours en cas de non-paiement."
                 },
                 "delivery": {
-                    "title": "4. Délais de livraison",
-                    "content": "Les sites sont livrés en 5 à 7 jours ouvrés maximum, sous réserve de la fourniture rapide des contenus par le client (textes, images, logo)."
+                    "title": "8. Délais de réalisation et livraison",
+                    "content": "Les délais indicatifs de réalisation sont de 5 à 10 jours ouvrés à compter de la réception de l'ensemble des éléments nécessaires (contenus, textes, images, logo, accès). Ces délais peuvent varier en fonction de la complexité du projet et de la réactivité du Client dans la fourniture des contenus. Tout retard imputable au Client (non-fourniture des contenus, retard de validation) reporte d'autant le délai de livraison. La livraison est réputée effectuée lors de la mise à disposition du site sur un environnement de prévisualisation (staging) pour validation par le Client."
                 },
-                "guarantees": {
-                    "title": "5. Garanties",
+                "providerObligations": {
+                    "title": "9. Obligations du prestataire",
                     "items": [
-                        "Garantie satisfait ou remboursé sous 30 jours",
-                        "Révisions illimitées jusqu'à satisfaction",
-                        "Support technique inclus pendant 1 mois"
+                        "Réaliser les prestations conformément au devis validé et aux règles de l'art",
+                        "Respecter les délais convenus, sous réserve de la coopération du Client",
+                        "Informer le Client de l'avancement du projet à chaque étape clé",
+                        "Assurer la confidentialité des informations communiquées par le Client",
+                        "Livrer un site fonctionnel, responsive et optimisé pour le référencement"
                     ]
                 },
-                "responsibilities": {
-                    "title": "6. Responsabilités",
-                    "content": "Le client s'engage à fournir des contenus conformes à la législation en vigueur. Atlas ne saurait être tenu responsable du contenu fourni par le client."
+                "clientObligations": {
+                    "title": "10. Obligations du client",
+                    "items": [
+                        "Fournir l'ensemble des contenus nécessaires (textes, images, logo) dans les délais convenus",
+                        "Valider les étapes de création dans un délai raisonnable (5 jours ouvrés maximum par étape)",
+                        "S'assurer que les contenus fournis sont libres de droits et conformes à la législation en vigueur",
+                        "Régler les sommes dues aux échéances prévues",
+                        "Désigner un interlocuteur unique pour faciliter la communication"
+                    ]
+                },
+                "withdrawal": {
+                    "title": "11. Droit de rétractation",
+                    "content": "Conformément aux articles L221-18 et suivants du Code de la consommation, le Client consommateur dispose d'un délai de 14 jours à compter de l'acceptation du devis pour exercer son droit de rétractation, sans avoir à justifier de motif ni à payer de pénalités. Pour exercer ce droit, le Client doit notifier sa décision par email à raphael.plassart@gmail.com. En cas de rétractation, les sommes versées seront remboursées dans un délai de 14 jours.",
+                    "exception": "Conformément à l'article L221-28 du Code de la consommation, le droit de rétractation ne peut être exercé pour les prestations de services pleinement exécutées avant la fin du délai de rétractation, si l'exécution a commencé avec l'accord exprès du Client et la reconnaissance de la perte de son droit de rétractation. En acceptant le devis et le démarrage des travaux pendant le délai de rétractation, le Client reconnaît expressément renoncer à son droit de rétractation pour les prestations déjà réalisées."
+                },
+                "validation": {
+                    "title": "12. Validation et recette",
+                    "content": "À l'issue de la réalisation, le Prestataire présente le site au Client pour validation (phase de recette). Le Client dispose de 7 jours ouvrés pour formuler ses remarques et demandes de modifications. Passé ce délai, et en l'absence de retour du Client, le site est réputé conforme et accepté. La validation (expresse ou tacite) déclenche l'exigibilité du solde et autorise la mise en ligne définitive."
+                },
+                "revisions": {
+                    "title": "13. Révisions et modifications",
+                    "content": "Dans le cadre du projet initial, le Client bénéficie de révisions incluses pour ajuster le résultat à ses attentes (modifications de textes, couleurs, disposition des éléments). Les révisions portent sur des ajustements par rapport au périmètre défini dans le devis. Toute demande entraînant une refonte significative du design, l'ajout de fonctionnalités non prévues, ou un changement de direction créative majeur pourra faire l'objet d'un devis complémentaire. Après la validation finale et la mise en ligne, les modifications sont facturées selon le tarif horaire en vigueur ou dans le cadre d'un contrat de maintenance."
+                },
+                "guarantee": {
+                    "title": "14. Garantie satisfait ou remboursé",
+                    "content": "Le Prestataire propose une garantie satisfait ou remboursé de 30 jours à compter de la livraison du site. Si le Client n'est pas satisfait du résultat malgré les révisions proposées, il peut demander le remboursement intégral des sommes versées dans ce délai. Cette garantie est soumise aux conditions suivantes : le Client doit avoir fourni l'ensemble des contenus demandés, participé activement aux phases de validation, et formulé sa demande de remboursement par email motivé."
                 },
                 "intellectual": {
-                    "title": "7. Propriété intellectuelle",
-                    "content": "Le site créé devient la propriété du client dès le paiement intégral. Le client dispose d'un accès administrateur complet."
+                    "title": "15. Propriété intellectuelle et cession des droits",
+                    "items": [
+                        "Le code source et le design du site créé sont cédés au Client à titre exclusif dès le paiement intégral de la prestation. Le Client devient propriétaire du site et dispose d'un accès administrateur complet.",
+                        "Le Prestataire conserve le droit de mentionner la réalisation dans son portfolio et ses supports de communication, sauf opposition écrite du Client.",
+                        "Les outils, frameworks, bibliothèques open source et méthodologies utilisés restent la propriété de leurs auteurs respectifs sous leurs licences d'origine.",
+                        "Le Client garantit détenir les droits sur l'ensemble des contenus qu'il fournit (textes, images, logos) et dégage le Prestataire de toute responsabilité en cas de violation de droits de tiers."
+                    ]
+                },
+                "liability": {
+                    "title": "16. Responsabilité",
+                    "items": [
+                        "Le Prestataire est tenu à une obligation de moyens dans l'exécution de ses prestations.",
+                        "Le Prestataire ne saurait être tenu responsable des contenus fournis par le Client, de l'indisponibilité temporaire du site liée à l'hébergeur, ni des dommages indirects (perte de chiffre d'affaires, perte de clientèle).",
+                        "La responsabilité du Prestataire est limitée au montant total de la prestation concernée.",
+                        "Le Client est seul responsable de l'utilisation qu'il fait du site livré, de sa mise à jour et de la conformité de ses contenus avec la réglementation applicable."
+                    ]
+                },
+                "data": {
+                    "title": "17. Données personnelles",
+                    "content": "Dans le cadre de l'exécution des prestations, le Prestataire peut être amené à traiter des données personnelles du Client (nom, email, téléphone). Ces données sont traitées conformément au RGPD et à la politique de confidentialité accessible sur le site. Le Prestataire s'engage à ne pas communiquer ces données à des tiers et à les conserver uniquement pour la durée nécessaire à l'exécution du contrat."
+                },
+                "confidentiality": {
+                    "title": "18. Confidentialité",
+                    "content": "Chaque partie s'engage à garder confidentielles les informations de toute nature (commerciales, techniques, financières) communiquées par l'autre partie dans le cadre de l'exécution du contrat. Cette obligation de confidentialité subsiste pendant toute la durée du contrat et pendant 2 ans après son terme."
+                },
+                "forceMajeure": {
+                    "title": "19. Force majeure",
+                    "content": "Aucune des parties ne pourra être tenue responsable d'un manquement à ses obligations contractuelles si ce manquement résulte d'un événement de force majeure au sens de l'article 1218 du Code civil (événement échappant au contrôle de la partie concernée, imprévisible et irrésistible). En cas de force majeure, les obligations des parties sont suspendues. Si l'événement perdure au-delà de 30 jours, chaque partie pourra résilier le contrat sans indemnité."
+                },
+                "termination": {
+                    "title": "20. Résiliation",
+                    "content": "En cas de manquement grave de l'une des parties à ses obligations contractuelles, l'autre partie pourra résilier le contrat de plein droit, 15 jours après l'envoi d'une mise en demeure restée infructueuse (par email avec accusé de réception). En cas de résiliation du fait du Client après le début des travaux et hors exercice du droit de rétractation, les sommes versées au titre de l'acompte restent acquises au Prestataire en compensation du travail déjà réalisé. Le Prestataire facturera en supplément les prestations réalisées au-delà de l'acompte."
+                },
+                "mediation": {
+                    "title": "21. Médiation et litiges",
+                    "content": "En cas de différend entre le Prestataire et le Client, les parties s'engagent à rechercher une solution amiable. Conformément aux articles L611-1 et suivants du Code de la consommation, le Client consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige. Le Prestataire proposera au Client les coordonnées du médiateur compétent lors de la signature du contrat. À défaut de résolution amiable, le litige sera soumis aux tribunaux compétents du ressort de la Cour d'appel de Paris, conformément au droit français."
+                },
+                "law": {
+                    "title": "22. Droit applicable",
+                    "content": "Les présentes CGV sont régies par le droit français. Elles sont rédigées en langue française. En cas de contradiction entre les versions française et anglaise, la version française prévaut."
                 },
                 "contact": {
-                    "title": "8. Contact",
+                    "title": "23. Contact",
                     "content": "Pour toute question relative aux présentes CGV :",
-                    "email": "Email : raphael.plassart@gmail.com"
+                    "email": "Email : raphael.plassart@gmail.com",
+                    "phone": "Téléphone : 07 69 89 28 62",
+                    "address": "Adresse : 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France"
                 }
             }
         },
         "mentions": {
             "title": "Mentions Légales",
+            "lastUpdate": "Dernière mise à jour : 9 février 2026",
             "sections": {
                 "publisher": {
-                    "title": "Éditeur du site",
-                    "content": "Raphaël Plassart",
-                    "role": "Développeur Full Stack & Mobile",
-                    "studies": "Étudiant en Master à l'ETNA",
-                    "projects": "Co-fondateur de Melios et Quori"
+                    "title": "1. Éditeur du site",
+                    "name": "Raphaël Plassart",
+                    "status": "Entrepreneur individuel (Micro-entreprise)",
+                    "activity": "Activité : Développement de sites internet, création de sites vitrines et e-commerce",
+                    "siren": "SIREN : 942 906 157",
+                    "siret": "SIRET : 942 906 157 00014",
+                    "ape": "Code APE : 62.01Z – Programmation informatique",
+                    "address": "Siège social : 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France",
+                    "tva": "TVA non applicable, article 293 B du Code général des impôts"
+                },
+                "director": {
+                    "title": "2. Directeur de la publication",
+                    "content": "Raphaël Plassart"
                 },
                 "contact": {
-                    "title": "Contact",
+                    "title": "3. Contact",
                     "email": "Email : raphael.plassart@gmail.com",
+                    "phone": "Téléphone : 07 69 89 28 62",
                     "website": "Site web : https://atlas.raphael-plassart.com"
                 },
                 "hosting": {
-                    "title": "Hébergement",
-                    "company": "Ce site est hébergé par Vercel Inc.",
+                    "title": "4. Hébergement",
+                    "content": "Ce site est hébergé par :",
+                    "company": "Vercel Inc.",
                     "address": "440 N Barranca Ave #4133",
                     "city": "Covina, CA 91723",
-                    "country": "États-Unis"
+                    "country": "États-Unis",
+                    "website": "Site web : https://vercel.com"
                 },
                 "intellectual": {
-                    "title": "Propriété intellectuelle",
-                    "content": "L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques."
+                    "title": "5. Propriété intellectuelle",
+                    "content": "L'ensemble du contenu de ce site (textes, images, graphismes, logo, icônes, code source) est la propriété exclusive de Raphaël Plassart, sauf mention contraire. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans autorisation écrite préalable de Raphaël Plassart. Toute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux articles L.335-2 et suivants du Code de la propriété intellectuelle."
                 },
                 "data": {
-                    "title": "Collecte de données",
-                    "content": "Les informations collectées via les formulaires de contact sont utilisées uniquement pour répondre aux demandes des utilisateurs. Aucune donnée n'est vendue à des tiers."
+                    "title": "6. Collecte de données personnelles",
+                    "content": "Les informations personnelles collectées via les formulaires de contact (nom, prénom, email, téléphone, nom d'entreprise) sont utilisées uniquement pour répondre aux demandes des utilisateurs et fournir les services demandés. Aucune donnée personnelle n'est cédée ou vendue à des tiers. Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Pour exercer ces droits, contactez : raphael.plassart@gmail.com. Pour plus d'informations, consultez notre Politique de Confidentialité."
                 },
                 "cookies": {
-                    "title": "Cookies",
-                    "content": "Ce site utilise des cookies pour améliorer l'expérience utilisateur et analyser le trafic. Vous pouvez désactiver les cookies dans les paramètres de votre navigateur."
+                    "title": "7. Cookies",
+                    "content": "Ce site utilise des cookies strictement nécessaires à son fonctionnement ainsi que des cookies analytiques (avec votre consentement) pour mesurer l'audience. Vous pouvez gérer vos préférences de cookies à tout moment via le bandeau de consentement ou les paramètres de votre navigateur. Pour plus de détails, consultez notre Politique de Confidentialité."
+                },
+                "liability": {
+                    "title": "8. Limitation de responsabilité",
+                    "content": "Les informations contenues sur ce site sont aussi précises que possible et régulièrement mises à jour. Toutefois, elles peuvent contenir des inexactitudes ou des omissions. Raphaël Plassart ne saurait être tenu responsable des dommages directs ou indirects résultant de l'accès ou de l'utilisation de ce site, y compris l'inaccessibilité, les pertes de données, les dommages ou virus qui pourraient affecter l'équipement informatique de l'utilisateur."
+                },
+                "links": {
+                    "title": "9. Liens hypertextes",
+                    "content": "Ce site peut contenir des liens hypertextes vers d'autres sites. Raphaël Plassart n'exerce aucun contrôle sur le contenu de ces sites tiers et décline toute responsabilité quant à leur contenu ou aux éventuels dommages résultant de leur utilisation."
                 },
                 "law": {
-                    "title": "Droit applicable",
-                    "content": "Les présentes mentions légales sont régies par le droit français. Tout litige sera soumis aux tribunaux compétents français."
+                    "title": "10. Droit applicable et juridiction compétente",
+                    "content": "Les présentes mentions légales sont régies par le droit français. En cas de litige, et après tentative de résolution amiable, compétence est attribuée aux tribunaux compétents du ressort de la Cour d'appel de Paris."
                 }
             }
         },
         "privacy": {
             "title": "Politique de Confidentialité",
+            "lastUpdate": "Dernière mise à jour : 9 février 2026",
             "sections": {
                 "introduction": {
                     "title": "1. Introduction",
-                    "content": "La présente politique de confidentialité décrit comment Atlas collecte, utilise et protège vos informations personnelles conformément au Règlement Général sur la Protection des Données (RGPD)."
+                    "content": "La présente politique de confidentialité décrit comment Raphaël Plassart, exerçant sous le nom commercial « Atlas », collecte, utilise et protège vos données personnelles dans le cadre de l'utilisation du site https://atlas.raphael-plassart.com, conformément au Règlement (UE) 2016/679 du 27 avril 2016 (RGPD) et à la loi n° 78-17 du 6 janvier 1978 modifiée (loi Informatique et Libertés)."
                 },
                 "controller": {
                     "title": "2. Responsable du traitement",
+                    "content": "Le responsable du traitement des données personnelles est :",
                     "name": "Raphaël Plassart",
+                    "status": "Entrepreneur individuel (Micro-entreprise)",
+                    "siret": "SIRET : 942 906 157 00014",
+                    "address": "18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France",
                     "email": "Email : raphael.plassart@gmail.com",
-                    "website": "Site web : https://atlas.raphael-plassart.com"
+                    "phone": "Téléphone : 07 69 89 28 62"
                 },
                 "data": {
-                    "title": "3. Données collectées",
-                    "content": "Nous collectons les informations suivantes :",
-                    "items": [
+                    "title": "3. Données personnelles collectées",
+                    "formTitle": "Via les formulaires de contact :",
+                    "formItems": [
                         "Nom et prénom",
                         "Adresse email",
                         "Numéro de téléphone (optionnel)",
                         "Nom de l'entreprise",
-                        "Messages et demandes de contact"
+                        "Objectif du projet et message"
+                    ],
+                    "autoTitle": "Données collectées automatiquement (avec votre consentement) :",
+                    "autoItems": [
+                        "Adresse IP (anonymisée)",
+                        "Type de navigateur et système d'exploitation",
+                        "Pages visitées et durée de visite",
+                        "Source de trafic (referrer)"
                     ]
                 },
                 "purposes": {
-                    "title": "4. Finalités du traitement",
-                    "content": "Vos données sont utilisées pour :",
+                    "title": "4. Finalités et bases légales du traitement",
+                    "content": "Vos données sont traitées pour les finalités suivantes :",
                     "items": [
-                        "Répondre à vos demandes de contact",
-                        "Vous fournir des devis et informations",
-                        "Améliorer nos services",
-                        "Respecter nos obligations légales"
+                        "Répondre à vos demandes de contact et vous fournir des devis (base légale : exécution de mesures précontractuelles – art. 6.1.b du RGPD)",
+                        "Gestion de la relation client et suivi des projets (base légale : exécution du contrat – art. 6.1.b du RGPD)",
+                        "Analyse statistique et amélioration du site via Google Analytics et Vercel Analytics (base légale : consentement – art. 6.1.a du RGPD)",
+                        "Respect de nos obligations légales et fiscales (base légale : obligation légale – art. 6.1.c du RGPD)"
                     ]
                 },
-                "legal": {
-                    "title": "5. Base légale",
-                    "content": "Le traitement de vos données personnelles est basé sur votre consentement lorsque vous nous contactez via nos formulaires."
+                "recipients": {
+                    "title": "5. Destinataires et sous-traitants",
+                    "content": "Vos données personnelles peuvent être transmises aux sous-traitants suivants, dans le cadre strict des finalités décrites ci-dessus :",
+                    "items": [
+                        "Vercel Inc. (hébergement du site) – États-Unis – https://vercel.com/legal/privacy-policy",
+                        "Google LLC (Google Analytics 4, mesure d'audience) – États-Unis – https://policies.google.com/privacy",
+                        "Vercel Analytics (mesure de performance) – États-Unis – https://vercel.com/legal/privacy-policy"
+                    ],
+                    "noSale": "Aucune donnée personnelle n'est vendue, louée ou cédée à des tiers à des fins commerciales."
+                },
+                "transfers": {
+                    "title": "6. Transferts internationaux de données",
+                    "content": "Certains de nos sous-traitants (Vercel, Google) sont situés aux États-Unis. Ces transferts sont encadrés par les clauses contractuelles types (CCT) approuvées par la Commission européenne et/ou le EU-US Data Privacy Framework, conformément aux exigences du RGPD (articles 46 et 49)."
                 },
                 "retention": {
-                    "title": "6. Conservation des données",
-                    "content": "Vos données personnelles sont conservées pendant la durée nécessaire aux finalités pour lesquelles elles ont été collectées, et au maximum 3 ans après notre dernier contact."
+                    "title": "7. Durée de conservation des données",
+                    "items": [
+                        "Données de contact (formulaires) : 3 ans à compter du dernier contact",
+                        "Données clients (facturation) : 10 ans conformément aux obligations comptables",
+                        "Données de navigation (cookies analytiques) : 13 mois maximum",
+                        "Préférences de consentement : 13 mois maximum (conformément aux recommandations CNIL)"
+                    ]
+                },
+                "cookies": {
+                    "title": "8. Cookies et technologies de suivi",
+                    "intro": "Ce site utilise des cookies, c'est-à-dire de petits fichiers texte stockés sur votre terminal lors de votre visite.",
+                    "essentialTitle": "Cookies strictement nécessaires (pas de consentement requis) :",
+                    "essentialItems": [
+                        "atlas_consent_preferences : stockage de vos préférences de cookies (durée : 13 mois)"
+                    ],
+                    "analyticsTitle": "Cookies analytiques (soumis à votre consentement) :",
+                    "analyticsItems": [
+                        "Google Analytics 4 (_ga, _ga_*) : mesure d'audience, pages visitées, durée de session (durée : 13 mois). L'anonymisation des adresses IP est activée.",
+                        "Vercel Analytics : mesure de performance et événements de conversion (durée : session)"
+                    ],
+                    "marketingTitle": "Cookies marketing (soumis à votre consentement) :",
+                    "marketingItems": [
+                        "Google Signals : personnalisation publicitaire (désactivé par défaut)"
+                    ],
+                    "management": "Vous pouvez gérer vos préférences de cookies à tout moment via le bandeau de consentement accessible en bas de page, ou en configurant votre navigateur. Le refus des cookies analytiques et marketing n'affecte pas le fonctionnement du site.",
+                    "consentMode": "Ce site utilise Google Consent Mode V2, qui garantit que les cookies analytiques et marketing ne sont déposés qu'après votre consentement explicite."
                 },
                 "rights": {
-                    "title": "7. Vos droits",
-                    "content": "Conformément au RGPD, vous disposez des droits suivants :",
+                    "title": "9. Vos droits",
+                    "content": "Conformément au RGPD (articles 15 à 22) et à la loi Informatique et Libertés, vous disposez des droits suivants :",
                     "items": [
-                        "Droit d'accès à vos données",
-                        "Droit de rectification",
-                        "Droit à l'effacement",
-                        "Droit à la portabilité",
-                        "Droit d'opposition",
-                        "Droit de limitation du traitement"
+                        "Droit d'accès : obtenir la confirmation que vos données sont traitées et en recevoir une copie (art. 15)",
+                        "Droit de rectification : faire corriger vos données inexactes ou incomplètes (art. 16)",
+                        "Droit à l'effacement : demander la suppression de vos données (art. 17)",
+                        "Droit à la limitation du traitement : demander la suspension du traitement (art. 18)",
+                        "Droit à la portabilité : recevoir vos données dans un format structuré et les transférer (art. 20)",
+                        "Droit d'opposition : vous opposer au traitement de vos données (art. 21)",
+                        "Droit de retrait du consentement : retirer votre consentement à tout moment pour les traitements fondés sur celui-ci (art. 7)"
                     ],
-                    "contact": "Pour exercer ces droits, contactez-nous à : raphael.plassart@gmail.com"
-                },
-                "analytics": {
-                    "title": "8. Cookies et analytics",
-                    "content": "Nous utilisons Plausible Analytics pour analyser le trafic de notre site. Cette solution respecte la vie privée et ne collecte pas de données personnelles."
+                    "contact": "Pour exercer ces droits, contactez-nous par email à : raphael.plassart@gmail.com. Nous répondrons dans un délai d'un mois conformément au RGPD.",
+                    "cnil": "En cas de difficulté dans la gestion de vos données personnelles, vous pouvez introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) : https://www.cnil.fr"
                 },
                 "security": {
-                    "title": "9. Sécurité",
-                    "content": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre la perte, l'utilisation abusive et l'accès non autorisé."
+                    "title": "10. Sécurité des données",
+                    "content": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles, notamment : hébergement sécurisé via Vercel (HTTPS), anonymisation des adresses IP dans Google Analytics, absence de stockage de données sensibles côté client, et accès restreint aux données personnelles."
                 },
-                "contact": {
-                    "title": "10. Contact",
-                    "content": "Pour toute question relative à cette politique de confidentialité :",
-                    "email": "Email : raphael.plassart@gmail.com"
+                "automated": {
+                    "title": "11. Décisions automatisées",
+                    "content": "Aucune décision automatisée ni aucun profilage au sens de l'article 22 du RGPD n'est mis en œuvre sur ce site."
+                },
+                "minors": {
+                    "title": "12. Données des mineurs",
+                    "content": "Ce site ne s'adresse pas aux mineurs de moins de 16 ans. Nous ne collectons pas sciemment de données personnelles auprès de mineurs. Si vous êtes parent ou tuteur et que vous constatez qu'un mineur nous a communiqué des données personnelles, contactez-nous pour en demander la suppression."
                 },
                 "modifications": {
-                    "title": "11. Modifications",
-                    "content": "Cette politique de confidentialité peut être modifiée. La version en vigueur est celle publiée sur notre site web."
+                    "title": "13. Modifications de la politique",
+                    "content": "Cette politique de confidentialité peut être modifiée à tout moment. La version en vigueur est celle publiée sur ce site, avec sa date de dernière mise à jour. En cas de modification substantielle, nous vous en informerons par le biais d'un bandeau sur le site."
+                },
+                "contact": {
+                    "title": "14. Contact",
+                    "content": "Pour toute question relative à cette politique de confidentialité ou à la gestion de vos données personnelles :",
+                    "email": "Email : raphael.plassart@gmail.com",
+                    "phone": "Téléphone : 07 69 89 28 62",
+                    "address": "Adresse : 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France"
                 }
             }
         }

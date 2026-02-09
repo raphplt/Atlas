@@ -15,6 +15,7 @@ export default async function Politique() {
 	return (
 		<div className="container mx-auto py-24">
 			<h1 className="h2 mb-8">{t("title")}</h1>
+			<p className="text-muted-foreground mb-8">{t("lastUpdate")}</p>
 
 			<div className="prose prose-lg max-w-none">
 				<section className="mb-8">
@@ -24,20 +25,33 @@ export default async function Politique() {
 
 				<section className="mb-8">
 					<H4 className="mb-4">{t("sections.controller.title")}</H4>
+					<p>{t("sections.controller.content")}</p>
 					<p>
 						<strong>{t("sections.controller.name")}</strong>
 						<br />
+						{t("sections.controller.status")}
+						<br />
+						{t("sections.controller.siret")}
+						<br />
+						{t("sections.controller.address")}
+						<br />
 						{t("sections.controller.email")}
 						<br />
-						{t("sections.controller.website")}
+						{t("sections.controller.phone")}
 					</p>
 				</section>
 
 				<section className="mb-8">
 					<H4 className="mb-4">{t("sections.data.title")}</H4>
-					<p>{t("sections.data.content")}</p>
+					<p><strong>{t("sections.data.formTitle")}</strong></p>
 					<ul className="list-disc pl-6">
-						{t.raw("sections.data.items").map((item: string, index: number) => (
+						{t.raw("sections.data.formItems").map((item: string, index: number) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+					<p><strong>{t("sections.data.autoTitle")}</strong></p>
+					<ul className="list-disc pl-6">
+						{t.raw("sections.data.autoItems").map((item: string, index: number) => (
 							<li key={index}>{item}</li>
 						))}
 					</ul>
@@ -54,13 +68,57 @@ export default async function Politique() {
 				</section>
 
 				<section className="mb-8">
-					<H4 className="mb-4">{t("sections.legal.title")}</H4>
-					<p>{t("sections.legal.content")}</p>
+					<H4 className="mb-4">{t("sections.recipients.title")}</H4>
+					<p>{t("sections.recipients.content")}</p>
+					<ul className="list-disc pl-6">
+						{t.raw("sections.recipients.items").map((item: string, index: number) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+					<p><em>{t("sections.recipients.noSale")}</em></p>
+				</section>
+
+				<section className="mb-8">
+					<H4 className="mb-4">{t("sections.transfers.title")}</H4>
+					<p>{t("sections.transfers.content")}</p>
 				</section>
 
 				<section className="mb-8">
 					<H4 className="mb-4">{t("sections.retention.title")}</H4>
-					<p>{t("sections.retention.content")}</p>
+					<ul className="list-disc pl-6">
+						{t.raw("sections.retention.items").map((item: string, index: number) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+				</section>
+
+				<section className="mb-8">
+					<H4 className="mb-4">{t("sections.cookies.title")}</H4>
+					<p>{t("sections.cookies.intro")}</p>
+
+					<p><strong>{t("sections.cookies.essentialTitle")}</strong></p>
+					<ul className="list-disc pl-6">
+						{t.raw("sections.cookies.essentialItems").map((item: string, index: number) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+
+					<p><strong>{t("sections.cookies.analyticsTitle")}</strong></p>
+					<ul className="list-disc pl-6">
+						{t.raw("sections.cookies.analyticsItems").map((item: string, index: number) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+
+					<p><strong>{t("sections.cookies.marketingTitle")}</strong></p>
+					<ul className="list-disc pl-6">
+						{t.raw("sections.cookies.marketingItems").map((item: string, index: number) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+
+					<p>{t("sections.cookies.management")}</p>
+					<p><em>{t("sections.cookies.consentMode")}</em></p>
 				</section>
 
 				<section className="mb-8">
@@ -72,11 +130,7 @@ export default async function Politique() {
 						))}
 					</ul>
 					<p>{t("sections.rights.contact")}</p>
-				</section>
-
-				<section className="mb-8">
-					<H4 className="mb-4">{t("sections.analytics.title")}</H4>
-					<p>{t("sections.analytics.content")}</p>
+					<p><strong>{t("sections.rights.cnil")}</strong></p>
 				</section>
 
 				<section className="mb-8">
@@ -85,17 +139,31 @@ export default async function Politique() {
 				</section>
 
 				<section className="mb-8">
-					<H4 className="mb-4">{t("sections.contact.title")}</H4>
-					<p>
-						{t("sections.contact.content")}
-						<br />
-						{t("sections.contact.email")}
-					</p>
+					<H4 className="mb-4">{t("sections.automated.title")}</H4>
+					<p>{t("sections.automated.content")}</p>
+				</section>
+
+				<section className="mb-8">
+					<H4 className="mb-4">{t("sections.minors.title")}</H4>
+					<p>{t("sections.minors.content")}</p>
 				</section>
 
 				<section className="mb-8">
 					<H4 className="mb-4">{t("sections.modifications.title")}</H4>
 					<p>{t("sections.modifications.content")}</p>
+				</section>
+
+				<section className="mb-8">
+					<H4 className="mb-4">{t("sections.contact.title")}</H4>
+					<p>
+						{t("sections.contact.content")}
+						<br />
+						{t("sections.contact.email")}
+						<br />
+						{t("sections.contact.phone")}
+						<br />
+						{t("sections.contact.address")}
+					</p>
 				</section>
 			</div>
 		</div>
