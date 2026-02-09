@@ -409,7 +409,7 @@
                 },
                 "latePayment": {
                     "title": "7. Late Payment",
-                    "content": "In case of late payment, and in accordance with articles L441-10 et seq. of the French Commercial Code: late payment penalties at three times the legal interest rate will be due, calculated on the outstanding amount from the scheduled payment date. A flat-rate compensation of €40 for recovery costs will also be automatically due (art. D441-5 of the French Commercial Code). The Service Provider reserves the right to suspend any ongoing work in case of non-payment."
+                    "content": "In case of late payment, and in accordance with articles L441-10 et seq. of the French Commercial Code: late payment penalties at three times the legal interest rate will be due, calculated on the net outstanding amount from the scheduled payment date. A flat-rate compensation of €40 for recovery costs will also be automatically due (art. D441-5 of the French Commercial Code). The Service Provider reserves the right to suspend any ongoing work in case of non-payment."
                 },
                 "delivery": {
                     "title": "8. Delivery Times",
@@ -442,7 +442,7 @@
                 },
                 "validation": {
                     "title": "12. Validation and Acceptance",
-                    "content": "Upon completion, the Service Provider presents the website to the Client for validation (acceptance phase). The Client has 7 business days to submit remarks and modification requests. After this period, in the absence of Client feedback, the website is deemed compliant and accepted. Validation (express or tacit) triggers payment of the balance and authorizes final deployment."
+                    "content": "Upon completion, the Service Provider presents the website to the Client for validation (acceptance phase). The Client has 10 business days to submit remarks and modification requests in writing (email). After this period, in the absence of written Client feedback despite an email reminder, the website is deemed compliant and accepted. Validation (express or tacit) triggers payment of the balance and authorizes final deployment."
                 },
                 "revisions": {
                     "title": "13. Revisions and Modifications",
@@ -450,7 +450,7 @@
                 },
                 "guarantee": {
                     "title": "14. Satisfaction Guarantee",
-                    "content": "The Service Provider offers a 30-day satisfaction or money-back guarantee from website delivery. If the Client is not satisfied with the result despite proposed revisions, they may request a full refund of amounts paid within this period. This guarantee is subject to the following conditions: the Client must have provided all requested content, actively participated in validation phases, and submitted their refund request by reasoned email."
+                    "content": "The Service Provider offers a 30-day satisfaction or money-back guarantee from website delivery. If the Client is not satisfied with the result despite proposed revisions, they may request a full refund of amounts paid within this period. This guarantee is subject to the following cumulative conditions: (1) the Client has provided all requested content within the agreed timeframes; (2) the Client has validated at least one design iteration and submitted written feedback (by email) enabling the Service Provider to adjust the result; (3) the refund request is submitted by reasoned email within the 30-day period, specifying the grounds for dissatisfaction."
                 },
                 "intellectual": {
                     "title": "15. Intellectual Property and Rights Transfer",
@@ -488,7 +488,7 @@
                 },
                 "mediation": {
                     "title": "21. Mediation and Disputes",
-                    "content": "In the event of a dispute between the Service Provider and the Client, the parties undertake to seek an amicable solution. In accordance with articles L611-1 et seq. of the French Consumer Code, consumer Clients have the right to use a consumer mediator free of charge for amicable dispute resolution. The Service Provider will provide the Client with the contact details of the relevant mediator upon contract signing. Failing amicable resolution, the dispute shall be submitted to the competent courts within the jurisdiction of the Paris Court of Appeal, under French law."
+                    "content": "In the event of a dispute between the Service Provider and the Client, the parties undertake to seek an amicable solution. In accordance with articles L611-1 et seq. of the French Consumer Code, consumer Clients have the right to use a consumer mediator free of charge for amicable dispute resolution. The competent consumer mediator is: CM2C (Centre de Médiation de la Consommation de Conciliateurs de Justice), 14 rue Saint-Jean-de-Beauregard, 91400 Orsay, France — https://www.cm2c.net — cm2c@cm2c.net. The Client may also file a complaint on the European Online Dispute Resolution platform: https://ec.europa.eu/consumers/odr. Failing amicable resolution, the dispute shall be submitted to the competent courts under French law. For professional Clients (B2B), jurisdiction is attributed to the courts within the Paris Court of Appeal district. For consumer Clients (B2C), the competent court is that of the defendant's domicile in accordance with general rules of jurisdiction."
                 },
                 "law": {
                     "title": "22. Applicable Law",

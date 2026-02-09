@@ -467,7 +467,7 @@
                 },
                 "latePayment": {
                     "title": "7. Retard de paiement",
-                    "content": "En cas de retard de paiement, et conformément aux articles L441-10 et suivants du Code de commerce : des pénalités de retard seront exigibles au taux de trois fois le taux d'intérêt légal en vigueur, calculées sur le montant TTC de la somme restant due, à compter de la date d'échéance prévue. Une indemnité forfaitaire de 40 € pour frais de recouvrement sera également due de plein droit (art. D441-5 du Code de commerce). Le Prestataire se réserve le droit de suspendre toute prestation en cours en cas de non-paiement."
+                    "content": "En cas de retard de paiement, et conformément aux articles L441-10 et suivants du Code de commerce : des pénalités de retard seront exigibles au taux de trois fois le taux d'intérêt légal en vigueur, calculées sur le montant net de la somme restant due, à compter de la date d'échéance prévue. Une indemnité forfaitaire de 40 € pour frais de recouvrement sera également due de plein droit (art. D441-5 du Code de commerce). Le Prestataire se réserve le droit de suspendre toute prestation en cours en cas de non-paiement."
                 },
                 "delivery": {
                     "title": "8. Délais de réalisation et livraison",
@@ -500,7 +500,7 @@
                 },
                 "validation": {
                     "title": "12. Validation et recette",
-                    "content": "À l'issue de la réalisation, le Prestataire présente le site au Client pour validation (phase de recette). Le Client dispose de 7 jours ouvrés pour formuler ses remarques et demandes de modifications. Passé ce délai, et en l'absence de retour du Client, le site est réputé conforme et accepté. La validation (expresse ou tacite) déclenche l'exigibilité du solde et autorise la mise en ligne définitive."
+                    "content": "À l'issue de la réalisation, le Prestataire présente le site au Client pour validation (phase de recette). Le Client dispose de 10 jours ouvrés pour formuler ses remarques et demandes de modifications par écrit (email). Passé ce délai, et en l'absence de retour écrit du Client malgré une relance par email, le site est réputé conforme et accepté. La validation (expresse ou tacite) déclenche l'exigibilité du solde et autorise la mise en ligne définitive."
                 },
                 "revisions": {
                     "title": "13. Révisions et modifications",
@@ -508,7 +508,7 @@
                 },
                 "guarantee": {
                     "title": "14. Garantie satisfait ou remboursé",
-                    "content": "Le Prestataire propose une garantie satisfait ou remboursé de 30 jours à compter de la livraison du site. Si le Client n'est pas satisfait du résultat malgré les révisions proposées, il peut demander le remboursement intégral des sommes versées dans ce délai. Cette garantie est soumise aux conditions suivantes : le Client doit avoir fourni l'ensemble des contenus demandés, participé activement aux phases de validation, et formulé sa demande de remboursement par email motivé."
+                    "content": "Le Prestataire propose une garantie satisfait ou remboursé de 30 jours à compter de la livraison du site. Si le Client n'est pas satisfait du résultat malgré les révisions proposées, il peut demander le remboursement intégral des sommes versées dans ce délai. Cette garantie est soumise aux conditions cumulatives suivantes : (1) le Client a fourni l'ensemble des contenus demandés dans les délais convenus ; (2) le Client a validé au moins une itération de maquette et formulé des retours écrits (par email) permettant au Prestataire d'ajuster le résultat ; (3) la demande de remboursement est formulée par email motivé dans le délai de 30 jours précisant les motifs d'insatisfaction."
                 },
                 "intellectual": {
                     "title": "15. Propriété intellectuelle et cession des droits",
@@ -546,7 +546,7 @@
                 },
                 "mediation": {
                     "title": "21. Médiation et litiges",
-                    "content": "En cas de différend entre le Prestataire et le Client, les parties s'engagent à rechercher une solution amiable. Conformément aux articles L611-1 et suivants du Code de la consommation, le Client consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige. Le Prestataire proposera au Client les coordonnées du médiateur compétent lors de la signature du contrat. À défaut de résolution amiable, le litige sera soumis aux tribunaux compétents du ressort de la Cour d'appel de Paris, conformément au droit français."
+                    "content": "En cas de différend entre le Prestataire et le Client, les parties s'engagent à rechercher une solution amiable. Conformément aux articles L611-1 et suivants du Code de la consommation, le Client consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige. Le médiateur de la consommation compétent est : CM2C (Centre de Médiation de la Consommation de Conciliateurs de Justice), 14 rue Saint-Jean-de-Beauregard, 91400 Orsay — https://www.cm2c.net — cm2c@cm2c.net. Le Client peut également déposer sa réclamation sur la plateforme européenne de règlement en ligne des litiges : https://ec.europa.eu/consumers/odr. À défaut de résolution amiable, le litige sera soumis aux tribunaux compétents conformément au droit français. Pour les Clients professionnels (B2B), compétence est attribuée aux tribunaux du ressort de la Cour d'appel de Paris. Pour les Clients consommateurs (B2C), le tribunal compétent est celui du domicile du défendeur conformément aux règles de droit commun."
                 },
                 "law": {
                     "title": "22. Droit applicable",
