@@ -22,15 +22,16 @@ export function FAQ() {
 	const t = useTranslations("faq");
 	const [query, setQuery] = useState("");
 
-	const faqs: FaqItem[] = Array.from({ length: 8 }, (_, i) => {
-		const question = t(`questions.${i}.question`);
-		const answer = t(`questions.${i}.answer`);
-		return {
-			question,
-			answer,
-			id: slugify(question),
-		};
-	});
+	const faqs: FaqItem[] = [];
+	for (let i = 0; i < 20; i++) {
+		try {
+			const question = t(`questions.${i}.question`);
+			const answer = t(`questions.${i}.answer`);
+			if (question && answer) faqs.push({ question, answer, id: slugify(question) });
+		} catch {
+			break;
+		}
+	}
 	const [openIds, setOpenIds] = useState<string[]>([faqs[0]?.id || ""]);
 
 	const filtered = useMemo(() => {
@@ -112,7 +113,7 @@ export function FAQ() {
 				<p className="mt-12 text-center text-sm text-[var(--color-muted)]">
 					{t("stillHaveQuestion")}{" "}
 					<a
-						href="#contact"
+						href="/#simulateur"
 						className="text-[var(--color-primary)] font-semibold hover:underline underline-offset-2"
 					>
 						{t("contactMe")}

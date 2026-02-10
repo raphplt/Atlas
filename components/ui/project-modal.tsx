@@ -70,7 +70,7 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
 
 	const handleClickCTA = async () => {
 		onClose();
-		router.push("/#contact");
+		router.push("/#simulateur");
 	};
 
 	if (showShowcase) {

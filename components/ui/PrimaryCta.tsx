@@ -28,8 +28,8 @@ export function PrimaryCta({
 
 	// Simple copy logic (previously A/B test, keeping static for now to fix errors)
 	const copy = {
-		primary: "Demander mon devis gratuit",
-		subtitle: "Réponse sous 24h • Sans engagement",
+		primary: "Estimer mon projet",
+		subtitle: "Gratuit et sans engagement",
 	};
 
 	const handleClick = () => {
@@ -57,7 +57,7 @@ export function PrimaryCta({
 	return (
 		<div className="flex flex-col gap-2 items-center">
 			<a
-				href="#contact"
+				href="#simulateur"
 				onClick={handleClick}
 				className={cn(
 					buttonVariants({ size: size === "large" ? "lg" : "default" }),

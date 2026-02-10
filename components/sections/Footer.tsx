@@ -21,21 +21,20 @@ export function Footer() {
             
 			<div className="container-width py-20 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
-                    <div className="lg:col-span-4 space-y-6">
+                    <div className="lg:col-span-5 space-y-6">
                         <div className="flex items-center gap-3">
                              <Image
-                                          src="/images/Logo-White.png" 
-                                          alt="Logo" 
-                                          width={20} 
-                                          height={20} 
-                                        
+                                          src="/images/Logo-White.png"
+                                          alt="Logo"
+                                          width={20}
+                                          height={20}
                                       />
                             <span className="font-heading font-bold text-2xl tracking-tight text-[var(--color-text)]">Atlas</span>
                         </div>
                         <p className="text-[var(--color-footer-muted)] leading-relaxed text-sm max-w-xs">
                             {t('description')}
                         </p>
-                        
+
                         <div className="flex items-center gap-3 pt-4">
                             <SocialLink href="https://github.com/raphplt" icon={<GitHubIcon />} label="GitHub" />
                             <SocialLink href="https://linkedin.com/in/raphaël-plassart" icon={<LinkedInIcon />} label="LinkedIn" />
@@ -43,26 +42,16 @@ export function Footer() {
                         </div>
                     </div>
 
-                    <div className="lg:col-span-2 lg:col-start-6 space-y-6">
+                    <div className="lg:col-span-3 lg:col-start-7 space-y-6">
                         <h4 className="font-bold text-sm uppercase tracking-widest text-[var(--color-text)]">
                             {t('navigation')}
                         </h4>
                         <ul className="space-y-3 text-sm">
-                            <FooterLink href="/#offres" label={t('links.offers')} />
                             <FooterLink href="/#portfolio" label={t('links.portfolio')} />
                             <FooterLink href="/#process" label={t('links.process')} />
-                            <FooterLink href="/#temoignages" label={t('links.testimonials')} />
-                        </ul>
-                    </div>
-
-                     <div className="lg:col-span-2 space-y-6">
-                        <h4 className="font-bold text-sm uppercase tracking-widest text-[var(--color-text)]">
-                            {t('support')}
-                        </h4>
-                        <ul className="space-y-3 text-sm">
-                            <FooterLink href="/#faq" label={t('links.faq')} />
-                            <FooterLink href="/#contact" label={t('links.contact')} />
-                            <FooterLink href="/about" label={t('links.about')} />
+                            <FooterLink href="/#simulateur" label={t('links.simulator')} />
+                            <FooterLink href="/#about" label={t('links.about')} />
+                            <FooterLink href="/faq" label={t('links.faq')} />
                         </ul>
                     </div>
 

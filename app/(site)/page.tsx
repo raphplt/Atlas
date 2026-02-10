@@ -1,32 +1,30 @@
 import { Hero } from "@/components/sections/Hero";
-import { Problems } from "@/components/sections/Problems";
 import { Portfolio } from "@/components/sections/Portfolio";
-import { Offers } from "@/components/sections/Offers";
-import { Guarantee } from "@/components/sections/Guarantee";
 import { Process } from "@/components/sections/Process";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { FAQ } from "@/components/sections/FAQ";
-import { CTA } from "@/components/sections/CTA";
+import { PortalAtlas } from "@/components/sections/PortalAtlas";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { Simulator } from "@/components/sections/Simulator";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Atlas | Sites Web pour Artisans & Services Locaux",
 	description:
-		"Augmentez vos demandes de devis avec un site web professionnel et optimisé. Spécialisé pour les artisans et TPE. Devis gratuit.",
+		"Sites web professionnels pour artisans et services locaux. Un vrai outil pour attirer de nouveaux clients. Estimez votre projet en ligne.",
 };
 
 export default function Page() {
 	return (
 		<main>
 			<Hero />
-			<Problems />
+			{/* Decorative separator — cartographic line */}
+			<div className="container-width">
+				<div className="carto-separator" />
+			</div>
 			<Portfolio />
-			<Testimonials />
-			<Offers />
-			<Guarantee />
 			<Process />
-			<FAQ />
-			<CTA />
+			<PortalAtlas />
+			<AboutSection />
+			<Simulator />
 		</main>
 	);
 }

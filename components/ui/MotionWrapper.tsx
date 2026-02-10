@@ -1,16 +1,49 @@
 "use client";
 
-import { motion, useInView, UseInViewOptions } from "framer-motion";
+import { motion, useInView, type Transition } from "framer-motion";
 import { useRef } from "react";
+
+const VARIANT_MAP = {
+	"fade-up": {
+		hidden: { opacity: 0, y: 40, filter: "blur(4px)" },
+		visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+	},
+	"fade-in": {
+		hidden: { opacity: 0, filter: "blur(6px)" },
+		visible: { opacity: 1, filter: "blur(0px)" },
+	},
+	"zoom-in": {
+		hidden: { opacity: 0, scale: 0.92, filter: "blur(4px)" },
+		visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
+	},
+	"slide-right": {
+		hidden: { opacity: 0, x: -50, filter: "blur(4px)" },
+		visible: { opacity: 1, x: 0, filter: "blur(0px)" },
+	},
+	"slide-left": {
+		hidden: { opacity: 0, x: 50, filter: "blur(4px)" },
+		visible: { opacity: 1, x: 0, filter: "blur(0px)" },
+	},
+	"scale-up": {
+		hidden: { opacity: 0, scale: 0.85, y: 20 },
+		visible: { opacity: 1, scale: 1, y: 0 },
+	},
+	"reveal-up": {
+		hidden: { opacity: 0, y: 60, rotateX: 8 },
+		visible: { opacity: 1, y: 0, rotateX: 0 },
+	},
+} as const;
+
+type VariantKey = keyof typeof VARIANT_MAP;
 
 interface MotionWrapperProps {
 	children: React.ReactNode;
 	className?: string;
-	variant?: "fade-up" | "fade-in" | "zoom-in" | "slide-right";
+	variant?: VariantKey;
 	delay?: number;
 	duration?: number;
 	amount?: number | "some" | "all";
-    once?: boolean;
+	once?: boolean;
 }
 
 export function MotionWrapper({
@@ -18,30 +51,17 @@ export function MotionWrapper({
 	className = "",
 	variant = "fade-up",
 	delay = 0,
-	duration = 0.5,
-	amount = 0.3,
-    once = true,
+	duration = 0.7,
+	amount = 0.2,
+	once = true,
 }: MotionWrapperProps) {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { amount, once });
 
-	const variants = {
-		"fade-up": {
-			hidden: { opacity: 0, y: 30 },
-			visible: { opacity: 1, y: 0 },
-		},
-		"fade-in": {
-			hidden: { opacity: 0 },
-			visible: { opacity: 1 },
-		},
-		"zoom-in": {
-			hidden: { opacity: 0, scale: 0.95 },
-			visible: { opacity: 1, scale: 1 },
-		},
-        "slide-right": {
-            hidden: { opacity: 0, x: -30 },
-            visible: { opacity: 1, x: 0 },
-        }
+	const transition: Transition = {
+		duration,
+		delay,
+		ease: [0.22, 1, 0.36, 1], // custom cubic-bezier — smooth decel
 	};
 
 	return (
@@ -49,8 +69,8 @@ export function MotionWrapper({
 			ref={ref}
 			initial="hidden"
 			animate={isInView ? "visible" : "hidden"}
-			variants={variants[variant]}
-			transition={{ duration, delay, ease: "easeOut" }}
+			variants={VARIANT_MAP[variant]}
+			transition={transition}
 			className={className}
 		>
 			{children}

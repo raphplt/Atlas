@@ -7,7 +7,6 @@ import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import Script from "next/script";
 import { ThemeScript } from "@/components/theme/ThemeScript";
-import TawkMessenger from "@/components/TawkMessenger";
 
 export const metadata: Metadata = {
 	title: {
@@ -26,10 +25,14 @@ export const metadata: Metadata = {
 	},
 };
 
-import { Inter, Inter_Tight } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const interTight = Inter_Tight({ subsets: ["latin"], variable: "--font-inter-tight" });
+const playfair = Playfair_Display({
+	subsets: ["latin"],
+	variable: "--font-playfair",
+	weight: ["400", "500", "600", "700", "800"],
+});
 
 export default function RootLayout({
 	children,
@@ -37,10 +40,13 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="fr" className={`${inter.variable} ${interTight.variable}`}>
-			<body className="font-sans min-h-screen flex flex-col bg-white text-slate-900" data-theme="light">
+		<html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
+			<body
+				className="font-sans min-h-screen flex flex-col bg-white text-slate-900"
+				data-theme="light"
+			>
 				<ThemeScript />
-				
+
 				{/* Google Consent Mode V2 */}
 				<Script id="consent-mode" strategy="beforeInteractive">
 					{`
@@ -73,12 +79,11 @@ export default function RootLayout({
 					`}
 				</Script>
 
-
 				<NextIntlClientProvider>
 					<Toaster />
 					<ConditionalLayoutWrapper>{children}</ConditionalLayoutWrapper>
 					<ConsentBanner />
-					<TawkMessenger />
+					{/* <TawkMessenger /> */}
 				</NextIntlClientProvider>
 				<Analytics />
 			</body>

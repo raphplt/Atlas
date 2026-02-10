@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 import { Navbar } from "@/components/Nav";
 import { Footer } from "@/components/sections/Footer";
 import { StickyCTA } from "@/components/StickyCTA";
+import { FloatingContact } from "@/components/FloatingContact";
 import { Analytics } from "@vercel/analytics/next";
 
 interface ConditionalLayoutWrapperProps {
@@ -32,6 +33,7 @@ export function ConditionalLayoutWrapper({
 			<Analytics />
 			<Footer />
 			<StickyCTA />
+			<FloatingContact />
 		</>
 	);
 }

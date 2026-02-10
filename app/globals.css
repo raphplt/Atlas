@@ -5,105 +5,189 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+/* ============================================
+   ATLAS CARTOGRAPHIC DESIGN SYSTEM
+   ============================================ */
+
+/* Cartographic grid — subtle coordinate lines */
+.bg-carto-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 42, 68, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 42, 68, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.bg-carto-grid-dense {
+  background-image:
+    linear-gradient(to right, rgba(15, 42, 68, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 42, 68, 0.04) 1px, transparent 1px),
+    linear-gradient(to right, rgba(15, 42, 68, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 42, 68, 0.015) 1px, transparent 1px);
+  background-size: 60px 60px, 60px 60px, 20px 20px, 20px 20px;
+}
+
+/* Paper/grain texture */
+.bg-paper-texture {
+  position: relative;
+}
+.bg-paper-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Legacy dot pattern (kept for backward compat during transition) */
 .bg-dot-pattern {
-  background-image: radial-gradient(rgba(15, 42, 68, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(15, 42, 68, 0.06) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
+/* Cartographic decorative separator */
+.carto-separator {
+  position: relative;
+  height: 1px;
+  background: var(--color-border);
+}
+.carto-separator::before,
+.carto-separator::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  transform: rotate(45deg);
+}
+.carto-separator::before { left: 20%; }
+.carto-separator::after { right: 20%; }
 
 @theme {
   /* Typography */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-playfair), "Playfair Display", Georgia, "Times New Roman", serif;
 
-  /* Colors */
+  /* Colors — Light Mode */
   --color-primary: #0F2A44;
   --color-primary-foreground: #FFFFFF;
-  
-  --color-accent: #C47A2C;
-  --color-accent-foreground: #FFFFFF;
-  --color-accent-alt: #D6944B;
-  --color-accent-rgb: 196 122 44;
 
-  --color-background: #FFFFFF;
-  --color-background-alt: #F7F9FC;
-  
+  --color-accent: #B8722A;
+  --color-accent-foreground: #FFFFFF;
+  --color-accent-alt: #C98B4A;
+  --color-accent-rgb: 184 114 42;
+
+  --color-background: #FDFCFA;
+  --color-background-alt: #F5F3EF;
+
   --color-card: #FFFFFF;
   --color-card-foreground: #0E141B;
-  
-  --color-warning: #F59E0B;   /* Stars / Alerts */
+  --color-surface: #FFFFFF;
+
+  --color-warning: #F59E0B;
   --color-footer-bg: #0B1221;
   --color-footer-fg: #F1F5F9;
   --color-footer-muted: #94A3B8;
 
-  --color-foreground: #0E141B; /* Main text */
-  --color-muted: #5B6673;      /* Secondary text */
+  --color-foreground: #0E141B;
+  --color-text: #0E141B;
+  --color-muted: #5B6673;
   --color-border: #E4E9F0;
 
-  /* UI Tokens */
-  --radius: 8px; /* Square-ish buttons */
-  --radius-lg: 12px; /* Cards */
-  --radius-sm: 4px;
-  
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --container: 1180px;
+  /* Radius — sharp by default */
+  --radius: 4px;
+  --radius-lg: 6px;
+  --radius-sm: 2px;
+
+  /* Asymmetric radius — Atlas signature */
+  --radius-atlas: 4px 16px 4px 4px;
+  --radius-atlas-alt: 16px 4px 4px 4px;
+  --radius-atlas-bl: 4px 4px 4px 16px;
+  --radius-atlas-br: 4px 4px 16px 4px;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.04);
+  --shadow: 0 4px 12px -2px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.04);
+  --shadow-lg: 0 8px 24px -4px rgb(0 0 0 / 0.1), 0 4px 8px -4px rgb(0 0 0 / 0.06);
   --container: 1180px;
 }
 
+/* Dark Mode */
 [data-theme="dark"] {
-  /* Backgrounds */
   --color-background: #0A0F1C;
-  /* Encre profonde */
   --color-background-alt: #0F1629;
-  /* Section contrastée */
 
-  /* Cards */
   --color-card: #0F172A;
-  /* Plein, pas glass */
   --color-card-foreground: #E5E7EB;
+  --color-surface: #111827;
 
-  /* Primary = version dark de ton bleu brand */
   --color-primary: #8FB4D9;
-  /* Bleu désaturé premium */
   --color-primary-foreground: #0A0F1C;
 
-  /* Text */
   --color-foreground: #E5E7EB;
+  --color-text: #E5E7EB;
   --color-muted: #9CA3AF;
   --color-border: #1F2937;
 
-  /* Accent = cuivre assombri */
   --color-accent: #D08A3D;
 
-  /* Footer */
   --color-footer-bg: #050814;
   --color-footer-fg: #CBD5E1;
   --color-footer-muted: #64748B;
 }
 
-/* Base Styles */
+[data-theme="dark"] .bg-carto-grid {
+  background-image:
+    linear-gradient(to right, rgba(143, 180, 217, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(143, 180, 217, 0.04) 1px, transparent 1px);
+}
+
+[data-theme="dark"] .bg-carto-grid-dense {
+  background-image:
+    linear-gradient(to right, rgba(143, 180, 217, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(143, 180, 217, 0.05) 1px, transparent 1px),
+    linear-gradient(to right, rgba(143, 180, 217, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(143, 180, 217, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px, 60px 60px, 20px 20px, 20px 20px;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply font-sans antialiased bg-[var(--color-background)] text-[var(--color-foreground)];
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold tracking-tight text-[var(--color-foreground)];
+  h1, h2 {
+    @apply font-heading font-bold tracking-tight text-[var(--color-foreground)];
   }
-  
-  h1 { @apply text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight; }
-  h2 { @apply text-3xl md:text-4xl font-semibold; }
-  h3 { @apply text-xl md:text-2xl font-semibold; }
-  
+
+  h3, h4, h5, h6 {
+    @apply font-sans font-bold tracking-tight text-[var(--color-foreground)];
+  }
+
+  h1 { @apply text-5xl md:text-6xl lg:text-7xl xl:text-[88px] leading-[1.05]; }
+  h2 { @apply text-4xl md:text-5xl font-bold; }
+  h3 { @apply text-2xl md:text-3xl font-semibold; }
+
   p { @apply leading-relaxed text-[var(--color-muted)]; }
 }
 
-/* Utilities */
+/* ============================================
+   UTILITIES
+   ============================================ */
 @layer utilities {
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-24 md:py-40;
   }
-  
+
   .container-width {
     @apply max-w-[var(--container)] mx-auto px-4 md:px-6;
   }
@@ -111,9 +195,25 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Atlas asymmetric radius utilities */
+  .rounded-atlas {
+    border-radius: var(--radius-atlas);
+  }
+  .rounded-atlas-alt {
+    border-radius: var(--radius-atlas-alt);
+  }
+  .rounded-atlas-bl {
+    border-radius: var(--radius-atlas-bl);
+  }
+  .rounded-atlas-br {
+    border-radius: var(--radius-atlas-br);
+  }
 }
 
-/* Components */
+/* ============================================
+   COMPONENTS
+   ============================================ */
 @layer components {
   .btn-primary {
     @apply bg-[var(--color-primary)] text-[var(--color-primary-foreground)] px-6 py-3 rounded-[var(--radius)] font-semibold hover:opacity-90 transition-all duration-200 shadow-sm flex items-center justify-center gap-2;
@@ -124,7 +224,7 @@
   }
 
   .card-base {
-    @apply bg-[var(--color-card)] border border-[var(--color-border)] rounded-[var(--radius-lg)] p-6 md:p-8 backdrop-blur-sm;
+    @apply bg-[var(--color-card)] border border-[var(--color-border)] rounded-[var(--radius-lg)] p-6 md:p-8 transition-shadow duration-300 hover:shadow-[var(--shadow)];
   }
 
   /* Form Elements */
@@ -137,7 +237,107 @@
   }
 }
 
-/* Specific Section Overrides */
+/* Section background override */
 .hero-gradient {
-    background-color: var(--color-background-alt);
+  background-color: var(--color-background-alt);
+}
+
+/* ============================================
+   PREMIUM ANIMATIONS
+   ============================================ */
+
+/* Button shimmer sweep */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 75%
+  );
+  transform: translateX(-100%);
+  transition: none;
+}
+.btn-shimmer:hover::after {
+  animation: shimmer 0.6s ease-out forwards;
+}
+
+@keyframes shimmer {
+  to { transform: translateX(100%); }
+}
+
+/* Breathing blob animation */
+.animate-blob {
+  animation: blob-float 8s ease-in-out infinite;
+}
+.animate-blob-delay {
+  animation: blob-float 10s ease-in-out infinite 2s;
+}
+
+@keyframes blob-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(15px, -20px) scale(1.04); }
+  66% { transform: translate(-10px, 12px) scale(0.97); }
+}
+
+/* Subtle floating for decorative elements */
+.animate-float {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Nav CTA — copper/bronze button with shimmer sweep */
+.nav-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-accent-foreground);
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-alt, #C98B4A));
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 1px 3px rgba(184, 114, 42, 0.25);
+}
+.nav-cta:hover {
+  box-shadow: 0 4px 16px rgba(184, 114, 42, 0.35);
+  transform: translateY(-1px);
+}
+.nav-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.25) 45%,
+    rgba(255, 255, 255, 0.1) 55%,
+    transparent 80%
+  );
+  transform: translateX(-110%);
+}
+.nav-cta:hover::after {
+  animation: nav-shimmer 0.7s ease-out forwards;
+}
+@keyframes nav-shimmer {
+  to { transform: translateX(110%); }
+}
+
+/* Focus ring for interactive simulator elements */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius);
 }

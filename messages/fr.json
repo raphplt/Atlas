@@ -2,43 +2,16 @@
     "navigation": {
         "home": "Accueil",
         "portfolio": "Réalisations",
-        "testimonials": "Témoignages",
-        "offers": "Offres",
         "process": "Process",
-        "contact": "Contact",
+        "simulator": "Simulateur",
         "about": "À propos",
-        "startProject": "Démarrer un projet"
+        "startProject": "Estimer mon projet"
     },
     "hero": {
-        "badge": "Seulement 3 diagnostics gratuits cette semaine",
-        "title": "Transformez votre site en machine à générer des clients",
-        "subtitle": "Sites web optimisés pour artisans et services locaux. +50% de demandes de devis en moyenne. Livraison en 5-7 jours.",
-        "ctaPrimary": "Obtenez votre diagnostic gratuit (réponse en 24h)",
-        "ctaSecondary": "Voir un exemple de site optimisé (+50% de devis)",
-        "socialProof": {
-            "clients": "20+ artisans nous font confiance",
-            "rating": "4.9/5",
-            "reviews": "(19 avis positifs)"
-        },
-        "trustIndicators": {
-            "0": "Sans engagement",
-            "1": "Réponse < 24h",
-            "2": "Paiement en 2x possible"
-        },
-        "solutions": {
-            "credibility": {
-                "title": "Crédibilité instantanée",
-                "description": "Design premium qui inspire confiance dès la première visite."
-            },
-            "conversion": {
-                "title": "Conversion maximisée",
-                "description": "Chaque élément est pensé pour transformer vos visiteurs en clients."
-            },
-            "visibility": {
-                "title": "Visibilité locale boostée",
-                "description": "Optimisation SEO locale pour être trouvé par vos clients."
-            }
-        }
+        "title": "Un site web qui travaille pour vous",
+        "subtitle": "Je crée des sites professionnels pour les artisans et services locaux. Des vrais outils qui vous apportent des clients, pas juste une vitrine.",
+        "ctaPrimary": "Estimer mon projet",
+        "ctaSecondary": "Voir mes réalisations"
     },
     "problems": {
         "title": "Ce qui vous freine",
@@ -92,19 +65,18 @@
         "ctaSecondary": "Voir mes réalisations"
     },
     "portfolio": {
-        "title": "Nos réalisations",
-        "subtitle": "L'impact concret d'une refonte structurée sur différents secteurs d'activité.",
-        "tabs": {
-            "gallery": "Galerie",
-            "caseStudies": "Études de cas"
-        },
+        "badge": "Réalisations",
+        "title": "Mes réalisations",
+        "subtitle": "Démonstrations de refonte avant/après pour différents secteurs d'activité.",
         "viewDetails": "Voir les détails",
         "benefitsTitle": "Bénéfices concrets",
         "resultsTitle": "Résultats mesurables",
         "metrics": {
             "visits": "Visites",
             "contacts": "Contacts"
-        }
+        },
+        "ctaTransition": "Vous voulez un site comme ça ?",
+        "ctaButton": "Estimer mon projet"
     },
     "offers": {
         "title": "Offres adaptées à votre besoin",
@@ -182,32 +154,27 @@
         }
     },
     "process": {
-        "title": "Étapes",
-        "subtitle": "Méthode courte, structurée et itérative — toujours orientée résultat.",
+        "badge": "Comment ça marche",
+        "title": "Un process simple et transparent",
+        "subtitle": "4 étapes claires pour passer de l'idée au site en ligne. Vous êtes impliqué à chaque moment.",
         "steps": {
-            "call": {
-                "title": "Call gratuit",
-                "description": "On cerne l'activité, objectifs, différenciation.",
-                "duration": "15 min"
-            },
-            "quote": {
-                "title": "Devis clair",
-                "description": "Portée définie, plan du site, timing confirmé.",
-                "duration": "< 24h"
+            "diagnostic": {
+                "title": "Diagnostic",
+                "description": "J'analyse votre présence actuelle, vos besoins et votre marché pour définir le meilleur plan d'action. On échange par téléphone ou visio, 15 minutes suffisent."
             },
             "creation": {
                 "title": "Création",
-                "description": "Design + intégration + contenus. Points d'étape.",
-                "duration": "5–7 j"
+                "description": "Design et développement sur mesure de votre site. Vous validez chaque étape via votre espace de suivi Portal Atlas avant que j'avance."
             },
-            "launch": {
-                "title": "Mise en ligne",
-                "description": "Tests, performance, SEO local, suivi analytics.",
-                "duration": "1 j"
+            "portal": {
+                "title": "Suivi via Portal Atlas",
+                "description": "Vous suivez l'avancement en temps réel depuis votre espace dédié : tâches, échanges, fichiers, paiements. Tout est centralisé, rien ne vous échappe."
+            },
+            "delivery": {
+                "title": "Livraison",
+                "description": "Mise en ligne, formation à l'utilisation de votre site, et accompagnement post-lancement. Vous êtes autonome, mais je reste disponible."
             }
-        },
-        "launchNote": "Mise en ligne + suivi initial",
-        "totalDuration": "Durée totale typique: 7-10 jours"
+        }
     },
     "testimonials": {
         "title": "Ils en parlent",
@@ -283,6 +250,30 @@
             "7": {
                 "question": "Que se passe-t-il si je n'ai jamais eu de site ?",
                 "answer": "C'est fréquent, et je m'occupe de tout : réservation du domaine, hébergement, création du site, configuration email si besoin. Vous repartez avec une solution clé en main, prête à générer des clients."
+            },
+            "8": {
+                "question": "Ça marche vraiment pour attirer des clients ?",
+                "answer": "Un site professionnel bien conçu, rapide et optimisé pour le référencement local est votre meilleur commercial 24h/24. Combiné à une fiche Google Business bien remplie, c'est le moyen le plus efficace pour qu'un client local vous trouve quand il cherche votre métier sur Internet."
+            },
+            "9": {
+                "question": "Pourquoi pas Wix, Squarespace ou un template WordPress ?",
+                "answer": "Ces outils sont pratiques pour débuter, mais ils ont des limites : performances souvent moyennes, dépendance à un abonnement, personnalisation limitée, et SEO local moins poussé. Avec un site sur-mesure, vous avez un outil taillé pour votre activité, rapide, et dont vous êtes propriétaire."
+            },
+            "10": {
+                "question": "C'est quoi le Portal Atlas ?",
+                "answer": "C'est un espace client en ligne où vous pouvez suivre l'avancement de votre projet en temps réel : tâches en cours, échanges par messagerie, fichiers partagés, factures. Tout est centralisé au même endroit, c'est plus simple que des allers-retours par email."
+            },
+            "11": {
+                "question": "Je ne suis pas à l'aise avec la technologie, c'est un problème ?",
+                "answer": "Pas du tout. Le site est conçu pour être simple à utiliser une fois livré. Et pendant toute la création, c'est moi qui gère la partie technique. Vous n'avez qu'à valider les contenus et le design."
+            },
+            "12": {
+                "question": "Combien coûte un site ?",
+                "answer": "Ça dépend de vos besoins. Un site vitrine simple commence autour de 490€, un site plus complet avec réservation ou blog sera plutôt entre 800 et 1 500€. Le simulateur sur cette page vous donne une estimation en quelques clics."
+            },
+            "13": {
+                "question": "Le site sera-t-il adapté aux téléphones ?",
+                "answer": "Oui, c'est même la priorité. Plus de 70% de vos visiteurs viendront depuis un smartphone. Chaque site est conçu mobile-first : il est pensé d'abord pour les petits écrans, puis adapté au desktop."
             }
         }
     },
@@ -381,8 +372,8 @@
             "photographe": "Créatif"
         },
         "metrics": {
-            "visits": "+150% visites",
-            "contacts": "+80% contacts",
+            "visits": "SEO optimisé",
+            "contacts": "Design premium",
             "mobileFirst": "Mobile-first"
         },
         "fullscreen": "Voir en plein écran",
@@ -847,22 +838,135 @@
         }
     },
     "footer": {
-        "description": "Sites vitrines modernes et performants pour artisans & services locaux. Design premium, optimisation locale, conversion.",
+        "description": "Sites web professionnels pour artisans & services locaux. Un interlocuteur unique, un résultat concret.",
         "navigation": "Navigation",
         "support": "Support",
         "legal": "Légal",
-        "copyright": "© {year} Atlas Web Studio — Tous droits réservés.",
+        "copyright": "© {year} Atlas — Tous droits réservés.",
         "links": {
-            "offers": "Nos Offres",
             "portfolio": "Réalisations",
-            "process": "Notre Process",
-            "testimonials": "Témoignages",
+            "process": "Mon Process",
             "faq": "FAQ",
-            "contact": "Contact",
+            "simulator": "Simulateur",
             "about": "À propos",
             "mentions": "Mentions légales",
             "cgv": "CGV",
             "privacy": "Confidentialité"
         }
+    },
+    "portalAtlas": {
+        "badge": "Votre espace client",
+        "title": "Suivez votre projet en temps réel",
+        "subtitle": "Un portail client dédié pour garder le contrôle à chaque étape : progression, échanges, fichiers et paiements, tout est centralisé.",
+        "keyMessage": "Tout votre projet, en un seul endroit. Tâches, messages, fichiers, paiements — vous gardez le contrôle à chaque étape.",
+        "featureLabels": {
+            "tasks": "Tâches",
+            "messages": "Messagerie",
+            "files": "Fichiers",
+            "payments": "Paiements",
+            "tickets": "Tickets"
+        },
+        "features": {
+            "dashboard": "Tableau de bord avec vos projets et leur avancement",
+            "tasks": "Suivi des tâches avec statut en temps réel",
+            "tickets": "Demandes et modifications suivies de A à Z",
+            "messages": "Messagerie instantanée intégrée",
+            "files": "Partage de fichiers centralisé (logos, contenus, livrables)",
+            "payments": "Paiements sécurisés via Stripe, suivi des factures"
+        }
+    },
+    "aboutSection": {
+        "title": "Qui suis-je ?",
+        "intro": "Je m'appelle Raphaël. Je crée des sites web qui marchent vraiment pour les artisans et les commerces de proximité.",
+        "values": {
+            "understand": {
+                "title": "Je comprends votre métier",
+                "description": "Avant de coder, je prends le temps de comprendre votre activité, vos clients et ce qui vous différencie."
+            },
+            "deliver": {
+                "title": "Je livre dans les temps",
+                "description": "Un planning clair, des points d'étape réguliers, et un site en ligne dans les délais annoncés."
+            },
+            "reachable": {
+                "title": "Vous pouvez me joindre facilement",
+                "description": "Un interlocuteur unique, joignable par téléphone, email ou via votre espace client."
+            },
+            "works": {
+                "title": "Je construis des outils qui marchent",
+                "description": "Pas juste un beau site : un vrai outil qui vous apporte concrètement de nouveaux clients."
+            }
+        }
+    },
+    "simulator": {
+        "badge": "Estimation en ligne",
+        "title": "Estimez votre projet en quelques clics",
+        "subtitle": "Sélectionnez vos besoins et obtenez une fourchette de prix adaptée. Gratuit et sans engagement.",
+        "steps": {
+            "projectType": "Type de projet",
+            "features": "Fonctionnalités",
+            "options": "Options",
+            "recap": "Récapitulatif",
+            "contact": "Contact"
+        },
+        "projectTypes": {
+            "creation": {
+                "label": "Création de site",
+                "desc": "Vous n'avez pas encore de site web"
+            },
+            "refonte": {
+                "label": "Refonte de site",
+                "desc": "Vous souhaitez moderniser votre site existant"
+            }
+        },
+        "features": {
+            "onePage": "Site une page",
+            "threePages": "Jusqu'à 3 pages",
+            "fivePages": "Jusqu'à 5 pages",
+            "contactForm": "Formulaire de contact",
+            "booking": "Réservation en ligne",
+            "blog": "Blog intégré",
+            "seo": "Optimisation SEO locale",
+            "maps": "Intégration Google Maps",
+            "gallery": "Galerie photos"
+        },
+        "options": {
+            "maintenance": "Maintenance mensuelle (30€/mois)",
+            "cmsTraining": "Formation à l'utilisation",
+            "contentWriting": "Rédaction de contenu optimisé"
+        },
+        "recap": {
+            "title": "Votre estimation",
+            "priceRange": "entre {min}€ et {max}€",
+            "projectType": "Type de projet",
+            "selectedFeatures": "Fonctionnalités incluses",
+            "selectedOptions": "Options",
+            "note": "Cette estimation est indicative. Le prix final sera défini après un échange sur les détails de votre projet.",
+            "cta": "Recevoir mon estimation détaillée"
+        },
+        "contact": {
+            "title": "Finalisez votre demande",
+            "subtitle": "Vos choix seront automatiquement transmis avec votre message.",
+            "fields": {
+                "firstName": "Prénom",
+                "email": "Email",
+                "phone": "Téléphone",
+                "company": "Nom de l'entreprise",
+                "message": "Précisions sur votre projet (optionnel)"
+            },
+            "submit": "Envoyer ma demande",
+            "submitting": "Envoi en cours...",
+            "consent": "Vos données sont confidentielles et ne seront jamais partagées."
+        }
+    },
+    "floatingContact": {
+        "title": "Un mot rapide ?",
+        "fields": {
+            "firstName": "Votre prénom",
+            "phone": "Téléphone",
+            "message": "Votre message..."
+        },
+        "send": "Envoyer",
+        "sending": "Envoi...",
+        "success": "Message envoyé ! Je vous rappelle rapidement."
     }
 }

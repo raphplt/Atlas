@@ -24,7 +24,7 @@ export function StickyCTA() {
 			const scrollPosition = window.scrollY;
 
 			// Check if form is in viewport
-			const formElement = document.getElementById("contact");
+			const formElement = document.getElementById("simulateur");
 			const formVisible = formElement
 				? formElement.getBoundingClientRect().top < window.innerHeight
 				: false;
@@ -65,7 +65,7 @@ export function StickyCTA() {
 					<X className="w-3 h-3" />
 				</button>
 				<a
-					href="#contact"
+					href="#simulateur"
 					onClick={handleClick}
 					className="w-full h-14 text-base font-bold rounded-xl bg-[var(--color-primary)] text-[var(--color-primary-foreground)] shadow-lg hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 animate-pulse-subtle border-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2"
 					aria-live="polite"
