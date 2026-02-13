@@ -12,6 +12,25 @@ export interface Project {
 
 export const projects: Project[] = [
 	{
+		id: "paysagiste",
+		title: "Paysagiste Créatif",
+		subtitle: "Un portfolio qui met en valeur votre savoir-faire",
+		beforeSrc: "/images/screenshots/before/paysagiste.png",
+		afterSrc: "/images/screenshots/after/paysagiste.png",
+		alt: "Démonstration de refonte — paysagiste",
+		improvements: [
+			"Galerie immersive pour montrer vos projets sous leur meilleur jour",
+			"Géolocalisation pour toucher les clients à proximité",
+			"Design nature premium pour un positionnement haut de gamme",
+		],
+		improvementWords: [
+			"Galerie immersive",
+			"Clients de proximité",
+			"Positionnement premium",
+		],
+		category: "paysage",
+	},
+	{
 		id: "coiffeur",
 		title: "Salon de Coiffure",
 		subtitle: "Un design qui inspire confiance dès la première visite",
@@ -44,25 +63,6 @@ export const projects: Project[] = [
 			"Galerie de réalisations",
 		],
 		category: "services",
-	},
-	{
-		id: "paysagiste",
-		title: "Paysagiste Créatif",
-		subtitle: "Un portfolio qui met en valeur votre savoir-faire",
-		beforeSrc: "/images/screenshots/before/paysagiste.png",
-		afterSrc: "/images/screenshots/after/paysagiste.png",
-		alt: "Démonstration de refonte — paysagiste",
-		improvements: [
-			"Galerie immersive pour montrer vos projets sous leur meilleur jour",
-			"Géolocalisation pour toucher les clients à proximité",
-			"Design nature premium pour un positionnement haut de gamme",
-		],
-		improvementWords: [
-			"Galerie immersive",
-			"Clients de proximité",
-			"Positionnement premium",
-		],
-		category: "paysage",
 	},
 	{
 		id: "photographe",

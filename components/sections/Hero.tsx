@@ -121,7 +121,7 @@ export function Hero() {
 		<>
 			<section
 				ref={sectionRef}
-				className="relative min-h-screen flex items-center pt-28 pb-16 md:pt-36 md:pb-24 bg-[var(--color-background-alt)] bg-carto-grid bg-paper-texture overflow-hidden"
+				className="relative min-h-[85vh] flex items-center pt-28 pb-16 md:pt-32 md:pb-20 bg-[var(--color-background-alt)] bg-carto-grid bg-paper-texture overflow-hidden"
 				id="hero"
 			>
 				{/* Animated decorative blobs */}
@@ -135,9 +135,9 @@ export function Hero() {
 				/>
 
 				<div className="container-width relative z-10 w-full">
-					<div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-						{/* Content — left, wider column */}
-						<div className="lg:col-span-7 space-y-10">
+					<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+						{/* Content — left column */}
+						<div className="space-y-10">
 							<AnimatedTitle text={t("title")} />
 
 							<MotionWrapper variant="fade-up" delay={0.5} duration={0.8}>
@@ -174,13 +174,12 @@ export function Hero() {
 							</motion.div>
 						</div>
 
-						{/* Video — right column, bleeds right */}
-						<div className="lg:col-span-5">
+						{/* Video — right column */}
+						<div>
 							<motion.div
 								initial={{ opacity: 0, scale: 0.88, y: 30, filter: "blur(8px)" }}
 								animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
 								transition={{ duration: 1, delay: 0.4, ease: EASE }}
-								className="lg:w-[130%] xl:w-[135%]"
 							>
 								<motion.div
 									style={{ y: videoY, scale: videoScale }}

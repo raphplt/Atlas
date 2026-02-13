@@ -6,12 +6,89 @@ import { useTranslations } from "next-intl";
 import { MotionWrapper } from "@/components/ui/MotionWrapper";
 import { ArrowRight, X } from "lucide-react";
 import Image from "next/image";
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-/** Single project card in the 2×2 grid */
+/** Tag pill for improvement keywords */
+function ImprovementTag({ label }: { label: string }) {
+	return (
+		<span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full border border-[var(--color-accent)]/20 bg-[var(--color-accent)]/5 text-[var(--color-accent)]">
+			<span className="w-1 h-1 rounded-full bg-[var(--color-accent)]" />
+			{label}
+		</span>
+	);
+}
+
+/** Featured project — large card with inline before/after slider */
+function FeaturedProject({
+	project,
+	onClick,
+}: {
+	project: Project;
+	onClick: () => void;
+}) {
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+	return (
+		<motion.div
+			ref={ref}
+			initial={{ opacity: 0, y: 30 }}
+			animate={isInView ? { opacity: 1, y: 0 } : {}}
+			transition={{ duration: 0.7, ease: EASE }}
+			className="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-card)] shadow-sm overflow-hidden"
+		>
+			<div className="grid lg:grid-cols-5 gap-0">
+				{/* Slider — takes 3/5 */}
+				<div className="lg:col-span-3">
+					<BeforeAfterSlider
+						beforeSrc={project.beforeSrc}
+						afterSrc={project.afterSrc}
+						alt={project.alt}
+						size="lg"
+						showLabels={false}
+						autoSlide={true}
+						className="h-full [&>div]:rounded-none [&>div]:ring-0 [&>div]:shadow-none"
+					/>
+				</div>
+
+				{/* Info — takes 2/5 */}
+				<div className="lg:col-span-2 p-6 md:p-8 lg:p-10 flex flex-col justify-center gap-5">
+					<div className="inline-flex self-start px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-[var(--color-muted)] border border-[var(--color-border)] rounded-[var(--radius)]">
+						{project.category}
+					</div>
+
+					<div>
+						<h3 className="text-2xl md:text-3xl font-bold text-[var(--color-primary)] mb-2">
+							{project.title}
+						</h3>
+						<p className="text-[var(--color-muted)] leading-relaxed">
+							{project.subtitle}
+						</p>
+					</div>
+
+					<div className="flex flex-wrap gap-2">
+						{project.improvementWords.map((word, i) => (
+							<ImprovementTag key={i} label={word} />
+						))}
+					</div>
+
+					<button
+						onClick={onClick}
+						className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-accent)] hover:gap-3 transition-all duration-300 mt-auto self-start group"
+					>
+						Voir le détail
+						<ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+					</button>
+				</div>
+			</div>
+		</motion.div>
+	);
+}
+
+/** Smaller project card for the grid below */
 function ProjectCard({
 	project,
 	index,
@@ -27,41 +104,57 @@ function ProjectCard({
 	return (
 		<motion.div
 			ref={ref}
-			initial={{ opacity: 0, scale: 0.95 }}
-			animate={isInView ? { opacity: 1, scale: 1 } : {}}
+			initial={{ opacity: 0, y: 20 }}
+			animate={isInView ? { opacity: 1, y: 0 } : {}}
 			transition={{
-				type: "spring",
-				stiffness: 200,
-				damping: 25,
+				duration: 0.6,
+				ease: EASE,
 				delay: index * 0.1,
 			}}
 			onClick={onClick}
-			className="group relative cursor-pointer overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-card)] shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-lg)]"
-			style={{ perspective: "800px" }}
+			className="group cursor-pointer rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-card)] shadow-sm overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-lg)]"
 		>
-			{/* After image only — device frame */}
-			<div className="relative aspect-[3/2] overflow-hidden">
+			{/* Image */}
+			<div className="relative aspect-[16/10] overflow-hidden">
 				<Image
 					src={project.afterSrc}
 					alt={project.alt}
 					fill
-					sizes="(max-width: 768px) 100vw, 50vw"
+					sizes="(max-width: 768px) 100vw, 33vw"
 					className="object-cover transition-transform duration-500 group-hover:scale-105"
 				/>
+				<div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+				<span className="absolute top-3 left-3 inline-flex px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-white/80 bg-black/30 backdrop-blur-sm border border-white/10 rounded-[var(--radius)]">
+					{project.category}
+				</span>
+			</div>
 
-				{/* Hover overlay */}
-				<div className="absolute inset-0 bg-[var(--color-primary)]/0 group-hover:bg-[var(--color-primary)]/80 transition-all duration-200 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100">
-					<h3 className="text-xl md:text-2xl font-bold text-white text-center px-4">
+			{/* Info */}
+			<div className="p-5 space-y-3">
+				<div>
+					<h3 className="text-lg font-bold text-[var(--color-primary)] mb-1 group-hover:text-[var(--color-accent)] transition-colors">
 						{project.title}
 					</h3>
-					<p className="text-sm text-white/70 text-center px-6 max-w-xs">
+					<p className="text-sm text-[var(--color-muted)] line-clamp-2">
 						{project.subtitle}
 					</p>
-					<span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--color-accent)] mt-2">
-						Voir le détail
-						<ArrowRight className="size-3.5" />
-					</span>
 				</div>
+
+				<div className="flex flex-wrap gap-1.5">
+					{project.improvementWords.map((word, i) => (
+						<span
+							key={i}
+							className="text-[11px] font-medium px-2 py-0.5 rounded-full bg-[var(--color-background-alt)] text-[var(--color-muted)] border border-[var(--color-border)]"
+						>
+							{word}
+						</span>
+					))}
+				</div>
+
+				<span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--color-accent)] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+					Voir avant / après
+					<ArrowRight className="size-3.5" />
+				</span>
 			</div>
 		</motion.div>
 	);
@@ -167,7 +260,7 @@ function ProjectModal({
 
 export function Portfolio() {
 	const t = useTranslations("portfolio");
-	const featuredProjects = projects.slice(0, 4);
+	const [featured, ...otherProjects] = projects;
 	const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
 	const closeModal = useCallback(() => setSelectedProject(null), []);
@@ -179,7 +272,7 @@ export function Portfolio() {
 				id="portfolio"
 			>
 				<div className="container-width">
-					<div className="text-center mb-20 max-w-3xl mx-auto">
+					<div className="text-center mb-16 max-w-3xl mx-auto">
 						<MotionWrapper variant="fade-up">
 							<div className="inline-block mb-4 text-xs font-bold tracking-widest uppercase text-[var(--color-accent)]">
 								{t("badge")}
@@ -193,9 +286,15 @@ export function Portfolio() {
 						</MotionWrapper>
 					</div>
 
-					{/* 2×2 Grid */}
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-6xl mx-auto">
-						{featuredProjects.map((project, index) => (
+					{/* Featured project — full width with inline slider */}
+					<FeaturedProject
+						project={featured}
+						onClick={() => setSelectedProject(featured)}
+					/>
+
+					{/* Other projects — 3 columns */}
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+						{otherProjects.map((project, index) => (
 							<ProjectCard
 								key={project.id}
 								project={project}
