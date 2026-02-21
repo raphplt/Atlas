@@ -84,7 +84,7 @@ export function AboutSection() {
 			<div className="container-width relative z-10">
 				<div className="grid lg:grid-cols-12 gap-20 items-center">
 					{/* Photo — 5 cols with parallax */}
-					<div className="lg:col-span-5" ref={photoRef}>
+					<div className="lg:col-span-5 max-w-xs sm:max-w-sm mx-auto lg:max-w-none" ref={photoRef}>
 						<MotionWrapper variant="scale-up" delay={0.1} duration={0.9}>
 							<motion.div
 								style={{ y: photoY, scale: photoScale }}
@@ -96,7 +96,7 @@ export function AboutSection() {
 									width={600}
 									height={700}
 									className="object-cover w-full aspect-[4/5]"
-									sizes="(max-width: 1024px) 100vw, 40vw"
+									sizes="(max-width: 640px) 320px, (max-width: 1024px) 384px, 40vw"
 								/>
 							</motion.div>
 						</MotionWrapper>
