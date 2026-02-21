@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, ContactInput } from "@/lib/validators";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { 
     LayoutDashboard, 
@@ -39,6 +40,7 @@ const OBJECTIVES = [
 const TIMELINES = ["urgent", "1month", "3months", "exploration"] as const;
 
 export function WizardForm() {
+    const router = useRouter();
     const t = useTranslations("contact.form");
     const [step, setStep] = useState(1);
     const [serverError, setServerError] = useState<string | null>(null);
@@ -65,7 +67,7 @@ export function WizardForm() {
         watch, 
         setValue, 
         trigger,
-        formState: { errors, isSubmitting, isValid } 
+        formState: { errors, isSubmitting } 
     } = form;
 
     const watchedGoal = watch("projectGoal");
@@ -97,31 +99,13 @@ export function WizardForm() {
             if (!res.ok) throw new Error("Erreur serveur");
 
             trackFormSuccess("wizard");
-            toast.success(t("successMessage"));
-            setStep(4); // Success Step
+            router.push("/success");
         } catch (e: any) {
             trackFormError(e.message, "wizard");
             setServerError("Une erreur est survenue. Réessayez ou envoyez un email.");
             toast.error("Erreur lors de l'envoi");
             console.error(e);
         }
-    };
-
-    const variants = {
-        enter: (direction: number) => ({
-            x: direction > 0 ? 20 : -20,
-            opacity: 0
-        }),
-        center: {
-            zIndex: 1,
-            x: 0,
-            opacity: 1
-        },
-        exit: (direction: number) => ({
-            zIndex: 0,
-            x: direction < 0 ? 20 : -20,
-            opacity: 0
-        })
     };
 
     return (
@@ -409,25 +393,6 @@ export function WizardForm() {
                             </motion.div>
                         )}
 
-                        {/* STEP 4: SUCCESS */}
-                        {step === 4 && (
-                            <motion.div
-                                key="step4"
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                className="text-center py-12 space-y-6"
-                            >
-                                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <CheckCircle2 className="size-10" />
-                                </div>
-                                <h3 className="text-2xl font-bold text-[var(--color-primary)]">
-                                    Demande reçue !
-                                </h3>
-                                <p className="text-[var(--color-muted)] max-w-xs mx-auto text-lg">
-                                    Merci {watch("firstName")}. Je vous recontacte sous 24h ouvrées pour faire le point.
-                                </p>
-                            </motion.div>
-                        )}
                     </AnimatePresence>
                 </form>
             </div>
