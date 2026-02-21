@@ -1,18 +1,18 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 import { useSimulator } from "./SimulatorContext";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { simulatorContactSchema, type SimulatorContactInput } from "@/lib/simulator-validators";
 import { calculatePriceRange, calculateMonthly } from "@/lib/pricing";
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 export function StepContact() {
+	const router = useRouter();
 	const t = useTranslations("simulator.contact");
 	const { state } = useSimulator();
-	const [submitted, setSubmitted] = useState(false);
 	const [error, setError] = useState("");
 
 	const range = calculatePriceRange(state);
@@ -44,33 +44,11 @@ export function StepContact() {
 				body: JSON.stringify(data),
 			});
 			if (!res.ok) throw new Error("Erreur serveur");
-			setSubmitted(true);
+			router.push("/success");
 		} catch {
 			setError("Une erreur est survenue. Réessayez ou contactez-moi directement.");
 		}
 	};
-
-	if (submitted) {
-		return (
-			<motion.div
-				initial={{ opacity: 0, y: 10 }}
-				animate={{ opacity: 1, y: 0 }}
-				className="text-center py-8 space-y-4"
-			>
-				<div className="w-14 h-14 mx-auto rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-						<path d="M5 12l5 5L20 7" />
-					</svg>
-				</div>
-				<h4 className="font-semibold text-lg text-[var(--color-primary)]">
-					Demande envoyée !
-				</h4>
-				<p className="text-sm text-[var(--color-muted)]">
-					Je vous recontacte sous 24h avec une estimation détaillée.
-				</p>
-			</motion.div>
-		);
-	}
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className="space-y-5">

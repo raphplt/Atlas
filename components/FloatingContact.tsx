@@ -7,6 +7,7 @@ import { z } from "zod";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 const schema = z.object({
 	firstName: z.string().min(1).max(60),
@@ -21,8 +22,8 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export function FloatingContact() {
+	const router = useRouter();
 	const [open, setOpen] = useState(false);
-	const [sent, setSent] = useState(false);
 	const t = useTranslations("floatingContact");
 
 	const {
@@ -34,7 +35,7 @@ export function FloatingContact() {
 
 	const onSubmit = async (data: FormData) => {
 		try {
-			await fetch("/api/contact", {
+			const res = await fetch("/api/contact", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({
@@ -47,12 +48,10 @@ export function FloatingContact() {
 					website: data.website,
 				}),
 			});
-			setSent(true);
-			setTimeout(() => {
-				setSent(false);
-				setOpen(false);
-				reset();
-			}, 3000);
+			if (!res.ok) throw new Error("Erreur serveur");
+			setOpen(false);
+			reset();
+			router.push("/success");
 		} catch {
 			// Silently fail
 		}
@@ -97,62 +96,50 @@ export function FloatingContact() {
 								</button>
 							</div>
 
-							{sent ? (
-								<motion.div
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									className="text-center py-4"
+							<form onSubmit={handleSubmit(onSubmit)} className="space-y-2.5">
+								{/* Honeypot */}
+								<input
+									type="text"
+									{...register("website")}
+									className="absolute opacity-0 pointer-events-none h-0"
+									tabIndex={-1}
+									autoComplete="off"
+								/>
+								<input
+									{...register("firstName")}
+									placeholder={t("fields.firstName")}
+									className="w-full px-3 py-2 rounded-[var(--radius)] border border-[var(--color-border)] bg-[var(--color-background)] text-sm text-[var(--color-primary)] placeholder:text-[var(--color-muted)]/50 focus:outline-none focus:border-[var(--color-accent)] transition-colors"
+								/>
+								{errors.firstName && (
+									<p className="text-[10px] text-red-500">{errors.firstName.message}</p>
+								)}
+								<input
+									{...register("phone")}
+									type="tel"
+									placeholder={t("fields.phone")}
+									className="w-full px-3 py-2 rounded-[var(--radius)] border border-[var(--color-border)] bg-[var(--color-background)] text-sm text-[var(--color-primary)] placeholder:text-[var(--color-muted)]/50 focus:outline-none focus:border-[var(--color-accent)] transition-colors"
+								/>
+								{errors.phone && (
+									<p className="text-[10px] text-red-500">{errors.phone.message}</p>
+								)}
+								<textarea
+									{...register("message")}
+									placeholder={t("fields.message")}
+									rows={2}
+									className="w-full px-3 py-2 rounded-[var(--radius)] border border-[var(--color-border)] bg-[var(--color-background)] text-sm text-[var(--color-primary)] placeholder:text-[var(--color-muted)]/50 focus:outline-none focus:border-[var(--color-accent)] transition-colors resize-none"
+								/>
+								{errors.message && (
+									<p className="text-[10px] text-red-500">{errors.message.message}</p>
+								)}
+								<button
+									type="submit"
+									disabled={isSubmitting}
+									className="w-full py-2 rounded-[var(--radius)] bg-[var(--color-accent)] text-white text-sm font-bold hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2"
 								>
-									<p className="text-sm text-[var(--color-accent)] font-medium">
-										{t("success")}
-									</p>
-								</motion.div>
-							) : (
-								<form onSubmit={handleSubmit(onSubmit)} className="space-y-2.5">
-									{/* Honeypot */}
-									<input
-										type="text"
-										{...register("website")}
-										className="absolute opacity-0 pointer-events-none h-0"
-										tabIndex={-1}
-										autoComplete="off"
-									/>
-									<input
-										{...register("firstName")}
-										placeholder={t("fields.firstName")}
-										className="w-full px-3 py-2 rounded-[var(--radius)] border border-[var(--color-border)] bg-[var(--color-background)] text-sm text-[var(--color-primary)] placeholder:text-[var(--color-muted)]/50 focus:outline-none focus:border-[var(--color-accent)] transition-colors"
-									/>
-									{errors.firstName && (
-										<p className="text-[10px] text-red-500">{errors.firstName.message}</p>
-									)}
-									<input
-										{...register("phone")}
-										type="tel"
-										placeholder={t("fields.phone")}
-										className="w-full px-3 py-2 rounded-[var(--radius)] border border-[var(--color-border)] bg-[var(--color-background)] text-sm text-[var(--color-primary)] placeholder:text-[var(--color-muted)]/50 focus:outline-none focus:border-[var(--color-accent)] transition-colors"
-									/>
-									{errors.phone && (
-										<p className="text-[10px] text-red-500">{errors.phone.message}</p>
-									)}
-									<textarea
-										{...register("message")}
-										placeholder={t("fields.message")}
-										rows={2}
-										className="w-full px-3 py-2 rounded-[var(--radius)] border border-[var(--color-border)] bg-[var(--color-background)] text-sm text-[var(--color-primary)] placeholder:text-[var(--color-muted)]/50 focus:outline-none focus:border-[var(--color-accent)] transition-colors resize-none"
-									/>
-									{errors.message && (
-										<p className="text-[10px] text-red-500">{errors.message.message}</p>
-									)}
-									<button
-										type="submit"
-										disabled={isSubmitting}
-										className="w-full py-2 rounded-[var(--radius)] bg-[var(--color-accent)] text-white text-sm font-bold hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2"
-									>
-										<Send className="size-3.5" />
-										{isSubmitting ? t("sending") : t("send")}
-									</button>
-								</form>
-							)}
+									<Send className="size-3.5" />
+									{isSubmitting ? t("sending") : t("send")}
+								</button>
+							</form>
 						</div>
 					</motion.div>
 				)}
