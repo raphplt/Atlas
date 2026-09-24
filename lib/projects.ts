@@ -2,7 +2,7 @@ import type { PortableTextBlock } from "@portabletext/react";
 import { getTranslations } from "next-intl/server";
 import { locales, type Locale } from "@/i18n/routing";
 import { isSanityConfigured } from "@/sanity/env";
-import { permapaysage, products } from "./content";
+import { permapaysage } from "./content";
 import { textToPortableText } from "./portable-text";
 import { sanityFetch } from "./sanity/fetch";
 import { hasAsset, urlForImage, type SanityImage } from "./sanity/image";
@@ -94,21 +94,6 @@ async function staticItems(locale: Locale): Promise<WorkItem[]> {
       image: { ...permapaysage.image, alt: t("permapaysage.imageAlt") },
       hasPage: true,
     },
-    ...products.map(
-      (p): WorkItem => ({
-        slug: p.key,
-        title: p.name,
-        kind: "product",
-        client: null,
-        url: p.url,
-        year: null,
-        role: t(`${p.key}.role`),
-        summary: t(`${p.key}.summary`),
-        fact: t(`${p.key}.fact`),
-        image: { ...p.image, alt: t(`${p.key}.imageAlt`) },
-        hasPage: false,
-      }),
-    ),
   ];
 }
 

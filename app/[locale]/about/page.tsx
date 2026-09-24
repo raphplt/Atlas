@@ -3,10 +3,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactBand } from "@/components/atlas/ContactBand";
 import { PageHero } from "@/components/atlas/PageHero";
 import { Reveal } from "@/components/atlas/Reveal";
-import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { portrait } from "@/lib/content";
 import { pageMetadata } from "@/lib/meta";
+import { siteMeta } from "@/lib/site";
 
 type Item = { title: string; text: string };
 
@@ -19,6 +19,8 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
   const { locale } = (await params) as { locale: Locale };
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "about" });
+  // Le portfolio existe en FR et EN (pas en IT) : les autres langues pointent vers l'anglais.
+  const portfolioUrl = locale === "fr" ? siteMeta.portfolio : `${siteMeta.portfolio}/en`;
 
   return (
     <main id="main-content">
@@ -80,9 +82,14 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
               </h2>
               <p className="body">{t("products.text")}</p>
             </div>
-            <Link href="/realisations" className="link link-arrow">
+            <a
+              href={portfolioUrl}
+              className="link link-out"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {t("products.link")}
-            </Link>
+            </a>
           </Reveal>
         </div>
       </section>

@@ -45,7 +45,7 @@
       },
       "work": {
         "title": "Réalisations",
-        "description": "Des sites pour des clients bien réels, comme Permapaysage, et des produits conçus en propre : QoreDB et TCG Nexus."
+        "description": "Des sites pour des clients bien réels, comme Permapaysage : design sur mesure, performance et référencement local."
       },
       "contact": {
         "title": "Contact — Démarrer un projet",
@@ -130,10 +130,6 @@
       },
       "more": "Découvrir l’offre"
     },
-    "products": {
-      "title": "Ce que je construis, aussi pour moi.",
-      "intro": "Des produits que je conçois et fais vivre moi-même : le meilleur terrain d’essai pour les méthodes que j’applique à vos projets."
-    },
     "method": {
       "title": "Un chemin simple, balisé de bout en bout.",
       "intro": "Vous savez à chaque étape où l’on en est, et ce qui vient ensuite."
@@ -141,7 +137,7 @@
     "about": {
       "title": "Un seul interlocuteur, du premier croquis à la mise en ligne.",
       "p1": "Moi, c’est Raphaël Plassart. Je réunis design et développement : la personne qui vous écoute est celle qui dessine et code votre site.",
-      "p2": "J’ai aussi cofondé Melios et Quori, et je développe mes propres produits. Cette double casquette m’oblige à penser votre site comme un outil de travail, pas seulement comme une vitrine.",
+      "p2": "J’ai aussi cofondé Melios et Quori. Cette double casquette m’oblige à penser votre site comme un outil de travail, pas seulement comme une vitrine.",
       "more": "Faire connaissance",
       "portraitAlt": "Portrait de Raphaël Plassart"
     },
@@ -149,6 +145,9 @@
       "title": "Le journal.",
       "intro": "Des repères concrets pour préparer un site, soigner son identité et être trouvé.",
       "all": "Tout le journal"
+    },
+    "faq": {
+      "all": "Toutes les questions"
     }
   },
   "method": {
@@ -294,11 +293,8 @@
   "work": {
     "hero": {
       "title": "Des projets sur la carte.",
-      "lead": "Des sites pour des clients bien réels, et des produits que je conçois pour moi-même."
+      "lead": "Des sites conçus pour des clients bien réels, et pensés pour être trouvés."
     },
-    "clients": "Pour mes clients",
-    "products": "Mes produits",
-    "productsIntro": "Conçus, développés et maintenus par mes soins.",
     "readCase": "Lire l’étude de cas",
     "visit": "Voir le site",
     "case": {
@@ -338,18 +334,6 @@
         ],
         "quote": "Il a su transformer un outil potable en une véritable machine de guerre digitale.",
         "quoteBy": "Permapaysage, sur LinkedIn"
-      },
-      "qoredb": {
-        "role": "Produit open source",
-        "summary": "Un client de bases de données natif, en Rust. 34 moteurs, une seule interface.",
-        "fact": "10 000+ téléchargements",
-        "imageAlt": "Éditeur de requêtes de QoreDB"
-      },
-      "tcgNexus": {
-        "role": "Plateforme web · Lead technique",
-        "summary": "Un écosystème pour joueurs de cartes : tournois, marketplace et analyse assistée par IA.",
-        "fact": "Équipe de 5 · En ligne",
-        "imageAlt": "Page d’accueil de TCG Nexus"
       }
     }
   },
@@ -389,7 +373,7 @@
     "products": {
       "title": "Ce que je construis aussi.",
       "text": "En parallèle des projets clients, je conçois mes propres produits, comme QoreDB, un client de bases de données open source, et TCG Nexus, une plateforme pour joueurs de cartes.",
-      "link": "Voir les réalisations"
+      "link": "Voir mon portfolio"
     }
   },
   "contactPage": {

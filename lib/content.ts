@@ -10,21 +10,6 @@ export const permapaysage = {
     "https://www.linkedin.com/posts/permapaysage_permapaysage-%C3%A9co-paysagiste-%C3%A0-vallet-activity-7441431187446861824-4d9D",
 };
 
-export const products = [
-  {
-    key: "qoredb",
-    name: "QoreDB",
-    url: "https://qoredb.com",
-    image: { src: "/images/work/qoredb.png", width: 1436, height: 946 },
-  },
-  {
-    key: "tcgNexus",
-    name: "TCG Nexus",
-    url: "https://tcg-nexus.org",
-    image: { src: "/images/work/tcg-nexus.png", width: 1675, height: 1088 },
-  },
-] as const;
-
 export const portrait = {
   src: "/images/Raphael-Plassart.png",
   width: 1024,

@@ -9,7 +9,7 @@ import { Reveal } from "@/components/atlas/Reveal";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { getPosts } from "@/lib/blog";
-import { permapaysage, portrait, products, quoted } from "@/lib/content";
+import { permapaysage, portrait, quoted } from "@/lib/content";
 import { pageMetadata } from "@/lib/meta";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]">) {
@@ -20,9 +20,9 @@ export async function generateMetadata({ params }: PageProps<"/[locale]">) {
 export default async function Home({ params }: PageProps<"/[locale]">) {
   const { locale } = (await params) as { locale: Locale };
   setRequestLocale(locale);
-  const [t, tWork, tMethod, posts] = await Promise.all([
+  const [t, tFaq, tMethod, posts] = await Promise.all([
     getTranslations({ locale, namespace: "home" }),
-    getTranslations({ locale, namespace: "work.items" }),
+    getTranslations({ locale, namespace: "faq" }),
     getTranslations({ locale, namespace: "method" }),
     getPosts(locale, 3),
   ]);
@@ -30,6 +30,10 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
     { key: "site", href: "/offres#site" },
     { key: "product", href: "/offres#produit" },
   ] as const;
+  // Prix, refonte, référencement, suivi : la démarche est déjà couverte par « method ».
+  const questions = (tFaq.raw("items") as { question: string; answer: string }[]).filter(
+    (_, i) => [0, 1, 3, 6].includes(i),
+  );
 
   return (
     <main id="main-content">
@@ -140,44 +144,6 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="products-title">
-        <div className="wrap">
-          <Reveal className="section-head">
-            <h2 id="products-title" className="h2">
-              {t("products.title")}
-            </h2>
-            <p className="body">{t("products.intro")}</p>
-          </Reveal>
-          <div className="cards">
-            {products.map((p) => (
-              <Reveal key={p.key}>
-                <a
-                  href={p.url}
-                  className="card"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="shot shot-crop">
-                    <Image
-                      src={p.image.src}
-                      width={p.image.width}
-                      height={p.image.height}
-                      alt={tWork(`${p.key}.imageAlt`)}
-                      sizes="(max-width: 900px) 100vw, 50vw"
-                    />
-                  </div>
-                  <div className="card-meta">
-                    <h3 className="h3">{p.name}</h3>
-                    <span>{tWork(`${p.key}.fact`)}</span>
-                  </div>
-                  <p className="body">{tWork(`${p.key}.summary`)}</p>
-                </a>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="section" aria-labelledby="method-title">
         <div className="wrap">
           <Reveal className="section-head">
@@ -238,6 +204,30 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           </div>
         </section>
       )}
+
+      <section className="section" aria-labelledby="faq-title">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <div>
+              <h2 id="faq-title" className="h2">
+                {tFaq("hero.title")}
+              </h2>
+              <p className="body">{tFaq("hero.lead")}</p>
+            </div>
+            <Link href="/faq" className="link link-arrow">
+              {t("faq.all")}
+            </Link>
+          </Reveal>
+          <div className="faq">
+            {questions.map((q) => (
+              <details key={q.question}>
+                <summary>{q.question}</summary>
+                <p>{q.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <ContactBand />
     </main>
