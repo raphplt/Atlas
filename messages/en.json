@@ -2,12 +2,12 @@
   "meta": {
     "siteName": "Atlas",
     "ogLocale": "en_GB",
-    "defaultTitle": "Atlas — Web design & development · Raphaël Plassart",
-    "description": "Distinctive, fast websites designed around your business. Design, development and SEO by Raphaël Plassart, freelance.",
+    "defaultTitle": "Atlas — Fast, search-friendly websites · Raphaël Plassart",
+    "description": "Fast, distinctive, search-friendly websites for craftspeople, small businesses and freelancers. Design, development and SEO by Raphaël Plassart, freelance.",
     "pages": {
       "about": {
-        "title": "The studio — Raphaël Plassart",
-        "description": "Raphaël Plassart, the freelance developer behind Atlas. A direct approach that brings together design, code and a real understanding of your business."
+        "title": "About — Raphaël Plassart",
+        "description": "Raphaël Plassart, the freelance designer and developer behind Atlas: one contact, from first sketch to launch."
       },
       "blog": {
         "title": "Journal — Design, web and visibility",
@@ -24,10 +24,6 @@
       "success": {
         "title": "Message sent"
       },
-      "permapaysage": {
-        "title": "Permapaysage — Redesigning an eco-landscaper’s website",
-        "description": "A redesign presenting Permapaysage’s services in Vallet, making it easier to get in touch and structuring its local presence."
-      },
       "legalMentions": {
         "title": "Legal notice",
         "description": "Legal notice for the Atlas website: publisher, hosting provider and contact details."
@@ -42,6 +38,18 @@
       },
       "notFound": {
         "title": "Page not found"
+      },
+      "offers": {
+        "title": "Services — Your website, your product",
+        "description": "A custom website to get found, or an application to run your business. Design, development and SEO."
+      },
+      "work": {
+        "title": "Work",
+        "description": "Websites for real clients, such as Permapaysage, and in-house products: QoreDB and TCG Nexus."
+      },
+      "contact": {
+        "title": "Contact — Start a project",
+        "description": "Tell me about your business and your website or app project. A personal reply from Raphaël Plassart."
       }
     }
   },
@@ -49,48 +57,428 @@
     "skipLink": "Skip to content",
     "homeAria": "Atlas, home",
     "mainNav": "Main navigation",
-    "mobileNav": "Mobile navigation",
     "menu": "Menu",
+    "close": "Close",
+    "language": "Language",
     "nav": {
       "work": "Work",
-      "expertise": "Expertise",
-      "studio": "The studio",
-      "journal": "Journal"
+      "offers": "Services",
+      "journal": "Journal",
+      "about": "About"
     },
-    "cta": "Let’s talk about your project",
-    "language": "Language"
+    "cta": "Start a project"
   },
   "footer": {
-    "tagline": "Character. Purpose. Results.",
-    "writeMe": "Write to me",
+    "tagline": "Fast, distinctive, search-friendly websites, designed and built by Raphaël Plassart.",
+    "siteNav": "Site map",
+    "faq": "FAQ",
+    "contact": "Contact",
     "copyright": "© {year} Atlas · Raphaël Plassart",
     "legalNav": "Legal information",
     "mentions": "Legal notice",
     "privacy": "Privacy",
-    "terms": "Terms of sale",
-    "faq": "FAQ"
+    "terms": "Terms of sale"
+  },
+  "speed": {
+    "before": "This page loaded in",
+    "after": "Yours can too."
+  },
+  "home": {
+    "hero": {
+      "title1": "Put your business",
+      "title2": "on the map.",
+      "lead": "I design and build fast, distinctive, search-friendly websites for craftspeople, freelancers and businesses that want to be found.",
+      "cta": "Start a project",
+      "secondary": "See the work"
+    },
+    "case": {
+      "title": "Permapaysage left Odoo for a website built to measure.",
+      "who": "Eco-landscaper in Vallet, in the Nantes wine country.",
+      "imageAlt": "Permapaysage website home page",
+      "beforeTitle": "Where we started",
+      "before": "An Odoo site that was fine to get going, but slow and hard to rank on Google, just as local demand for resilient gardens was taking off.",
+      "didTitle": "What we built",
+      "did": "A fast, custom website organised around the services and the area covered, with direct access to a quote request and to the tax benefits.",
+      "quote": "He turned a passable tool into a real digital war machine.",
+      "quoteBy": "Permapaysage, on LinkedIn (translated from French)",
+      "readCase": "Read the case study",
+      "visit": "Visit the site"
+    },
+    "doors": {
+      "title": "Two ways to work together.",
+      "site": {
+        "for": "Craftspeople, small businesses, freelancers",
+        "title": "Your website",
+        "text": "A custom website that looks like you, loads in the blink of an eye and gets you found by customers in your area.",
+        "items": [
+          "Custom design",
+          "Local SEO",
+          "Google Business Profile",
+          "Support after launch"
+        ]
+      },
+      "product": {
+        "for": "Startups, founders, teams",
+        "title": "Your product",
+        "text": "An app, an internal tool or a SaaS: from idea to production, with the same care for design and performance.",
+        "items": [
+          "Product design",
+          "Web applications",
+          "Business tools",
+          "Going to production"
+        ]
+      },
+      "more": "See the offer"
+    },
+    "products": {
+      "title": "What I build, for myself too.",
+      "intro": "Products I design and run myself: the best testing ground for the methods I bring to your projects."
+    },
+    "method": {
+      "title": "A simple path, marked from start to finish.",
+      "intro": "At every step you know where we are, and what comes next."
+    },
+    "about": {
+      "title": "One contact, from first sketch to launch.",
+      "p1": "I’m Raphaël Plassart. I bring design and development together: the person who listens to you is the one who designs and codes your website.",
+      "p2": "I also co-founded Melios and Quori, and I build my own products. Wearing both hats makes me treat your website as a working tool, not just a shop window.",
+      "more": "Get to know me",
+      "portraitAlt": "Portrait of Raphaël Plassart"
+    },
+    "journal": {
+      "title": "The journal.",
+      "intro": "Practical pointers to prepare a website, shape its identity and get found.",
+      "all": "All articles"
+    }
+  },
+  "method": {
+    "steps": [
+      {
+        "title": "We talk.",
+        "text": "Your trade, your customers, what needs to change. A first conversation, with no commitment, to understand before proposing."
+      },
+      {
+        "title": "We draw up the plan.",
+        "text": "A clear quote: the pages, the features, the steps and the schedule. You know where we are going before we set off."
+      },
+      {
+        "title": "We design, then we build.",
+        "text": "A visual direction that fits you, approved together, then custom development that is fast and accessible."
+      },
+      {
+        "title": "We launch, and I stay reachable.",
+        "text": "Going live, SEO basics, a proper handover. After delivery, you keep the same contact."
+      }
+    ]
+  },
+  "contactBand": {
+    "title1": "Got a project in mind?",
+    "title2": "Let’s map the route.",
+    "text": "Tell me about your business and what needs to change. I’ll reply personally."
+  },
+  "form": {
+    "firstName": "First name",
+    "firstNamePlaceholder": "Alex",
+    "company": "Company",
+    "companyPlaceholder": "Your business name",
+    "email": "Email address",
+    "emailPlaceholder": "hello@company.com",
+    "goal": "Your project",
+    "goalPlaceholder": "What do you need?",
+    "goals": {
+      "creation": "Create my website",
+      "redesign": "Redesign my website",
+      "product": "Build an app or a product",
+      "marketing": "Get found on Google",
+      "other": "Something else, let’s talk"
+    },
+    "message": "A few words to start",
+    "messagePlaceholder": "Your business, your goals, your timeline…",
+    "privacy": "This information is only used to reply to your request.",
+    "privacyLink": "Privacy",
+    "send": "Send message",
+    "sending": "Sending…",
+    "success": "Thank you, your message has arrived. I’ll get back to you very soon.",
+    "error": "Your message could not be sent. Please try again, or email me directly."
+  },
+  "offers": {
+    "hero": {
+      "title": "Two offers, one standard.",
+      "lead": "A website to get found, or a product to run your business. Either way: custom design, fast code and a single point of contact."
+    },
+    "site": {
+      "for": "Craftspeople, small businesses, freelancers",
+      "title": "Your website",
+      "lead": "A custom website that looks like you, loads in the blink of an eye and gets you found by customers in your area.",
+      "items": [
+        {
+          "title": "A design that is yours",
+          "text": "No recycled template: a visual direction built around your trade, your photos and your customers."
+        },
+        {
+          "title": "Local SEO",
+          "text": "Pages organised around your services and the area you cover, clean technical markup, useful content."
+        },
+        {
+          "title": "Google Business Profile",
+          "text": "Setting up or tidying your business profile, consistent with the website."
+        },
+        {
+          "title": "Enquiries, not just visits",
+          "text": "A clear path to a quote or a call, on mobile and desktop alike."
+        },
+        {
+          "title": "Your content, your way",
+          "text": "If you wish, a simple space to publish your projects and news yourself."
+        },
+        {
+          "title": "Support after launch",
+          "text": "Hosting, maintenance and updates: the terms are agreed together in the quote."
+        }
+      ]
+    },
+    "product": {
+      "for": "Startups, founders, teams",
+      "title": "Your product",
+      "lead": "An app, an internal tool or a SaaS: from idea to production, with the same care for design and performance.",
+      "items": [
+        {
+          "title": "Product design",
+          "text": "Clarifying the need, prioritising features and designing the flows before writing the first line of code."
+        },
+        {
+          "title": "Web applications",
+          "text": "Fast, accessible interfaces, built with modern, proven tools."
+        },
+        {
+          "title": "Business tools",
+          "text": "Automating what wastes your time: quotes, job tracking, client portals, dashboards."
+        },
+        {
+          "title": "Going to production",
+          "text": "Deployment, security, backups and monitoring: a product that holds up once it is live."
+        }
+      ]
+    },
+    "included": {
+      "title": "In every project.",
+      "items": [
+        {
+          "title": "Speed",
+          "text": "Lightweight pages designed to load quickly, even on a phone over 4G."
+        },
+        {
+          "title": "Accessibility",
+          "text": "Contrast, keyboard navigation, alternative text: a website everyone can use."
+        },
+        {
+          "title": "A website you own",
+          "text": "The code and design are transferred to you on full payment, with administrator access."
+        },
+        {
+          "title": "Money-back guarantee",
+          "text": "A 30-day guarantee after delivery, under the conditions set out in the terms of sale."
+        }
+      ]
+    },
+    "method": {
+      "title": "How we move forward."
+    },
+    "pricing": {
+      "title": "What about the price?",
+      "text": "Every project is different: the quote depends on the number of pages, the content and the features. After a first conversation, you receive a clear proposal, detailed step by step.",
+      "cta": "Ask for a quote"
+    },
+    "faq": "Read the FAQ"
+  },
+  "work": {
+    "hero": {
+      "title": "Projects on the map.",
+      "lead": "Websites for very real clients, and products I design for myself."
+    },
+    "clients": "For clients",
+    "products": "My products",
+    "productsIntro": "Designed, built and maintained by me.",
+    "readCase": "Read the case study",
+    "visit": "Visit the site",
+    "case": {
+      "back": "All work",
+      "client": "Client",
+      "year": "Year",
+      "role": "Role",
+      "visit": "Visit the live site",
+      "challenge": "Where we started",
+      "approach": "The approach",
+      "results": "The results",
+      "source": "Read the original post"
+    },
+    "items": {
+      "permapaysage": {
+        "title": "Permapaysage",
+        "lead": "Eco-landscaper in Vallet, in the Nantes wine country. Real know-how in the field, and a redesigned website to make it visible.",
+        "role": "Design, development, local SEO",
+        "summary": "An eco-landscaper near Nantes leaves Odoo for a fast, custom website built for local search.",
+        "fact": "Redesign · Local SEO · Quote requests",
+        "imageAlt": "Permapaysage website home page",
+        "seoTitle": "Permapaysage — Redesigning an eco-landscaper’s website",
+        "seoDescription": "A redesign presenting Permapaysage’s services in Vallet, making it easier to get in touch and structuring its local presence.",
+        "sections": [
+          {
+            "title": "Where we started",
+            "text": "Permapaysage had an Odoo website: fine to get going, but slow and hard to rank on Google. Local demand for resilient gardens is strong, and the company wanted a website that matched the quality of its work: clear, fast and rooted in its area."
+          },
+          {
+            "title": "An offer that is easier to understand",
+            "text": "The website separates design, landscaping and maintenance. Past projects illustrate each service, the area covered is explicit and visitors can request a study directly.\n\nThe tax benefits of garden maintenance have their own entry point, answering a question clients often ask."
+          },
+          {
+            "title": "The area at the heart of the content",
+            "text": "Services, towns covered and local projects give the business a precise context. A blog shares advice on gardening and permaculture.\n\nThis structure helps visitors, and search engines, understand what Permapaysage does, and where."
+          }
+        ],
+        "quote": "He turned a passable tool into a real digital war machine.",
+        "quoteBy": "Permapaysage, on LinkedIn (translated from French)"
+      },
+      "qoredb": {
+        "role": "Open-source product",
+        "summary": "A native database client, written in Rust. 34 engines, one interface.",
+        "fact": "10,000+ downloads",
+        "imageAlt": "QoreDB query editor"
+      },
+      "tcgNexus": {
+        "role": "Web platform · Tech lead",
+        "summary": "An ecosystem for card players: tournaments, marketplace and AI-assisted analysis.",
+        "fact": "Team of 5 · Live",
+        "imageAlt": "TCG Nexus home page"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Designer and developer, under one roof.",
+      "lead": "Behind Atlas is one person: the one who listens to you, designs your website and writes its code."
+    },
+    "portraitAlt": "Portrait of Raphaël Plassart",
+    "introTitle": "Hello, I’m Raphaël.",
+    "intro": [
+      "I’m Raphaël Plassart, developer and founder of Atlas. I like giving ideas a concrete shape: finding the right composition, simplifying a journey and building a website that is pleasant to use.",
+      "My experience as a developer and as co-founder of Melios and Quori shapes an approach that ties technology to the real needs of a business. A website is a working tool as much as a shop window.",
+      "With me, you have a direct contact. We define the scope, priorities and steps together before starting. You follow progress and take part in the decisions that matter."
+    ],
+    "values": {
+      "title": "How I work.",
+      "items": [
+        {
+          "title": "Understand before designing",
+          "text": "Your trade, your customers and their questions come before colours and effects."
+        },
+        {
+          "title": "Speed as courtesy",
+          "text": "A slow website drives people away. Every page is built to load fast, on every screen."
+        },
+        {
+          "title": "Show rather than promise",
+          "text": "No invented figures or superlatives: real projects and attributed testimonials."
+        },
+        {
+          "title": "Stay reachable",
+          "text": "After launch, you keep the same contact to help your website evolve."
+        }
+      ]
+    },
+    "products": {
+      "title": "What else I build.",
+      "text": "Alongside client work, I design my own products, such as QoreDB, an open-source database client, and TCG Nexus, a platform for card players.",
+      "link": "See the work"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Let’s talk about your project.",
+      "lead": "One message is enough to start. I reply personally, with specific questions or a first idea."
+    },
+    "nextTitle": "What happens next",
+    "next": [
+      "I read your message and reply.",
+      "We talk about your business and your goals.",
+      "You receive a clear, detailed proposal."
+    ],
+    "direct": "Prefer email? Write to me directly:"
+  },
+  "faq": {
+    "hero": {
+      "title": "The right questions.",
+      "lead": "Before getting started, here is what people ask me most often."
+    },
+    "items": [
+      {
+        "question": "How much does a custom website cost?",
+        "answer": "The price depends on the number of pages, the content and the features. After a first conversation, you receive a quote that sets out the scope and the steps. No flat rate can replace that discussion."
+      },
+      {
+        "question": "Can you redo my existing website?",
+        "answer": "Yes. We start by identifying what works and what needs to change: visual identity, content, navigation or technology. URL changes are prepared so that journeys stay consistent."
+      },
+      {
+        "question": "How does a project run?",
+        "answer": "We clarify your goals, then I propose a visual direction. After your feedback, I build the pages, check the journeys and prepare the launch with you."
+      },
+      {
+        "question": "Is SEO taken into account?",
+        "answer": "Yes: page structure, titles, descriptions, internal links and performance are part of the design. A ranking on Google cannot, however, be guaranteed."
+      },
+      {
+        "question": "Do you also work on applications?",
+        "answer": "Yes. Beyond websites, I design and build web applications, business tools and SaaS products, from design to production."
+      },
+      {
+        "question": "Will I be able to publish articles?",
+        "answer": "Yes. The publishing setup is chosen according to your needs. An admin area can be included in the quote if you want to write and publish on your own."
+      },
+      {
+        "question": "Who looks after the website after delivery?",
+        "answer": "Hosting, maintenance and support terms are set out in the quote. We plan the access and explanations needed to keep your website running."
+      }
+    ],
+    "moreTitle": "Another question?",
+    "moreText": "Ask it directly, I’ll reply personally.",
+    "cta": "Ask me"
+  },
+  "links": {
+    "hero": {
+      "title": "Raphaël Plassart.",
+      "lead": "Where to reach me and follow my work."
+    },
+    "site": "Atlas, the website",
+    "contact": "Email me",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "kofi": "Support my work"
+  },
+  "success": {
+    "title": "Message received.",
+    "text": "Thank you! I’ll get back to you to talk about your project.",
+    "back": "Back to home"
   },
   "notFound": {
-    "eyebrow": "404 / OUT OF FRAME",
-    "titleLine1": "This page has taken",
-    "titleLine2": "a different path.",
-    "text": "Let’s help you find your way back.",
-    "back": "Back to the studio"
+    "title": "This page isn’t on the map.",
+    "text": "The address may have changed. Let’s start again from a known point.",
+    "back": "Back to home",
+    "work": "See the work"
   },
   "blog": {
-    "eyebrow": "THE ATLAS JOURNAL",
-    "titleLine1": "Studio notes.",
-    "titleLine2": "Ideas to take away.",
-    "introLine1": "Design, code and online presence.",
-    "introLine2": "Pointers to help you make the right calls.",
-    "readingTime": "{minutes} MIN",
+    "title": "The journal.",
+    "lead": "Practical pointers to prepare your website, shape its identity and get found.",
+    "readingTime": "{minutes} min read",
     "readingTimeLong": "{minutes}-minute read",
     "by": "By {author}",
     "publishedOn": "Published on {date}",
     "updatedOn": "Updated on {date}",
-    "backToList": "All notes",
-    "seriesLabel": "STUDIO NOTES",
-    "cta": "Let’s talk about your website",
+    "backToList": "All articles",
+    "read": "Read the article",
+    "ctaTitle": "A website to prepare?",
+    "ctaText": "Let’s talk about your business and what needs to change.",
+    "cta": "Start a project",
     "empty": "No articles published in English yet.",
     "breadcrumbHome": "Home",
     "rssTitle": "Atlas — Journal"

@@ -22,7 +22,7 @@ export function SanityFigure({
   const width = image.dimensions?.width ?? 1600;
   const height = image.dimensions?.height ?? 900;
   return (
-    <figure className="article-figure">
+    <figure>
       <Image
         src={urlForImage(image).width(Math.min(width, 2000)).url()}
         alt={image.alt ?? ""}
@@ -45,7 +45,7 @@ const components: PortableTextComponents = {
       <SanityFigure image={value} />
     ),
     codeBlock: ({ value }: { value: CodeBlock }) => (
-      <figure className="article-code">
+      <figure>
         {value.filename && <figcaption>{value.filename}</figcaption>}
         <pre>
           <code data-language={value.language}>{value.code}</code>
@@ -53,7 +53,7 @@ const components: PortableTextComponents = {
       </figure>
     ),
     callout: ({ value }: { value: Callout }) => (
-      <aside className={`article-callout article-callout-${value.tone ?? "info"}`}>
+      <aside className={`callout callout-${value.tone ?? "info"}`}>
         <p>{value.text}</p>
       </aside>
     ),
@@ -65,7 +65,6 @@ const components: PortableTextComponents = {
       return (
         <a
           href={href}
-          className="text-link"
           {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         >
           {children}

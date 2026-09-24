@@ -1,308 +1,245 @@
-// TODO(i18n) : contenu de la page encore en français.
 import Image from "next/image";
-import { setRequestLocale } from "next-intl/server";
-import { Art, Label } from "@/components/studio/Shell";
-import { Contact } from "@/components/studio/Contact";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { ContactBand } from "@/components/atlas/ContactBand";
+import { ContourField } from "@/components/atlas/ContourField";
+import { PageSpeed } from "@/components/atlas/PageSpeed";
+import { Path } from "@/components/atlas/Path";
+import { PostCards } from "@/components/atlas/PostCards";
+import { Reveal } from "@/components/atlas/Reveal";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { getPosts } from "@/lib/blog";
+import { permapaysage, portrait, products, quoted } from "@/lib/content";
 import { pageMetadata } from "@/lib/meta";
+
 export async function generateMetadata({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
   return pageMetadata({ locale: locale as Locale, path: "/" });
 }
-export default async function Page({ params }: PageProps<"/[locale]">) {
-  const { locale } = await params;
-  setRequestLocale(locale as Locale);
-  const posts = await getPosts(locale as Locale, 3);
+
+export default async function Home({ params }: PageProps<"/[locale]">) {
+  const { locale } = (await params) as { locale: Locale };
+  setRequestLocale(locale);
+  const [t, tWork, tMethod, posts] = await Promise.all([
+    getTranslations({ locale, namespace: "home" }),
+    getTranslations({ locale, namespace: "work.items" }),
+    getTranslations({ locale, namespace: "method" }),
+    getPosts(locale, 3),
+  ]);
+  const doors = [
+    { key: "site", href: "/offres#site" },
+    { key: "product", href: "/offres#produit" },
+  ] as const;
+
   return (
     <main id="main-content">
-      <section className="hero section-wrap">
-        <div className="hero-top">
-          <Label>ATELIER INDÉPENDANT · DESIGN & CODE</Label>
-          <span className="hero-note">
-            Raphaël Plassart
+      <section className="band hero">
+        <ContourField className="band-field" />
+        <div className="wrap hero-body">
+          <h1 className="display">
+            {t("hero.title1")}
             <br />
-            Développeur & designer freelance
-          </span>
-        </div>
-        <div className="hero-grid">
-          <div className="hero-copy">
-            <h1>
-              Votre savoir-faire.
-              <br />
-              Un site à <em>sa hauteur.</em>
-            </h1>
-            <p>
-              Je crée des sites qui ont du caractère.
-              <br />
-              Pensés pour vos clients, dessinés pour vous.
-              <br />
-              Et construits pour durer.
-            </p>
-            <div className="hero-actions">
-              <Link href="#contact" className="button">
-                Parlons de votre projet <span>↗</span>
+            {t("hero.title2")}
+          </h1>
+          <div className="hero-aside">
+            <p className="lead">{t("hero.lead")}</p>
+            <div className="actions">
+              <Link href="/contact" className="btn btn-light">
+                {t("hero.cta")}
               </Link>
-              <Link href="#realisations" className="text-link">
-                Explorer les réalisations <span>↓</span>
+              <Link href="/realisations" className="link">
+                {t("hero.secondary")}
               </Link>
             </div>
           </div>
-          <Art />
         </div>
-        <div className="hero-bottom">
-          <span>
-            LE SENS DU DÉTAIL. DE LA PREMIÈRE IDÉE À LA DERNIÈRE LIGNE DE CODE.
-          </span>
-          <span>SCROLL POUR EXPLORER ↓</span>
+        <div className="wrap">
+          <PageSpeed className="speed" />
         </div>
       </section>
-      <div className="discipline-strip">
-        <span>Design singulier</span>
-        <b>✳</b>
-        <span>Développement sur mesure</span>
-        <b>✳</b>
-        <span>Référencement naturel</span>
-        <b>✳</b>
-        <span>Relation directe</span>
-      </div>
-      <section id="realisations" className="section-wrap work-section">
-        <div className="section-heading">
-          <div>
-            <Label>01 / DU CONCRET</Label>
-            <h2>
-              Le travail parle.
-              <br />
-              <em>Les clients aussi.</em>
+
+      <section className="section case" aria-labelledby="case-title">
+        <div className="wrap">
+          <Reveal className="case-head">
+            <h2 id="case-title" className="h2">
+              {t("case.title")}
             </h2>
-          </div>
-          <p>
-            Chaque activité a son histoire.
-            <br />
-            Voici comment je l’aide à prendre sa place en ligne.
-          </p>
-        </div>
-        <Link className="project-feature" href="/realisations/permapaysage">
-          <div className="project-preview">
-            <div className="project-browser">
-              <div className="browser-bar">
-                <span>● ● ●</span>
-                <span>permapaysage.fr</span>
-                <span>↗</span>
+            <p className="body">{t("case.who")}</p>
+          </Reveal>
+          <Reveal className="shot">
+            <Image
+              src={permapaysage.image.src}
+              width={permapaysage.image.width}
+              height={permapaysage.image.height}
+              alt={t("case.imageAlt")}
+              sizes="(max-width: 1480px) 100vw, 1400px"
+            />
+          </Reveal>
+          <div className="case-grid">
+            <Reveal>
+              <h3 className="h3">{t("case.beforeTitle")}</h3>
+              <p className="body">{t("case.before")}</p>
+            </Reveal>
+            <Reveal delay={0.06}>
+              <h3 className="h3">{t("case.didTitle")}</h3>
+              <p className="body">{t("case.did")}</p>
+            </Reveal>
+            <Reveal delay={0.12} className="quote">
+              <blockquote>{quoted(t("case.quote"), locale)}</blockquote>
+              <p>{t("case.quoteBy")}</p>
+              <div className="actions">
+                <Link href="/realisations/permapaysage" className="link link-arrow">
+                  {t("case.readCase")}
+                </Link>
+                <a
+                  href={permapaysage.url}
+                  className="link link-out"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("case.visit")}
+                </a>
               </div>
-              <div className="garden-preview">
-                <div className="garden-brand">
-                  permapaysage<span>ÉCO-PAYSAGISTE À VALLET</span>
-                </div>
-                <div className="garden-content">
-                  <span>CONCEVOIR · AMÉNAGER · PRENDRE SOIN</span>
-                  <h3>
-                    Des jardins vivants.
-                    <br />
-                    <i>Naturellement.</i>
-                  </h3>
-                  <p>
-                    Un autre regard sur votre jardin,
-                    <br />
-                    dans le Vignoble Nantais.
-                  </p>
-                  <span className="garden-button">Imaginer mon jardin ↗</span>
-                </div>
-                <div className="garden-illustration">
-                  <i />
-                  <i />
-                  <i />
-                  <i />
-                  <i />
-                  <i />
-                  <span>
-                    Le vivant
-                    <br />
-                    comme inspiration.
-                  </span>
-                </div>
-              </div>
-            </div>
-            <span className="preview-caption">
-              DIRECTION VISUELLE · APERÇU ÉDITORIAL DU PROJET
-            </span>
+            </Reveal>
           </div>
-          <div className="project-info">
-            <div>
-              <h3>Permapaysage</h3>
-              <p>Faire grandir une présence, comme on cultive un jardin.</p>
-            </div>
-            <div className="project-tags">
-              <span>Refonte</span>
-              <span>SEO local</span>
-              <span className="circle-arrow">↗</span>
-            </div>
-          </div>
-        </Link>
-        <div className="testimonial">
-          <span className="quote-mark">“</span>
-          <blockquote>
-            Il a su transformer un outil potable en une véritable machine de
-            guerre digitale.
-            <cite>
-              PERMAPAYSAGE <span>— Éco-paysagiste à Vallet</span>
-            </cite>
-          </blockquote>
-          <a
-            className="text-link"
-            href="https://www.linkedin.com/posts/permapaysage_permapaysage-%C3%A9co-paysagiste-%C3%A0-vallet-activity-7441431187446861824-4d9D"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Lire le témoignage ↗
-          </a>
         </div>
       </section>
-      <section id="expertises" className="expertise-section section-wrap">
-        <div className="section-heading">
-          <div>
-            <Label>02 / L’EXIGENCE, À CHAQUE ÉTAPE</Label>
-            <h2>
-              Beau, oui.
-              <br />
-              <em>Mais jamais seulement.</em>
+
+      <section className="section" aria-labelledby="doors-title">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <h2 id="doors-title" className="h2">
+              {t("doors.title")}
             </h2>
+          </Reveal>
+          <div className="doors">
+            {doors.map((d) => (
+              <Reveal key={d.key} className="door">
+                <ContourField
+                  className="door-field"
+                  color="31,59,217"
+                  levels={9}
+                  cell={16}
+                  scale={0.004}
+                  interactive={false}
+                />
+                <p className="door-for">{t(`doors.${d.key}.for`)}</p>
+                <h3 className="door-title">{t(`doors.${d.key}.title`)}</h3>
+                <p className="body">{t(`doors.${d.key}.text`)}</p>
+                <ul className="chips">
+                  {(t.raw(`doors.${d.key}.items`) as string[]).map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+                <Link href={d.href} className="link link-arrow">
+                  {t("doors.more")}
+                </Link>
+              </Reveal>
+            ))}
           </div>
-          <p>
-            Un bon site doit vous ressembler.
-            <br />
-            Un excellent site doit aussi vous servir.
-          </p>
-        </div>
-        <div className="services">
-          {[
-            {
-              n: "01",
-              title: "Une identité qui reste",
-              text: "Une direction artistique pensée pour votre activité. Des choix de typographie, de couleurs et de composition qui vous rendent reconnaissable.",
-              tags: "DIRECTION ARTISTIQUE / WEB DESIGN",
-            },
-            {
-              n: "02",
-              title: "Du code qui tient la route",
-              text: "Un site fluide, accessible et agréable sur tous les écrans. Une base technique soignée, sans surcharger l’expérience de vos visiteurs.",
-              tags: "DÉVELOPPEMENT / PERFORMANCE",
-            },
-            {
-              n: "03",
-              title: "Une présence qui compte",
-              text: "Des pages structurées autour de vos services et des recherches de vos clients. Le référencement se construit dès les premières lignes.",
-              tags: "SEO / STRATÉGIE DE CONTENU",
-            },
-          ].map((s) => (
-            <div className="service" key={s.n}>
-              <span className="service-number">{s.n}</span>
-              <h3>{s.title}</h3>
-              <p>{s.text}</p>
-              <span className="service-tags">{s.tags}</span>
-            </div>
-          ))}
         </div>
       </section>
-      <section className="about-section section-wrap">
-        <div className="portrait-wrap">
-          <Image
-            src="/images/Raphael-Plassart.png"
-            alt="Raphaël Plassart, créateur d’Atlas"
-            width={560}
-            height={640}
-            sizes="(max-width: 700px) 90vw, 40vw"
-          />
-          <span>LE VISAGE DERRIÈRE ATLAS ↗</span>
-        </div>
-        <div>
-          <Label>03 / UN FREELANCE, PAS UNE USINE</Label>
-          <h2>
-            La tête dans les idées.
-            <br />
-            <em>Les mains dans le code.</em>
-          </h2>
-          <p>
-            Moi, c’est Raphaël. Je réunis design et développement pour faire le
-            lien entre ce que vous imaginez et ce que vos clients vivent.
-          </p>
-          <p>
-            Avec Atlas, vous échangez directement avec la personne qui conçoit
-            et développe votre site. Du premier croquis à la mise en ligne, je
-            garde le même fil : comprendre votre métier et lui donner la place
-            qu’il mérite.
-          </p>
-          <Link href="/about" className="text-link">
-            Faire connaissance ↗
-          </Link>
-        </div>
-      </section>
-      <section className="process-section section-wrap">
-        <Label>04 / SIMPLE, DU DÉBUT À LA SUITE</Label>
-        <div className="process-grid">
-          {[
-            [
-              "On échange.",
-              "Votre métier, vos clients, vos objectifs. On pose les bonnes questions avant de dessiner.",
-            ],
-            [
-              "On donne forme.",
-              "Une direction visuelle, des pages, des retours. Vous voyez votre site prendre vie.",
-            ],
-            [
-              "On fait les choses bien.",
-              "Développement, vérifications et mise en ligne. Puis les clés pour continuer sereinement.",
-            ],
-          ].map(([title, text], i) => (
-            <div key={title}>
-              <span>0{i + 1} —</span>
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section className="journal-section section-wrap">
-        <div className="section-heading">
-          <div>
-            <Label>05 / NOTES D’ATELIER</Label>
-            <h2>
-              Un peu de recul.
-              <br />
-              <em>Beaucoup de concret.</em>
+
+      <section className="section" aria-labelledby="products-title">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <h2 id="products-title" className="h2">
+              {t("products.title")}
             </h2>
+            <p className="body">{t("products.intro")}</p>
+          </Reveal>
+          <div className="cards">
+            {products.map((p) => (
+              <Reveal key={p.key}>
+                <a
+                  href={p.url}
+                  className="card"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="shot shot-crop">
+                    <Image
+                      src={p.image.src}
+                      width={p.image.width}
+                      height={p.image.height}
+                      alt={tWork(`${p.key}.imageAlt`)}
+                      sizes="(max-width: 900px) 100vw, 50vw"
+                    />
+                  </div>
+                  <div className="card-meta">
+                    <h3 className="h3">{p.name}</h3>
+                    <span>{tWork(`${p.key}.fact`)}</span>
+                  </div>
+                  <p className="body">{tWork(`${p.key}.summary`)}</p>
+                </a>
+              </Reveal>
+            ))}
           </div>
-          <Link className="text-link" href="/blog">
-            Tout le journal ↗
-          </Link>
-        </div>
-        <div className="journal-grid">
-          {posts.map((p, i) => (
-            <Link
-              href={`/blog/${p.slug}`}
-              className="journal-card"
-              key={p._id}
-            >
-              <div
-                className={`journal-art journal-art-${i}`}
-                aria-hidden="true"
-              >
-                <span>{["Aa", "↗", "</>"][i]}</span>
-                <small>ATLAS — NOTE 0{i + 1}</small>
-              </div>
-              <p className="eyebrow">
-                {p.category}{" "}
-                {p.readingTime && <span>· {p.readingTime} MIN DE LECTURE</span>}
-              </p>
-              <h3>
-                {p.title} <span>↗</span>
-              </h3>
-            </Link>
-          ))}
         </div>
       </section>
-      <Contact />
+
+      <section className="section" aria-labelledby="method-title">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <h2 id="method-title" className="h2">
+              {t("method.title")}
+            </h2>
+            <p className="body">{t("method.intro")}</p>
+          </Reveal>
+          <Path steps={tMethod.raw("steps")} />
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="about-title">
+        <div className="wrap about">
+          <Reveal className="portrait">
+            <Image
+              src={portrait.src}
+              width={portrait.width}
+              height={portrait.height}
+              alt={t("about.portraitAlt")}
+              sizes="(max-width: 900px) 90vw, 40vw"
+            />
+          </Reveal>
+          <Reveal>
+            <h2 id="about-title" className="h2">
+              {t("about.title")}
+            </h2>
+            <div className="stack">
+              <p className="body">{t("about.p1")}</p>
+              <p className="body">{t("about.p2")}</p>
+            </div>
+            <div className="actions">
+              <Link href="/about" className="link link-arrow">
+                {t("about.more")}
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {posts.length > 0 && (
+        <section className="section" aria-labelledby="journal-title">
+          <div className="wrap">
+            <Reveal className="section-head">
+              <div>
+                <h2 id="journal-title" className="h2">
+                  {t("journal.title")}
+                </h2>
+                <p className="body">
+                  {t("journal.intro")}
+                </p>
+              </div>
+              <Link href="/blog" className="link link-arrow">
+                {t("journal.all")}
+              </Link>
+            </Reveal>
+            <PostCards posts={posts} locale={locale} />
+          </div>
+        </section>
+      )}
+
+      <ContactBand />
     </main>
   );
 }

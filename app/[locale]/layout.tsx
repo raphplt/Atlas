@@ -1,25 +1,27 @@
-import "../globals.css";
-import "../studio.css";
-import type { Metadata } from "next";
+import "@/styles/tokens.css";
+import "@/styles/base.css";
+import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Inter, Playfair_Display } from "next/font/google";
-import { Footer, Header } from "@/components/studio/Shell";
+import { Funnel_Display, Funnel_Sans } from "next/font/google";
+import { Footer } from "@/components/atlas/Footer";
+import { Header } from "@/components/atlas/Header";
 import { locales, routing } from "@/i18n/routing";
 import { defaultOgImage, siteMeta } from "@/lib/meta";
 
-const inter = Inter({
+const display = Funnel_Display({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-funnel-display",
   display: "swap",
 });
-const serif = Playfair_Display({
+const text = Funnel_Sans({
   subsets: ["latin"],
-  variable: "--font-playfair",
-  weight: ["400", "500"],
+  variable: "--font-funnel-sans",
   display: "swap",
 });
+
+export const viewport: Viewport = { themeColor: "#1f3bd9" };
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -50,6 +52,7 @@ export async function generateMetadata({
       images: [defaultOgImage],
     },
     twitter: { card: "summary_large_image" },
+    manifest: "/manifest.webmanifest",
   };
 }
 
@@ -62,8 +65,14 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "shell" });
   return (
-    <html lang={locale} className={`${inter.variable} ${serif.variable}`}>
-      <body className="atlas-body">
+    <html lang={locale} suppressHydrationWarning className={`${display.variable} ${text.variable}`}>
+      <head>
+        <script
+          // Active les apparitions au défilement uniquement quand JS tourne.
+          dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }}
+        />
+      </head>
+      <body>
         <NextIntlClientProvider>
           <a className="skip-link" href="#main-content">
             {t("skipLink")}

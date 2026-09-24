@@ -23,3 +23,17 @@ export function sectionsToPortableText(
     ),
   );
 }
+
+/** Convertit un texte brut (paragraphes séparés par une ligne vide) en Portable Text. */
+export function textToPortableText(text: string): PortableTextBlock[] {
+  return text.split(/\n{2,}/).map(
+    (paragraph) =>
+      ({
+        _type: "block",
+        _key: key(),
+        style: "normal",
+        markDefs: [],
+        children: [{ _type: "span", _key: key(), text: paragraph, marks: [] }],
+      }) as PortableTextBlock,
+  );
+}

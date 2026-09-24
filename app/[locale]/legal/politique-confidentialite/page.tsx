@@ -1,8 +1,7 @@
-// TODO(i18n) : pas encore de version italienne des textes légaux — repli sur le français (i18n/request.ts).
+import { PageHero } from "@/components/atlas/PageHero";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/meta";
-import { H4 } from "@/components/ui/typography";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/legal/politique-confidentialite">) {
   const { locale } = await params;
@@ -19,18 +18,19 @@ export default async function Politique({ params }: PageProps<"/[locale]/legal/p
   const t = await getTranslations({ locale: locale as Locale, namespace: "legal.privacy" });
 
   return (
-    <main id="main-content" className="article-wrap">
-      <h1 className="h2 mb-8">{t("title")}</h1>
-      <p className="text-muted-foreground mb-8">{t("lastUpdate")}</p>
-
-      <div className="prose prose-lg max-w-none">
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.introduction.title")}</H4>
+    <main id="main-content" className="legal">
+      <PageHero title={t("title")}>
+        <p className="legal-date">{t("lastUpdate")}</p>
+      </PageHero>
+      <section className="section">
+        <div className="wrap prose">
+        <>
+          <h2>{t("sections.introduction.title")}</h2>
           <p>{t("sections.introduction.content")}</p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.controller.title")}</H4>
+        <>
+          <h2>{t("sections.controller.title")}</h2>
           <p>{t("sections.controller.content")}</p>
           <p>
             <strong>{t("sections.controller.name")}</strong>
@@ -45,14 +45,14 @@ export default async function Politique({ params }: PageProps<"/[locale]/legal/p
             <br />
             {t("sections.controller.phone")}
           </p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.data.title")}</H4>
+        <>
+          <h2>{t("sections.data.title")}</h2>
           <p>
             <strong>{t("sections.data.formTitle")}</strong>
           </p>
-          <ul className="list-disc pl-6">
+          <ul>
             {t
               .raw("sections.data.formItems")
               .map((item: string, index: number) => (
@@ -62,31 +62,31 @@ export default async function Politique({ params }: PageProps<"/[locale]/legal/p
           <p>
             <strong>{t("sections.data.autoTitle")}</strong>
           </p>
-          <ul className="list-disc pl-6">
+          <ul>
             {t
               .raw("sections.data.autoItems")
               .map((item: string, index: number) => (
                 <li key={index}>{item}</li>
               ))}
           </ul>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.purposes.title")}</H4>
+        <>
+          <h2>{t("sections.purposes.title")}</h2>
           <p>{t("sections.purposes.content")}</p>
-          <ul className="list-disc pl-6">
+          <ul>
             {t
               .raw("sections.purposes.items")
               .map((item: string, index: number) => (
                 <li key={index}>{item}</li>
               ))}
           </ul>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.recipients.title")}</H4>
+        <>
+          <h2>{t("sections.recipients.title")}</h2>
           <p>{t("sections.recipients.content")}</p>
-          <ul className="list-disc pl-6">
+          <ul>
             {t
               .raw("sections.recipients.items")
               .map((item: string, index: number) => (
@@ -96,33 +96,33 @@ export default async function Politique({ params }: PageProps<"/[locale]/legal/p
           <p>
             <em>{t("sections.recipients.noSale")}</em>
           </p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.transfers.title")}</H4>
+        <>
+          <h2>{t("sections.transfers.title")}</h2>
           <p>{t("sections.transfers.content")}</p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.retention.title")}</H4>
-          <ul className="list-disc pl-6">
+        <>
+          <h2>{t("sections.retention.title")}</h2>
+          <ul>
             {t
               .raw("sections.retention.items")
               .map((item: string, index: number) => (
                 <li key={index}>{item}</li>
               ))}
           </ul>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.cookies.title")}</H4>
+        <>
+          <h2>{t("sections.cookies.title")}</h2>
           <p>{t("sections.cookies.intro")}</p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.rights.title")}</H4>
+        <>
+          <h2>{t("sections.rights.title")}</h2>
           <p>{t("sections.rights.content")}</p>
-          <ul className="list-disc pl-6">
+          <ul>
             {t
               .raw("sections.rights.items")
               .map((item: string, index: number) => (
@@ -133,30 +133,30 @@ export default async function Politique({ params }: PageProps<"/[locale]/legal/p
           <p>
             <strong>{t("sections.rights.cnil")}</strong>
           </p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.security.title")}</H4>
+        <>
+          <h2>{t("sections.security.title")}</h2>
           <p>{t("sections.security.content")}</p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.automated.title")}</H4>
+        <>
+          <h2>{t("sections.automated.title")}</h2>
           <p>{t("sections.automated.content")}</p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.minors.title")}</H4>
+        <>
+          <h2>{t("sections.minors.title")}</h2>
           <p>{t("sections.minors.content")}</p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.modifications.title")}</H4>
+        <>
+          <h2>{t("sections.modifications.title")}</h2>
           <p>{t("sections.modifications.content")}</p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.contact.title")}</H4>
+        <>
+          <h2>{t("sections.contact.title")}</h2>
           <p>
             {t("sections.contact.content")}
             <br />
@@ -166,8 +166,9 @@ export default async function Politique({ params }: PageProps<"/[locale]/legal/p
             <br />
             {t("sections.contact.address")}
           </p>
-        </section>
+        </>
       </div>
+      </section>
     </main>
   );
 }

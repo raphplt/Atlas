@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Label } from "@/components/studio/Shell";
-import { Link } from "@/i18n/navigation";
+import { PageHero } from "@/components/atlas/PageHero";
+import { PostCards } from "@/components/atlas/PostCards";
 import type { Locale } from "@/i18n/routing";
 import { getPosts } from "@/lib/blog";
 import { absoluteUrl, localizedPath, pageMetadata } from "@/lib/meta";
@@ -34,53 +34,13 @@ export default async function Blog({ params }: PageProps<"/[locale]/blog">) {
   const t = await getTranslations({ locale, namespace: "blog" });
   const posts = await getPosts(locale);
   return (
-    <main id="main-content" className="section-wrap">
-      <Label>{t("eyebrow")}</Label>
-      <div className="section-heading">
-        <h1 style={{ fontSize: "clamp(44px,6vw,80px)" }}>
-          {t("titleLine1")}
-          <br />
-          <em>{t("titleLine2")}</em>
-        </h1>
-        <p>
-          {t("introLine1")}
-          <br />
-          {t("introLine2")}
-        </p>
-      </div>
-      {posts.length === 0 ? (
-        <p>{t("empty")}</p>
-      ) : (
-        <div className="journal-grid">
-          {posts.map((p, i) => (
-            <Link className="journal-card" href={`/blog/${p.slug}`} key={p._id}>
-              <div
-                className={`journal-art journal-art-${i % 3}`}
-                aria-hidden="true"
-              >
-                <span>{["Aa", "↗", "</>"][i % 3]}</span>
-                <small>ATLAS — NOTE {String(i + 1).padStart(2, "0")}</small>
-              </div>
-              <p className="eyebrow">
-                {[
-                  p.category,
-                  p.readingTime && t("readingTime", { minutes: p.readingTime }),
-                ]
-                  .filter(Boolean)
-                  .join(" · ")}
-              </p>
-              <h2 style={{ fontSize: 26 }}>{p.title} ↗</h2>
-              {p.excerpt && (
-                <p
-                  style={{ fontSize: 13, lineHeight: 1.8, color: "var(--muted)" }}
-                >
-                  {p.excerpt}
-                </p>
-              )}
-            </Link>
-          ))}
+    <main id="main-content">
+      <PageHero title={t("title")} lead={t("lead")} />
+      <section className="section">
+        <div className="wrap">
+          <PostCards posts={posts} locale={locale} headingLevel="h2" />
         </div>
-      )}
+      </section>
     </main>
   );
 }

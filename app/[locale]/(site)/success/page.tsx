@@ -1,8 +1,9 @@
-// TODO(i18n) : contenu de la page encore en français.
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { PageHero } from "@/components/atlas/PageHero";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/meta";
+
 export async function generateMetadata({ params }: PageProps<"/[locale]/success">) {
   const { locale } = await params;
   return pageMetadata({
@@ -12,17 +13,18 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/success"
     noindex: true,
   });
 }
+
 export default async function Success({ params }: PageProps<"/[locale]/success">) {
-  const { locale } = await params;
-  setRequestLocale(locale as Locale);
+  const { locale } = (await params) as { locale: Locale };
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "success" });
   return (
-    <main id="main-content" className="article-wrap">
-      <p className="eyebrow">BIEN REÇU</p>
-      <h1>Merci pour votre message.</h1>
-      <p>Je reviens vers vous pour parler de votre projet.</p>
-      <Link className="button" href="/">
-        Retour à l’accueil ↗
-      </Link>
+    <main id="main-content">
+      <PageHero title={t("title")} lead={t("text")}>
+        <Link href="/" className="btn btn-light">
+          {t("back")}
+        </Link>
+      </PageHero>
     </main>
   );
 }

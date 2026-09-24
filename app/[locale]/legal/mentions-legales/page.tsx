@@ -1,5 +1,4 @@
-// TODO(i18n) : pas encore de version italienne des textes légaux — repli sur le français (i18n/request.ts).
-import { H4 } from "@/components/ui/typography";
+import { PageHero } from "@/components/atlas/PageHero";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/meta";
@@ -19,13 +18,14 @@ export default async function MentionsLegales({ params }: PageProps<"/[locale]/l
   const t = await getTranslations({ locale: locale as Locale, namespace: "legal.mentions" });
 
   return (
-    <main id="main-content" className="article-wrap">
-      <h1 className="h2 mb-8">{t("title")}</h1>
-      <p className="text-muted-foreground mb-8">{t("lastUpdate")}</p>
-
-      <div className="prose prose-lg max-w-none">
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.publisher.title")}</H4>
+    <main id="main-content" className="legal">
+      <PageHero title={t("title")}>
+        <p className="legal-date">{t("lastUpdate")}</p>
+      </PageHero>
+      <section className="section">
+        <div className="wrap prose">
+        <>
+          <h2>{t("sections.publisher.title")}</h2>
           <p>
             <strong>{t("sections.publisher.name")}</strong>
             <br />
@@ -43,15 +43,15 @@ export default async function MentionsLegales({ params }: PageProps<"/[locale]/l
             <br />
             <em>{t("sections.publisher.tva")}</em>
           </p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.director.title")}</H4>
+        <>
+          <h2>{t("sections.director.title")}</h2>
           <p>{t("sections.director.content")}</p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.contact.title")}</H4>
+        <>
+          <h2>{t("sections.contact.title")}</h2>
           <p>
             {t("sections.contact.email")}
             <br />
@@ -59,10 +59,10 @@ export default async function MentionsLegales({ params }: PageProps<"/[locale]/l
             <br />
             {t("sections.contact.website")}
           </p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.hosting.title")}</H4>
+        <>
+          <h2>{t("sections.hosting.title")}</h2>
           <p>
             {t("sections.hosting.content")}
             <br />
@@ -76,38 +76,39 @@ export default async function MentionsLegales({ params }: PageProps<"/[locale]/l
             <br />
             {t("sections.hosting.website")}
           </p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.intellectual.title")}</H4>
+        <>
+          <h2>{t("sections.intellectual.title")}</h2>
           <p>{t("sections.intellectual.content")}</p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.data.title")}</H4>
+        <>
+          <h2>{t("sections.data.title")}</h2>
           <p>{t("sections.data.content")}</p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.cookies.title")}</H4>
+        <>
+          <h2>{t("sections.cookies.title")}</h2>
           <p>{t("sections.cookies.content")}</p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.liability.title")}</H4>
+        <>
+          <h2>{t("sections.liability.title")}</h2>
           <p>{t("sections.liability.content")}</p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.links.title")}</H4>
+        <>
+          <h2>{t("sections.links.title")}</h2>
           <p>{t("sections.links.content")}</p>
-        </section>
+        </>
 
-        <section className="mb-8">
-          <H4 className="mb-4">{t("sections.law.title")}</H4>
+        <>
+          <h2>{t("sections.law.title")}</h2>
           <p>{t("sections.law.content")}</p>
-        </section>
+        </>
       </div>
+      </section>
     </main>
   );
 }

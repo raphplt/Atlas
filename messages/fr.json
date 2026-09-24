@@ -2,12 +2,12 @@
   "meta": {
     "siteName": "Atlas",
     "ogLocale": "fr_FR",
-    "defaultTitle": "Atlas — Design & développement web · Raphaël Plassart",
-    "description": "Des sites web singuliers, rapides et pensés pour votre activité. Design, développement et référencement par Raphaël Plassart, freelance.",
+    "defaultTitle": "Atlas — Sites web rapides et bien référencés · Raphaël Plassart",
+    "description": "Des sites rapides, singuliers et bien référencés pour les artisans, les TPE et les indépendants. Design, développement et SEO par Raphaël Plassart, freelance.",
     "pages": {
       "about": {
-        "title": "L’atelier — Raphaël Plassart",
-        "description": "Raphaël Plassart, développeur freelance derrière Atlas. Une approche directe qui réunit design, code et compréhension de votre activité."
+        "title": "À propos — Raphaël Plassart",
+        "description": "Raphaël Plassart, designer et développeur freelance derrière Atlas : un seul interlocuteur, du premier croquis à la mise en ligne."
       },
       "blog": {
         "title": "Journal — Design, web et visibilité",
@@ -24,10 +24,6 @@
       "success": {
         "title": "Message envoyé"
       },
-      "permapaysage": {
-        "title": "Permapaysage — Refonte d’un site d’éco-paysagiste",
-        "description": "Une refonte pour présenter les services de Permapaysage à Vallet, faciliter la prise de contact et structurer sa présence locale."
-      },
       "legalMentions": {
         "title": "Mentions légales",
         "description": "Mentions légales du site Atlas : éditeur, hébergeur et coordonnées de contact."
@@ -42,6 +38,18 @@
       },
       "notFound": {
         "title": "Page introuvable"
+      },
+      "offers": {
+        "title": "Offres — Votre site, votre produit",
+        "description": "Un site sur mesure pour être trouvé, ou une application pour faire tourner votre activité. Design, développement et référencement."
+      },
+      "work": {
+        "title": "Réalisations",
+        "description": "Des sites pour des clients bien réels, comme Permapaysage, et des produits conçus en propre : QoreDB et TCG Nexus."
+      },
+      "contact": {
+        "title": "Contact — Démarrer un projet",
+        "description": "Parlez-moi de votre activité et de votre projet de site ou d’application. Réponse personnelle de Raphaël Plassart."
       }
     }
   },
@@ -49,48 +57,428 @@
     "skipLink": "Aller au contenu",
     "homeAria": "Atlas, accueil",
     "mainNav": "Navigation principale",
-    "mobileNav": "Navigation mobile",
     "menu": "Menu",
+    "close": "Fermer",
+    "language": "Langue",
     "nav": {
       "work": "Réalisations",
-      "expertise": "Expertises",
-      "studio": "L’atelier",
-      "journal": "Journal"
+      "offers": "Offres",
+      "journal": "Journal",
+      "about": "À propos"
     },
-    "cta": "Parlons de votre projet",
-    "language": "Langue"
+    "cta": "Démarrer un projet"
   },
   "footer": {
-    "tagline": "Du caractère. Du sens. Du résultat.",
-    "writeMe": "Écrivez-moi",
+    "tagline": "Des sites rapides, singuliers et bien référencés, conçus et développés par Raphaël Plassart.",
+    "siteNav": "Plan du site",
+    "faq": "Questions fréquentes",
+    "contact": "Contact",
     "copyright": "© {year} Atlas · Raphaël Plassart",
     "legalNav": "Informations légales",
     "mentions": "Mentions légales",
     "privacy": "Confidentialité",
-    "terms": "CGV",
-    "faq": "FAQ"
+    "terms": "CGV"
+  },
+  "speed": {
+    "before": "Cette page s’est affichée en",
+    "after": "Les vôtres le peuvent aussi."
+  },
+  "home": {
+    "hero": {
+      "title1": "Mettez votre activité",
+      "title2": "sur la carte.",
+      "lead": "Je conçois et développe des sites rapides, singuliers et bien référencés, pour les artisans, les indépendants et les entreprises qui veulent être trouvés.",
+      "cta": "Démarrer un projet",
+      "secondary": "Voir les réalisations"
+    },
+    "case": {
+      "title": "Permapaysage a quitté Odoo pour un site à sa mesure.",
+      "who": "Éco-paysagiste à Vallet, dans le Vignoble nantais.",
+      "imageAlt": "Page d’accueil du site Permapaysage",
+      "beforeTitle": "Le point de départ",
+      "before": "Un site Odoo correct pour démarrer, mais lent et difficile à faire remonter sur Google, alors que la demande locale pour des jardins résilients explose.",
+      "didTitle": "Ce qu’on a construit",
+      "did": "Un site sur mesure, rapide, structuré autour des services et de la zone d’intervention, avec un accès direct au devis et aux avantages fiscaux.",
+      "quote": "Il a su transformer un outil potable en une véritable machine de guerre digitale.",
+      "quoteBy": "Permapaysage, sur LinkedIn",
+      "readCase": "Lire l’étude de cas",
+      "visit": "Voir le site"
+    },
+    "doors": {
+      "title": "Deux façons de travailler ensemble.",
+      "site": {
+        "for": "Artisans, TPE, indépendants",
+        "title": "Votre site",
+        "text": "Un site sur mesure qui vous ressemble, se charge en un clin d’œil et vous fait trouver par les clients de votre secteur.",
+        "items": [
+          "Design sur mesure",
+          "Référencement local",
+          "Fiche Google",
+          "Suivi après la mise en ligne"
+        ]
+      },
+      "product": {
+        "for": "Startups, porteurs de projet, équipes",
+        "title": "Votre produit",
+        "text": "Une application, un outil métier ou un SaaS : de l’idée à la production, avec la même exigence de design et de performance.",
+        "items": [
+          "Conception produit",
+          "Applications web",
+          "Outils métier",
+          "Mise en production"
+        ]
+      },
+      "more": "Découvrir l’offre"
+    },
+    "products": {
+      "title": "Ce que je construis, aussi pour moi.",
+      "intro": "Des produits que je conçois et fais vivre moi-même : le meilleur terrain d’essai pour les méthodes que j’applique à vos projets."
+    },
+    "method": {
+      "title": "Un chemin simple, balisé de bout en bout.",
+      "intro": "Vous savez à chaque étape où l’on en est, et ce qui vient ensuite."
+    },
+    "about": {
+      "title": "Un seul interlocuteur, du premier croquis à la mise en ligne.",
+      "p1": "Moi, c’est Raphaël Plassart. Je réunis design et développement : la personne qui vous écoute est celle qui dessine et code votre site.",
+      "p2": "J’ai aussi cofondé Melios et Quori, et je développe mes propres produits. Cette double casquette m’oblige à penser votre site comme un outil de travail, pas seulement comme une vitrine.",
+      "more": "Faire connaissance",
+      "portraitAlt": "Portrait de Raphaël Plassart"
+    },
+    "journal": {
+      "title": "Le journal.",
+      "intro": "Des repères concrets pour préparer un site, soigner son identité et être trouvé.",
+      "all": "Tout le journal"
+    }
+  },
+  "method": {
+    "steps": [
+      {
+        "title": "On se parle.",
+        "text": "Votre métier, vos clients, ce qui doit changer. Un premier échange, sans engagement, pour comprendre avant de proposer."
+      },
+      {
+        "title": "On trace le plan.",
+        "text": "Un devis clair : les pages, les fonctionnalités, les étapes et le calendrier. Vous savez où l’on va avant de partir."
+      },
+      {
+        "title": "On dessine, puis on construit.",
+        "text": "Une direction visuelle à votre image, validée avec vous, puis un développement sur mesure, rapide et accessible."
+      },
+      {
+        "title": "On met en ligne, et je reste joignable.",
+        "text": "Mise en production, référencement de base, prise en main. Après la livraison, vous gardez le même interlocuteur."
+      }
+    ]
+  },
+  "contactBand": {
+    "title1": "Un projet en tête ?",
+    "title2": "Traçons la route.",
+    "text": "Parlez-moi de votre activité et de ce qui doit changer. Je vous réponds personnellement."
+  },
+  "form": {
+    "firstName": "Votre prénom",
+    "firstNamePlaceholder": "Camille",
+    "company": "Votre entreprise",
+    "companyPlaceholder": "Le nom de votre activité",
+    "email": "Votre adresse e-mail",
+    "emailPlaceholder": "bonjour@entreprise.fr",
+    "goal": "Votre projet",
+    "goalPlaceholder": "De quoi avez-vous besoin ?",
+    "goals": {
+      "creation": "Créer mon site",
+      "redesign": "Refaire mon site",
+      "product": "Construire une application ou un produit",
+      "marketing": "Être mieux trouvé sur Google",
+      "other": "Autre chose, parlons-en"
+    },
+    "message": "Quelques mots pour commencer",
+    "messagePlaceholder": "Votre activité, vos objectifs, votre calendrier…",
+    "privacy": "Ces informations servent uniquement à répondre à votre demande.",
+    "privacyLink": "Confidentialité",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours…",
+    "success": "Merci, votre message est bien arrivé. Je reviens vers vous très vite.",
+    "error": "L’envoi n’a pas abouti. Réessayez, ou écrivez-moi directement par e-mail."
+  },
+  "offers": {
+    "hero": {
+      "title": "Deux offres, une même exigence.",
+      "lead": "Un site pour être trouvé, ou un produit pour faire tourner votre activité. Dans les deux cas : un design sur mesure, un code rapide et un seul interlocuteur."
+    },
+    "site": {
+      "for": "Artisans, TPE, indépendants",
+      "title": "Votre site",
+      "lead": "Un site sur mesure qui vous ressemble, se charge en un clin d’œil et vous fait trouver par les clients de votre secteur.",
+      "items": [
+        {
+          "title": "Un design à votre image",
+          "text": "Pas de modèle recyclé : une direction visuelle construite autour de votre métier, de vos photos et de vos clients."
+        },
+        {
+          "title": "Référencement local",
+          "text": "Des pages organisées autour de vos services et de votre zone d’intervention, un balisage technique propre, des contenus utiles."
+        },
+        {
+          "title": "Fiche Google",
+          "text": "Création ou remise en ordre de votre fiche d’établissement, cohérente avec le site."
+        },
+        {
+          "title": "Des demandes, pas seulement des visites",
+          "text": "Un parcours clair jusqu’au devis ou à l’appel, sur mobile comme sur ordinateur."
+        },
+        {
+          "title": "Vos contenus en autonomie",
+          "text": "Si vous le souhaitez, un espace simple pour publier vos réalisations et vos actualités."
+        },
+        {
+          "title": "Suivi après la mise en ligne",
+          "text": "Hébergement, maintenance et évolutions : les modalités sont définies ensemble dans le devis."
+        }
+      ]
+    },
+    "product": {
+      "for": "Startups, porteurs de projet, équipes",
+      "title": "Votre produit",
+      "lead": "Une application, un outil métier ou un SaaS : de l’idée à la production, avec la même exigence de design et de performance.",
+      "items": [
+        {
+          "title": "Conception produit",
+          "text": "Clarifier le besoin, prioriser les fonctionnalités et dessiner les parcours avant d’écrire la première ligne de code."
+        },
+        {
+          "title": "Applications web",
+          "text": "Des interfaces rapides et accessibles, construites avec des outils modernes et éprouvés."
+        },
+        {
+          "title": "Outils métier",
+          "text": "Automatiser ce qui vous fait perdre du temps : devis, suivi de chantier, espace client, tableaux de bord."
+        },
+        {
+          "title": "Mise en production",
+          "text": "Déploiement, sécurité, sauvegardes et suivi : un produit qui tient la route une fois en ligne."
+        }
+      ]
+    },
+    "included": {
+      "title": "Dans chaque projet.",
+      "items": [
+        {
+          "title": "La vitesse",
+          "text": "Des pages légères, pensées pour s’afficher vite, même sur un téléphone en 4G."
+        },
+        {
+          "title": "L’accessibilité",
+          "text": "Contrastes, navigation au clavier, textes alternatifs : un site utilisable par tous."
+        },
+        {
+          "title": "Un site qui vous appartient",
+          "text": "Le code et le design vous sont cédés au paiement complet, avec un accès administrateur."
+        },
+        {
+          "title": "Satisfait ou remboursé",
+          "text": "Une garantie de 30 jours après la livraison, dans les conditions prévues par les CGV."
+        }
+      ]
+    },
+    "method": {
+      "title": "Comment on avance."
+    },
+    "pricing": {
+      "title": "Et le prix ?",
+      "text": "Chaque projet est différent : le devis dépend du nombre de pages, des contenus et des fonctionnalités. Après un premier échange, vous recevez une proposition claire, détaillée étape par étape.",
+      "cta": "Demander un devis"
+    },
+    "faq": "Lire les questions fréquentes"
+  },
+  "work": {
+    "hero": {
+      "title": "Des projets sur la carte.",
+      "lead": "Des sites pour des clients bien réels, et des produits que je conçois pour moi-même."
+    },
+    "clients": "Pour mes clients",
+    "products": "Mes produits",
+    "productsIntro": "Conçus, développés et maintenus par mes soins.",
+    "readCase": "Lire l’étude de cas",
+    "visit": "Voir le site",
+    "case": {
+      "back": "Toutes les réalisations",
+      "client": "Client",
+      "year": "Année",
+      "role": "Rôle",
+      "visit": "Voir le site en ligne",
+      "challenge": "Le point de départ",
+      "approach": "La démarche",
+      "results": "Les résultats",
+      "source": "Lire la publication d’origine"
+    },
+    "items": {
+      "permapaysage": {
+        "title": "Permapaysage",
+        "lead": "Éco-paysagiste à Vallet, dans le Vignoble nantais. Un savoir-faire de terrain, et un site repensé pour le rendre visible.",
+        "role": "Design, développement, SEO local",
+        "summary": "Un éco-paysagiste du Vignoble nantais quitte Odoo pour un site sur mesure, rapide et pensé pour le référencement local.",
+        "fact": "Refonte · SEO local · Parcours devis",
+        "imageAlt": "Page d’accueil du site Permapaysage",
+        "seoTitle": "Permapaysage — Refonte d’un site d’éco-paysagiste",
+        "seoDescription": "Une refonte pour présenter les services de Permapaysage à Vallet, faciliter la prise de contact et structurer sa présence locale.",
+        "sections": [
+          {
+            "title": "Le point de départ",
+            "text": "Permapaysage disposait d’un site Odoo, correct pour démarrer mais lent et difficile à faire remonter sur Google. Or la demande locale pour des jardins résilients est forte, et l’entreprise voulait un site à la hauteur de ses chantiers : clair, rapide et ancré dans son territoire."
+          },
+          {
+            "title": "Une offre plus facile à comprendre",
+            "text": "Le site distingue la conception, l’aménagement et l’entretien. Les réalisations illustrent chaque prestation, la zone d’intervention est explicite et les visiteurs accèdent directement à une demande d’étude.\n\nLes avantages fiscaux liés à l’entretien du jardin disposent de leur propre point d’entrée, pour répondre à une question que les clients posent souvent."
+          },
+          {
+            "title": "Le territoire au cœur des contenus",
+            "text": "Les services, les communes desservies et les réalisations locales donnent un contexte précis à l’activité. Un blog apporte des conseils sur le jardinage et la permaculture.\n\nCette organisation aide les visiteurs, comme les moteurs de recherche, à comprendre ce que fait Permapaysage, et où."
+          }
+        ],
+        "quote": "Il a su transformer un outil potable en une véritable machine de guerre digitale.",
+        "quoteBy": "Permapaysage, sur LinkedIn"
+      },
+      "qoredb": {
+        "role": "Produit open source",
+        "summary": "Un client de bases de données natif, en Rust. 34 moteurs, une seule interface.",
+        "fact": "10 000+ téléchargements",
+        "imageAlt": "Éditeur de requêtes de QoreDB"
+      },
+      "tcgNexus": {
+        "role": "Plateforme web · Lead technique",
+        "summary": "Un écosystème pour joueurs de cartes : tournois, marketplace et analyse assistée par IA.",
+        "fact": "Équipe de 5 · En ligne",
+        "imageAlt": "Page d’accueil de TCG Nexus"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Designer et développeur, sous le même toit.",
+      "lead": "Derrière Atlas, une seule personne : celle qui vous écoute, dessine votre site et écrit son code."
+    },
+    "portraitAlt": "Portrait de Raphaël Plassart",
+    "introTitle": "Bonjour, moi c’est Raphaël.",
+    "intro": [
+      "Je suis Raphaël Plassart, développeur et créateur d’Atlas. J’aime donner une forme concrète aux idées : trouver la bonne composition, simplifier un parcours et construire un site agréable à utiliser.",
+      "Mon expérience de développeur et de cofondateur de Melios et Quori nourrit une approche qui relie la technique aux besoins réels d’une activité. Un site est un outil de travail autant qu’une vitrine.",
+      "Avec moi, vous avez un interlocuteur direct. Nous définissons ensemble le périmètre, les priorités et les étapes avant de commencer. Vous suivez l’avancement et participez aux choix qui comptent."
+    ],
+    "values": {
+      "title": "Ma façon de travailler.",
+      "items": [
+        {
+          "title": "Comprendre avant de dessiner",
+          "text": "Votre métier, vos clients et leurs questions passent avant les couleurs et les effets."
+        },
+        {
+          "title": "La vitesse, par politesse",
+          "text": "Un site lent fait fuir. Chaque page est pensée pour s’afficher vite, sur tous les écrans."
+        },
+        {
+          "title": "Montrer plutôt que promettre",
+          "text": "Pas de chiffres inventés ni de superlatifs : des réalisations et des témoignages attribués."
+        },
+        {
+          "title": "Rester joignable",
+          "text": "Après la mise en ligne, vous gardez le même interlocuteur pour faire évoluer votre site."
+        }
+      ]
+    },
+    "products": {
+      "title": "Ce que je construis aussi.",
+      "text": "En parallèle des projets clients, je conçois mes propres produits, comme QoreDB, un client de bases de données open source, et TCG Nexus, une plateforme pour joueurs de cartes.",
+      "link": "Voir les réalisations"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Parlons de votre projet.",
+      "lead": "Un message suffit pour commencer. Je vous réponds personnellement, avec des questions précises ou une première piste."
+    },
+    "nextTitle": "Ce qui se passe ensuite",
+    "next": [
+      "Je lis votre message et je vous réponds.",
+      "On échange sur votre activité et vos objectifs.",
+      "Vous recevez une proposition claire et détaillée."
+    ],
+    "direct": "Vous préférez l’e-mail ? Écrivez-moi directement :"
+  },
+  "faq": {
+    "hero": {
+      "title": "Les bonnes questions.",
+      "lead": "Avant de se lancer, voici ce qu’on me demande le plus souvent."
+    },
+    "items": [
+      {
+        "question": "Combien coûte un site sur mesure ?",
+        "answer": "Le prix dépend du nombre de pages, des contenus et des fonctionnalités. Après un premier échange, vous recevez un devis qui précise le périmètre et les étapes. Aucun tarif unique ne remplace cette discussion."
+      },
+      {
+        "question": "Pouvez-vous refaire mon site existant ?",
+        "answer": "Oui. Nous commençons par identifier ce qui fonctionne et ce qui doit évoluer : identité visuelle, contenus, navigation ou technique. Les changements d’adresses sont préparés pour conserver des parcours cohérents."
+      },
+      {
+        "question": "Comment se déroule le projet ?",
+        "answer": "Nous clarifions vos objectifs, puis je propose une direction visuelle. Après vos retours, je développe les pages, vérifie les parcours et prépare la mise en ligne avec vous."
+      },
+      {
+        "question": "Le référencement est-il pris en compte ?",
+        "answer": "Oui : structure des pages, titres, descriptions, liens internes et performance font partie de la conception. Un classement dans Google ne peut toutefois pas être garanti."
+      },
+      {
+        "question": "Travaillez-vous aussi sur des applications ?",
+        "answer": "Oui. Au-delà des sites, je conçois et développe des applications web, des outils métier et des produits SaaS, de la conception à la mise en production."
+      },
+      {
+        "question": "Est-ce que je pourrai publier des articles ?",
+        "answer": "Oui. Le mode de publication se choisit en fonction de vos besoins. Un espace d’administration peut être prévu au devis si vous souhaitez rédiger et publier en autonomie."
+      },
+      {
+        "question": "Qui s’occupe du site après la livraison ?",
+        "answer": "Les modalités d’hébergement, de maintenance et d’accompagnement sont définies dans le devis. Nous prévoyons les accès et les explications nécessaires à la continuité de votre site."
+      }
+    ],
+    "moreTitle": "Une autre question ?",
+    "moreText": "Posez-la directement, je vous réponds personnellement.",
+    "cta": "Me poser la question"
+  },
+  "links": {
+    "hero": {
+      "title": "Raphaël Plassart.",
+      "lead": "Les bonnes adresses pour me contacter et suivre mon travail."
+    },
+    "site": "Atlas, le site",
+    "contact": "M’écrire",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "kofi": "Soutenir mon travail"
+  },
+  "success": {
+    "title": "Message bien reçu.",
+    "text": "Merci ! Je reviens vers vous pour parler de votre projet.",
+    "back": "Retour à l’accueil"
   },
   "notFound": {
-    "eyebrow": "404 / HORS CADRE",
-    "titleLine1": "Cette page a pris",
-    "titleLine2": "un autre chemin.",
-    "text": "Retrouvons le fil de votre visite.",
-    "back": "Retour à l’atelier"
+    "title": "Cette page n’est pas sur la carte.",
+    "text": "L’adresse a peut-être changé. Reprenons depuis un point connu.",
+    "back": "Retour à l’accueil",
+    "work": "Voir les réalisations"
   },
   "blog": {
-    "eyebrow": "LE JOURNAL D’ATLAS",
-    "titleLine1": "Notes d’atelier.",
-    "titleLine2": "Idées à emporter.",
-    "introLine1": "Design, code et présence en ligne.",
-    "introLine2": "Des repères pour faire les bons choix.",
-    "readingTime": "{minutes} MIN",
+    "title": "Le journal.",
+    "lead": "Des repères concrets pour préparer votre site, penser son identité et être trouvé.",
+    "readingTime": "{minutes} min de lecture",
     "readingTimeLong": "{minutes} minutes de lecture",
     "by": "Par {author}",
     "publishedOn": "Publié le {date}",
     "updatedOn": "Mis à jour le {date}",
-    "backToList": "Toutes les notes",
-    "seriesLabel": "NOTES D’ATELIER",
-    "cta": "Parlons de votre site",
+    "backToList": "Tout le journal",
+    "read": "Lire l’article",
+    "ctaTitle": "Un site à préparer ?",
+    "ctaText": "Parlons de votre activité et de ce qui doit changer.",
+    "cta": "Démarrer un projet",
     "empty": "Aucun article publié pour le moment.",
     "breadcrumbHome": "Accueil",
     "rssTitle": "Atlas — Journal"

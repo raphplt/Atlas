@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { locales, type Locale } from "@/i18n/routing";
 import { getPostPaths, postAlternatePaths } from "@/lib/blog";
 import { alternatesFor } from "@/lib/meta";
+import { getWorkDetail, getWorkPaths } from "@/lib/projects";
 
 // Pages statiques, déclinées dans chaque langue.
 const staticPaths = [
@@ -9,7 +10,9 @@ const staticPaths = [
   "/about",
   "/faq",
   "/blog",
-  "/realisations/permapaysage",
+  "/offres",
+  "/realisations",
+  "/contact",
   "/links",
   "/legal/mentions-legales",
   "/legal/politique-confidentialite",
@@ -26,6 +29,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (canonical)
         entries.push({ url: canonical, alternates: { languages } });
     }
+  for (const { locale, slug } of await getWorkPaths()) {
+    const work = await getWorkDetail(locale, slug);
+    if (!work) continue;
+    const { canonical, languages } = alternatesFor(work.paths, locale);
+    if (canonical) entries.push({ url: canonical, alternates: { languages } });
+  }
   for (const post of await getPostPaths()) {
     const { canonical, languages } = alternatesFor(
       postAlternatePaths(post),

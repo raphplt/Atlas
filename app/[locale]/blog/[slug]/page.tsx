@@ -5,6 +5,7 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
+import { PageHero } from "@/components/atlas/PageHero";
 import { PortableBody, SanityFigure } from "@/components/blog/PortableBody";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -148,25 +149,40 @@ export default async function Article({
   ].filter(Boolean);
 
   return (
-    <main id="main-content" className="article-wrap">
-      <Link className="article-back" href="/blog">
-        ← {t("backToList")}
-      </Link>
-      <article>
-        <p className="eyebrow" style={{ marginTop: 40 }}>
-          {[post.category, t("seriesLabel")].filter(Boolean).join(" / ")}
-        </p>
-        <h1>{post.title}</h1>
+    <main id="main-content">
+      <PageHero
+        title={post.title}
+        lead={post.excerpt}
+        back={
+          <Link href="/blog" className="back-link">
+            {t("backToList")}
+          </Link>
+        }
+      >
         <p className="article-meta">
-          {meta.flatMap((part, i) => (i ? [" · ", part] : [part]))}
+          {post.category && <span>{post.category}</span>}
+          {meta.map((part, i) => (
+            <span key={i}>{part}</span>
+          ))}
         </p>
-        {post.excerpt && <p className="article-lead">{post.excerpt}</p>}
-        <SanityFigure image={post.cover} priority />
-        <PortableBody value={post.body} />
-      </article>
-      <Link className="button" href="/#contact">
-        {t("cta")} ↗
-      </Link>
+      </PageHero>
+      <section className="section">
+        <div className="wrap">
+          <article className="prose">
+            <SanityFigure image={post.cover} priority />
+            <PortableBody value={post.body} />
+          </article>
+          <div className="article-end">
+            <h2 className="h3">{t("ctaTitle")}</h2>
+            <p className="body">{t("ctaText")}</p>
+            <div className="actions">
+              <Link className="btn" href="/contact">
+                {t("cta")}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={jsonLd(articleLd)}

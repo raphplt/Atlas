@@ -12,7 +12,7 @@ export const contactSchema = z.object({
       "Téléphone invalide",
     ),
   // Qualification fields
-  projectGoal: z.enum(["creation", "redesign", "marketing", "other"], {
+  projectGoal: z.enum(["creation", "redesign", "product", "marketing", "other"], {
     required_error: "Veuillez sélectionner un objectif",
   }),
   timeline: z

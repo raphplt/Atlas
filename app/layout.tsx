@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 // Layout racine « transparent » : <html>/<body> sont rendus par
-// app/[locale]/layout.tsx (site), app/studio/layout.tsx (Sanity) et app/lab/layout.tsx.
+// app/[locale]/layout.tsx (site), et app/studio/layout.tsx (Sanity).
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return children;
 }

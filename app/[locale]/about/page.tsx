@@ -1,58 +1,93 @@
-// TODO(i18n) : contenu de la page encore en français.
 import Image from "next/image";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { ContactBand } from "@/components/atlas/ContactBand";
+import { PageHero } from "@/components/atlas/PageHero";
+import { Reveal } from "@/components/atlas/Reveal";
 import { Link } from "@/i18n/navigation";
-import { Label } from "@/components/studio/Shell";
-import { setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
+import { portrait } from "@/lib/content";
 import { pageMetadata } from "@/lib/meta";
+
+type Item = { title: string; text: string };
+
 export async function generateMetadata({ params }: PageProps<"/[locale]/about">) {
   const { locale } = await params;
   return pageMetadata({ locale: locale as Locale, path: "/about", page: "about" });
 }
+
 export default async function About({ params }: PageProps<"/[locale]/about">) {
-  const { locale } = await params;
-  setRequestLocale(locale as Locale);
+  const { locale } = (await params) as { locale: Locale };
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "about" });
+
   return (
     <main id="main-content">
-      <section className="about-section section-wrap">
-        <div className="portrait-wrap">
-          <Image
-            src="/images/Raphael-Plassart.png"
-            alt="Raphaël Plassart"
-            width={560}
-            height={640}
-            priority
-          />
-          <span>RAPHAËL PLASSART / ATLAS</span>
-        </div>
-        <div>
-          <Label>L’ATELIER INDÉPENDANT</Label>
-          <h1 style={{ fontSize: "clamp(40px,5vw,64px)" }}>
-            Un regard créatif.
-            <br />
-            <em>Une tête technique.</em>
-          </h1>
-          <p>
-            Je suis Raphaël Plassart, développeur et créateur d’Atlas. J’aime
-            donner une forme concrète aux idées : trouver la bonne composition,
-            simplifier un parcours et construire un site agréable à utiliser.
-          </p>
-          <p>
-            Mon expérience de développeur et de cofondateur de Melios et Quori
-            nourrit une approche qui relie la technique aux besoins réels d’une
-            activité. Le site est un outil de travail autant qu’une vitrine.
-          </p>
-          <p>
-            Avec moi, vous avez un interlocuteur direct. Nous définissons
-            ensemble le périmètre, les priorités et les étapes avant de
-            commencer. Vous suivez l’avancement et participez aux choix qui
-            comptent.
-          </p>
-          <Link className="button" href="/#contact">
-            Faisons connaissance ↗
-          </Link>
+      <PageHero title={t("hero.title")} lead={t("hero.lead")} />
+
+      <section className="section" aria-labelledby="intro-title">
+        <div className="wrap about">
+          <Reveal className="portrait">
+            <Image
+              src={portrait.src}
+              width={portrait.width}
+              height={portrait.height}
+              alt={t("portraitAlt")}
+              sizes="(max-width: 900px) 90vw, 40vw"
+              priority
+            />
+          </Reveal>
+          <Reveal>
+            <h2 id="intro-title" className="h2">
+              {t("introTitle")}
+            </h2>
+            <div className="stack">
+              {(t.raw("intro") as string[]).map((p) => (
+                <p key={p} className="body">
+                  {p}
+                </p>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
+
+      <section className="section" aria-labelledby="values-title">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <h2 id="values-title" className="h2">
+              {t("values.title")}
+            </h2>
+          </Reveal>
+          <Reveal>
+            <ul className="points">
+              {(t.raw("values.items") as Item[]).map((item) => (
+                <li key={item.title}>
+                  <h3 className="h3">{item.title}</h3>
+                  <p className="body">{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="products-title">
+        <div className="wrap">
+          <Reveal className="note">
+            <div>
+              <h2 id="products-title" className="h3">
+                {t("products.title")}
+              </h2>
+              <p className="body">{t("products.text")}</p>
+            </div>
+            <Link href="/realisations" className="link link-arrow">
+              {t("products.link")}
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
+      <ContactBand />
     </main>
   );
 }
