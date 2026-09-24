@@ -5,7 +5,7 @@ export const permapaysage = {
   client: "Permapaysage",
   url: "https://www.permapaysage.fr",
   year: 2026,
-  image: { src: "/images/work/permapaysage.png", width: 1600, height: 920 },
+  image: { src: "/images/work/permapaysage.webp", width: 3200, height: 1840 },
   testimonialUrl:
     "https://www.linkedin.com/posts/permapaysage_permapaysage-%C3%A9co-paysagiste-%C3%A0-vallet-activity-7441431187446861824-4d9D",
 };
