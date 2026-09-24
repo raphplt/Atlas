@@ -1,0 +1,64 @@
+/*
+ * Atlas — identité « Relief ».
+ * Source unique des couleurs, typographies, espacements et mouvements.
+ */
+:root {
+  /* Couleurs */
+  --blue: #1f3bd9;
+  --blue-deep: #1730b8;
+  --blue-rgb: 31, 59, 217;
+  --ink: #0d1222;
+  --ink-rgb: 13, 18, 34;
+  --paper: #f3f4f1;
+  --white: #ffffff;
+  --beacon: #ffd84d;
+  --muted: #545a6b;
+  --line: #d9dce3;
+  --line-strong: #b9bec9;
+  --on-dark-muted: rgba(255, 255, 255, 0.76);
+  --on-dark-line: rgba(255, 255, 255, 0.3);
+  --danger: #c2261d;
+
+  /* Typographies (variables posées par next/font dans le layout) */
+  --font-display: var(--font-funnel-display), "Helvetica Neue", Arial, sans-serif;
+  --font-text: var(--font-funnel-sans), "Helvetica Neue", Arial, sans-serif;
+
+  --fs-display: clamp(3.1rem, 9vw, 9.5rem);
+  --fs-h1: clamp(2.7rem, 6.4vw, 6.4rem);
+  --fs-h2: clamp(2.1rem, 4.8vw, 4.6rem);
+  --fs-h3: clamp(1.35rem, 2vw, 1.75rem);
+  --fs-lead: clamp(1.12rem, 1.55vw, 1.4rem);
+  --fs-body: 1.125rem;
+  --fs-small: 0.9375rem;
+
+  --lh-tight: 0.95;
+  --lh-heading: 1.04;
+  --lh-body: 1.6;
+
+  --tracking-display: -0.04em;
+  --tracking-heading: -0.03em;
+
+  /* Espacements */
+  --gutter: clamp(20px, 4vw, 56px);
+  --container: 1480px;
+  --section-y: clamp(88px, 12vw, 168px);
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+
+  /* Formes */
+  --radius-s: 8px;
+  --radius-m: 14px;
+  --radius-l: 20px;
+  --radius-pill: 999px;
+  --shadow-shot: 0 1px 0 var(--line), 0 40px 80px -40px rgba(var(--ink-rgb), 0.35);
+
+  /* Mouvement */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.2s;
+  --dur: 0.5s;
+}
