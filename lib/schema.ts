@@ -1,4 +1,4 @@
-import { siteMeta } from "./meta";
+import { siteMeta } from "./site";
 export function businessSchema(description: string) {
   return {
     "@context": "https://schema.org",

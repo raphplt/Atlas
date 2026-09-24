@@ -1,7 +1,7 @@
-import type { PortableTextBlock } from "@portabletext/react";
 import { posts as journalPosts } from "@/content/journal";
 import { defaultLocale, locales, type Locale } from "@/i18n/routing";
 import { isSanityConfigured } from "@/sanity/env";
+import { sectionsToPortableText } from "./portable-text";
 import { sanityFetch } from "./sanity/fetch";
 import {
   POST_PATHS_QUERY,
@@ -23,30 +23,6 @@ const FALLBACK_AUTHOR = {
   role: "Designer & développeur",
   url: null,
 };
-
-let keySeq = 0;
-const key = () => `k${(keySeq++).toString(36)}`;
-
-/** Convertit une section { title, text } en Portable Text (h2 + paragraphe). */
-export function sectionsToPortableText(
-  sections: { title: string; text: string }[],
-): PortableTextBlock[] {
-  return sections.flatMap(({ title, text }) =>
-    [
-      { style: "h2", text: title },
-      { style: "normal", text },
-    ].map(
-      ({ style, text }) =>
-        ({
-          _type: "block",
-          _key: key(),
-          style,
-          markDefs: [],
-          children: [{ _type: "span", _key: key(), text, marks: [] }],
-        }) as PortableTextBlock,
-    ),
-  );
-}
 
 function fallbackPost(p: (typeof journalPosts)[number]): Post {
   return {

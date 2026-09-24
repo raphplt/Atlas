@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { getPathname } from "@/i18n/navigation";
 import { defaultLocale, locales, type Locale } from "@/i18n/routing";
+import { siteMeta } from "./site";
 
-export const siteMeta = {
-  url: "https://atlas.raphael-plassart.com",
-  author: "Raphaël Plassart",
-  siteName: "Atlas",
-  email: "contact@raphael-plassart.com",
-  linkedin: "https://www.linkedin.com/in/rapha%C3%ABl-plassart/",
-  github: "https://github.com/raphplt",
-  ogImage: "/opengraph-image",
+export { siteMeta };
+
+/** Image de partage par défaut (app/opengraph-image.tsx). */
+export const defaultOgImage = {
+  url: siteMeta.ogImage,
+  width: 1200,
+  height: 630,
 };
 
 /** Chemin localisé : /about (fr), /en/about, /it/about… */
@@ -91,6 +91,7 @@ export async function pageMetadata({
       url: alternates.canonical,
       title: title ?? t("defaultTitle"),
       description,
+      images: [defaultOgImage],
     },
     ...(noindex ? { robots: { index: false, follow: false } } : {}),
   };

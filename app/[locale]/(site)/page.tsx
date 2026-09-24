@@ -1,10 +1,20 @@
-import Link from "next/link";
+// TODO(i18n) : contenu de la page encore en français.
 import Image from "next/image";
+import { setRequestLocale } from "next-intl/server";
 import { Art, Label } from "@/components/studio/Shell";
 import { Contact } from "@/components/studio/Contact";
-import { posts } from "@/content/journal";
-export const metadata = { alternates: { canonical: "/" } };
-export default function Page() {
+import { Link } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
+import { getPosts } from "@/lib/blog";
+import { pageMetadata } from "@/lib/meta";
+export async function generateMetadata({ params }: PageProps<"/[locale]">) {
+  const { locale } = await params;
+  return pageMetadata({ locale: locale as Locale, path: "/" });
+}
+export default async function Page({ params }: PageProps<"/[locale]">) {
+  const { locale } = await params;
+  setRequestLocale(locale as Locale);
+  const posts = await getPosts(locale as Locale, 3);
   return (
     <main id="main-content">
       <section className="hero section-wrap">
@@ -272,7 +282,7 @@ export default function Page() {
             <Link
               href={`/blog/${p.slug}`}
               className="journal-card"
-              key={p.slug}
+              key={p._id}
             >
               <div
                 className={`journal-art journal-art-${i}`}
@@ -282,7 +292,8 @@ export default function Page() {
                 <small>ATLAS — NOTE 0{i + 1}</small>
               </div>
               <p className="eyebrow">
-                {p.category} <span>· {p.readingTime} MIN DE LECTURE</span>
+                {p.category}{" "}
+                {p.readingTime && <span>· {p.readingTime} MIN DE LECTURE</span>}
               </p>
               <h3>
                 {p.title} <span>↗</span>

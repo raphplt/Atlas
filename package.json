@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "tsc --noEmit",
     "typecheck": "tsc --noEmit",
-    "sanity:seed": "tsx scripts/seed-sanity.ts"
+    "sanity:seed": "tsx --env-file-if-exists=.env.local scripts/seed-sanity.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -16,6 +16,7 @@
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-scroll-area": "^1.2.10",
     "@radix-ui/react-select": "^2.2.6",
+    "@sanity/client": "^8.7.0",
     "@sanity/document-internationalization": "^6.2.37",
     "@sanity/image-url": "^2.1.1",
     "@sanity/vision": "^6.16.0",

@@ -7,7 +7,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Footer, Header } from "@/components/studio/Shell";
 import { locales, routing } from "@/i18n/routing";
-import { siteMeta } from "@/lib/meta";
+import { defaultOgImage, siteMeta } from "@/lib/meta";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,6 +47,7 @@ export async function generateMetadata({
       locale: t("ogLocale"),
       alternateLocale: others,
       siteName: siteMeta.siteName,
+      images: [defaultOgImage],
     },
     twitter: { card: "summary_large_image" },
   };

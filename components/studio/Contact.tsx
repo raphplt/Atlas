@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { siteMeta } from "@/lib/site";
 export function Contact() {
   const [state, setState] = useState<"idle" | "sending" | "success" | "error">(
     "idle",
@@ -35,8 +36,8 @@ export function Contact() {
           Parlez-moi de votre activité, de vos envies, de ce qui doit changer.
           On commence par une conversation.
         </p>
-        <a className="text-link" href="mailto:contact@raphael-plassart.com">
-          contact@raphael-plassart.com ↗
+        <a className="text-link" href={`mailto:${siteMeta.email}`}>
+          {siteMeta.email} ↗
         </a>
       </div>
       <form onSubmit={submit} className="contact-form">

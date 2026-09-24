@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { siteMeta } from "@/lib/meta";
+import { siteMeta } from "@/lib/site";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 export function Header() {
   const t = useTranslations("shell");
