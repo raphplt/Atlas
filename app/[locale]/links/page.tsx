@@ -12,8 +12,11 @@ export default async function Links({ params }: PageProps<"/[locale]/links">) {
   const { locale } = (await params) as { locale: Locale };
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "links" });
+  // Le portfolio existe en FR et EN (pas en IT) : les autres langues pointent vers l'anglais.
+  const portfolioUrl = locale === "fr" ? siteMeta.portfolio : `${siteMeta.portfolio}/en`;
   const links = [
     [t("site"), localizedPath("/", locale), false],
+    [t("portfolio"), portfolioUrl, true],
     [t("contact"), `mailto:${siteMeta.email}`, false],
     [t("linkedin"), siteMeta.linkedin, true],
     [t("github"), siteMeta.github, true],
