@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactBand } from "@/components/atlas/ContactBand";
+import { OfferIcon } from "@/components/atlas/OfferIcon";
 import { PageHero } from "@/components/atlas/PageHero";
 import { Path } from "@/components/atlas/Path";
 import { Reveal } from "@/components/atlas/Reveal";
@@ -43,6 +44,7 @@ export default async function Offers({ params }: PageProps<"/[locale]/offres">) 
           {offers.map((o) => (
             <article key={o.id} id={o.id} className="offer">
               <Reveal>
+                <OfferIcon kind={o.key} size={72} className="offer-icon" />
                 <p className="offer-for">{t(`${o.key}.for`)}</p>
                 <h2 className="h2">{t(`${o.key}.title`)}</h2>
                 <p className="lead">{t(`${o.key}.lead`)}</p>

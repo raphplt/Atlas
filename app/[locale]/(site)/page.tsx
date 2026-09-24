@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactBand } from "@/components/atlas/ContactBand";
 import { ContourField } from "@/components/atlas/ContourField";
+import { OfferIcon } from "@/components/atlas/OfferIcon";
 import { PageSpeed } from "@/components/atlas/PageSpeed";
 import { Path } from "@/components/atlas/Path";
 import { PostCards } from "@/components/atlas/PostCards";
@@ -127,6 +128,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                   scale={0.004}
                   interactive={false}
                 />
+                <OfferIcon kind={d.key} className="door-icon" />
                 <p className="door-for">{t(`doors.${d.key}.for`)}</p>
                 <h3 className="door-title">{t(`doors.${d.key}.title`)}</h3>
                 <p className="body">{t(`doors.${d.key}.text`)}</p>

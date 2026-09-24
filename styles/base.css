@@ -462,7 +462,9 @@ p {
 .hero-body {
   display: grid;
   gap: var(--space-5);
-  margin-top: auto;
+  /* Centré plutôt que collé en bas : sur les grands écrans, le titre ne
+     tombe plus en bas de page (sans effet quand le contenu remplit l'écran). */
+  margin-block: auto;
   padding-top: 150px;
 }
 .hero-aside {
@@ -617,6 +619,10 @@ p {
   height: 80%;
   opacity: 0.5;
   mask-image: radial-gradient(closest-side, #000 40%, transparent);
+}
+.door-icon {
+  margin-bottom: var(--space-3);
+  color: var(--blue);
 }
 .door-for {
   margin-bottom: auto;
@@ -1006,6 +1012,12 @@ a.door {
   margin-top: var(--section-y);
   padding-top: var(--section-y);
   border-top: 1px solid var(--line);
+}
+.offer-icon {
+  --icon-bg: var(--paper);
+  display: block;
+  margin-bottom: var(--space-3);
+  color: var(--blue);
 }
 .offer-for {
   color: var(--blue);
