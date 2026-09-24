@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "siteName": "Atlas",
+    "ogLocale": "it_IT",
+    "defaultTitle": "Atlas — Web design e sviluppo · Raphaël Plassart",
+    "description": "Siti web unici, veloci e pensati per la tua attività. Design, sviluppo e SEO a cura di Raphaël Plassart, freelance.",
+    "pages": {
+      "about": {
+        "title": "Lo studio — Raphaël Plassart",
+        "description": "Raphaël Plassart, lo sviluppatore freelance dietro Atlas. Un approccio diretto che unisce design, codice e una vera comprensione della tua attività."
+      },
+      "blog": {
+        "title": "Journal — Design, web e visibilità",
+        "description": "Consigli concreti per preparare il tuo sito, definirne l’identità e far crescere la tua visibilità online."
+      },
+      "faq": {
+        "title": "Domande frequenti",
+        "description": "Budget, restyling, SEO e assistenza: le risposte alle tue domande su un progetto con Atlas."
+      },
+      "links": {
+        "title": "Dove trovare Raphaël Plassart",
+        "description": "I link utili per contattare Raphaël Plassart e seguire il suo lavoro."
+      },
+      "success": {
+        "title": "Messaggio inviato"
+      },
+      "permapaysage": {
+        "title": "Permapaysage — Il restyling del sito di un eco-paesaggista",
+        "description": "Un restyling per presentare i servizi di Permapaysage a Vallet, facilitare il contatto e strutturarne la presenza locale."
+      },
+      "legalMentions": {
+        "title": "Note legali",
+        "description": "Note legali del sito Atlas: editore, hosting e recapiti."
+      },
+      "legalPrivacy": {
+        "title": "Informativa sulla privacy",
+        "description": "Informativa sulla privacy e protezione dei dati personali di Atlas: GDPR, cookie e i tuoi diritti."
+      },
+      "legalCgv": {
+        "title": "Condizioni generali di vendita",
+        "description": "Condizioni generali di vendita dei servizi di creazione siti web di Atlas: pagamenti, tempi e garanzie."
+      },
+      "notFound": {
+        "title": "Pagina non trovata"
+      }
+    }
+  },
+  "shell": {
+    "skipLink": "Vai al contenuto",
+    "homeAria": "Atlas, home",
+    "mainNav": "Navigazione principale",
+    "mobileNav": "Navigazione mobile",
+    "menu": "Menu",
+    "nav": {
+      "work": "Progetti",
+      "expertise": "Competenze",
+      "studio": "Lo studio",
+      "journal": "Journal"
+    },
+    "cta": "Parliamo del tuo progetto",
+    "language": "Lingua"
+  },
+  "footer": {
+    "tagline": "Carattere. Senso. Risultati.",
+    "writeMe": "Scrivimi",
+    "copyright": "© {year} Atlas · Raphaël Plassart",
+    "legalNav": "Informazioni legali",
+    "mentions": "Note legali",
+    "privacy": "Privacy",
+    "terms": "Condizioni di vendita",
+    "faq": "FAQ"
+  },
+  "notFound": {
+    "eyebrow": "404 / FUORI CAMPO",
+    "titleLine1": "Questa pagina ha preso",
+    "titleLine2": "un’altra strada.",
+    "text": "Riprendiamo il filo della tua visita.",
+    "back": "Torna allo studio"
+  },
+  "blog": {
+    "eyebrow": "IL JOURNAL DI ATLAS",
+    "titleLine1": "Appunti di bottega.",
+    "titleLine2": "Idee da portare via.",
+    "introLine1": "Design, codice e presenza online.",
+    "introLine2": "Punti di riferimento per fare le scelte giuste.",
+    "readingTime": "{minutes} MIN",
+    "readingTimeLong": "{minutes} minuti di lettura",
+    "by": "Di {author}",
+    "publishedOn": "Pubblicato il {date}",
+    "updatedOn": "Aggiornato il {date}",
+    "backToList": "Tutti gli appunti",
+    "seriesLabel": "APPUNTI DI BOTTEGA",
+    "cta": "Parliamo del tuo sito",
+    "empty": "Nessun articolo ancora pubblicato in italiano.",
+    "breadcrumbHome": "Home",
+    "rssTitle": "Atlas — Journal"
+  }
+}
