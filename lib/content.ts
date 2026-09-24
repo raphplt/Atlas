@@ -21,7 +21,7 @@ export const products = [
     key: "tcgNexus",
     name: "TCG Nexus",
     url: "https://tcg-nexus.org",
-    image: { src: "/images/work/tcg-nexus.png", width: 1675, height: 1088 },
+    image: { src: "/images/work/tcg-nexus.webp", width: 2000, height: 1213 },
   },
 ] as const;
 
