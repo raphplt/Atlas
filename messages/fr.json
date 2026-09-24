@@ -1,972 +1,825 @@
 {
-    "navigation": {
-        "home": "Accueil",
-        "portfolio": "Réalisations",
-        "process": "Process",
-        "simulator": "Simulateur",
-        "about": "À propos",
-        "startProject": "Estimer mon projet"
+  "meta": {
+    "siteName": "Atlas",
+    "ogLocale": "fr_FR",
+    "defaultTitle": "Atlas — Sites web rapides et bien référencés · Raphaël Plassart",
+    "description": "Des sites rapides, singuliers et bien référencés pour les artisans, les TPE et les indépendants. Design, développement et SEO par Raphaël Plassart, freelance.",
+    "pages": {
+      "about": {
+        "title": "À propos — Raphaël Plassart",
+        "description": "Raphaël Plassart, designer et développeur freelance derrière Atlas : un seul interlocuteur, du premier croquis à la mise en ligne."
+      },
+      "blog": {
+        "title": "Journal — Design, web et visibilité",
+        "description": "Des conseils concrets pour préparer votre site, penser son identité et développer votre visibilité."
+      },
+      "faq": {
+        "title": "Questions fréquentes",
+        "description": "Budget, refonte, référencement et accompagnement : les réponses à vos questions sur un projet avec Atlas."
+      },
+      "links": {
+        "title": "Retrouver Raphaël Plassart",
+        "description": "Les liens utiles pour contacter Raphaël Plassart et suivre son travail."
+      },
+      "success": {
+        "title": "Message envoyé"
+      },
+      "legalMentions": {
+        "title": "Mentions légales",
+        "description": "Mentions légales du site Atlas : éditeur, hébergeur et coordonnées de contact."
+      },
+      "legalPrivacy": {
+        "title": "Politique de confidentialité",
+        "description": "Politique de confidentialité et protection des données personnelles d’Atlas : RGPD, cookies et vos droits."
+      },
+      "legalCgv": {
+        "title": "Conditions générales de vente",
+        "description": "Conditions générales de vente des services de création de sites web d’Atlas : paiement, délais et garanties."
+      },
+      "notFound": {
+        "title": "Page introuvable"
+      },
+      "offers": {
+        "title": "Offres — Votre site, votre produit",
+        "description": "Un site sur mesure pour être trouvé, ou une application pour faire tourner votre activité. Design, développement et référencement."
+      },
+      "work": {
+        "title": "Réalisations",
+        "description": "Des sites pour des clients bien réels, comme Permapaysage, et des produits conçus en propre : QoreDB et TCG Nexus."
+      },
+      "contact": {
+        "title": "Contact — Démarrer un projet",
+        "description": "Parlez-moi de votre activité et de votre projet de site ou d’application. Réponse personnelle de Raphaël Plassart."
+      }
+    }
+  },
+  "shell": {
+    "skipLink": "Aller au contenu",
+    "homeAria": "Atlas, accueil",
+    "mainNav": "Navigation principale",
+    "menu": "Menu",
+    "close": "Fermer",
+    "language": "Langue",
+    "nav": {
+      "work": "Réalisations",
+      "offers": "Offres",
+      "journal": "Journal",
+      "about": "À propos"
     },
+    "cta": "Démarrer un projet"
+  },
+  "footer": {
+    "tagline": "Des sites rapides, singuliers et bien référencés, conçus et développés par Raphaël Plassart.",
+    "siteNav": "Plan du site",
+    "faq": "Questions fréquentes",
+    "contact": "Contact",
+    "copyright": "© {year} Atlas · Raphaël Plassart",
+    "legalNav": "Informations légales",
+    "mentions": "Mentions légales",
+    "privacy": "Confidentialité",
+    "terms": "CGV"
+  },
+  "speed": {
+    "before": "Cette page s’est affichée en",
+    "after": "Les vôtres le peuvent aussi."
+  },
+  "home": {
     "hero": {
-        "title": "Un site web qui travaille pour vous",
-        "subtitle": "Je crée des sites professionnels pour les artisans et services locaux. Des vrais outils qui vous apportent des clients, pas juste une vitrine.",
-        "ctaPrimary": "Estimer mon projet",
-        "ctaSecondary": "Voir mes réalisations"
+      "title1": "Mettez votre activité",
+      "title2": "sur la carte.",
+      "lead": "Je conçois et développe des sites rapides, singuliers et bien référencés, pour les artisans, les indépendants et les entreprises qui veulent être trouvés.",
+      "cta": "Démarrer un projet",
+      "secondary": "Voir les réalisations"
     },
-    "problems": {
-        "title": "Ce qui vous freine",
-        "subtitle": "Des freins faciles à lever qui pénalisent votre crédibilité et vos conversions.",
-        "items": {
-            "mobile": {
-                "title": "Site non mobile",
-                "description": "60%+ de vos visiteurs quittent avant 5s."
-            },
-            "quotes": {
-                "title": "Aucun devis rapide",
-                "description": "Vous perdez les prospects chauds."
-            },
-            "local": {
-                "title": "Invisible en local",
-                "description": "Les clients proches ne vous trouvent pas."
-            }
-        }
+    "case": {
+      "title": "Permapaysage a quitté Odoo pour un site à sa mesure.",
+      "who": "Éco-paysagiste à Vallet, dans le Vignoble nantais.",
+      "imageAlt": "Page d’accueil du site Permapaysage",
+      "beforeTitle": "Le point de départ",
+      "before": "Un site Odoo correct pour démarrer, mais lent et difficile à faire remonter sur Google, alors que la demande locale pour des jardins résilients explose.",
+      "didTitle": "Ce qu’on a construit",
+      "did": "Un site sur mesure, rapide, structuré autour des services et de la zone d’intervention, avec un accès direct au devis et aux avantages fiscaux.",
+      "quote": "Il a su transformer un outil potable en une véritable machine de guerre digitale.",
+      "quoteBy": "Permapaysage, sur LinkedIn",
+      "readCase": "Lire l’étude de cas",
+      "visit": "Voir le site"
+    },
+    "doors": {
+      "title": "Deux façons de travailler ensemble.",
+      "site": {
+        "for": "Artisans, TPE, indépendants",
+        "title": "Votre site",
+        "text": "Un site sur mesure qui vous ressemble, se charge en un clin d’œil et vous fait trouver par les clients de votre secteur.",
+        "items": [
+          "Design sur mesure",
+          "Référencement local",
+          "Fiche Google",
+          "Suivi après la mise en ligne"
+        ]
+      },
+      "product": {
+        "for": "Startups, porteurs de projet, équipes",
+        "title": "Votre produit",
+        "text": "Une application, un outil métier ou un SaaS : de l’idée à la production, avec la même exigence de design et de performance.",
+        "items": [
+          "Conception produit",
+          "Applications web",
+          "Outils métier",
+          "Mise en production"
+        ]
+      },
+      "more": "Découvrir l’offre"
+    },
+    "products": {
+      "title": "Ce que je construis, aussi pour moi.",
+      "intro": "Des produits que je conçois et fais vivre moi-même : le meilleur terrain d’essai pour les méthodes que j’applique à vos projets."
+    },
+    "method": {
+      "title": "Un chemin simple, balisé de bout en bout.",
+      "intro": "Vous savez à chaque étape où l’on en est, et ce qui vient ensuite."
     },
     "about": {
-        "title": "Pourquoi choisir Raphaël plutôt qu'une agence ?",
-        "subtitle": "Développeur Full Stack avec 2+ ans d'expérience en startup et co-fondateur de projets SaaS.",
-        "description": "Étudiant en Master à l'ETNA et co-fondateur de plusieurs projets (Melios, Quori), je crée Atlas pour apporter aux artisans la même qualité technique qu'aux startups tech. Plus de 2 ans d'expérience en développement from scratch jusqu'à la production.",
-        "expertise": {
-            "technical": {
-                "title": "Technologies modernes",
-                "description": "React/Next.js, NestJS, PostgreSQL, React Native. Applications déployées sur App Store & Google Play Store."
-            },
-            "conversion": {
-                "title": "Expérience startup & produit",
-                "description": "Co-fondateur de Melios (+150 beta-testers) et Quori (SaaS B2B). Vision produit couplée à l'expertise technique."
-            },
-            "approach": {
-                "title": "Approche développement & entrepreneuriat",
-                "description": "Chaque projet est pensé comme un produit : architecture solide, performance, et surtout ROI business tangible."
-            }
-        },
-        "skillsTitle": "Technologies maîtrisées",
-        "skills": {
-            "0": "React & Next.js 15",
-            "1": "NestJS & Node.js",
-            "2": "PostgreSQL & MongoDB",
-            "3": "React Native & Expo",
-            "4": "Docker & CI/CD",
-            "5": "Firebase & DevOps"
-        },
-        "name": "Raphaël Plassart",
-        "jobTitle": "Développeur Full Stack & Mobile",
-        "photoPlaceholder": "Photo professionnelle",
-        "cta": "Discutons de votre projet",
-        "ctaSecondary": "Voir mes réalisations"
+      "title": "Un seul interlocuteur, du premier croquis à la mise en ligne.",
+      "p1": "Moi, c’est Raphaël Plassart. Je réunis design et développement : la personne qui vous écoute est celle qui dessine et code votre site.",
+      "p2": "J’ai aussi cofondé Melios et Quori, et je développe mes propres produits. Cette double casquette m’oblige à penser votre site comme un outil de travail, pas seulement comme une vitrine.",
+      "more": "Faire connaissance",
+      "portraitAlt": "Portrait de Raphaël Plassart"
     },
-    "portfolio": {
-        "badge": "Réalisations",
-        "title": "Mes réalisations",
-        "subtitle": "Démonstrations de refonte avant/après pour différents secteurs d'activité.",
-        "viewDetails": "Voir les détails",
-        "benefitsTitle": "Bénéfices concrets",
-        "resultsTitle": "Résultats mesurables",
-        "metrics": {
-            "visits": "Visites",
-            "contacts": "Contacts"
-        },
-        "ctaTransition": "Vous voulez un site comme ça ?",
-        "ctaButton": "Estimer mon projet"
+    "journal": {
+      "title": "Le journal.",
+      "intro": "Des repères concrets pour préparer un site, soigner son identité et être trouvé.",
+      "all": "Tout le journal"
+    }
+  },
+  "method": {
+    "steps": [
+      {
+        "title": "On se parle.",
+        "text": "Votre métier, vos clients, ce qui doit changer. Un premier échange, sans engagement, pour comprendre avant de proposer."
+      },
+      {
+        "title": "On trace le plan.",
+        "text": "Un devis clair : les pages, les fonctionnalités, les étapes et le calendrier. Vous savez où l’on va avant de partir."
+      },
+      {
+        "title": "On dessine, puis on construit.",
+        "text": "Une direction visuelle à votre image, validée avec vous, puis un développement sur mesure, rapide et accessible."
+      },
+      {
+        "title": "On met en ligne, et je reste joignable.",
+        "text": "Mise en production, référencement de base, prise en main. Après la livraison, vous gardez le même interlocuteur."
+      }
+    ]
+  },
+  "contactBand": {
+    "title1": "Un projet en tête ?",
+    "title2": "Traçons la route.",
+    "text": "Parlez-moi de votre activité et de ce qui doit changer. Je vous réponds personnellement."
+  },
+  "form": {
+    "firstName": "Votre prénom",
+    "firstNamePlaceholder": "Camille",
+    "company": "Votre entreprise",
+    "companyPlaceholder": "Le nom de votre activité",
+    "email": "Votre adresse e-mail",
+    "emailPlaceholder": "bonjour@entreprise.fr",
+    "goal": "Votre projet",
+    "goalPlaceholder": "De quoi avez-vous besoin ?",
+    "goals": {
+      "creation": "Créer mon site",
+      "redesign": "Refaire mon site",
+      "product": "Construire une application ou un produit",
+      "marketing": "Être mieux trouvé sur Google",
+      "other": "Autre chose, parlons-en"
     },
-    "offers": {
-        "title": "Offres adaptées à votre besoin",
-        "subtitle": "Chaque formule est conçue pour maximiser votre retour sur investissement. Livraison rapide garantie.",
-        "popular": "Le plus choisi",
-        "bestValue": "Meilleur rapport",
-        "limitedOffer": "⚡ Offre de lancement — Réservez maintenant",
-        "perProject": "HT",
-        "guarantee": "💯 Garantie satisfait ou remboursé sous 30 jours",
-        "cta": "Choisir cette formule",
-        "packages": {
-            "essential": {
-                "name": "Essentiel",
-                "description": "Pour démarrer rapidement avec une présence en ligne professionnelle",
-                "price": "490€",
-                "originalPrice": "690€",
-                "features": {
-                    "0": "Site one-page responsive",
-                    "1": "Design moderne sur mesure",
-                    "2": "Formulaire de contact optimisé",
-                    "3": "SEO de base inclus",
-                    "4": "Livraison en 5-7 jours"
-                }
-            },
-            "standard": {
-                "name": "Performance",
-                "description": "L'offre complète pour générer des leads et dominer localement",
-                "price": "790€",
-                "originalPrice": "1190€",
-                "features": {
-                    "0": "Tout de l'offre Essentiel",
-                    "1": "Jusqu'à 5 pages personnalisées",
-                    "2": "Intégration Google Maps",
-                    "3": "Analytics & tracking avancé",
-                    "4": "Optimisation performance (Core Web Vitals)",
-                    "5": "Livraison en 5-7 jours"
-                }
-            },
-            "premium": {
-                "name": "Excellence",
-                "description": "La solution tout-en-un pour dominer votre marché local",
-                "price": "1190€",
-                "originalPrice": "1790€",
-                "features": {
-                    "0": "Tout de l'offre Performance",
-                    "1": "Blog intégré pour votre SEO",
-                    "2": "Rédaction de contenu optimisé",
-                    "3": "Fiche Google Business Profile",
-                    "4": "Support prioritaire 1 mois",
-                    "5": "Formation complète CMS"
-                }
-            }
+    "message": "Quelques mots pour commencer",
+    "messagePlaceholder": "Votre activité, vos objectifs, votre calendrier…",
+    "privacy": "Ces informations servent uniquement à répondre à votre demande.",
+    "privacyLink": "Confidentialité",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours…",
+    "success": "Merci, votre message est bien arrivé. Je reviens vers vous très vite.",
+    "error": "L’envoi n’a pas abouti. Réessayez, ou écrivez-moi directement par e-mail."
+  },
+  "offers": {
+    "hero": {
+      "title": "Deux offres, une même exigence.",
+      "lead": "Un site pour être trouvé, ou un produit pour faire tourner votre activité. Dans les deux cas : un design sur mesure, un code rapide et un seul interlocuteur."
+    },
+    "site": {
+      "for": "Artisans, TPE, indépendants",
+      "title": "Votre site",
+      "lead": "Un site sur mesure qui vous ressemble, se charge en un clin d’œil et vous fait trouver par les clients de votre secteur.",
+      "items": [
+        {
+          "title": "Un design à votre image",
+          "text": "Pas de modèle recyclé : une direction visuelle construite autour de votre métier, de vos photos et de vos clients."
+        },
+        {
+          "title": "Référencement local",
+          "text": "Des pages organisées autour de vos services et de votre zone d’intervention, un balisage technique propre, des contenus utiles."
+        },
+        {
+          "title": "Fiche Google",
+          "text": "Création ou remise en ordre de votre fiche d’établissement, cohérente avec le site."
+        },
+        {
+          "title": "Des demandes, pas seulement des visites",
+          "text": "Un parcours clair jusqu’au devis ou à l’appel, sur mobile comme sur ordinateur."
+        },
+        {
+          "title": "Vos contenus en autonomie",
+          "text": "Si vous le souhaitez, un espace simple pour publier vos réalisations et vos actualités."
+        },
+        {
+          "title": "Suivi après la mise en ligne",
+          "text": "Hébergement, maintenance et évolutions : les modalités sont définies ensemble dans le devis."
         }
+      ]
     },
-    "guarantee": {
-        "title": "Notre engagement envers vous",
-        "subtitle": "Votre satisfaction est notre priorité absolue. Nous prenons tous les risques pour que vous n'en ayez aucun.",
-        "items": {
-            "moneyBack": {
-                "title": "Satisfait ou remboursé",
-                "description": "30 jours pour changer d'avis. Remboursement intégral sans condition."
-            },
-            "delivery": {
-                "title": "Livraison garantie",
-                "description": "Respect strict des délais annoncés ou remboursement partiel."
-            },
-            "revisions": {
-                "title": "Révisions illimitées",
-                "description": "Modifications gratuites jusqu'à satisfaction complète du projet."
-            },
-            "support": {
-                "title": "Support réactif",
-                "description": "Réponse sous 24h pour toutes vos questions et demandes."
-            }
+    "product": {
+      "for": "Startups, porteurs de projet, équipes",
+      "title": "Votre produit",
+      "lead": "Une application, un outil métier ou un SaaS : de l’idée à la production, avec la même exigence de design et de performance.",
+      "items": [
+        {
+          "title": "Conception produit",
+          "text": "Clarifier le besoin, prioriser les fonctionnalités et dessiner les parcours avant d’écrire la première ligne de code."
+        },
+        {
+          "title": "Applications web",
+          "text": "Des interfaces rapides et accessibles, construites avec des outils modernes et éprouvés."
+        },
+        {
+          "title": "Outils métier",
+          "text": "Automatiser ce qui vous fait perdre du temps : devis, suivi de chantier, espace client, tableaux de bord."
+        },
+        {
+          "title": "Mise en production",
+          "text": "Déploiement, sécurité, sauvegardes et suivi : un produit qui tient la route une fois en ligne."
         }
+      ]
     },
-    "process": {
-        "badge": "Comment ça marche",
-        "title": "Un process simple et transparent",
-        "subtitle": "4 étapes claires pour passer de l'idée au site en ligne. Vous êtes impliqué à chaque moment.",
-        "steps": {
-            "diagnostic": {
-                "title": "Diagnostic",
-                "description": "J'analyse votre présence actuelle, vos besoins et votre marché pour définir le meilleur plan d'action. On échange par téléphone ou visio, 15 minutes suffisent."
-            },
-            "creation": {
-                "title": "Création",
-                "description": "Design et développement sur mesure de votre site. Vous validez chaque étape via votre espace de suivi Portal Atlas avant que j'avance."
-            },
-            "portal": {
-                "title": "Suivi via Portal Atlas",
-                "description": "Vous suivez l'avancement en temps réel depuis votre espace dédié : tâches, échanges, fichiers, paiements. Tout est centralisé, rien ne vous échappe."
-            },
-            "delivery": {
-                "title": "Livraison",
-                "description": "Mise en ligne, formation à l'utilisation de votre site, et accompagnement post-lancement. Vous êtes autonome, mais je reste disponible."
-            }
+    "included": {
+      "title": "Dans chaque projet.",
+      "items": [
+        {
+          "title": "La vitesse",
+          "text": "Des pages légères, pensées pour s’afficher vite, même sur un téléphone en 4G."
+        },
+        {
+          "title": "L’accessibilité",
+          "text": "Contrastes, navigation au clavier, textes alternatifs : un site utilisable par tous."
+        },
+        {
+          "title": "Un site qui vous appartient",
+          "text": "Le code et le design vous sont cédés au paiement complet, avec un accès administrateur."
+        },
+        {
+          "title": "Satisfait ou remboursé",
+          "text": "Une garantie de 30 jours après la livraison, dans les conditions prévues par les CGV."
         }
+      ]
     },
-    "testimonials": {
-        "title": "Ils en parlent",
-        "subtitle": "Résultats perçus par nos clients",
-        "testimonials": {
-            "0": {
-                "name": "Mickaël Roussel",
-                "role": "Menuisier",
-                "text": "Refonte impeccable : image plus pro, et beaucoup plus d'appels."
-            },
-            "1": {
-                "name": "Karima Bensaïd",
-                "role": "Plombière",
-                "text": "Site moderne livré en une semaine, mes clients trouvent enfin mes services facilement."
-            },
-            "2": {
-                "name": "Didier Lemoine",
-                "role": "Peintre en bâtiment",
-                "text": "Résultats rapides : +30% de demandes de devis depuis la mise en ligne."
-            },
-            "3": {
-                "name": "Claire Doucet",
-                "role": "Paysagiste",
-                "text": "Process fluide, rendu très qualitatif. Mes clients me prennent plus au sérieux."
-            }
+    "method": {
+      "title": "Comment on avance."
+    },
+    "pricing": {
+      "title": "Et le prix ?",
+      "text": "Chaque projet est différent : le devis dépend du nombre de pages, des contenus et des fonctionnalités. Après un premier échange, vous recevez une proposition claire, détaillée étape par étape.",
+      "cta": "Demander un devis"
+    },
+    "faq": "Lire les questions fréquentes"
+  },
+  "work": {
+    "hero": {
+      "title": "Des projets sur la carte.",
+      "lead": "Des sites pour des clients bien réels, et des produits que je conçois pour moi-même."
+    },
+    "clients": "Pour mes clients",
+    "products": "Mes produits",
+    "productsIntro": "Conçus, développés et maintenus par mes soins.",
+    "readCase": "Lire l’étude de cas",
+    "visit": "Voir le site",
+    "case": {
+      "back": "Toutes les réalisations",
+      "client": "Client",
+      "year": "Année",
+      "role": "Rôle",
+      "visit": "Voir le site en ligne",
+      "challenge": "Le point de départ",
+      "approach": "La démarche",
+      "results": "Les résultats",
+      "source": "Lire la publication d’origine"
+    },
+    "items": {
+      "permapaysage": {
+        "title": "Permapaysage",
+        "lead": "Éco-paysagiste à Vallet, dans le Vignoble nantais. Un savoir-faire de terrain, et un site repensé pour le rendre visible.",
+        "role": "Design, développement, SEO local",
+        "summary": "Un éco-paysagiste du Vignoble nantais quitte Odoo pour un site sur mesure, rapide et pensé pour le référencement local.",
+        "fact": "Refonte · SEO local · Parcours devis",
+        "imageAlt": "Page d’accueil du site Permapaysage",
+        "seoTitle": "Permapaysage — Refonte d’un site d’éco-paysagiste",
+        "seoDescription": "Une refonte pour présenter les services de Permapaysage à Vallet, faciliter la prise de contact et structurer sa présence locale.",
+        "sections": [
+          {
+            "title": "Le point de départ",
+            "text": "Permapaysage disposait d’un site Odoo, correct pour démarrer mais lent et difficile à faire remonter sur Google. Or la demande locale pour des jardins résilients est forte, et l’entreprise voulait un site à la hauteur de ses chantiers : clair, rapide et ancré dans son territoire."
+          },
+          {
+            "title": "Une offre plus facile à comprendre",
+            "text": "Le site distingue la conception, l’aménagement et l’entretien. Les réalisations illustrent chaque prestation, la zone d’intervention est explicite et les visiteurs accèdent directement à une demande d’étude.\n\nLes avantages fiscaux liés à l’entretien du jardin disposent de leur propre point d’entrée, pour répondre à une question que les clients posent souvent."
+          },
+          {
+            "title": "Le territoire au cœur des contenus",
+            "text": "Les services, les communes desservies et les réalisations locales donnent un contexte précis à l’activité. Un blog apporte des conseils sur le jardinage et la permaculture.\n\nCette organisation aide les visiteurs, comme les moteurs de recherche, à comprendre ce que fait Permapaysage, et où."
+          }
+        ],
+        "quote": "Il a su transformer un outil potable en une véritable machine de guerre digitale.",
+        "quoteBy": "Permapaysage, sur LinkedIn"
+      },
+      "qoredb": {
+        "role": "Produit open source",
+        "summary": "Un client de bases de données natif, en Rust. 34 moteurs, une seule interface.",
+        "fact": "10 000+ téléchargements",
+        "imageAlt": "Éditeur de requêtes de QoreDB"
+      },
+      "tcgNexus": {
+        "role": "Plateforme web · Lead technique",
+        "summary": "Un écosystème pour joueurs de cartes : tournois, marketplace et analyse assistée par IA.",
+        "fact": "Équipe de 5 · En ligne",
+        "imageAlt": "Page d’accueil de TCG Nexus"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Designer et développeur, sous le même toit.",
+      "lead": "Derrière Atlas, une seule personne : celle qui vous écoute, dessine votre site et écrit son code."
+    },
+    "portraitAlt": "Portrait de Raphaël Plassart",
+    "introTitle": "Bonjour, moi c’est Raphaël.",
+    "intro": [
+      "Je suis Raphaël Plassart, développeur et créateur d’Atlas. J’aime donner une forme concrète aux idées : trouver la bonne composition, simplifier un parcours et construire un site agréable à utiliser.",
+      "Mon expérience de développeur et de cofondateur de Melios et Quori nourrit une approche qui relie la technique aux besoins réels d’une activité. Un site est un outil de travail autant qu’une vitrine.",
+      "Avec moi, vous avez un interlocuteur direct. Nous définissons ensemble le périmètre, les priorités et les étapes avant de commencer. Vous suivez l’avancement et participez aux choix qui comptent."
+    ],
+    "values": {
+      "title": "Ma façon de travailler.",
+      "items": [
+        {
+          "title": "Comprendre avant de dessiner",
+          "text": "Votre métier, vos clients et leurs questions passent avant les couleurs et les effets."
         },
-        "marquee": {
-            "0": "+30% demandes de devis",
-            "1": "Crédibilité renforcée",
-            "2": "Process rapide",
-            "3": "Design premium",
-            "4": "Optimisation locale"
+        {
+          "title": "La vitesse, par politesse",
+          "text": "Un site lent fait fuir. Chaque page est pensée pour s’afficher vite, sur tous les écrans."
+        },
+        {
+          "title": "Montrer plutôt que promettre",
+          "text": "Pas de chiffres inventés ni de superlatifs : des réalisations et des témoignages attribués."
+        },
+        {
+          "title": "Rester joignable",
+          "text": "Après la mise en ligne, vous gardez le même interlocuteur pour faire évoluer votre site."
         }
+      ]
     },
-    "faq": {
-        "title": "FAQ",
-        "subtitle": "Réponses aux questions fréquentes. Utilisez la recherche pour filtrer.",
-        "searchPlaceholder": "Rechercher une question (ex: paiement, google...)",
-        "expandAll": "Tout ouvrir",
-        "collapseAll": "Replier tout",
-        "noResults": "Aucun résultat. Essayez un autre terme.",
-        "stillHaveQuestion": "Toujours une question ?",
-        "contactMe": "Contactez-moi",
-        "questions": {
-            "0": {
-                "question": "Quels délais pour la création d'un site ?",
-                "answer": "Un site vitrine complet est livré en 7 à 10 jours maximum, selon la réactivité pour valider les contenus (textes, photos, logo). Le processus est rapide et structuré pour éviter les retards."
-            },
-            "1": {
-                "question": "Quels contenus dois-je fournir ?",
-                "answer": "Idéalement : votre logo, quelques photos de vos réalisations, la liste de vos services, vos coordonnées. Si vous n'avez pas tout, je peux vous proposer des textes optimisés et des images libres de droits."
-            },
-            "2": {
-                "question": "Dois-je gérer l'hébergement et le nom de domaine ?",
-                "answer": "Non, je m'occupe de tout. Je vous accompagne pour réserver un nom de domaine à votre nom et configurer un hébergement fiable. Vous êtes propriétaire du site et gardez un accès complet."
-            },
-            "3": {
-                "question": "Le site sera-t-il visible sur Google ?",
-                "answer": "Oui. Chaque site est livré optimisé pour le référencement local : structure claire, balises SEO, rapidité et compatibilité mobile. De plus, je peux créer ou améliorer votre fiche Google Business Profile pour renforcer votre visibilité locale."
-            },
-            "4": {
-                "question": "Puis-je mettre à jour mon site moi-même ?",
-                "answer": "Oui. Le site est conçu pour être simple à modifier. Je vous fournis un accès administrateur et une mini-formation pour faire des changements basiques (texte, photos, prix)."
-            },
-            "5": {
-                "question": "Proposez-vous un suivi après la mise en ligne ?",
-                "answer": "Oui. Une option de maintenance mensuelle est disponible (30€/mois) : mises à jour techniques, sauvegardes, sécurité et petites modifications. Cela vous permet d'avoir un site toujours à jour et sécurisé."
-            },
-            "6": {
-                "question": "Comment se passe le paiement ?",
-                "answer": "Le paiement est simple et transparent : acompte de 30% au démarrage, solde à la livraison. Vous pouvez aussi régler en 2 fois sans frais. Pas de coûts cachés."
-            },
-            "7": {
-                "question": "Que se passe-t-il si je n'ai jamais eu de site ?",
-                "answer": "C'est fréquent, et je m'occupe de tout : réservation du domaine, hébergement, création du site, configuration email si besoin. Vous repartez avec une solution clé en main, prête à générer des clients."
-            },
-            "8": {
-                "question": "Ça marche vraiment pour attirer des clients ?",
-                "answer": "Un site professionnel bien conçu, rapide et optimisé pour le référencement local est votre meilleur commercial 24h/24. Combiné à une fiche Google Business bien remplie, c'est le moyen le plus efficace pour qu'un client local vous trouve quand il cherche votre métier sur Internet."
-            },
-            "9": {
-                "question": "Pourquoi pas Wix, Squarespace ou un template WordPress ?",
-                "answer": "Ces outils sont pratiques pour débuter, mais ils ont des limites : performances souvent moyennes, dépendance à un abonnement, personnalisation limitée, et SEO local moins poussé. Avec un site sur-mesure, vous avez un outil taillé pour votre activité, rapide, et dont vous êtes propriétaire."
-            },
-            "10": {
-                "question": "C'est quoi le Portal Atlas ?",
-                "answer": "C'est un espace client en ligne où vous pouvez suivre l'avancement de votre projet en temps réel : tâches en cours, échanges par messagerie, fichiers partagés, factures. Tout est centralisé au même endroit, c'est plus simple que des allers-retours par email."
-            },
-            "11": {
-                "question": "Je ne suis pas à l'aise avec la technologie, c'est un problème ?",
-                "answer": "Pas du tout. Le site est conçu pour être simple à utiliser une fois livré. Et pendant toute la création, c'est moi qui gère la partie technique. Vous n'avez qu'à valider les contenus et le design."
-            },
-            "12": {
-                "question": "Combien coûte un site ?",
-                "answer": "Ça dépend de vos besoins. Un site vitrine simple commence autour de 490€, un site plus complet avec réservation ou blog sera plutôt entre 800 et 1 500€. Le simulateur sur cette page vous donne une estimation en quelques clics."
-            },
-            "13": {
-                "question": "Le site sera-t-il adapté aux téléphones ?",
-                "answer": "Oui, c'est même la priorité. Plus de 70% de vos visiteurs viendront depuis un smartphone. Chaque site est conçu mobile-first : il est pensé d'abord pour les petits écrans, puis adapté au desktop."
-            }
-        }
+    "products": {
+      "title": "Ce que je construis aussi.",
+      "text": "En parallèle des projets clients, je conçois mes propres produits, comme QoreDB, un client de bases de données open source, et TCG Nexus, une plateforme pour joueurs de cartes.",
+      "link": "Voir les réalisations"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Parlons de votre projet.",
+      "lead": "Un message suffit pour commencer. Je vous réponds personnellement, avec des questions précises ou une première piste."
     },
-    "contact": {
-        "title": "Transformez plus de visites en clients.",
-        "badge": "Places limitées ce mois-ci",
-        "subtitle": "Présentez activité & objectifs et recevez un plan d'amélioration concret.",
-        "benefits": {
-            "diagnostic": {
-                "label": "Diagnostic gratuit",
-                "description": "Analyse de votre présence actuelle."
-            },
-            "recommendations": {
-                "label": "Pistes concrètes",
-                "description": "Recommandations actionnables."
-            },
-            "response": {
-                "label": "Réponse ≤24h",
-                "description": "Retour rapide garanti."
-            },
-            "commitment": {
-                "label": "Sans engagement",
-                "description": "Vous décidez ensuite."
-            }
-        },
-        "form": {
-            "title": "Formulaire de contact",
-            "steps": {
-                "objective": "Votre Objectif",
-                "context": "Contexte",
-                "identity": "Coordonnées"
-            },
-            "objectives": {
-                "creation": {
-                    "label": "Création de site",
-                    "desc": "Je n'ai pas encore de site"
-                },
-                "redesign": {
-                    "label": "Refonte complète",
-                    "desc": "J'ai un site mais il est daté"
-                },
-                "marketing": {
-                    "label": "Performance / SEO",
-                    "desc": "Je veux plus de trafic/clients"
-                },
-                "other": {
-                    "label": "Autre demande",
-                    "desc": "Partenariat ou spécifique"
-                }
-            },
-            "timelines": {
-                "label": "Délai souhaité",
-                "urgent": "Dès que possible (< 2 sem)",
-                "1month": "Dans le mois",
-                "3months": "Dans les 3 mois",
-                "exploration": "Je me renseigne"
-            },
-            "budgetRanges": {
-                "tbd": "À définir / Je ne sais pas",
-                "under1000": "Moins de 1 000 €",
-                "1000to2000": "1 000 € - 2 000 €",
-                "over2000": "Plus de 2 000 €"
-            },
-            "fields": {
-                "currentUrl": "Adresse de votre site actuel (si existant)",
-                "budget": "Budget envisagé",
-                "budgetPlaceholder": "Sélectionner une fourchette...",
-                "message": "Détails supplémentaires (optionnel)",
-                "firstName": "Prénom",
-                "lastName": "Nom",
-                "email": "Email pro",
-                "company": "Nom de l'entreprise",
-                "phone": "Téléphone mobile"
-            },
-            "next": "Continuer",
-            "back": "Retour",
-            "submit": "Obtenir mon audit gratuit",
-            "submitting": "Analyse en cours...",
-            "successMessage": "Demande reçue ! Je vous recontacte sous 24h.",
-            "consent": "Vos données sont confidentielles. Pas de spam, promis."
-        }
+    "nextTitle": "Ce qui se passe ensuite",
+    "next": [
+      "Je lis votre message et je vous réponds.",
+      "On échange sur votre activité et vos objectifs.",
+      "Vous recevez une proposition claire et détaillée."
+    ],
+    "direct": "Vous préférez l’e-mail ? Écrivez-moi directement :"
+  },
+  "faq": {
+    "hero": {
+      "title": "Les bonnes questions.",
+      "lead": "Avant de se lancer, voici ce qu’on me demande le plus souvent."
     },
-    "language": {
-        "switch": "Changer de langue",
-        "french": "Français",
-        "english": "English"
+    "items": [
+      {
+        "question": "Combien coûte un site sur mesure ?",
+        "answer": "Le prix dépend du nombre de pages, des contenus et des fonctionnalités. Après un premier échange, vous recevez un devis qui précise le périmètre et les étapes. Aucun tarif unique ne remplace cette discussion."
+      },
+      {
+        "question": "Pouvez-vous refaire mon site existant ?",
+        "answer": "Oui. Nous commençons par identifier ce qui fonctionne et ce qui doit évoluer : identité visuelle, contenus, navigation ou technique. Les changements d’adresses sont préparés pour conserver des parcours cohérents."
+      },
+      {
+        "question": "Comment se déroule le projet ?",
+        "answer": "Nous clarifions vos objectifs, puis je propose une direction visuelle. Après vos retours, je développe les pages, vérifie les parcours et prépare la mise en ligne avec vous."
+      },
+      {
+        "question": "Le référencement est-il pris en compte ?",
+        "answer": "Oui : structure des pages, titres, descriptions, liens internes et performance font partie de la conception. Un classement dans Google ne peut toutefois pas être garanti."
+      },
+      {
+        "question": "Travaillez-vous aussi sur des applications ?",
+        "answer": "Oui. Au-delà des sites, je conçois et développe des applications web, des outils métier et des produits SaaS, de la conception à la mise en production."
+      },
+      {
+        "question": "Est-ce que je pourrai publier des articles ?",
+        "answer": "Oui. Le mode de publication se choisit en fonction de vos besoins. Un espace d’administration peut être prévu au devis si vous souhaitez rédiger et publier en autonomie."
+      },
+      {
+        "question": "Qui s’occupe du site après la livraison ?",
+        "answer": "Les modalités d’hébergement, de maintenance et d’accompagnement sont définies dans le devis. Nous prévoyons les accès et les explications nécessaires à la continuité de votre site."
+      }
+    ],
+    "moreTitle": "Une autre question ?",
+    "moreText": "Posez-la directement, je vous réponds personnellement.",
+    "cta": "Me poser la question"
+  },
+  "links": {
+    "hero": {
+      "title": "Raphaël Plassart.",
+      "lead": "Les bonnes adresses pour me contacter et suivre mon travail."
     },
-    "stickyCta": {
-        "cta": "Diagnostic gratuit →"
-    },
-    "projectModal": {
-        "categories": {
-            "coiffeur": "Beauté",
-            "plombier": "Services",
-            "paysagiste": "Paysage",
-            "photographe": "Créatif"
+    "site": "Atlas, le site",
+    "contact": "M’écrire",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "kofi": "Soutenir mon travail"
+  },
+  "success": {
+    "title": "Message bien reçu.",
+    "text": "Merci ! Je reviens vers vous pour parler de votre projet.",
+    "back": "Retour à l’accueil"
+  },
+  "notFound": {
+    "title": "Cette page n’est pas sur la carte.",
+    "text": "L’adresse a peut-être changé. Reprenons depuis un point connu.",
+    "back": "Retour à l’accueil",
+    "work": "Voir les réalisations"
+  },
+  "blog": {
+    "title": "Le journal.",
+    "lead": "Des repères concrets pour préparer votre site, penser son identité et être trouvé.",
+    "readingTime": "{minutes} min de lecture",
+    "readingTimeLong": "{minutes} minutes de lecture",
+    "by": "Par {author}",
+    "publishedOn": "Publié le {date}",
+    "updatedOn": "Mis à jour le {date}",
+    "backToList": "Tout le journal",
+    "read": "Lire l’article",
+    "ctaTitle": "Un site à préparer ?",
+    "ctaText": "Parlons de votre activité et de ce qui doit changer.",
+    "cta": "Démarrer un projet",
+    "empty": "Aucun article publié pour le moment.",
+    "breadcrumbHome": "Accueil",
+    "rssTitle": "Atlas — Journal"
+  },
+  "legal": {
+    "cgv": {
+      "title": "Conditions Générales de Vente",
+      "lastUpdate": "Dernière mise à jour : 9 février 2026",
+      "sections": {
+        "object": {
+          "title": "1. Objet et champ d'application",
+          "content": "Les présentes Conditions Générales de Vente (ci-après « CGV ») régissent l'ensemble des relations contractuelles entre le Prestataire et le Client pour toute commande de prestations de services de création de sites web. Toute commande implique l'acceptation sans réserve des présentes CGV par le Client. Les CGV applicables sont celles en vigueur à la date de la commande."
         },
-        "metrics": {
-            "visits": "SEO optimisé",
-            "contacts": "Design premium",
-            "mobileFirst": "Mobile-first"
+        "provider": {
+          "title": "2. Identification du prestataire",
+          "name": "Raphaël Plassart",
+          "tradeName": "Nom commercial : Atlas",
+          "status": "Entrepreneur individuel (Micro-entreprise)",
+          "siren": "SIREN : 942 906 157",
+          "siret": "SIRET : 942 906 157 00014",
+          "ape": "Code APE : 62.01Z – Programmation informatique",
+          "address": "Siège social : 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France",
+          "email": "Email : contact@raphael-plassart.com",
+          "phone": "Téléphone : 07 69 89 28 62",
+          "tva": "TVA non applicable, article 293 B du Code général des impôts"
         },
-        "fullscreen": "Voir en plein écran",
-        "close": "Fermer",
-        "closeHint": "Appuyez sur Échap pour fermer",
-        "transformation": {
-            "title": "Transformation Avant/Après",
-            "subtitle": "Impact visuel de la refonte sur l'expérience utilisateur"
+        "services": {
+          "title": "3. Prestations",
+          "content": "Le Prestataire propose des services de conception et de développement de sites web, incluant notamment :",
+          "items": [
+            "Création de sites vitrines (one-page ou multi-pages)",
+            "Design et intégration sur mesure (responsive / mobile-first)",
+            "Optimisation du référencement naturel (SEO local)",
+            "Configuration de l'hébergement et du nom de domaine",
+            "Intégration d'outils tiers (Google Maps, Analytics, formulaires)",
+            "Formation à l'utilisation et maintenance optionnelle"
+          ],
+          "detail": "Le détail précis des prestations, fonctionnalités et livrables est défini dans le devis validé par le Client, qui fait partie intégrante du contrat."
         },
-        "results": {
-            "title": "Résultats concrets",
-            "visits": "Visites",
-            "contacts": "Contacts"
+        "quote": {
+          "title": "4. Devis et commande",
+          "items": [
+            "Le Prestataire établit un devis gratuit et détaillé sur la base des informations fournies par le Client.",
+            "Le devis est valable 30 jours à compter de sa date d'émission.",
+            "La commande est réputée ferme et définitive à réception du devis signé (ou accepté par email) accompagné du versement de l'acompte.",
+            "Toute demande de prestation supplémentaire non prévue au devis initial fera l'objet d'un avenant chiffré soumis à l'accord du Client."
+          ]
         },
-        "improvements": {
-            "title": "Améliorations apportées"
+        "pricing": {
+          "title": "5. Tarifs",
+          "content": "Les prix sont indiqués en euros. TVA non applicable en vertu de l'article 293 B du Code général des impôts (régime de la micro-entreprise). Les tarifs en vigueur sont ceux figurant sur le devis accepté par le Client. Le Prestataire se réserve le droit de modifier ses tarifs à tout moment, sans effet sur les commandes déjà acceptées."
         },
-        "cta": {
-            "title": "Prêt à transformer votre site ?",
-            "description": "Obtenez des résultats similaires avec une approche sur-mesure adaptée à votre secteur d'activité.",
-            "button": "Demander un diagnostic gratuit"
-        }
-    },
-    "legal": {
-        "cgv": {
-            "title": "Conditions Générales de Vente",
-            "lastUpdate": "Dernière mise à jour : 9 février 2026",
-            "sections": {
-                "object": {
-                    "title": "1. Objet et champ d'application",
-                    "content": "Les présentes Conditions Générales de Vente (ci-après « CGV ») régissent l'ensemble des relations contractuelles entre le Prestataire et le Client pour toute commande de prestations de services de création de sites web. Toute commande implique l'acceptation sans réserve des présentes CGV par le Client. Les CGV applicables sont celles en vigueur à la date de la commande."
-                },
-                "provider": {
-                    "title": "2. Identification du prestataire",
-                    "name": "Raphaël Plassart",
-                    "tradeName": "Nom commercial : Atlas",
-                    "status": "Entrepreneur individuel (Micro-entreprise)",
-                    "siren": "SIREN : 942 906 157",
-                    "siret": "SIRET : 942 906 157 00014",
-                    "ape": "Code APE : 62.01Z – Programmation informatique",
-                    "address": "Siège social : 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France",
-                    "email": "Email : raphael.plassart@gmail.com",
-                    "phone": "Téléphone : 07 69 89 28 62",
-                    "tva": "TVA non applicable, article 293 B du Code général des impôts"
-                },
-                "services": {
-                    "title": "3. Prestations",
-                    "content": "Le Prestataire propose des services de conception et de développement de sites web, incluant notamment :",
-                    "items": [
-                        "Création de sites vitrines (one-page ou multi-pages)",
-                        "Design et intégration sur mesure (responsive / mobile-first)",
-                        "Optimisation du référencement naturel (SEO local)",
-                        "Configuration de l'hébergement et du nom de domaine",
-                        "Intégration d'outils tiers (Google Maps, Analytics, formulaires)",
-                        "Formation à l'utilisation et maintenance optionnelle"
-                    ],
-                    "detail": "Le détail précis des prestations, fonctionnalités et livrables est défini dans le devis validé par le Client, qui fait partie intégrante du contrat."
-                },
-                "quote": {
-                    "title": "4. Devis et commande",
-                    "items": [
-                        "Le Prestataire établit un devis gratuit et détaillé sur la base des informations fournies par le Client.",
-                        "Le devis est valable 30 jours à compter de sa date d'émission.",
-                        "La commande est réputée ferme et définitive à réception du devis signé (ou accepté par email) accompagné du versement de l'acompte.",
-                        "Toute demande de prestation supplémentaire non prévue au devis initial fera l'objet d'un avenant chiffré soumis à l'accord du Client."
-                    ]
-                },
-                "pricing": {
-                    "title": "5. Tarifs",
-                    "content": "Les prix sont indiqués en euros. TVA non applicable en vertu de l'article 293 B du Code général des impôts (régime de la micro-entreprise). Les tarifs en vigueur sont ceux figurant sur le devis accepté par le Client. Le Prestataire se réserve le droit de modifier ses tarifs à tout moment, sans effet sur les commandes déjà acceptées."
-                },
-                "payment": {
-                    "title": "6. Modalités de paiement",
-                    "content": "Le paiement s'effectue selon les modalités suivantes :",
-                    "items": [
-                        "Acompte de 30 % du montant total à la commande (signature du devis)",
-                        "Solde de 70 % à la livraison du site, avant mise en ligne définitive",
-                        "Paiement possible en 2 fois sans frais (50 % à la commande, 50 % à la livraison), sur demande",
-                        "Moyens de paiement acceptés : virement bancaire, PayPal"
-                    ],
-                    "invoice": "Une facture est émise pour chaque paiement. La facture mentionne « TVA non applicable, article 293 B du CGI »."
-                },
-                "latePayment": {
-                    "title": "7. Retard de paiement",
-                    "content": "En cas de retard de paiement, et conformément aux articles L441-10 et suivants du Code de commerce : des pénalités de retard seront exigibles au taux de trois fois le taux d'intérêt légal en vigueur, calculées sur le montant net de la somme restant due, à compter de la date d'échéance prévue. Une indemnité forfaitaire de 40 € pour frais de recouvrement sera également due de plein droit (art. D441-5 du Code de commerce). Le Prestataire se réserve le droit de suspendre toute prestation en cours en cas de non-paiement."
-                },
-                "delivery": {
-                    "title": "8. Délais de réalisation et livraison",
-                    "content": "Les délais indicatifs de réalisation sont de 5 à 10 jours ouvrés à compter de la réception de l'ensemble des éléments nécessaires (contenus, textes, images, logo, accès). Ces délais peuvent varier en fonction de la complexité du projet et de la réactivité du Client dans la fourniture des contenus. Tout retard imputable au Client (non-fourniture des contenus, retard de validation) reporte d'autant le délai de livraison. La livraison est réputée effectuée lors de la mise à disposition du site sur un environnement de prévisualisation (staging) pour validation par le Client."
-                },
-                "providerObligations": {
-                    "title": "9. Obligations du prestataire",
-                    "items": [
-                        "Réaliser les prestations conformément au devis validé et aux règles de l'art",
-                        "Respecter les délais convenus, sous réserve de la coopération du Client",
-                        "Informer le Client de l'avancement du projet à chaque étape clé",
-                        "Assurer la confidentialité des informations communiquées par le Client",
-                        "Livrer un site fonctionnel, responsive et optimisé pour le référencement"
-                    ]
-                },
-                "clientObligations": {
-                    "title": "10. Obligations du client",
-                    "items": [
-                        "Fournir l'ensemble des contenus nécessaires (textes, images, logo) dans les délais convenus",
-                        "Valider les étapes de création dans un délai raisonnable (5 jours ouvrés maximum par étape)",
-                        "S'assurer que les contenus fournis sont libres de droits et conformes à la législation en vigueur",
-                        "Régler les sommes dues aux échéances prévues",
-                        "Désigner un interlocuteur unique pour faciliter la communication"
-                    ]
-                },
-                "withdrawal": {
-                    "title": "11. Droit de rétractation",
-                    "content": "Conformément aux articles L221-18 et suivants du Code de la consommation, le Client consommateur dispose d'un délai de 14 jours à compter de l'acceptation du devis pour exercer son droit de rétractation, sans avoir à justifier de motif ni à payer de pénalités. Pour exercer ce droit, le Client doit notifier sa décision par email à raphael.plassart@gmail.com. En cas de rétractation, les sommes versées seront remboursées dans un délai de 14 jours.",
-                    "exception": "Conformément à l'article L221-28 du Code de la consommation, le droit de rétractation ne peut être exercé pour les prestations de services pleinement exécutées avant la fin du délai de rétractation, si l'exécution a commencé avec l'accord exprès du Client et la reconnaissance de la perte de son droit de rétractation. En acceptant le devis et le démarrage des travaux pendant le délai de rétractation, le Client reconnaît expressément renoncer à son droit de rétractation pour les prestations déjà réalisées."
-                },
-                "validation": {
-                    "title": "12. Validation et recette",
-                    "content": "À l'issue de la réalisation, le Prestataire présente le site au Client pour validation (phase de recette). Le Client dispose de 10 jours ouvrés pour formuler ses remarques et demandes de modifications par écrit (email). Passé ce délai, et en l'absence de retour écrit du Client malgré une relance par email, le site est réputé conforme et accepté. La validation (expresse ou tacite) déclenche l'exigibilité du solde et autorise la mise en ligne définitive."
-                },
-                "revisions": {
-                    "title": "13. Révisions et modifications",
-                    "content": "Dans le cadre du projet initial, le Client bénéficie de révisions incluses pour ajuster le résultat à ses attentes (modifications de textes, couleurs, disposition des éléments). Les révisions portent sur des ajustements par rapport au périmètre défini dans le devis. Toute demande entraînant une refonte significative du design, l'ajout de fonctionnalités non prévues, ou un changement de direction créative majeur pourra faire l'objet d'un devis complémentaire. Après la validation finale et la mise en ligne, les modifications sont facturées selon le tarif horaire en vigueur ou dans le cadre d'un contrat de maintenance."
-                },
-                "guarantee": {
-                    "title": "14. Garantie satisfait ou remboursé",
-                    "content": "Le Prestataire propose une garantie satisfait ou remboursé de 30 jours à compter de la livraison du site. Si le Client n'est pas satisfait du résultat malgré les révisions proposées, il peut demander le remboursement intégral des sommes versées dans ce délai. Cette garantie est soumise aux conditions cumulatives suivantes : (1) le Client a fourni l'ensemble des contenus demandés dans les délais convenus ; (2) le Client a validé au moins une itération de maquette et formulé des retours écrits (par email) permettant au Prestataire d'ajuster le résultat ; (3) la demande de remboursement est formulée par email motivé dans le délai de 30 jours précisant les motifs d'insatisfaction."
-                },
-                "intellectual": {
-                    "title": "15. Propriété intellectuelle et cession des droits",
-                    "items": [
-                        "Le code source et le design du site créé sont cédés au Client à titre exclusif dès le paiement intégral de la prestation. Le Client devient propriétaire du site et dispose d'un accès administrateur complet.",
-                        "Le Prestataire conserve le droit de mentionner la réalisation dans son portfolio et ses supports de communication, sauf opposition écrite du Client.",
-                        "Les outils, frameworks, bibliothèques open source et méthodologies utilisés restent la propriété de leurs auteurs respectifs sous leurs licences d'origine.",
-                        "Le Client garantit détenir les droits sur l'ensemble des contenus qu'il fournit (textes, images, logos) et dégage le Prestataire de toute responsabilité en cas de violation de droits de tiers."
-                    ]
-                },
-                "liability": {
-                    "title": "16. Responsabilité",
-                    "items": [
-                        "Le Prestataire est tenu à une obligation de moyens dans l'exécution de ses prestations.",
-                        "Le Prestataire ne saurait être tenu responsable des contenus fournis par le Client, de l'indisponibilité temporaire du site liée à l'hébergeur, ni des dommages indirects (perte de chiffre d'affaires, perte de clientèle).",
-                        "La responsabilité du Prestataire est limitée au montant total de la prestation concernée.",
-                        "Le Client est seul responsable de l'utilisation qu'il fait du site livré, de sa mise à jour et de la conformité de ses contenus avec la réglementation applicable."
-                    ]
-                },
-                "data": {
-                    "title": "17. Données personnelles",
-                    "content": "Dans le cadre de l'exécution des prestations, le Prestataire peut être amené à traiter des données personnelles du Client (nom, email, téléphone). Ces données sont traitées conformément au RGPD et à la politique de confidentialité accessible sur le site. Le Prestataire s'engage à ne pas communiquer ces données à des tiers et à les conserver uniquement pour la durée nécessaire à l'exécution du contrat."
-                },
-                "confidentiality": {
-                    "title": "18. Confidentialité",
-                    "content": "Chaque partie s'engage à garder confidentielles les informations de toute nature (commerciales, techniques, financières) communiquées par l'autre partie dans le cadre de l'exécution du contrat. Cette obligation de confidentialité subsiste pendant toute la durée du contrat et pendant 2 ans après son terme."
-                },
-                "forceMajeure": {
-                    "title": "19. Force majeure",
-                    "content": "Aucune des parties ne pourra être tenue responsable d'un manquement à ses obligations contractuelles si ce manquement résulte d'un événement de force majeure au sens de l'article 1218 du Code civil (événement échappant au contrôle de la partie concernée, imprévisible et irrésistible). En cas de force majeure, les obligations des parties sont suspendues. Si l'événement perdure au-delà de 30 jours, chaque partie pourra résilier le contrat sans indemnité."
-                },
-                "termination": {
-                    "title": "20. Résiliation",
-                    "content": "En cas de manquement grave de l'une des parties à ses obligations contractuelles, l'autre partie pourra résilier le contrat de plein droit, 15 jours après l'envoi d'une mise en demeure restée infructueuse (par email avec accusé de réception). En cas de résiliation du fait du Client après le début des travaux et hors exercice du droit de rétractation, les sommes versées au titre de l'acompte restent acquises au Prestataire en compensation du travail déjà réalisé. Le Prestataire facturera en supplément les prestations réalisées au-delà de l'acompte."
-                },
-                "mediation": {
-                    "title": "21. Médiation et litiges",
-                    "content": "En cas de différend entre le Prestataire et le Client, les parties s'engagent à rechercher une solution amiable. Conformément aux articles L611-1 et suivants du Code de la consommation, le Client consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige. Le médiateur de la consommation compétent est : CM2C (Centre de Médiation de la Consommation de Conciliateurs de Justice), 14 rue Saint-Jean-de-Beauregard, 91400 Orsay — https://www.cm2c.net — cm2c@cm2c.net. Le Client peut également déposer sa réclamation sur la plateforme européenne de règlement en ligne des litiges : https://ec.europa.eu/consumers/odr. À défaut de résolution amiable, le litige sera soumis aux tribunaux compétents conformément au droit français. Pour les Clients professionnels (B2B), compétence est attribuée aux tribunaux du ressort de la Cour d'appel de Paris. Pour les Clients consommateurs (B2C), le tribunal compétent est celui du domicile du défendeur conformément aux règles de droit commun."
-                },
-                "law": {
-                    "title": "22. Droit applicable",
-                    "content": "Les présentes CGV sont régies par le droit français. Elles sont rédigées en langue française. En cas de contradiction entre les versions française et anglaise, la version française prévaut."
-                },
-                "contact": {
-                    "title": "23. Contact",
-                    "content": "Pour toute question relative aux présentes CGV :",
-                    "email": "Email : raphael.plassart@gmail.com",
-                    "phone": "Téléphone : 07 69 89 28 62",
-                    "address": "Adresse : 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France"
-                }
-            }
+        "payment": {
+          "title": "6. Modalités de paiement",
+          "content": "Le paiement s'effectue selon les modalités suivantes :",
+          "items": [
+            "Acompte de 30 % du montant total à la commande (signature du devis)",
+            "Solde de 70 % à la livraison du site, avant mise en ligne définitive",
+            "Paiement possible en 2 fois sans frais (50 % à la commande, 50 % à la livraison), sur demande",
+            "Moyens de paiement acceptés : virement bancaire, PayPal"
+          ],
+          "invoice": "Une facture est émise pour chaque paiement. La facture mentionne « TVA non applicable, article 293 B du CGI »."
         },
-        "mentions": {
-            "title": "Mentions Légales",
-            "lastUpdate": "Dernière mise à jour : 9 février 2026",
-            "sections": {
-                "publisher": {
-                    "title": "1. Éditeur du site",
-                    "name": "Raphaël Plassart",
-                    "status": "Entrepreneur individuel (Micro-entreprise)",
-                    "activity": "Activité : Développement de sites internet, création de sites vitrines et e-commerce",
-                    "siren": "SIREN : 942 906 157",
-                    "siret": "SIRET : 942 906 157 00014",
-                    "ape": "Code APE : 62.01Z – Programmation informatique",
-                    "address": "Siège social : 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France",
-                    "tva": "TVA non applicable, article 293 B du Code général des impôts"
-                },
-                "director": {
-                    "title": "2. Directeur de la publication",
-                    "content": "Raphaël Plassart"
-                },
-                "contact": {
-                    "title": "3. Contact",
-                    "email": "Email : raphael.plassart@gmail.com",
-                    "phone": "Téléphone : 07 69 89 28 62",
-                    "website": "Site web : https://atlas.raphael-plassart.com"
-                },
-                "hosting": {
-                    "title": "4. Hébergement",
-                    "content": "Ce site est hébergé par :",
-                    "company": "Vercel Inc.",
-                    "address": "440 N Barranca Ave #4133",
-                    "city": "Covina, CA 91723",
-                    "country": "États-Unis",
-                    "website": "Site web : https://vercel.com"
-                },
-                "intellectual": {
-                    "title": "5. Propriété intellectuelle",
-                    "content": "L'ensemble du contenu de ce site (textes, images, graphismes, logo, icônes, code source) est la propriété exclusive de Raphaël Plassart, sauf mention contraire. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans autorisation écrite préalable de Raphaël Plassart. Toute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux articles L.335-2 et suivants du Code de la propriété intellectuelle."
-                },
-                "data": {
-                    "title": "6. Collecte de données personnelles",
-                    "content": "Les informations personnelles collectées via les formulaires de contact (nom, prénom, email, téléphone, nom d'entreprise) sont utilisées uniquement pour répondre aux demandes des utilisateurs et fournir les services demandés. Aucune donnée personnelle n'est cédée ou vendue à des tiers. Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Pour exercer ces droits, contactez : raphael.plassart@gmail.com. Pour plus d'informations, consultez notre Politique de Confidentialité."
-                },
-                "cookies": {
-                    "title": "7. Cookies",
-                    "content": "Ce site utilise des cookies strictement nécessaires à son fonctionnement ainsi que des cookies analytiques (avec votre consentement) pour mesurer l'audience. Vous pouvez gérer vos préférences de cookies à tout moment via le bandeau de consentement ou les paramètres de votre navigateur. Pour plus de détails, consultez notre Politique de Confidentialité."
-                },
-                "liability": {
-                    "title": "8. Limitation de responsabilité",
-                    "content": "Les informations contenues sur ce site sont aussi précises que possible et régulièrement mises à jour. Toutefois, elles peuvent contenir des inexactitudes ou des omissions. Raphaël Plassart ne saurait être tenu responsable des dommages directs ou indirects résultant de l'accès ou de l'utilisation de ce site, y compris l'inaccessibilité, les pertes de données, les dommages ou virus qui pourraient affecter l'équipement informatique de l'utilisateur."
-                },
-                "links": {
-                    "title": "9. Liens hypertextes",
-                    "content": "Ce site peut contenir des liens hypertextes vers d'autres sites. Raphaël Plassart n'exerce aucun contrôle sur le contenu de ces sites tiers et décline toute responsabilité quant à leur contenu ou aux éventuels dommages résultant de leur utilisation."
-                },
-                "law": {
-                    "title": "10. Droit applicable et juridiction compétente",
-                    "content": "Les présentes mentions légales sont régies par le droit français. En cas de litige, et après tentative de résolution amiable, compétence est attribuée aux tribunaux compétents du ressort de la Cour d'appel de Paris."
-                }
-            }
+        "latePayment": {
+          "title": "7. Retard de paiement",
+          "content": "En cas de retard de paiement, et conformément aux articles L441-10 et suivants du Code de commerce : des pénalités de retard seront exigibles au taux de trois fois le taux d'intérêt légal en vigueur, calculées sur le montant net de la somme restant due, à compter de la date d'échéance prévue. Une indemnité forfaitaire de 40 € pour frais de recouvrement sera également due de plein droit (art. D441-5 du Code de commerce). Le Prestataire se réserve le droit de suspendre toute prestation en cours en cas de non-paiement."
         },
-        "privacy": {
-            "title": "Politique de Confidentialité",
-            "lastUpdate": "Dernière mise à jour : 9 février 2026",
-            "sections": {
-                "introduction": {
-                    "title": "1. Introduction",
-                    "content": "La présente politique de confidentialité décrit comment Raphaël Plassart, exerçant sous le nom commercial « Atlas », collecte, utilise et protège vos données personnelles dans le cadre de l'utilisation du site https://atlas.raphael-plassart.com, conformément au Règlement (UE) 2016/679 du 27 avril 2016 (RGPD) et à la loi n° 78-17 du 6 janvier 1978 modifiée (loi Informatique et Libertés)."
-                },
-                "controller": {
-                    "title": "2. Responsable du traitement",
-                    "content": "Le responsable du traitement des données personnelles est :",
-                    "name": "Raphaël Plassart",
-                    "status": "Entrepreneur individuel (Micro-entreprise)",
-                    "siret": "SIRET : 942 906 157 00014",
-                    "address": "18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France",
-                    "email": "Email : raphael.plassart@gmail.com",
-                    "phone": "Téléphone : 07 69 89 28 62"
-                },
-                "data": {
-                    "title": "3. Données personnelles collectées",
-                    "formTitle": "Via les formulaires de contact :",
-                    "formItems": [
-                        "Nom et prénom",
-                        "Adresse email",
-                        "Numéro de téléphone (optionnel)",
-                        "Nom de l'entreprise",
-                        "Objectif du projet et message"
-                    ],
-                    "autoTitle": "Données collectées automatiquement (avec votre consentement) :",
-                    "autoItems": [
-                        "Adresse IP (anonymisée)",
-                        "Type de navigateur et système d'exploitation",
-                        "Pages visitées et durée de visite",
-                        "Source de trafic (referrer)"
-                    ]
-                },
-                "purposes": {
-                    "title": "4. Finalités et bases légales du traitement",
-                    "content": "Vos données sont traitées pour les finalités suivantes :",
-                    "items": [
-                        "Répondre à vos demandes de contact et vous fournir des devis (base légale : exécution de mesures précontractuelles – art. 6.1.b du RGPD)",
-                        "Gestion de la relation client et suivi des projets (base légale : exécution du contrat – art. 6.1.b du RGPD)",
-                        "Analyse statistique et amélioration du site via Google Analytics et Vercel Analytics (base légale : consentement – art. 6.1.a du RGPD)",
-                        "Respect de nos obligations légales et fiscales (base légale : obligation légale – art. 6.1.c du RGPD)"
-                    ]
-                },
-                "recipients": {
-                    "title": "5. Destinataires et sous-traitants",
-                    "content": "Vos données personnelles peuvent être transmises aux sous-traitants suivants, dans le cadre strict des finalités décrites ci-dessus :",
-                    "items": [
-                        "Vercel Inc. (hébergement du site) – États-Unis – https://vercel.com/legal/privacy-policy",
-                        "Google LLC (Google Analytics 4, mesure d'audience) – États-Unis – https://policies.google.com/privacy",
-                        "Vercel Analytics (mesure de performance) – États-Unis – https://vercel.com/legal/privacy-policy"
-                    ],
-                    "noSale": "Aucune donnée personnelle n'est vendue, louée ou cédée à des tiers à des fins commerciales."
-                },
-                "transfers": {
-                    "title": "6. Transferts internationaux de données",
-                    "content": "Certains de nos sous-traitants (Vercel, Google) sont situés aux États-Unis. Ces transferts sont encadrés par les clauses contractuelles types (CCT) approuvées par la Commission européenne et/ou le EU-US Data Privacy Framework, conformément aux exigences du RGPD (articles 46 et 49)."
-                },
-                "retention": {
-                    "title": "7. Durée de conservation des données",
-                    "items": [
-                        "Données de contact (formulaires) : 3 ans à compter du dernier contact",
-                        "Données clients (facturation) : 10 ans conformément aux obligations comptables",
-                        "Données de navigation (cookies analytiques) : 13 mois maximum",
-                        "Préférences de consentement : 13 mois maximum (conformément aux recommandations CNIL)"
-                    ]
-                },
-                "cookies": {
-                    "title": "8. Cookies et technologies de suivi",
-                    "intro": "Ce site utilise des cookies, c'est-à-dire de petits fichiers texte stockés sur votre terminal lors de votre visite.",
-                    "essentialTitle": "Cookies strictement nécessaires (pas de consentement requis) :",
-                    "essentialItems": [
-                        "atlas_consent_preferences : stockage de vos préférences de cookies (durée : 13 mois)"
-                    ],
-                    "analyticsTitle": "Cookies analytiques (soumis à votre consentement) :",
-                    "analyticsItems": [
-                        "Google Analytics 4 (_ga, _ga_*) : mesure d'audience, pages visitées, durée de session (durée : 13 mois). L'anonymisation des adresses IP est activée.",
-                        "Vercel Analytics : mesure de performance et événements de conversion (durée : session)"
-                    ],
-                    "marketingTitle": "Cookies marketing (soumis à votre consentement) :",
-                    "marketingItems": [
-                        "Google Signals : personnalisation publicitaire (désactivé par défaut)"
-                    ],
-                    "management": "Vous pouvez gérer vos préférences de cookies à tout moment via le bandeau de consentement accessible en bas de page, ou en configurant votre navigateur. Le refus des cookies analytiques et marketing n'affecte pas le fonctionnement du site.",
-                    "consentMode": "Ce site utilise Google Consent Mode V2, qui garantit que les cookies analytiques et marketing ne sont déposés qu'après votre consentement explicite."
-                },
-                "rights": {
-                    "title": "9. Vos droits",
-                    "content": "Conformément au RGPD (articles 15 à 22) et à la loi Informatique et Libertés, vous disposez des droits suivants :",
-                    "items": [
-                        "Droit d'accès : obtenir la confirmation que vos données sont traitées et en recevoir une copie (art. 15)",
-                        "Droit de rectification : faire corriger vos données inexactes ou incomplètes (art. 16)",
-                        "Droit à l'effacement : demander la suppression de vos données (art. 17)",
-                        "Droit à la limitation du traitement : demander la suspension du traitement (art. 18)",
-                        "Droit à la portabilité : recevoir vos données dans un format structuré et les transférer (art. 20)",
-                        "Droit d'opposition : vous opposer au traitement de vos données (art. 21)",
-                        "Droit de retrait du consentement : retirer votre consentement à tout moment pour les traitements fondés sur celui-ci (art. 7)"
-                    ],
-                    "contact": "Pour exercer ces droits, contactez-nous par email à : raphael.plassart@gmail.com. Nous répondrons dans un délai d'un mois conformément au RGPD.",
-                    "cnil": "En cas de difficulté dans la gestion de vos données personnelles, vous pouvez introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) : https://www.cnil.fr"
-                },
-                "security": {
-                    "title": "10. Sécurité des données",
-                    "content": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles, notamment : hébergement sécurisé via Vercel (HTTPS), anonymisation des adresses IP dans Google Analytics, absence de stockage de données sensibles côté client, et accès restreint aux données personnelles."
-                },
-                "automated": {
-                    "title": "11. Décisions automatisées",
-                    "content": "Aucune décision automatisée ni aucun profilage au sens de l'article 22 du RGPD n'est mis en œuvre sur ce site."
-                },
-                "minors": {
-                    "title": "12. Données des mineurs",
-                    "content": "Ce site ne s'adresse pas aux mineurs de moins de 16 ans. Nous ne collectons pas sciemment de données personnelles auprès de mineurs. Si vous êtes parent ou tuteur et que vous constatez qu'un mineur nous a communiqué des données personnelles, contactez-nous pour en demander la suppression."
-                },
-                "modifications": {
-                    "title": "13. Modifications de la politique",
-                    "content": "Cette politique de confidentialité peut être modifiée à tout moment. La version en vigueur est celle publiée sur ce site, avec sa date de dernière mise à jour. En cas de modification substantielle, nous vous en informerons par le biais d'un bandeau sur le site."
-                },
-                "contact": {
-                    "title": "14. Contact",
-                    "content": "Pour toute question relative à cette politique de confidentialité ou à la gestion de vos données personnelles :",
-                    "email": "Email : raphael.plassart@gmail.com",
-                    "phone": "Téléphone : 07 69 89 28 62",
-                    "address": "Adresse : 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France"
-                }
-            }
-        }
-    },
-    "consent": {
-        "banner": {
-            "title": "Gestion des cookies",
-            "description": "Nous utilisons des cookies pour améliorer votre expérience et analyser notre trafic. Vous pouvez accepter tous les cookies ou personnaliser vos préférences.",
-            "manage": "Gérer",
-            "reject": "Refuser",
-            "accept": "Accepter"
+        "delivery": {
+          "title": "8. Délais de réalisation et livraison",
+          "content": "Les délais indicatifs de réalisation sont de 5 à 10 jours ouvrés à compter de la réception de l'ensemble des éléments nécessaires (contenus, textes, images, logo, accès). Ces délais peuvent varier en fonction de la complexité du projet et de la réactivité du Client dans la fourniture des contenus. Tout retard imputable au Client (non-fourniture des contenus, retard de validation) reporte d'autant le délai de livraison. La livraison est réputée effectuée lors de la mise à disposition du site sur un environnement de prévisualisation (staging) pour validation par le Client."
         },
-        "modal": {
-            "title": "Gestion de vos préférences de cookies",
-            "description": "Nous respectons votre vie privée. Choisissez les types de cookies que vous acceptez. Vos préférences seront sauvegardées pendant 13 mois maximum.",
-            "categories": {
-                "essential": {
-                    "title": "Cookies essentiels",
-                    "description": "Nécessaires au fonctionnement du site. Ils ne peuvent pas être désactivés.",
-                    "status": "Toujours actifs"
-                },
-                "analytics": {
-                    "title": "Cookies analytiques",
-                    "description": "Nous aident à comprendre comment vous utilisez notre site via Google Analytics.",
-                    "status": {
-                        "enabled": "Activés",
-                        "disabled": "Désactivés"
-                    },
-                    "actions": {
-                        "enable": "Activer",
-                        "disable": "Désactiver"
-                    }
-                },
-                "marketing": {
-                    "title": "Cookies marketing",
-                    "description": "Utilisés pour personnaliser les publicités et mesurer leur efficacité.",
-                    "status": {
-                        "enabled": "Activés",
-                        "disabled": "Désactivés"
-                    },
-                    "actions": {
-                        "enable": "Activer",
-                        "disable": "Désactiver"
-                    }
-                }
-            },
-            "footer": {
-                "rejectAll": "Refuser tout",
-                "acceptAll": "Accepter tout"
-            }
+        "providerObligations": {
+          "title": "9. Obligations du prestataire",
+          "items": [
+            "Réaliser les prestations conformément au devis validé et aux règles de l'art",
+            "Respecter les délais convenus, sous réserve de la coopération du Client",
+            "Informer le Client de l'avancement du projet à chaque étape clé",
+            "Assurer la confidentialité des informations communiquées par le Client",
+            "Livrer un site fonctionnel, responsive et optimisé pour le référencement"
+          ]
         },
-        "manager": {
-            "link": "Gérer mes cookies"
-        }
-    },
-    "links": {
-        "title": "Mes liens",
-        "subtitle": "Retrouvez tous mes liens en un seul endroit",
-        "profile": {
-            "name": "Raphaël Plassart",
-            "title": "Développeur Full Stack & Mobile",
-            "description": "Créateur d'Atlas • Étudiant ETNA • Co-fondateur Melios & Quori"
+        "clientObligations": {
+          "title": "10. Obligations du client",
+          "items": [
+            "Fournir l'ensemble des contenus nécessaires (textes, images, logo) dans les délais convenus",
+            "Valider les étapes de création dans un délai raisonnable (5 jours ouvrés maximum par étape)",
+            "S'assurer que les contenus fournis sont libres de droits et conformes à la législation en vigueur",
+            "Régler les sommes dues aux échéances prévues",
+            "Désigner un interlocuteur unique pour faciliter la communication"
+          ]
         },
-        "categories": {
-            "social": "Réseaux sociaux",
-            "projects": "Projets",
-            "contact": "Contact",
-            "support": "Support"
+        "withdrawal": {
+          "title": "11. Droit de rétractation",
+          "content": "Conformément aux articles L221-18 et suivants du Code de la consommation, le Client consommateur dispose d'un délai de 14 jours à compter de l'acceptation du devis pour exercer son droit de rétractation, sans avoir à justifier de motif ni à payer de pénalités. Pour exercer ce droit, le Client doit notifier sa décision par email à contact@raphael-plassart.com. En cas de rétractation, les sommes versées seront remboursées dans un délai de 14 jours.",
+          "exception": "Conformément à l'article L221-28 du Code de la consommation, le droit de rétractation ne peut être exercé pour les prestations de services pleinement exécutées avant la fin du délai de rétractation, si l'exécution a commencé avec l'accord exprès du Client et la reconnaissance de la perte de son droit de rétractation. En acceptant le devis et le démarrage des travaux pendant le délai de rétractation, le Client reconnaît expressément renoncer à son droit de rétractation pour les prestations déjà réalisées."
         },
-        "links": {
-            "github": {
-                "title": "GitHub",
-                "description": "Mes projets open source et contributions"
-            },
-            "linkedin": {
-                "title": "LinkedIn",
-                "description": "Mon profil professionnel"
-            },
-            "email": {
-                "title": "Email",
-                "description": "Contactez-moi directement"
-            },
-            "ko-fi": {
-                "title": "Ko-fi",
-                "description": "Soutenez mon travail"
-            },
-            "atlas": {
-                "title": "Atlas",
-                "description": "Sites web pour artisans"
-            },
-            "melios": {
-                "title": "Melios",
-                "description": "Plateforme de gestion d'événements"
-            },
-            "quori": {
-                "title": "Quori",
-                "description": "SaaS B2B pour entreprises"
-            }
-        }
-    },
-    "footer": {
-        "description": "Sites web professionnels pour artisans & services locaux. Un interlocuteur unique, un résultat concret.",
-        "navigation": "Navigation",
-        "support": "Support",
-        "legal": "Légal",
-        "copyright": "© {year} Atlas — Tous droits réservés.",
-        "links": {
-            "portfolio": "Réalisations",
-            "process": "Mon Process",
-            "faq": "FAQ",
-            "simulator": "Simulateur",
-            "about": "À propos",
-            "mentions": "Mentions légales",
-            "cgv": "CGV",
-            "privacy": "Confidentialité"
-        }
-    },
-    "portalAtlas": {
-        "badge": "Votre espace client",
-        "title": "Suivez votre projet en temps réel",
-        "subtitle": "Un portail client dédié pour garder le contrôle à chaque étape : progression, échanges, fichiers et paiements, tout est centralisé.",
-        "keyMessage": "Tout votre projet, en un seul endroit. Tâches, messages, fichiers, paiements — vous gardez le contrôle à chaque étape.",
-        "featureLabels": {
-            "tasks": "Tâches",
-            "messages": "Messagerie",
-            "files": "Fichiers",
-            "payments": "Paiements",
-            "tickets": "Tickets"
+        "validation": {
+          "title": "12. Validation et recette",
+          "content": "À l'issue de la réalisation, le Prestataire présente le site au Client pour validation (phase de recette). Le Client dispose de 10 jours ouvrés pour formuler ses remarques et demandes de modifications par écrit (email). Passé ce délai, et en l'absence de retour écrit du Client malgré une relance par email, le site est réputé conforme et accepté. La validation (expresse ou tacite) déclenche l'exigibilité du solde et autorise la mise en ligne définitive."
         },
-        "features": {
-            "dashboard": "Tableau de bord avec vos projets et leur avancement",
-            "tasks": "Suivi des tâches avec statut en temps réel",
-            "tickets": "Demandes et modifications suivies de A à Z",
-            "messages": "Messagerie instantanée intégrée",
-            "files": "Partage de fichiers centralisé (logos, contenus, livrables)",
-            "payments": "Paiements sécurisés via Stripe, suivi des factures"
-        }
-    },
-    "aboutSection": {
-        "title": "Qui suis-je ?",
-        "intro": "Je m'appelle Raphaël. Je crée des sites web qui marchent vraiment pour les artisans et les commerces de proximité.",
-        "values": {
-            "understand": {
-                "title": "Je comprends votre métier",
-                "description": "Avant de coder, je prends le temps de comprendre votre activité, vos clients et ce qui vous différencie."
-            },
-            "deliver": {
-                "title": "Je livre dans les temps",
-                "description": "Un planning clair, des points d'étape réguliers, et un site en ligne dans les délais annoncés."
-            },
-            "reachable": {
-                "title": "Vous pouvez me joindre facilement",
-                "description": "Un interlocuteur unique, joignable par téléphone, email ou via votre espace client."
-            },
-            "works": {
-                "title": "Je construis des outils qui marchent",
-                "description": "Pas juste un beau site : un vrai outil qui vous apporte concrètement de nouveaux clients."
-            }
-        }
-    },
-    "simulator": {
-        "badge": "Estimation en ligne",
-        "title": "Estimez votre projet en quelques clics",
-        "subtitle": "Sélectionnez vos besoins et obtenez une fourchette de prix adaptée. Gratuit et sans engagement.",
-        "steps": {
-            "projectType": "Type de projet",
-            "features": "Fonctionnalités",
-            "options": "Options",
-            "recap": "Récapitulatif",
-            "contact": "Contact"
+        "revisions": {
+          "title": "13. Révisions et modifications",
+          "content": "Dans le cadre du projet initial, le Client bénéficie de révisions incluses pour ajuster le résultat à ses attentes (modifications de textes, couleurs, disposition des éléments). Les révisions portent sur des ajustements par rapport au périmètre défini dans le devis. Toute demande entraînant une refonte significative du design, l'ajout de fonctionnalités non prévues, ou un changement de direction créative majeur pourra faire l'objet d'un devis complémentaire. Après la validation finale et la mise en ligne, les modifications sont facturées selon le tarif horaire en vigueur ou dans le cadre d'un contrat de maintenance."
         },
-        "projectTypes": {
-            "creation": {
-                "label": "Création de site",
-                "desc": "Vous n'avez pas encore de site web"
-            },
-            "refonte": {
-                "label": "Refonte de site",
-                "desc": "Vous souhaitez moderniser votre site existant"
-            }
+        "guarantee": {
+          "title": "14. Garantie satisfait ou remboursé",
+          "content": "Le Prestataire propose une garantie satisfait ou remboursé de 30 jours à compter de la livraison du site. Si le Client n'est pas satisfait du résultat malgré les révisions proposées, il peut demander le remboursement intégral des sommes versées dans ce délai. Cette garantie est soumise aux conditions cumulatives suivantes : (1) le Client a fourni l'ensemble des contenus demandés dans les délais convenus ; (2) le Client a validé au moins une itération de maquette et formulé des retours écrits (par email) permettant au Prestataire d'ajuster le résultat ; (3) la demande de remboursement est formulée par email motivé dans le délai de 30 jours précisant les motifs d'insatisfaction."
         },
-        "features": {
-            "onePage": "Site une page",
-            "threePages": "Jusqu'à 3 pages",
-            "fivePages": "Jusqu'à 5 pages",
-            "contactForm": "Formulaire de contact",
-            "booking": "Réservation en ligne",
-            "blog": "Blog intégré",
-            "seo": "Optimisation SEO locale",
-            "maps": "Intégration Google Maps",
-            "gallery": "Galerie photos"
+        "intellectual": {
+          "title": "15. Propriété intellectuelle et cession des droits",
+          "items": [
+            "Le code source et le design du site créé sont cédés au Client à titre exclusif dès le paiement intégral de la prestation. Le Client devient propriétaire du site et dispose d'un accès administrateur complet.",
+            "Le Prestataire conserve le droit de mentionner la réalisation dans son portfolio et ses supports de communication, sauf opposition écrite du Client.",
+            "Les outils, frameworks, bibliothèques open source et méthodologies utilisés restent la propriété de leurs auteurs respectifs sous leurs licences d'origine.",
+            "Le Client garantit détenir les droits sur l'ensemble des contenus qu'il fournit (textes, images, logos) et dégage le Prestataire de toute responsabilité en cas de violation de droits de tiers."
+          ]
         },
-        "options": {
-            "maintenance": "Maintenance mensuelle (30€/mois)",
-            "cmsTraining": "Formation à l'utilisation",
-            "contentWriting": "Rédaction de contenu optimisé"
+        "liability": {
+          "title": "16. Responsabilité",
+          "items": [
+            "Le Prestataire est tenu à une obligation de moyens dans l'exécution de ses prestations.",
+            "Le Prestataire ne saurait être tenu responsable des contenus fournis par le Client, de l'indisponibilité temporaire du site liée à l'hébergeur, ni des dommages indirects (perte de chiffre d'affaires, perte de clientèle).",
+            "La responsabilité du Prestataire est limitée au montant total de la prestation concernée.",
+            "Le Client est seul responsable de l'utilisation qu'il fait du site livré, de sa mise à jour et de la conformité de ses contenus avec la réglementation applicable."
+          ]
         },
-        "recap": {
-            "title": "Votre estimation",
-            "priceRange": "entre {min}€ et {max}€",
-            "projectType": "Type de projet",
-            "selectedFeatures": "Fonctionnalités incluses",
-            "selectedOptions": "Options",
-            "note": "Cette estimation est indicative. Le prix final sera défini après un échange sur les détails de votre projet.",
-            "cta": "Recevoir mon estimation détaillée"
+        "data": {
+          "title": "17. Données personnelles",
+          "content": "Dans le cadre de l'exécution des prestations, le Prestataire peut être amené à traiter des données personnelles du Client (nom, email, téléphone). Ces données sont traitées conformément au RGPD et à la politique de confidentialité accessible sur le site. Le Prestataire s'engage à ne pas communiquer ces données à des tiers et à les conserver uniquement pour la durée nécessaire à l'exécution du contrat."
+        },
+        "confidentiality": {
+          "title": "18. Confidentialité",
+          "content": "Chaque partie s'engage à garder confidentielles les informations de toute nature (commerciales, techniques, financières) communiquées par l'autre partie dans le cadre de l'exécution du contrat. Cette obligation de confidentialité subsiste pendant toute la durée du contrat et pendant 2 ans après son terme."
+        },
+        "forceMajeure": {
+          "title": "19. Force majeure",
+          "content": "Aucune des parties ne pourra être tenue responsable d'un manquement à ses obligations contractuelles si ce manquement résulte d'un événement de force majeure au sens de l'article 1218 du Code civil (événement échappant au contrôle de la partie concernée, imprévisible et irrésistible). En cas de force majeure, les obligations des parties sont suspendues. Si l'événement perdure au-delà de 30 jours, chaque partie pourra résilier le contrat sans indemnité."
+        },
+        "termination": {
+          "title": "20. Résiliation",
+          "content": "En cas de manquement grave de l'une des parties à ses obligations contractuelles, l'autre partie pourra résilier le contrat de plein droit, 15 jours après l'envoi d'une mise en demeure restée infructueuse (par email avec accusé de réception). En cas de résiliation du fait du Client après le début des travaux et hors exercice du droit de rétractation, les sommes versées au titre de l'acompte restent acquises au Prestataire en compensation du travail déjà réalisé. Le Prestataire facturera en supplément les prestations réalisées au-delà de l'acompte."
+        },
+        "mediation": {
+          "title": "21. Médiation et litiges",
+          "content": "En cas de différend entre le Prestataire et le Client, les parties s'engagent à rechercher une solution amiable. Conformément aux articles L611-1 et suivants du Code de la consommation, le Client consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige. Le médiateur de la consommation compétent est : CM2C (Centre de Médiation de la Consommation de Conciliateurs de Justice), 14 rue Saint-Jean-de-Beauregard, 91400 Orsay — https://www.cm2c.net — cm2c@cm2c.net. Le Client peut également déposer sa réclamation sur la plateforme européenne de règlement en ligne des litiges : https://ec.europa.eu/consumers/odr. À défaut de résolution amiable, le litige sera soumis aux tribunaux compétents conformément au droit français. Pour les Clients professionnels (B2B), compétence est attribuée aux tribunaux du ressort de la Cour d'appel de Paris. Pour les Clients consommateurs (B2C), le tribunal compétent est celui du domicile du défendeur conformément aux règles de droit commun."
+        },
+        "law": {
+          "title": "22. Droit applicable",
+          "content": "Les présentes CGV sont régies par le droit français. Elles sont rédigées en langue française. En cas de contradiction entre les versions française et anglaise, la version française prévaut."
         },
         "contact": {
-            "title": "Finalisez votre demande",
-            "subtitle": "Vos choix seront automatiquement transmis avec votre message.",
-            "fields": {
-                "firstName": "Prénom",
-                "email": "Email",
-                "phone": "Téléphone",
-                "company": "Nom de l'entreprise",
-                "message": "Précisions sur votre projet (optionnel)"
-            },
-            "submit": "Envoyer ma demande",
-            "submitting": "Envoi en cours...",
-            "consent": "Vos données sont confidentielles et ne seront jamais partagées."
+          "title": "23. Contact",
+          "content": "Pour toute question relative aux présentes CGV :",
+          "email": "Email : contact@raphael-plassart.com",
+          "phone": "Téléphone : 07 69 89 28 62",
+          "address": "Adresse : 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France"
         }
+      }
     },
-    "floatingContact": {
-        "title": "Un mot rapide ?",
-        "fields": {
-            "firstName": "Votre prénom",
-            "phone": "Téléphone",
-            "message": "Votre message..."
+    "mentions": {
+      "title": "Mentions Légales",
+      "lastUpdate": "Dernière mise à jour : 9 février 2026",
+      "sections": {
+        "publisher": {
+          "title": "1. Éditeur du site",
+          "name": "Raphaël Plassart",
+          "status": "Entrepreneur individuel (Micro-entreprise)",
+          "activity": "Activité : Développement de sites internet, création de sites vitrines et e-commerce",
+          "siren": "SIREN : 942 906 157",
+          "siret": "SIRET : 942 906 157 00014",
+          "ape": "Code APE : 62.01Z – Programmation informatique",
+          "address": "Siège social : 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France",
+          "tva": "TVA non applicable, article 293 B du Code général des impôts"
         },
-        "send": "Envoyer",
-        "sending": "Envoi...",
-        "success": "Message envoyé ! Je vous rappelle rapidement."
+        "director": {
+          "title": "2. Directeur de la publication",
+          "content": "Raphaël Plassart"
+        },
+        "contact": {
+          "title": "3. Contact",
+          "email": "Email : contact@raphael-plassart.com",
+          "phone": "Téléphone : 07 69 89 28 62",
+          "website": "Site web : https://atlas.raphael-plassart.com"
+        },
+        "hosting": {
+          "title": "4. Hébergement",
+          "content": "Ce site est hébergé par :",
+          "company": "Vercel Inc.",
+          "address": "440 N Barranca Ave #4133",
+          "city": "Covina, CA 91723",
+          "country": "États-Unis",
+          "website": "Site web : https://vercel.com"
+        },
+        "intellectual": {
+          "title": "5. Propriété intellectuelle",
+          "content": "L'ensemble du contenu de ce site (textes, images, graphismes, logo, icônes, code source) est la propriété exclusive de Raphaël Plassart, sauf mention contraire. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans autorisation écrite préalable de Raphaël Plassart. Toute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux articles L.335-2 et suivants du Code de la propriété intellectuelle."
+        },
+        "data": {
+          "title": "6. Collecte de données personnelles",
+          "content": "Les informations personnelles collectées via les formulaires de contact (nom, prénom, email, téléphone, nom d'entreprise) sont utilisées uniquement pour répondre aux demandes des utilisateurs et fournir les services demandés. Aucune donnée personnelle n'est cédée ou vendue à des tiers. Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Pour exercer ces droits, contactez : contact@raphael-plassart.com. Pour plus d'informations, consultez notre Politique de Confidentialité."
+        },
+        "cookies": {
+          "title": "7. Cookies",
+          "content": "Cette version du site ne charge aucun outil de mesure d’audience ni de publicité et ne dépose aucun cookie analytique ou marketing."
+        },
+        "liability": {
+          "title": "8. Limitation de responsabilité",
+          "content": "Les informations contenues sur ce site sont aussi précises que possible et régulièrement mises à jour. Toutefois, elles peuvent contenir des inexactitudes ou des omissions. Raphaël Plassart ne saurait être tenu responsable des dommages directs ou indirects résultant de l'accès ou de l'utilisation de ce site, y compris l'inaccessibilité, les pertes de données, les dommages ou virus qui pourraient affecter l'équipement informatique de l'utilisateur."
+        },
+        "links": {
+          "title": "9. Liens hypertextes",
+          "content": "Ce site peut contenir des liens hypertextes vers d'autres sites. Raphaël Plassart n'exerce aucun contrôle sur le contenu de ces sites tiers et décline toute responsabilité quant à leur contenu ou aux éventuels dommages résultant de leur utilisation."
+        },
+        "law": {
+          "title": "10. Droit applicable et juridiction compétente",
+          "content": "Les présentes mentions légales sont régies par le droit français. En cas de litige, et après tentative de résolution amiable, compétence est attribuée aux tribunaux compétents du ressort de la Cour d'appel de Paris."
+        }
+      }
+    },
+    "privacy": {
+      "title": "Politique de Confidentialité",
+      "lastUpdate": "Dernière mise à jour : 9 février 2026",
+      "sections": {
+        "introduction": {
+          "title": "1. Introduction",
+          "content": "La présente politique de confidentialité décrit comment Raphaël Plassart, exerçant sous le nom commercial « Atlas », collecte, utilise et protège vos données personnelles dans le cadre de l'utilisation du site https://atlas.raphael-plassart.com, conformément au Règlement (UE) 2016/679 du 27 avril 2016 (RGPD) et à la loi n° 78-17 du 6 janvier 1978 modifiée (loi Informatique et Libertés)."
+        },
+        "controller": {
+          "title": "2. Responsable du traitement",
+          "content": "Le responsable du traitement des données personnelles est :",
+          "name": "Raphaël Plassart",
+          "status": "Entrepreneur individuel (Micro-entreprise)",
+          "siret": "SIRET : 942 906 157 00014",
+          "address": "18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France",
+          "email": "Email : contact@raphael-plassart.com",
+          "phone": "Téléphone : 07 69 89 28 62"
+        },
+        "data": {
+          "title": "3. Données personnelles collectées",
+          "formTitle": "Via les formulaires de contact :",
+          "formItems": [
+            "Nom et prénom",
+            "Adresse email",
+            "Numéro de téléphone (optionnel)",
+            "Nom de l'entreprise",
+            "Objectif du projet et message"
+          ],
+          "autoTitle": "Données collectées automatiquement (avec votre consentement) :",
+          "autoItems": [
+            "Données techniques nécessaires à la fourniture du site et à la sécurité de l’hébergement."
+          ]
+        },
+        "purposes": {
+          "title": "4. Finalités et bases légales du traitement",
+          "content": "Vos données sont traitées pour les finalités suivantes :",
+          "items": [
+            "Répondre à vos demandes de contact et vous fournir des devis (base légale : exécution de mesures précontractuelles – art. 6.1.b du RGPD)",
+            "Gestion de la relation client et suivi des projets (base légale : exécution du contrat – art. 6.1.b du RGPD)",
+            "Analyse statistique et amélioration du site via Google Analytics et Vercel Analytics (base légale : consentement – art. 6.1.a du RGPD)",
+            "Respect de nos obligations légales et fiscales (base légale : obligation légale – art. 6.1.c du RGPD)"
+          ]
+        },
+        "recipients": {
+          "title": "5. Destinataires et sous-traitants",
+          "content": "Vos données personnelles peuvent être transmises aux sous-traitants suivants, dans le cadre strict des finalités décrites ci-dessus :",
+          "items": [
+            "Vercel : hébergement du site.",
+            "Resend : acheminement des messages du formulaire.",
+            "Make : transmission à l’outil de suivi, uniquement si cette intégration est activée."
+          ],
+          "noSale": "Aucune donnée personnelle n'est vendue, louée ou cédée à des tiers à des fins commerciales."
+        },
+        "transfers": {
+          "title": "6. Transferts internationaux de données",
+          "content": "Les prestataires techniques utilisés pour l’hébergement et l’acheminement des demandes peuvent traiter des données hors de l’Union européenne. Leurs conditions de traitement et les garanties applicables sont précisées dans leurs politiques de confidentialité."
+        },
+        "retention": {
+          "title": "7. Durée de conservation des données",
+          "items": [
+            "Données de contact (formulaires) : 3 ans à compter du dernier contact",
+            "Données clients (facturation) : 10 ans conformément aux obligations comptables"
+          ]
+        },
+        "cookies": {
+          "title": "8. Cookies et technologies de suivi",
+          "intro": "Cette version du site ne charge aucun outil de mesure d’audience ni de publicité et ne dépose aucun cookie analytique ou marketing.",
+          "essentialTitle": "Cookies strictement nécessaires (pas de consentement requis) :",
+          "essentialItems": [
+            "atlas_consent_preferences : stockage de vos préférences de cookies (durée : 13 mois)"
+          ],
+          "analyticsTitle": "Cookies analytiques (soumis à votre consentement) :",
+          "analyticsItems": [
+            "Google Analytics 4 (_ga, _ga_*) : mesure d'audience, pages visitées, durée de session (durée : 13 mois). L'anonymisation des adresses IP est activée.",
+            "Vercel Analytics : mesure de performance et événements de conversion (durée : session)"
+          ],
+          "marketingTitle": "Cookies marketing (soumis à votre consentement) :",
+          "marketingItems": [
+            "Google Signals : personnalisation publicitaire (désactivé par défaut)"
+          ],
+          "management": "Vous pouvez gérer vos préférences de cookies à tout moment via le bandeau de consentement accessible en bas de page, ou en configurant votre navigateur. Le refus des cookies analytiques et marketing n'affecte pas le fonctionnement du site.",
+          "consentMode": "Ce site utilise Google Consent Mode V2, qui garantit que les cookies analytiques et marketing ne sont déposés qu'après votre consentement explicite."
+        },
+        "rights": {
+          "title": "9. Vos droits",
+          "content": "Conformément au RGPD (articles 15 à 22) et à la loi Informatique et Libertés, vous disposez des droits suivants :",
+          "items": [
+            "Droit d'accès : obtenir la confirmation que vos données sont traitées et en recevoir une copie (art. 15)",
+            "Droit de rectification : faire corriger vos données inexactes ou incomplètes (art. 16)",
+            "Droit à l'effacement : demander la suppression de vos données (art. 17)",
+            "Droit à la limitation du traitement : demander la suspension du traitement (art. 18)",
+            "Droit à la portabilité : recevoir vos données dans un format structuré et les transférer (art. 20)",
+            "Droit d'opposition : vous opposer au traitement de vos données (art. 21)",
+            "Droit de retrait du consentement : retirer votre consentement à tout moment pour les traitements fondés sur celui-ci (art. 7)"
+          ],
+          "contact": "Pour exercer ces droits, contactez-nous par email à : contact@raphael-plassart.com. Nous répondrons dans un délai d'un mois conformément au RGPD.",
+          "cnil": "En cas de difficulté dans la gestion de vos données personnelles, vous pouvez introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) : https://www.cnil.fr"
+        },
+        "security": {
+          "title": "10. Sécurité des données",
+          "content": "Le formulaire contrôle les champs, le format et la taille des requêtes. Les informations transmises ne sont pas publiées sur le site. Les accès aux services d’hébergement et de messagerie doivent être réservés aux personnes habilitées."
+        },
+        "automated": {
+          "title": "11. Décisions automatisées",
+          "content": "Aucune décision automatisée ni aucun profilage au sens de l'article 22 du RGPD n'est mis en œuvre sur ce site."
+        },
+        "minors": {
+          "title": "12. Données des mineurs",
+          "content": "Ce site ne s'adresse pas aux mineurs de moins de 16 ans. Nous ne collectons pas sciemment de données personnelles auprès de mineurs. Si vous êtes parent ou tuteur et que vous constatez qu'un mineur nous a communiqué des données personnelles, contactez-nous pour en demander la suppression."
+        },
+        "modifications": {
+          "title": "13. Modifications de la politique",
+          "content": "Cette politique de confidentialité peut être modifiée à tout moment. La version en vigueur est celle publiée sur ce site, avec sa date de dernière mise à jour. En cas de modification substantielle, nous vous en informerons par le biais d'un bandeau sur le site."
+        },
+        "contact": {
+          "title": "14. Contact",
+          "content": "Pour toute question relative à cette politique de confidentialité ou à la gestion de vos données personnelles :",
+          "email": "Email : contact@raphael-plassart.com",
+          "phone": "Téléphone : 07 69 89 28 62",
+          "address": "Adresse : 18 rue de l'Abreuvoir, 91370 Verrières-le-Buisson, France"
+        }
+      }
     }
+  }
 }
