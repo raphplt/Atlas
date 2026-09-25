@@ -8,6 +8,11 @@ export const permapaysage = {
   image: { src: "/images/work/permapaysage.webp", width: 3200, height: 1840 },
   testimonialUrl:
     "https://www.linkedin.com/posts/permapaysage_permapaysage-%C3%A9co-paysagiste-%C3%A0-vallet-activity-7441431187446861824-4d9D",
+  /** Site de la marque d'entretien, présenté dans l'étude de cas. */
+  companion: {
+    url: "https://www.lejardinierduvignoble.fr",
+    image: { src: "/images/work/lejardinierduvignoble.webp", width: 3200, height: 1840 },
+  },
 };
 
 export const portrait = {

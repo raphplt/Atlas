@@ -311,7 +311,7 @@
     "items": {
       "permapaysage": {
         "title": "Permapaysage",
-        "lead": "Eco-landscaper in Vallet, in the Nantes wine country. Real know-how in the field, and a redesigned website to make it visible.",
+        "lead": "Eco-landscaper in Vallet, in the Nantes wine country. Real know-how in the field, and two websites to make it visible.",
         "role": "Design, development, local SEO",
         "summary": "An eco-landscaper near Nantes leaves Odoo for a fast, custom website built for local search.",
         "fact": "Redesign · Local SEO · Quote requests",
@@ -332,6 +332,12 @@
             "text": "Services, towns covered and local projects give the business a precise context. A blog shares advice on gardening and permaculture.\n\nThis structure helps visitors, and search engines, understand what Permapaysage does, and where."
           }
         ],
+        "companion": {
+          "title": "Where it began: Le Jardinier du Vignoble",
+          "text": "Our work together began with Le Jardinier du Vignoble, Permapaysage’s brand dedicated to garden maintenance as a home service. A single page built to convert: the 50% tax credit and the URSSAF immediate advance are front and centre from the start, then services, before/after photos, client reviews and the area covered all lead to a quote request.\n\nWon over by this first website, Permapaysage then trusted me with the redesign of its main site.",
+          "imageAlt": "Le Jardinier du Vignoble website home page",
+          "visit": "Visit Le Jardinier du Vignoble"
+        },
         "quote": "He turned a passable tool into a real digital war machine.",
         "quoteBy": "Permapaysage, on LinkedIn (translated from French)"
       }

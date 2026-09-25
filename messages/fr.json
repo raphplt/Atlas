@@ -311,7 +311,7 @@
     "items": {
       "permapaysage": {
         "title": "Permapaysage",
-        "lead": "Éco-paysagiste à Vallet, dans le Vignoble nantais. Un savoir-faire de terrain, et un site repensé pour le rendre visible.",
+        "lead": "Éco-paysagiste à Vallet, dans le Vignoble nantais. Un savoir-faire de terrain, et deux sites pour le rendre visible.",
         "role": "Design, développement, SEO local",
         "summary": "Un éco-paysagiste du Vignoble nantais quitte Odoo pour un site sur mesure, rapide et pensé pour le référencement local.",
         "fact": "Refonte · SEO local · Parcours devis",
@@ -332,6 +332,12 @@
             "text": "Les services, les communes desservies et les réalisations locales donnent un contexte précis à l’activité. Un blog apporte des conseils sur le jardinage et la permaculture.\n\nCette organisation aide les visiteurs, comme les moteurs de recherche, à comprendre ce que fait Permapaysage, et où."
           }
         ],
+        "companion": {
+          "title": "Aux origines : Le Jardinier du Vignoble",
+          "text": "Notre collaboration a commencé avec Le Jardinier du Vignoble, la marque de Permapaysage dédiée à l’entretien de jardin en service à la personne. Une page unique, pensée pour convertir : le crédit d’impôt de 50 % et l’avance immédiate de l’URSSAF sont mis en avant dès l’accueil, puis les prestations, les avant/après, les avis clients et la zone d’intervention mènent tous à la demande de devis.\n\nConvaincu par ce premier site, Permapaysage m’a ensuite confié la refonte de son site principal.",
+          "imageAlt": "Page d’accueil du site Le Jardinier du Vignoble",
+          "visit": "Voir Le Jardinier du Vignoble"
+        },
         "quote": "Il a su transformer un outil potable en une véritable machine de guerre digitale.",
         "quoteBy": "Permapaysage, sur LinkedIn"
       }

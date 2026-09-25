@@ -124,10 +124,37 @@ export default async function Case({
         <section key={s.title} className="section">
           <div className="wrap case-body">
             <h2 className="h3">{s.title}</h2>
-            <div className="prose">
-              <PortableBody value={s.body} />
+            <div>
+              <div className="prose">
+                <PortableBody value={s.body} />
+              </div>
+              {s.link && (
+                <div className="actions case-link">
+                  <a
+                    href={s.link.href}
+                    className="link link-out"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {s.link.label}
+                  </a>
+                </div>
+              )}
             </div>
           </div>
+          {s.image && (
+            <div className="wrap case-shot">
+              <Reveal className="shot">
+                <Image
+                  src={s.image.src}
+                  width={s.image.width}
+                  height={s.image.height}
+                  alt={s.image.alt}
+                  sizes="(max-width: 1480px) 100vw, 1400px"
+                />
+              </Reveal>
+            </div>
+          )}
         </section>
       ))}
 

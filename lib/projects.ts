@@ -38,7 +38,12 @@ export type WorkItem = {
 
 export type WorkDetail = WorkItem & {
   lead: string | null;
-  sections: { title: string; body: PortableTextBlock[] }[];
+  sections: {
+    title: string;
+    body: PortableTextBlock[];
+    image?: WorkImage;
+    link?: { label: string; href: string };
+  }[];
   metrics: { label: string; value: string; note: string | null }[];
   quote: { text: string; author: string; url: string | null } | null;
   seo: { title: string | null; description: string | null };
@@ -102,13 +107,22 @@ async function staticDetail(locale: Locale, slug: string): Promise<WorkDetail | 
   const [item] = await staticItems(locale);
   const t = await getTranslations({ locale, namespace: "work.items.permapaysage" });
   const sections = t.raw("sections") as { title: string; text: string }[];
+  const { companion } = permapaysage;
   return {
     ...item,
     lead: t("lead"),
-    sections: sections.map((s) => ({
-      title: s.title,
-      body: textToPortableText(s.text),
-    })),
+    sections: [
+      ...sections.map((s) => ({
+        title: s.title,
+        body: textToPortableText(s.text),
+      })),
+      {
+        title: t("companion.title"),
+        body: textToPortableText(t("companion.text")),
+        image: { ...companion.image, alt: t("companion.imageAlt") },
+        link: { label: t("companion.visit"), href: companion.url },
+      },
+    ],
     metrics: [],
     quote: {
       text: t("quote"),

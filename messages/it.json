@@ -311,7 +311,7 @@
     "items": {
       "permapaysage": {
         "title": "Permapaysage",
-        "lead": "Eco-paesaggista a Vallet, nella zona vinicola di Nantes. Un vero saper fare sul campo, e un sito ripensato per renderlo visibile.",
+        "lead": "Eco-paesaggista a Vallet, nella zona vinicola di Nantes. Un vero saper fare sul campo, e due siti per renderlo visibile.",
         "role": "Design, sviluppo, SEO locale",
         "summary": "Un eco-paesaggista vicino a Nantes lascia Odoo per un sito su misura, veloce e pensato per la ricerca locale.",
         "fact": "Restyling · SEO locale · Richieste di preventivo",
@@ -332,6 +332,12 @@
             "text": "Servizi, comuni serviti e lavori locali danno un contesto preciso all’attività. Un blog offre consigli di giardinaggio e permacultura.\n\nQuesta struttura aiuta i visitatori, come i motori di ricerca, a capire cosa fa Permapaysage, e dove."
           }
         ],
+        "companion": {
+          "title": "Alle origini: Le Jardinier du Vignoble",
+          "text": "La nostra collaborazione è iniziata con Le Jardinier du Vignoble, il marchio di Permapaysage dedicato alla manutenzione del giardino come servizio alla persona. Una pagina unica, pensata per convertire: il credito d’imposta del 50% e l’anticipo immediato dell’URSSAF sono in primo piano fin dall’inizio, poi servizi, foto prima/dopo, recensioni dei clienti e zona d’intervento portano tutti alla richiesta di preventivo.\n\nConvinta da questo primo sito, Permapaysage mi ha poi affidato il restyling del suo sito principale.",
+          "imageAlt": "Home page del sito Le Jardinier du Vignoble",
+          "visit": "Vedi Le Jardinier du Vignoble"
+        },
         "quote": "Ha saputo trasformare uno strumento discreto in una vera macchina da guerra digitale.",
         "quoteBy": "Permapaysage, su LinkedIn (tradotto dal francese)"
       }
